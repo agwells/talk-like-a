@@ -17,6 +17,14 @@ eleet:
 		4 b c d 3 f g h 1 j |< l /\/\ /\/ 0 p q r 5 + u \/ \/\/ >< y z
         Note that the equivalent translation is done on upper-case letters.
 
+fudd:
+
+	This one is trivial too. A few transpositions happen differently if
+	the letter is at the end of the word or not, and I think I found
+	all the transpositions with only a few paragraphs of sample output.
+	The only weird thing is that 'n.' is changed to "n, uh-hah-hah-hah."
+	(Works well with sentances ending in "gun." ..)
+
 chef:
 	Personally my favorite filter. This took a bit of work to figure
 	out, and I doubt I have everything correct. Note that due to a bug
