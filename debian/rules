@@ -27,7 +27,6 @@ binary-indep: build
 
 # Build architecture-dependent files here.
 binary-arch: build
-#	dh_testversion
 	dh_testdir
 	dh_testroot
 	dh_clean -k
