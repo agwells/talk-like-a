@@ -10,7 +10,7 @@ Architecture: any
 Conflicts: filters-nonfree
 Replaces: filters-nonfree
 Depends: ${shlibs:Depends}
-Description: a collection of filters, including B1FF and the swedish chef
+Description: a collection of filters, including B1FF and the Swedish Chef
  A collection of filters to do all sorts of strange things to text.
- This includes such favorites as B1FF and the swedish chef, and a wide
+ This includes such favorites as B1FF and the Swedish Chef, and a wide
  range of others.
