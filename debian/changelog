@@ -1,3 +1,11 @@
+filters (2.33) unstable; urgency=low
+
+  * Better flex fixups; make sure to link with -lfl even if building
+    indivitually, and move stuff that uses unput into %{ %} delimited blocks
+    in rules section.
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 15 Apr 2003 15:06:25 -0400
+
 filters (2.32) unstable; urgency=low
 
   * Deal with the new flex 2.5.31 as follows:

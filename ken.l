@@ -286,14 +286,3 @@ aw		printf("or");
 .		printf(yytext);
 \n		printf("\n");
 %%
-
-main()
-{
-	srand(getpid());
-	yylex();
-}
-
-int yywrap()
-{
-	return 1;
-}

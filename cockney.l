@@ -16,6 +16,20 @@ EW [ \t.,;!\?$]
 %Start junk
 
 %%
+
+%{
+	void eos() {
+	    if (yytext[yyleng-1] == '.')
+		dintI();
+	    else
+		unput(yytext[yyleng-1]);
+	}
+
+	void plastc() {
+	    unput(yytext[yyleng-1]);
+	}
+%}
+
 <junk>.			{	srandom(time(0L)); unput(yytext[0]); BEGIN 0; }
 {BW}[Tt]he{EW}		{	ECHO; bloody(); }
 {BW}[Ss]teal{EW}	{	printf("%c%cick",yytext[0],yytext[1]-5);
@@ -88,29 +102,6 @@ ime{EW}			{	printf("oime"); eos(); }
 \n				printf("\n");
 
 %%
-
-eos()
-{
-    if (yytext[yyleng-1] == '.')
-	dintI();
-    else
-	yyunput(yytext[yyleng-1], yytext);
-}
-
-plastc()
-{
-    yyunput(yytext[yyleng-1], yytext);
-}
-
-main()
-{
-        yylex();
-}
-
-int yywrap()
-{
-	return 1;
-}
 
 caseify(c)
 char c;

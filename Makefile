@@ -1,7 +1,7 @@
 LEX	= flex
 BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak
 OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd censor spammer
-CFLAGS	= -O2
+CFLAGS	= -O2 -lfl
 INSTALL_PROGRAM = install
 
 # DEB_BUILD_OPTIONS suport, to control binary stripping.
@@ -39,7 +39,7 @@ clean:
 .l:
 	$(RM) $*.c
 	$(LEX) -t $< > $*.c
-	$(CC) -O -o $@ $*.c -lfl $(CFLAGS)
+	$(CC) -o $@ $*.c $(CFLAGS)
 	$(RM) $*.c
 
 .SUFFIXES: .dir

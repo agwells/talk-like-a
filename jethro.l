@@ -263,13 +263,3 @@ er{EW}			ESUB("uh");
 !			SUB(". Ye DAWGies!!!");
 
 %%
-
-main()
-{
-	yylex();
-}
-
-int yywrap()
-{
-	return 1;
-}

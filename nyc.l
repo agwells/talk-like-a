@@ -12,6 +12,11 @@ BW [ \t]
 SP [ \t]
 EW [ \t.,;!\?$]
 %%
+%{
+	void plastc() {
+		yyunput(yytext[yyleng-1], yytext);
+	}
+%}
 ".so ".*$			printf("%s", yytext);
 [ao]ther			printf("%cdder", yytext[0]=='a'?'a':'u');
 [Nn]othing			printf("%cuttin'", yytext[0]);
@@ -66,10 +71,6 @@ negro				printf("spade");
 !				printf("!  Okay?");
 [a-z]"."		{	printf("%s", yytext);expletive();}
 %%
-plastc()
-{
-	yyunput(yytext[yyleng-1], yytext);
-}
 
 caseify(c)
 char c;

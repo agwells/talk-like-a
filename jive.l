@@ -18,6 +18,12 @@
 BW [ \t\(]
 EW [ \t.,;!\?$\)]
 %%
+%{
+	void plastc()
+	{
+		unput(yytext[yyleng-1]);
+	}
+%}
 @[Bb]egin(.*)		|
 ".so ".*$			printf("%s", yytext);
 {BW}send			printf("%ct'row",yytext[0]);
@@ -195,10 +201,6 @@ against				printf("agin'");
 meta				printf("meta-fuckin'");
 cally				printf("c'l");
 %%
-plastc()
-{
-	yyunput(yytext[yyleng-1], yytext);
-}
 
 caseify(c)
 char c;
@@ -241,16 +243,6 @@ expletive()
 			case 4: printf("  Git down!"); break;
 			}
 		}
-}
-
-main()
-{
-	yylex();
-}
-
-int yywrap()
-{
-	return 1;
 }
 
 /*
