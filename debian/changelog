@@ -1,3 +1,10 @@
+filters (2.22) unstable; urgency=low
+
+  * Something I already fixed in CVS, Closes: #124617
+  * debhelper v3.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 17 Dec 2001 22:20:35 -0500
+
 filters (2.21) unstable; urgency=low
 
   * Wrote elmer fudd filter in perl, replacment for a long-removed
