@@ -1,3 +1,10 @@
+filters (2.21) unstable; urgency=low
+
+  * Wrote elmer fudd filter in perl, replacment for a long-removed
+    lex filter of uncertian authorship and copyright. Closes: #109157
+
+ -- Joey Hess <joeyh@debian.org>  Thu,  4 Oct 2001 19:32:00 -0400
+
 filters (2.20) unstable; urgency=low
 
   * Woo hoo! JWZ has placed newspeak under a BSD-ish license, so it moves
