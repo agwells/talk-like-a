@@ -17,7 +17,7 @@ install:	$(ALL) $(OTHER)
 
 samples:	$(ALL) $(OTHER)
 	-rm -f SAMPLES
-	PATH=. echo $(ALL) $(OTHER) |xargs -n 1 sh makesample.sh
+	PATH=.:$$PATH; export PATH; echo $(ALL) $(OTHER) |xargs -n 1 sh makesample.sh
 
 clean:
 	$(RM) -f core *.o *~ $(ALL) *.c SAMPLES
