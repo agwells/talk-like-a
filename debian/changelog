@@ -1,3 +1,11 @@
+filters (2.23) unstable; urgency=low
+
+  * Patch from Seneca <seneca-cunningham@rogers.com> to correct newspeak's
+    handling of double quotes preeceeded by punctuation and followed by a
+    blank line. Closes: #146769
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 19 May 2002 19:52:06 -0400
+
 filters (2.22) unstable; urgency=low
 
   * Something I already fixed in CVS, Closes: #124617

@@ -584,7 +584,7 @@ robably|ventually|[Oo]bvious|[Bb]asic|{W}[Oo]nly|otally	|
 			if (14 == fcounter++) printf("(fnord)  ");
 		}
 
-[.,!?]\"([^\n\".!]+[.!])?\n/[\n\t ]	printf("%c  Hail Big Brother!\"%s",Y0,yytext+1);
+[.,!?]\"([^\n\".!]+[.!])?\n/[\n\t ]	printf("%c  Hail Big Brother!\"%s",Y0,yytext+2);
 \"([.,!?][^\n\".!]+[.!])?\n/[\n\t ]	printf("%c  Hail Big Brother!\"%s",Y1,yytext+2);
 
 .			printf(yytext);
