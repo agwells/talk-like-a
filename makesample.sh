@@ -1,0 +1,5 @@
+#!/bin/sh
+echo $1 >>SAMPLES
+echo "-------------" >>SAMPLES
+echo -e "Here's how this filter sounds, in everyday use.\nThis line is another sample of this filter's output." | ./$1 >>SAMPLES
+echo "" >>SAMPLES

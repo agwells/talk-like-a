@@ -1,0 +1,67 @@
+#!/usr/bin/perl -p
+# Swedish Chef filter. Bork Bork Bork!
+# Copyright 1999 by Joey Hess under the terms of the GNU GPL.
+
+# Note that the order of the commands in this program is very important!
+
+# Change 'e' at the end of a word to 'e-a', but don't mess with the word
+# "the".
+s{(\w+)e(\b)}{
+	if (lc($1) ne 'th') {
+		"$1e-a$2"
+	}
+	else {
+		"$1e$2"
+	}
+}eg;
+
+# Stuff that happens at the end of a word.
+s/en(\b)/ee$1/g;
+s/th(\b)/t$1/g;
+
+# Stuff that happens if not the first letter of a word.
+s/(\w)f/$1ff/g;
+
+# Change 'o' to 'u' and at the same time, change 'u' to 'oo'. But only
+# if it's not the first letter of the word.
+tr/ou/uo/;
+s{(\b)([uo])}{
+	$1 . $2 eq 'o' ? 'u' : 'o'
+}eg;
+# Note that this also handles doubling "oo" at the beginning of words.
+s/o/oo/g;
+# Have to double "Oo" seperatly.
+s/(\b)O(\w)/$1Oo$2/g;
+# Fix the word "bork", which will have been mangled to "burk"
+# by above commands. Note that any occurence of "burk" in the input
+# gets changed to "boork", so it's completly safe to do this:
+s/\bburk\b/bork/;
+
+# Stuff to do to letters that are the first letter of any word.
+s/\be/i/g;
+s/\bE/I/g;
+
+# Stuff that always happens.
+s/teeun/shun/g; # this actually has the effect of changing "tion" to "shun".
+s/the/zee/g;
+s/The/Zee/g;
+tr/vVwW/fFvV/;
+
+# Stuff to do to letters that are not the last letter of a word.
+s/a(?!\b)/e/g;
+s/A(?!\b)/E/g;
+
+s/en/un/g; # this actually has the effect of changing "an" to "un".
+s/En/Un/g; # this actually has the effect of changing "An" to "Un".
+s/eoo/oo/g; # this actually has the effect of changing "au" to "oo".
+s/Eoo/Oo/g; # this actually has the effect of changing "Au" to "Oo".
+
+# Change "ow" at end of word to "oo".
+s/uv\b/oo\b/g;
+
+# Change 'i' to 'ee', but not at the beginning of a word,
+# and only affect the first 'i' in each word.
+s/(\b\w[a-hj-zA-HJ-Z]*)i/$1ee/g;
+
+# Special punctuation of the end of sentances but only at end of lines.
+s/([.?!])$/$1\nBork Bork Bork!/g;

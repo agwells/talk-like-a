@@ -1,0 +1,3 @@
+#!/usr/bin/perl -pl-
+$_=reverse lc$_;s@"@''@g;y/[]{A-R}<>()a-y1-9,!.?`'/][}        Joey Hess
+{><)(eq)paj6y!fk7wuodbjsfn^mxhl5Eh29L86`i'%,/;s@k@>|@g#   joey@kitenet.net

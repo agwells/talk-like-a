@@ -1,0 +1,60 @@
+This is a Debian prepackaged version of the filters package.
+
+This package was put together and debianized by Joey Hess
+<joeyh@master.debian.org>, using sources from all over, including:
+	http://www.princeton.edu/~mkporwit/pub_links/davido/slang/
+	http://www.mathlab.sunysb.edu/~elijah/src.html
+
+Various copyrights pertain to different files in this package:
+
+cockney filter:
+/*
+ *      Lex filter to transform plain English into Cockney English.
+ *      No racial or societal slurs are intended.  For amusement only.
+ *
+ *      Copyright 1986 by Daniel Klein.
+ *
+ *      Reproduction permitted so long as this notice is retained.
+ */
+
+jive filter:
+/*
+ *      Lex filter to transform plain English into Jive English.
+ *      No racial or societal slurs are intended.  For amusement only.
+ *
+ *      Copyright 1986 by Daniel Klein and Clement Cole.
+ *
+ *      Reproduction permitted so long as this notice is retained.
+ */
+
+newspeak filter:
+ *      newspeak.l, version 1.1.
+ *      Lex filter to transform plain English into NewSpeak.
+ *      Copyright (c) 1991 Jamie Zawinski <jwz@lucid.com>.
+ *      Permission granted for noncommercial use and redistribution.
+
+nyc filter:
+/*
+ *      Lex filter to transform plain English into Brooklyn English.
+ *      No racial or societal slurs are intended.  For amusement only.
+ *
+ *      Copyright 1986 by Daniel Klein.
+ *
+ *      Reproduction permitted so long as this notice is retained.
+ */
+
+ky00te filter:
+
+This program is (c) 1994, Brent E. Edwards.  Feel free to distribute the
+complete program world-wide.  (Please do NOT break apart this text file
+from the program.)  
+
+This program is under absolutely no warrantee of any kind.  
+
+If you have any questions about this program, please send them to 
+edwardsb@cs.rpi.edu.
+
+This program is dedicated to Conrad Wong.
+
+This program is catware.  If you find it useful in any way, pay for this
+program by spending one hour petting one or several cats.

@@ -1,0 +1,40 @@
+filters (1.3) unstable; urgency=low
+
+  * Libc6.
+  * Added man pages. #11318
+
+ -- Joey Hess <joeyh@master.debian.org>  Wed, 16 Jul 1997 13:31:07 -0400
+
+filters (1.2) frozen unstable; urgency=low
+
+  * Fixed bug #8329 (buck segfaulted if it encountered C[aou] or R[aeiou] in
+    input.)
+  * Routine update of debian/rules:
+    Run dpkg-gencontrol after debstd, and delete substvars during clean.
+
+ -- Joey Hess <joeyh@master.debian.org>  Tue, 8 Apr 1997 20:59:12 -0400
+
+filters (1.1) unstable; urgency=low
+
+  * Changed version number to 1.1, because there was some confusion if this
+    was a debian-only package. It is, so I've removed the debian revision
+    number.
+
+ -- Joey Hess <joeyh@master.debian.org>  Tue, 24 Dec 1996 20:35:51 -0500
+
+filters (1.0-2) unstable; urgency=low
+
+  * New email address.
+  * Use debmake.
+
+ -- Joey Hess <joeyh@master.debian.org>  Tue, 24 Dec 1996 15:40:55 -0500
+
+filters (1.0-1) unstable; urgency=low
+
+  * First release.
+
+ -- Joey Hess <joeyh@master.debian.org>  Sat, 28 Sep 1996 00:55:40 -0400
+
+Local variables:
+mode: debian-changelog
+End:

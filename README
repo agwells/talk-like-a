@@ -1,0 +1,39 @@
+This is a collection of filters from various places, including:
+
+http://www.princeton.edu/~mkporwit/pub_links/davido/slang/
+
+http://www.mathlab.sunysb.edu/~elijah/src.html
+
+Collected by Joey Hess <joey@kite.ml.org>
+
+
+Note that the Makefile will get the filters to compile on Linux systems. 
+Otherwise, you're on your own.
+
+
+Descriptions of the filters:
+
+aust:		Australian
+b1ff:		The B1FF filter
+biffa:		??
+buck:		The buckwheat filter
+censor:		[CENSORED]
+chef:		convert English on stdin to Mock Swedish on stdout
+cockney:	Cockney English
+drawl:		English to Texan translator
+fin:		??
+fudd:		Elmer Fudd
+jethro:		Hillbilly text filter
+jive:		Jive English
+ken:		English into Cockney, featuring (dubious) rhyming 
+		slang for a lot of computer terminology.
+kraut:		German
+mb:		Marc Barrett posting translator
+moo:		The cow filter
+newspeak:	As in 1984
+nyc:		Brooklyn English
+valspeak:	??
+ky00te:		This program places a very cute (and familiar to FurryMuck
+		fans) accent to any text file.
+
+No racial or societal slurs are intended.  For amusement only.
