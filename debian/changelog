@@ -1,3 +1,15 @@
+filters (2.27) unstable; urgency=low
+
+  * Added a censor filter.
+  * Added a spammer filter which generates spamassassin-triggering
+    pseudo-spam from input.
+  * Updated eleet filter (which should perhaps be renamed to just 'leet')
+    to the <ahem> standards of irc circa mid 2002.
+  * Make jibberish filter only run text through 3 to 8 of the other filters.
+  * Various improvements.
+
+ -- Joey Hess <joeyh@debian.org>  Sun,  3 Nov 2002 16:37:12 -0500
+
 filters (2.26) unstable; urgency=low
 
   * Don't use dh_installmanpages.

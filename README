@@ -1,5 +1,6 @@
 This is a collection of filters to do all sorts of strange things to text.
-B1ff, the Swedish Chef, and an eleet filter are included. 
+B1ff, the Swedish Chef, and an eleet filter are included, along with many,
+many more.
 
 Since the original versions of some of these filters have copyright
 problems, I have done a "clean room" re-implementation of the original lex

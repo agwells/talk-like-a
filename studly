@@ -11,4 +11,3 @@ for (my $offset = 0; defined(my $c = getc); $offset++) {
 #    (($c + $offset) % 4) == 2 and print (ord($c) ^ 32) or print($c);
     (($c + $offset) % 4) != 2 and print($c) or $c =~ tr/[A-Za-z]/[a-zA-Z]/, print $c;
 }
-

@@ -1,13 +1,19 @@
 #!/usr/bin/perl -p
-# Eleet filter, Copyright 1999 by Joey Hess under the terms of the GNU GPL.
+# Eleet filter, Copyright 1999,2002 by Joey Hess under the terms of the GNU GPL.
 BEGIN {
-	$transstring="4bcd3fgh1jklmn0pqr5+uvwxyz";
-	$t="tr/a-zA-Z/$transstring".uc($transstring)."/";
+	#             abcdefghijklmnopqrstuvwxyz
+	$transstring="4bcd3fgh1jklmn0pqr5tuvwxyz";
+	$t="tr/a-zA-Z/$transstring$transstring/";
 }
+s/porn/pr0n/g;
+s/elite/l33t/g;
 eval $t;
-s:h:|-|:ig;
-s:l:|_:ig;
-s:m:/\\/\\:ig;
-s:n:/\\/:ig;
-s:v:\\/:ig;
-s:x:><:ig;
+
+# These are not in common usage anymore.
+#s:h:|-|:ig;
+#s:l:|_:ig;
+#s:m:/\\/\\:ig;
+#s:n:/\\/:ig;
+#s:w:\\/\\/:ig;
+#s:v:\\/:ig;
+#s:x:><:ig;

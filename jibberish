@@ -1,5 +1,5 @@
 #!/usr/bin/perl
-# jibberish -- run all filters in random order
+# jibberish -- run filters in random order
 
 $ENV{PATH}.=":/usr/games";
 
@@ -18,6 +18,8 @@ ky00te
 rasterman
 newspeak
 studly
+censor
+spammer
 );
 
 # shuffle order
@@ -30,9 +32,9 @@ for (0..$#all) {
 }
 
 # start the pipe...
-my $pipe= join '|', @all;
+my $pipe= join '|', @all[0..3 + rand(5)];
 open FILTER, "$pipe|"
-	or die "&quot;Never mind...\n";;
+	or die "Never mind...\n";
 
 # display the results
 while (<FILTER>) {
