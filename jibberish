@@ -13,6 +13,7 @@ kraut
 cockney
 jive
 nyc
+rasterman
 );
 
 @nonfree= qw(

@@ -1,3 +1,9 @@
+filters (2.15) unstable; urgency=low
+
+  * Rasterized jubberish, Closes: #81901
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 10 Jan 2001 23:48:00 -0800
+
 filters (2.14) unstable; urgency=low
 
   * Hahaha. Added a rasterman filter. (Not just "raster" as I worry about
