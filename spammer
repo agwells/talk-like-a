@@ -1,0 +1,196 @@
+#!/usr/bin/perl
+# Talk like a spammer. Copyright 2002 by Joey Hess <joeyh@debian.org>
+# Licensed under the GPL.
+#
+# Doesn't always generate proper engrish, but then neither do
+# spammers.
+ 
+sub c {
+	return $_[rand @_];
+}
+
+sub line_of_yelling {
+	my @lines=split(/\n/, shift);
+	my $n=rand @lines;
+	$lines[$n] = uc($lines[$n]);
+	return join("\n", @lines);
+}
+
+sub for_free {
+	return c(qw(100% completely totally absolutely))." ".c(qw(f F))."ree";
+}
+
+my $hits=0;
+
+if (rand > 0.75) {
+	$hits++;
+	$spam .= "Dear Friend, ";
+}
+elsif (rand > 0.9) {
+	$hits++;
+	$spam .= "Below is the result of your feedback form".c(qw{: . ..})."\n";
+}
+elsif (rand > 0.75) {
+	$hits++;
+	$spam .= "This message is not spam!\n";
+}
+
+while (<>) {
+	# Try to trigger spam trappers. Keep count of the number of unique
+	# ones triggered.
+	@results = (
+		s/^(Subject:\s+.*)/$1. ' ' x (rand(20) + 40) . rand(1000000)/eig,
+		s/free\b/for_free()/eig,
+		s/(email|message|e-mail|mail)\b/$1 (sent in compliance with regulations)/i,
+		s/(join|register|order|apply)/$1 today/ig,
+		s/money/big bucks/i,
+		s/check\b/check or money order/i,
+		s/(amazing|atonishing|neat|interesting)/AMAZING/ig,
+		s/guarantee\b/GUARANTEE/ig,
+		s/(profits|money)/PROFITS/ig,
+		s/(no questions asked|quiet|confidential|secret)\b/NO QUESTIONS ASKED/ig,
+		s/refund\b/full refund/i,
+		s/free\b/FREE/ig,
+		s/\b(full|complete|fully)\b/100% GUARANTEED/ig,
+		s/(spam|UCE)\b/c(qw(bulk direct mass))." email"/eig,
+		s/spammer/businessman/ig,
+		s/(call|phone|contact)\b/CALL NOW/ig,
+		s/business\b/online business/ig,
+		s/online\b/online business opportunities/ig,
+		s/number\b/social security number/ig,
+		s/addresses\b/addresses on cd/ig,
+		s/cdrom\b/addresses on cd/ig,
+		s/click\b/click here/ig,
+		s/viagra/c('VIAGRA', 'natural viagra', 'herbal viagra')/eig,
+		s/\btraffic\b/rand > 0.6 ? 'more web traffic' : 'traffic'/eig,
+		s/targeted/targeted traffic/ig,
+		s/limited/LIMITED TIME OFFER/ig,
+		s/buy\b/buy direct/ig,
+		s/profit\b/PURE PROFIT/ig,
+		s/opportunity/once in a lifetime opportunity/ig,
+		s/stock\b/STOCK PICK/ig,
+		s/access\b/INSTANT ACCESS/ig,
+		s/(diploma|credential)s?/college diploma$a/ig,
+		s/(penis|breast)/larger $1/ig,
+		s/\b(work|job)\b/home employment/ig,
+		s/experience\b/no experience needed!/ig,
+		s/printer\b/printer (toner cartridge)/ig,
+		s/(income|money|savings?)\b/you income/ig,
+		s/(amazing|amazed|atonished|interesting)/be amazed/ig,
+		s/(\$\d+\.?\d*)/for only $1!/ig,
+		s/natural/completly natural/ig,
+		s/obligation/no obligation/ig,
+		s/vacation\b/c(qw(dream special free))." vacation"/eig,
+		s/sign up\b/sign up today/ig,
+		s/cell (phone)?\b/free cell phone/ig,
+		s/(offer|trial|membership|website|quote|installation|sample|dvd|preview|leads)\b/free $1/ig,
+		s/\bvalue/outstanding value/ig,
+		s/shipping/shopping spree/ig,
+		s/winning/WINNING/ig,
+		s/winner\b/WINNER/ig,
+		s/promotion\b/special promotion/ig,
+		s/password\b/free password/ig,
+		s/\bcash\b/extra cash/ig,
+		s/cancel\b/cancel at any time/ig,
+		s/\bearn\b/earn up to/ig,
+		s/(movies|pics|photos|videos)/c(qw(hundreds thousands millions tons))." of $1"/eig,
+		s/\bporn\b/free porn/ig,
+		s/\blegal\b/c(qw(absolutely perfectly totall 100%))." legal"/eig,
+		s/(drugs|medications|pharmacy)/online $1/ig,
+		s/asset/hidden asset/ig,
+		s/\bsave\b/save thousands/ig,
+		s/partner/marketing partner/ig,
+		s/unlimited/UNLIMITED/ig,
+		s/\bprice\b/low price/ig,
+		s/galleries\b/huge galleries/ig,
+		# Convert phone numbers to 800 numbers.
+		s/(?:(?:1-)?[0-9]{3}-)?([0-9]{3}-[0-9]{4})/"1-".c(800,888)."-$1"/eg,
+		# de-http:// urls
+		s/http:\/\///ig,
+	);
+	
+	# Merge result table into an overall results table that counts each
+	# item at most once.
+	for ($x=0; $x < $#results; $x++) {
+		if ($results[$x]) {
+			$overallresults[$x]=1;
+		}
+	}
+	
+	# Cute things that don't cause real hits.
+	s/\.(com|org|net|edu)\b/".".c(qw(info biz name))/eig;
+	s/([Ee])nglish/${1}ngrish/g if rand > 0.66;
+	$spam .= $_;
+}
+
+$hits += $_ foreach @overallresults;
+
+if (rand > 0.5) {
+	# random line breaks make spam look
+	# more professional
+	# or is it just written in Notepad?
+	$spam =~ s/ /rand > 0.95 ? "\n" : " "/eg;
+}
+elsif (rand > 0.75) {
+	# I write my spam in MS WORD!
+	$spam =~ s/\n/ /g;
+}
+else {
+	$spam=line_of_yelling($spam);
+}
+
+if (rand > 0.8 || $hits < 5) {
+	$spam .= "\nThis is a ".c(qw(one 1))." time ".c(qw(email e-mail offer)).c(qw(! .));
+	$hits++;
+}
+
+if (rand > 0.7 || $hits < 5) {
+	$spam .= "\n" . c('-' x 78, '~' x 70, '---', '', '', '', "\n\n\n\n") . "\n" .
+	      c('To remove your address from ', 'To be removed from', 'To get off from',
+	        'To unsubscribe from', 'To receive no further notices on',
+	        'If you did not opt in for', 'To be removed from future mailings to') .
+	      " " .
+	      c('this mailing list', 'these mails') . " " .
+	      c('please ', '') .
+	      c('reply', 'send an email', 'write back') . " " .
+	      c('with a subject of', 'and put in the subject the word') . " " .
+	      c("REMOVE", '"remove"') .
+	      c(qw(! . .)) . "\n";
+	$hits++;
+}
+
+# Desperate to make it look like a spam now, I insert arbitrary
+# junk.
+while ($hits < 5) {
+	if (rand > 0.66) {
+		$spam=line_of_yelling($spam);
+		$hits++;
+	}
+	elsif (rand > 0.5) {
+		# Insert a spam phrase after the end of a sentence.
+		@spam_phrases = ('FREE CONSULATATION', 'INSTANT ACCESS',
+			'PURE PROFIT', 'STOCK PICK', 'VIAGRA', 'WINNER',
+			'WINNING', 'LIMITED TIME OFFER', 'extra cash',
+			'CALL NOW', 'once in a lifetime opportunity',
+			'cancel at any time', 'no experience needed',
+			'no obligation', 'save millions', 'be amazed',
+			for_free());
+		$hits += $spam =~ s/\.\s+([A-Z])/". ".ucfirst(c(@spam_phrases)). "! $1"/es;
+	}
+	elsif (rand > 0.75) {
+		# large hexadecimal block
+		my @hex = ('A'..'F', 0..9);
+		for (1..70 + rand(9)) {
+			$spam .= $hex[rand @hex];
+		}
+		$spam .= "\n";
+		$hits++;
+	}
+	elsif (rand > 0.75) {
+		$spam .= c("SSPLTM ", "{%RAND%} ");
+		$hits++;
+	}
+}
+
+$spam =~ s/\n/\r\n/g;
+print "$spam\n";
