@@ -203,7 +203,3 @@ filters (1.0-1) unstable; urgency=low
   * First release.
 
  -- Joey Hess <joeyh@debian.org>  Sat, 28 Sep 1996 00:55:40 -0400
-
-Local variables:
-mode: debian-changelog
-End:
