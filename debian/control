@@ -1,7 +1,7 @@
 Source: filters
 Section: games
 Priority: optional
-Build-Depends: debhelper (>= 3), flex, bison | byacc | btyacc
+Build-Depends: debhelper (>= 3), flex, bison | byacc | btyacc, dpkg-dev (>= 1.9.0)
 Maintainer: Joey Hess <joeyh@debian.org>
 Standards-Version: 3.5.6.1
 
@@ -9,7 +9,7 @@ Package: filters
 Architecture: any
 Conflicts: filters-nonfree
 Replaces: filters-nonfree
-Depends: ${shlibs:Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: a collection of filters, including B1FF and the Swedish Chef
  A collection of filters to do all sorts of strange things to text.
  This includes such favorites as B1FF and the Swedish Chef, and a wide

@@ -1,3 +1,10 @@
+filters (2.24) unstable; urgency=low
+
+  * debhelper v4
+  * DEB_BUILD_OPTS support
+
+ -- Joey Hess <joeyh@debian.org>  Sat,  1 Jun 2002 16:45:49 -0400
+
 filters (2.23) unstable; urgency=low
 
   * Patch from Seneca <seneca-cunningham@rogers.com> to correct newspeak's

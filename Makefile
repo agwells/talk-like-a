@@ -1,15 +1,25 @@
-# Various dialect translators.
+LEX	= flex
+BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak
+OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd
+CFLAGS	= -O2
+INSTALL_PROGRAM = install
 
-LEX	 = flex
+# DEB_BUILD_OPTIONS suport, to control binary stripping.
+ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
+INSTALL_PROGRAM += -s
+endif
 
-BUILD	 = jethro kraut cockney jive nyc ken ky00te newspeak
-OTHER	 = eleet b1ff chef jibberish upside-down rasterman studly fudd
+# And debug building.
+ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
+CFLAGS += -g
+endif
 
 all:	$(OTHER) $(BUILD)
 
 install:	$(BUILD) $(OTHER)
 	install -d $(PREFIX)/usr/games
-	install $(BUILD) $(OTHER) $(PREFIX)/usr/games/
+	$(INSTALL_PROGRAM) $(BUILD) $(PREFIX)/usr/games/
+	install $(OTHER) $(PREFIX)/usr/games/
 	install -d $(PREFIX)/usr/share/man/man6
 	install -m 0644 filters.6 $(PREFIX)/usr/share/man/man6
 	cd $(PREFIX)/usr/share/man/man6 && \
@@ -28,8 +38,7 @@ clean:
 .l:
 	$(RM) $*.c
 	$(LEX) -t $< > $*.c
-	$(CC) -O -o $@ $*.c -lfl -g
-#	strip $@
+	$(CC) -O -o $@ $*.c -lfl $(CFLAGS)
 	$(RM) $*.c
 
 .SUFFIXES: .dir
