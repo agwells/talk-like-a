@@ -2,12 +2,11 @@ Source: filters
 Section: games
 Priority: optional
 Maintainer: Joey Hess <joeyh@master.debian.org>
-Standards-Version: 2.1.1.0
+Standards-Version: 3.0.1.1
 
 Package: filters
 Architecture: any
 Depends: ${shlibs:Depends}
 Description: a collection of filters, including B1FF and the swedish chef
  A collection of filters to do all sorts of strange things to text.
- This includes such favorites as B1FF and the swedish chef, as well as lots
- of other filters.
+ This includes such favorites as B1FF and the swedish chef.

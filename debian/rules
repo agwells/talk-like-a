@@ -1,136 +1,53 @@
 #!/usr/bin/make -f
-##############################################################################
-# Generic debian/rules file. Based on:
-#
-#> Sample debian.rules file - for GNU Hello (1.3).
-#> Copyright 1994,1995 by Ian Jackson.
-#> I hereby give you perpetual unlimited permission to copy,
-#> modify and relicense this file, provided that you do not remove
-#> my name from the file itself.  (I assert my moral right of
-#> paternity under the Copyright, Designs and Patents Act 1988.)
-#
-# Heavily modified by Joey Hess <joeyh@master.debian.org>
-#
-##############################################################################
-#
-# NOTE: You shouldn't have to edit this file. Edit debian/config instead.
-# If you must edit this file to get your package to build properly, then
-# I have failed. Let me know; mail me.
-#
-# (Currently not handled: multiple binary packages from 1 source package,
-# and binary-indep rule.)
-#
-# NOTE: This file is designed so it doesn't need to be run as root. For
-# actions that require that the user be root, the root password will be
-# prompted for, if you're not already root.
-#
-##############################################################################
-#
-# Changelog:
-# * Fakeroot and sudo fixes.
-# * Run dpkg-gencontrol after debstd, and delete substvars during clean.
-# * Clean up junk files in subdirs.
-# * Modifications for multiple binary package support.
-# * Call debstd after fixing file perms.
-# * Don't pass package name to debstd + fixes for multi binary packages. 
-# * Use build-stamp instead of build.
-# * New email address.
-# * Added changelog.
-#
-##############################################################################
+# Sample debian/rules that uses debhelper. GNU copyright 1997 by Joey Hess.
 
-# Include config file.
-include debian/config
-
-# Generate a makefile (via configure scriopt or xmkmf).
-makefile-stamp:
-  ifeq ($(strip $(use_imakefile)),y)
-	xmkmf -a
-  endif 
-	$(use_configure)
-	touch makefile-stamp
-
-# Preserve some files that may get deleted/overwritten/modified otherwise.
-preserve-stamp:
-  ifneq ($(strip $(preserve_files)),)
-	$(foreach file,$(preserve_files),cp $(file) $(file).preserved ;)
-  endif
-	touch preserve-stamp
-
-build-stamp: preserve-stamp makefile-stamp
-	$(checkdir)
-	$(build_command)
-	touch build-stamp
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
 build: build-stamp
+build-stamp:
+	dh_testdir
+	$(MAKE)
+	$(MAKE) samples
+	touch build-stamp
 
-clean: preserve-stamp makefile-stamp
-	$(checkdir)
-  # Do actual cleaning up here.
-	-rm -f build-stamp
-	$(clean_command)
-	-find . -name '\#*\#' -o -name '*~' -o -name 'DEADJOE' -exec rm -f {} \;
-	-rm -f debian/files* debian/substvars debian/*.substvars $(clean_files)
-	$(clean_tmp)
-  # Remove Makefile that xmkmf creates.
-  ifeq ($(strip $(use_imakefile)),y)
-	-rm -f Makefile
-  endif
-  # If we preserved some files, we need to restore them now.
-  ifneq ($(strip $(preserve_files)),)
-	$(foreach file,$(preserve_files),mv -f $(file).preserved $(file); )
-  endif
-	-rm -f preserve-stamp makefile-stamp
+clean:
+	dh_testdir
+	dh_testroot
+	rm -f build-stamp
+	-$(MAKE) -i clean
+	dh_clean
 
 # Build architecture-independent files here.
-# (not yet set up to be used)
 binary-indep: build
-	$(checkdir)
+# We have nothing to do by default.
 
 # Build architecture-dependent files here.
 binary-arch: build
-	$(checkdir)
-	$(clean_tmp)
-	$(install_command)
-  # Set permissions and check package for problems, then build package.
-	@if [ "`whoami`" != root ]; then \
-		echo -e "\n ** Enter root password to set file permissions."; \
-		sudo debian/rules setperms; \
-	else \
-		debian/rules setperms; \
-	fi
-
-# This must be run suid root, it sets the file permissions in debian/tmp
-setperms:
-	chown -R root.root debian/tmp
-	chmod -R g-ws debian/tmp
-  # Debstd handles lots of nasty details. This requires that the debmake
-  # package is installed.
-	-debstd $(debstd) $(docs)
-	dpkg-gencontrol -p$(package)
-	$(ch_commands)
-	dpkg --build debian/tmp ..
-
-define checkdir
-	@test -e $(test_file) -a -f debian/rules || (echo -e "\n\
-	** \"$(test_file)\" or \"debian/rules\" does not exist.\n\
-	** Either the package is not unpacked in this directory, or\n\
-	** an incorrect test_file is specified in debian/config.\n" && false)
-endef
-
-# This rm's the debian/tmp directory, and any other directories specified in 
-# tmpdirs
-define clean_tmp
-	-rm -rf debian/tmp >/dev/null 2>&1
-	@if [ -d debian/tmp -o -n "$(tmp_dirs)" ]; then \
-		if  [ "`whoami`" != root ]; then \
-			echo -e "\n ** Enter root password to remove temporary directories $(tmp_dirs)"; \
-			sudo rm -rf debian/tmp $(tmp_dirs); \
-		else \
-			rm -rf debian/tmp $(tmp_dirs); \
-		fi; \
-	fi
-endef
+#	dh_testversion
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+	$(MAKE) PREFIX=debian/tmp install
+	dh_installdocs README SAMPLES
+	dh_installexamples
+	dh_installmenu
+#	dh_installinit
+	dh_installcron
+	dh_installmanpages
+#	dh_undocumented
+	dh_installchangelogs
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_suidregister
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+#	dh_makeshlibs
+	dh_md5sums
+	dh_builddeb
 
 binary: binary-indep binary-arch
-.PHONY: clean setperms binary
+.PHONY: build clean binary-indep binary-arch binary
