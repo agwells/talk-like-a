@@ -1,7 +1,7 @@
 Source: filters
 Section: games
 Priority: optional
-Maintainer: Joey Hess <joeyh@master.debian.org>
+Maintainer: Joey Hess <joeyh@debian.org>
 Standards-Version: 3.1.1.0
 
 Package: filters
