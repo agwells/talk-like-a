@@ -6,14 +6,31 @@ This package was put together and debianized by Joey Hess
 	ftp://ftp.funet.fi/pub/misc/old-hsu-archive/unsorted/2/kraut.shar.gz
 
 The jethro filter has this copyright:
- **   Public domain. Use at your own risk. Y'all come back now, heah?
+  **   Public domain. Use at your own risk. Y'all come back now, heah?
 
 The kraut filter has this copyright:
-/* Kraut v0.9  */
-/*     by      */
-/* John Sparks */
-/*  5-5-1989   */
+  /* Kraut v0.9  */
+  /*     by      */
+  /* John Sparks */
+  /*  5-5-1989   */
 
-/* This is in the public domain. Do with it as you will. *\
+  /* This is in the public domain. Do with it as you will. *\
+
+The cockney, jive, and nyc filters are copyright under the GPL by Daniel V
+Klein. He confirmed the new copyright in this email:
+
+  From: Daniel V Klein <dvk@lonewolf.com>
+  Date: Wed, 22 Nov 2000 22:00:50 -0500
+  To: Joey Hess <joey@kitenet.net>
+  Subject: Re: filters GPL'd 
+  
+  That is so.  Have fun (FWIW, I have done some rewriting on them - they are
+  now in Perl, but still need some work...)
+  
+  -Dan
+  
+  > I've been told that you have changed the copyright of the cockney, jive
+  > and nyc filters to the GPL? Is that correct? I'd love to move them into
+  > Debian proper.
 
 Everything else is copyright 1999 by Joey Hess, under the terms of GPL.

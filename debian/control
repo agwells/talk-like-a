@@ -7,6 +7,7 @@ Standards-Version: 3.2.1.0
 
 Package: filters
 Architecture: any
+Conflicts: filters-nonfree (<< 2.4)
 Depends: ${shlibs:Depends}
 Description: a collection of filters, including B1FF and the swedish chef
  A collection of filters to do all sorts of strange things to text.

@@ -4,28 +4,28 @@
 $ENV{PATH}.=":/usr/games";
 
 @all= qw(
-jive
-valspeak
-nyc
-cockney
-fin
-biffa
-ken
-aust
-drawl
-kraut
-newspeak
-chef
-marc-barrett
-censor
-fudd
-moo
-buck
-jethro
-b1ff
 eleet
-ky00te
+b1ff
+chef
+jethro
+upside-down
+kraut
+cockney
+jive
+nyc
 );
+
+@nonfree= qw(
+kyoote
+newspeak
+);
+
+# Test to see if non-free filters are here, if so, add them to @all.
+foreach (@nonfree) {
+	if (-x "/usr/games/$_") {
+		push @all, $_;
+	}
+}
 
 # shuffle order
 srand;

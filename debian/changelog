@@ -1,3 +1,10 @@
+filters (2.13) unstable; urgency=low
+
+  * cockney, jive, and nyc filters are now GPL'd, moved from -nonfree
+    package.
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 22 Nov 2000 19:04:08 -0800
+
 filters (2.12) unstable; urgency=low
 
   * Use debhelper v2.
