@@ -1,3 +1,9 @@
+filters (2.25) unstable; urgency=low
+
+  * Fixed debhelper build-dep.
+
+ -- Joey Hess <joeyh@debian.org>  Sat,  1 Jun 2002 22:41:07 -0400
+
 filters (2.24) unstable; urgency=low
 
   * debhelper v4
