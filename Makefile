@@ -2,7 +2,7 @@
 
 LEX	 = flex
 
-ALL	 = jethro kraut cockney jive nyc
+ALL	 = jethro kraut cockney jive nyc ken
 OTHER	 = eleet b1ff chef jibberish upside-down rasterman
 
 all:	$(OTHER) $(ALL)

@@ -1,3 +1,9 @@
+filters (2.16) unstable; urgency=low
+
+  * ken is now free.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 11 Jun 2001 14:58:58 -0400
+
 filters (2.15) unstable; urgency=low
 
   * Rasterized jubberish, Closes: #81901

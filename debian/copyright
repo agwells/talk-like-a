@@ -37,4 +37,21 @@ The rasterman filter was pulled out of
 http://www.xach.com/xachbot/xachbot-2000-07-15.tar.gz, which is as a whole
 copyright (C) 1997 Zachary Beane and is GPL'd.
 
-Everything else is copyright 1999 by Joey Hess, under the terms of GPL.
+The ken filter is now in the public domain. It's author, Stephen K Mulrine,
+confirmed the new copyright in this email:
+
+  From: Stephen Mulrine <stephen@moroder.scotnet.co.uk>
+  Date: Mon, 11 Jun 2001 01:06:52 +0100 (BST)
+  To: edward@debian.org (Edward Betts)
+  Subject: Re: Ken?
+
+  [...]
+
+  >We would like to include ken in the Debian GNU/Linux Operating System, but
+  >we need permission to modify ken if we want to. Would you be willing to
+  >relicense ken under the GNU GPL, a BSD like license, or public domain?
+
+  Certainly, it would be an honour to have it included in the Debian
+  distribution so I hereby release ken into the public domain.
+
+Everything else is copyright 1999-2001 by Joey Hess, under the terms of GPL.

@@ -1,12 +1,13 @@
 This is a collection of filters to do all sorts of strange things to text.
 B1ff, the Swedish Chef, and an eleet filter are included. 
 
-Since the original versions of these filters have copyright problems, I have
-done a "clean room" re-implementation of the original lex filters in perl. I
-did this without looking at the original code to the filters at all, I
-simply observed their output and drew my own conclusions, and wrote my own
-code. Then I compared the output of the original and new filters when ran on
-large bodies of text, and fixed the things I had missed.
+Since the original versions of some of these filters have copyright
+problems, I have done a "clean room" re-implementation of the original lex
+filters in perl. I did this without looking at the original code to the
+filters at all, I simply observed their output and drew my own conclusions,
+and wrote my own code. Then I compared the output of the original and new
+filters when ran on large bodies of text, and fixed the things I had
+missed.
 
 Here are the results of my investigations of how the filters work:
 
