@@ -1,3 +1,9 @@
+filters (2.26) unstable; urgency=low
+
+  * Don't use dh_installmanpages.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 13 Jun 2002 18:27:53 -0400
+
 filters (2.25) unstable; urgency=low
 
   * Fixed debhelper build-dep.
