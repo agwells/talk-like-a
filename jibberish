@@ -16,18 +16,9 @@ nyc
 ken
 ky00te
 rasterman
-);
-
-@nonfree= qw(
 newspeak
+studly
 );
-
-# Test to see if non-free filters are here, if so, add them to @all.
-foreach (@nonfree) {
-	if (-x "/usr/games/$_") {
-		push @all, $_;
-	}
-}
 
 # shuffle order
 srand;

@@ -71,3 +71,33 @@ Edwards, confirmed the new copyright in this email:
 Everything else is copyright 1999-2001 by Joey Hess, under the terms of GPL.
 The full text of the GNU GPL can be found in /usr/share/common-licenses/GPL
 on Debian systems.
+
+The newspeak filter is now relicensed under a BSD-like copyright. Its
+author, Jamie Zawinski, established the new copyright in this email:
+
+  From: Jamie Zawinski <jwz@jwz.org>
+  Date: Mon, 06 Aug 2001 16:17:02 -0700
+  To: Joey Hess <joeyh@debian.org>
+  Subject: Re: copyright of newspeak filter
+
+  Hey there -- I'm cleaning out old mail, and don't remember if I replied
+  to this or not.  Anyway, in case I didn't -- feel free to slap this 
+  license atop the newspeak script (it's BSD-like, so that should work
+  for you.)
+
+        Copyright (c) 1991 Jamie Zawinski <jwz@jwz.org>
+
+        Permission to use, copy, modify, distribute, and sell this 
+        software and its documentation for any purpose is hereby granted
+        without fee, provided that the above copyright notice appear in
+        all copies and that both that copyright notice and this
+        permission notice appear in supporting documentation.  No
+        representations are made about the suitability of this software
+        for any purpose.  It is provided "as is" without express or
+        implied warranty.
+
+The studly filter is copyright Nick Phillips <nwp@lemon-computing.com> and
+has the following license statement:
+
+# just for reference, you may do whatever you like with this file.
+

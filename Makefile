@@ -2,25 +2,25 @@
 
 LEX	 = flex
 
-ALL	 = jethro kraut cockney jive nyc ken ky00te
-OTHER	 = eleet b1ff chef jibberish upside-down rasterman
+BUILD	 = jethro kraut cockney jive nyc ken ky00te newspeak
+OTHER	 = eleet b1ff chef jibberish upside-down rasterman studly
 
-all:	$(OTHER) $(ALL)
+all:	$(OTHER) $(BUILD)
 
-install:	$(ALL) $(OTHER)
+install:	$(BUILD) $(OTHER)
 	install -d $(PREFIX)/usr/games
-	install $(ALL) $(OTHER) $(PREFIX)/usr/games/
+	install $(BUILD) $(OTHER) $(PREFIX)/usr/games/
 	install -d $(PREFIX)/usr/share/man/man6
 	install -m 0644 filters.6 $(PREFIX)/usr/share/man/man6
 	cd $(PREFIX)/usr/share/man/man6 && \
-		$(foreach prog,$(ALL) $(OTHER),ln -s filters.6 $(prog).6;)
+		$(foreach prog,$(BUILD) $(OTHER),ln -s filters.6 $(prog).6;)
 
-samples:	$(ALL) $(OTHER)
+samples:	$(BUILD) $(OTHER)
 	-rm -f SAMPLES
-	PATH=.:$$PATH; export PATH; echo $(ALL) $(OTHER) |xargs -n 1 sh makesample.sh
+	PATH=.:$$PATH; export PATH; echo $(BUILD) $(OTHER) |xargs -n 1 sh makesample.sh
 
 clean:
-	$(RM) -f core *.o *~ $(ALL) *.c SAMPLES
+	$(RM) -f core *.o *~ $(BUILD) *.c SAMPLES
 	cd ky00te.dir && make clean
 
 .SUFFIXES: .l
