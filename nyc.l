@@ -68,7 +68,7 @@ negro				printf("spade");
 %%
 plastc()
 {
-	unput(yytext[yyleng-1]);
+	yyunput(yytext[yyleng-1], yytext);
 }
 
 caseify(c)
@@ -94,4 +94,14 @@ expletive()
 			case 4: printf("  Yuh with me?"); break;
 			}
 		}
+}
+
+main()
+{
+	yylex();
+}
+
+int yywrap()
+{
+	return 1;
 }

@@ -94,12 +94,22 @@ eos()
     if (yytext[yyleng-1] == '.')
 	dintI();
     else
-	unput(yytext[yyleng-1]);
+	yyunput(yytext[yyleng-1], yytext);
 }
 
 plastc()
 {
-    unput(yytext[yyleng-1]);
+    yyunput(yytext[yyleng-1], yytext);
+}
+
+main()
+{
+        yylex();
+}
+
+int yywrap()
+{
+	return 1;
 }
 
 caseify(c)

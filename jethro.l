@@ -206,7 +206,6 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Aa]t{BW}all{EW}	*(yytext+1)=(char)'A'; SESUB("A tall");
 
 {SW}[Aa]m{EW}		|
-{SW}[Aa]re{EW}		SESUB("Is");
 {SW}[Ww]as{EW}		|
 {SW}[Ww]ere{EW}		SESUB("Wuz");
 {SW}[Ww]asn't{EW}	SESUB("Wasunt");
@@ -231,7 +230,6 @@ ing			SUB("in");
 {SW}[Tt]oo{EW}		SESUB("Besides");
 {SW}[Tt]o{EW}		SESUB("Tuh");
 {SW}[Aa][n]?{EW}	SESUB("Ah");
-{SW}[Aa]re{EW}		|
 {SW}[Oo]ur{EW}		|
 {SW}[Oo]r{EW}		SESUB("Ore");
 {SW}[Oo]f{EW}		SESUB("Uv");
@@ -271,3 +269,7 @@ main()
 	yylex();
 }
 
+int yywrap()
+{
+	return 1;
+}

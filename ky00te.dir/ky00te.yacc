@@ -119,7 +119,7 @@ t:	CUTE   { printf("ky00te!"); }
 
 extern char mylval;
 
-void yyerror(char *s) {
+int yyerror(char *s) {
 	printf("%s\n",s);
 }
 

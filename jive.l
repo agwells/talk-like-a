@@ -7,6 +7,7 @@
  *
  *	Reproduction permitted so long as this notice is retained.
  */
+
 %}
 %e 1700
 %p 4000
@@ -196,7 +197,7 @@ cally				printf("c'l");
 %%
 plastc()
 {
-	unput(yytext[yyleng-1]);
+	yyunput(yytext[yyleng-1], yytext);
 }
 
 caseify(c)
@@ -240,6 +241,16 @@ expletive()
 			case 4: printf("  Git down!"); break;
 			}
 		}
+}
+
+main()
+{
+	yylex();
+}
+
+int yywrap()
+{
+	return 1;
 }
 
 /*

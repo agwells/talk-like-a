@@ -1,3 +1,14 @@
+filters (2.32) unstable; urgency=low
+
+  * Deal with the new flex 2.5.31 as follows:
+    - Add main and yywrap functions, though they were not needed before.
+    - Call yyunput instead of unput macro, as the macro uses yytext_ptr,
+      which flex undefes before the bottom set of functions are defined.
+    Closes: #189040
+  * Various other fixes to build without warnings.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 14 Apr 2003 23:39:26 -0400
+
 filters (2.31) unstable; urgency=low
 
   * censor: corrected spelling of pyvgbevf, Closes: #172976

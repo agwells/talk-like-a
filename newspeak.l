@@ -13,7 +13,6 @@
  *      for any purpose.  It is provided "as is" without express or
  *      implied warranty.
  *
- *	Permissiom granted for noncommercial use and redistribution.
  *	To compile:
  *
  *	flex newspeak.l

@@ -292,3 +292,8 @@ main()
 	srand(getpid());
 	yylex();
 }
+
+int yywrap()
+{
+	return 1;
+}
