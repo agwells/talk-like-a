@@ -1,3 +1,11 @@
+filters (2.8) unstable; urgency=low
+
+  * makesample.sh is now careful to make sure each program is executable
+    before running it. Closes: #50985
+  * I also set -e the script.
+
+ -- Joey Hess <joeyh@master.debian.org>  Mon, 22 Nov 1999 14:09:43 -0800
+
 filters (2.7) unstable; urgency=low
 
   * A much better synopsis.
