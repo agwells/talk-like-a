@@ -1,3 +1,11 @@
+filters (2.29) unstable; urgency=low
+
+  * Added certain German phrase to the censor filter. If Germans want to send
+    me censored German phrases, I will be glad to continue adding them to this
+    filter.
+
+ -- Joey Hess <joeyh@debian.org>  Fri, 15 Nov 2002 13:35:51 -0500
+
 filters (2.28) unstable; urgency=low
 
   * Fixed a typo in kraut.

@@ -33,29 +33,29 @@ while (<>) {
 }
 
 __DATA__
-ahqr		enaql		grng		pbzrvat		t\f+fcbg
-anxrq		encr		guebng		pbzvat		tebva
-avccyr		erne		gvg		pebgpu		ubbgre
-bcravat		fangpu		gvggl		penc		ubeal
-beny		fchax		gvggvr		penpx		ubyr
-betl		fcrez		hgrehf		pernz		uhzc
-betnfz		fcuvapgre	ihyin		phag		unaqwbo
-certanag	fghq		intvan		phz		urnq
-cevpx		fgnss		ivetva		phzzvat		wvfz
-chff		fhpx		ivoengbe	pnzr		xabo
-chffl		fjnyybj		jbzo		preivk		xvff
-chffvrf		fperj		jrg		pureel		ybir
-chovp		frk		juber		pyvg		ybire
-chqraqhz	frkhny		kkk		pyvgbehf	ybirq
-chzc		frrq		nany		pyvggl		ybnq
-cnagvrf		frzra		nerbyn		pyvznk		ynovn
-crargengr	funsg		nff		qevyyrq		ynvq
-crargengrq	funt		nffubyr		qrsybjre	yrfovna
-cravf		funttvat	obbo		qvpx		yvcf
-crgre		fuvg		oernfg		qvyqb		znfgheong
-crpxre		fyhg		ohgg		rebgvp		znfgheongr
-cunyyhf		fyhggvfu	ohggbpx		rerpgvba	znfgheongvat
-cvff		fyvg		onyy		rkcbfrq		znzznel
-ebfrohq		gbathr		ovgpu		shpx		znzznevrf
-ebq		gbby		oybj		snpvny
-ehg		gjng		pbpx		t-fcbg
+ahqr		enaql		gjng		pbpx		t-fcbg
+anxrq		encr		grng		pbzrvat		t\f+fcbg
+avccyr		erne		guebng		pbzvat		tebva
+bcravat		fangpu		gvg		pebgpu		ubbgre
+beny		fchax		gvggl		penc		ubeal
+betl		fcrez		gvggvr		penpx		ubyr
+betnfz		fcuvapgre	hgrehf		pernz		uhzc
+certanag	fghq		ihyin		phag		unaqwbo
+cevpx		fgnss		intvan		phz		urnq
+chff		fhpx		ivetva		phzzvat		wvfz
+chffl		fjnyybj		ivoengbe	pnzr		xabo
+chffvrf		fperj		jbzo		preivk		xvff
+chovp		frk		jrg		pureel		ybir
+chqraqhz	frkhny		juber		pyvg		ybire
+chzc		frrq		kkk		pyvgbehf	ybirq
+cnagvrf		frzra		nany		pyvggl		ybnq
+crargengr	funsg		nerbyn		pyvznk		ynovn
+crargengrq	funt		nff		qevyyrq		ynvq
+cravf		funttvat	nffubyr		qrsybjre	yrfovna
+crgre		fuvg		obbo		qvpx		yvcf
+crpxre		fvrt\furvy	oernfg		qvyqb		znfgheong
+cunyyhf		fyhg		ohgg		rebgvp		znfgheongr
+cvff		fyhggvfu	ohggbpx		rerpgvba	znfgheongvat
+ebfrohq		fyvg		onyy		rkcbfrq		znzznel
+ebq		gbathr		ovgpu		shpx		znzznevrf
+ehg		gbby		oybj		snpvny
