@@ -32,6 +32,7 @@ samples:	$(BUILD) $(OTHER)
 clean:
 	$(RM) -f core *.o *~ $(BUILD) *.c SAMPLES
 	cd ky00te.dir && make clean
+	rm -f kraut.dir/lex.yy.c
 
 .SUFFIXES: .l
 

@@ -71,7 +71,7 @@ Th                  return("D");
 [Jj]on              return("Hansel");
 
 [a-f]"!"       {sprintf(buf,"%s Naturlich!",yytext);return(buf);}
-[p-z]"!"       {sprintf(buf,"%s Seig Heil!",yytext);return(buf);}
+[p-z]"!"       {sprintf(buf,"%s Sieg Heil!",yytext);return(buf);}
 .              return(yytext);
 \n             return("\n");
 
