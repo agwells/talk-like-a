@@ -1,9 +1,8 @@
 filters (2.31) unstable; urgency=low
 
-UNRE
   * censor: corrected spelling of pyvgbevf, Closes: #172976
 
- -- Joey Hess <joeyh@debian.org>  Sat, 14 Dec 2002 12:06:52 -0500
+ -- Joey Hess <joeyh@debian.org>  Sat, 22 Feb 2003 14:03:18 -0500
 
 filters (2.30) unstable; urgency=low
 
