@@ -1,3 +1,10 @@
+filters (2.11) unstable; urgency=low
+
+  * Corrected the man page, which was misrepresenting me as the author of
+    some programs I didn't write.
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 29 Aug 2000 22:58:02 -0700
+
 filters (2.10) unstable; urgency=low
 
   * upside-down: 5 and 2 are the best available upside-down versions of
