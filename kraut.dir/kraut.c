@@ -6,16 +6,20 @@
 
 /* This is in the public domain. Do with it as you will. */
 
-main()
-{
-char *line; 
+const char *yylex(void);
 
-    while(line = (char *) yylex()){
+int main()
+{
+    char *line; 
+
+    while((line = (char *) yylex())) {
          printf("%s", line);
     }
+
+    return 0;
 }
 
-yywrap ()
+int yywrap ()
 {
     return (1);
 }

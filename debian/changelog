@@ -1,3 +1,10 @@
+filters (2.30) unstable; urgency=low
+
+  * Falk Hueffner provided a patch to make kraut work on alpha.
+    Closes: #169256
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 21 Nov 2002 00:16:40 -0500
+
 filters (2.29) unstable; urgency=low
 
   * Added certain German phrase to the censor filter. If Germans want to send

@@ -8,6 +8,7 @@ BW [      ]
 EW [      .,;!?]
 
 %{
+#define YY_DECL const char *yylex(void)
      char buf[128];
 
 %}
