@@ -1,3 +1,84 @@
+filters (2.6) unstable; urgency=low
+
+  * 
+
+ -- Joey Hess <joeyh@master.debian.org>  Fri, 10 Sep 1999 21:25:47 -0700
+
+filters (2.5) unstable; urgency=low
+
+  * eleet: w -> \/\/
+  * Spelling correction patch from Edward Betts <edward@debian.org>
+    (closes: #38850)
+
+ -- Joey Hess <joeyh@master.debian.org>  Thu,  3 Jun 1999 13:03:02 -0700
+
+filters (2.4) unstable; urgency=low
+
+  * chef: say "knooeeng" for "knowing", and in general say "oo" for "ow".
+
+ -- Joey Hess <joeyh@master.debian.org>  Wed, 19 May 1999 17:20:07 -0700
+
+filters (2.3) unstable; urgency=low
+
+  * Added kraut filter (free version found).
+
+ -- Joey Hess <joeyh@master.debian.org>  Wed, 17 Mar 1999 15:52:05 -0800
+
+filters (2.2) unstable; urgency=low
+
+  * fixed Makefile to add . to PATH before running makesample.sh, because it
+    called jibberish, which looks only in /usr/games for the filters, and if
+    you're building filters w/o the package installed, they won't be there
+    and the build will fail. Whew! (closes: #33758)
+
+ -- Joey Hess <joeyh@master.debian.org>  Fri, 26 Feb 1999 00:17:24 -0800
+
+filters (2.1) unstable; urgency=low
+
+  * Added upside down filter, which well, turns text upside down.
+
+ -- Joey Hess <joeyh@master.debian.org>  Sat, 20 Feb 1999 18:22:43 -0800
+
+filters (2.0) unstable; urgency=low
+
+  * Re-wrote the eleet, chef, b1ff filters in perl, dropped all the rest
+    (except jethro); they will be in filters-nonfree now. This was done
+    due to copyright problems in the original filters.
+  * Fixes important bug #32333
+
+ -- Joey Hess <joeyh@master.debian.org>  Sun, 24 Jan 1999 13:13:17 -0800
+
+filters (1.8) unstable; urgency=low
+
+  * Added jibberish meta-filter by Raul Miller <rdm@test.legislate.com>.
+    (#24677)
+
+ -- Joey Hess <joeyh@master.debian.org>  Fri,  4 Dec 1998 15:18:09 -0800
+
+filters (1.7) unstable; urgency=low
+
+  * Renamed mb to marc-barrett to eliminate namespace pollution.
+
+ -- Joey Hess <joeyh@master.debian.org>  Wed, 15 Apr 1998 00:23:38 -0700
+
+filters (1.6) unstable; urgency=low
+
+  * Added eleet filter, thanks to Jeremy Worrells <jworrell@priacc.com>.
+
+ -- Joey Hess <joeyh@master.debian.org>  Fri,  6 Mar 1998 11:41:29 -0800
+
+filters (1.5) unstable; urgency=low
+
+  * Updated standards-version.
+
+ -- Joey Hess <joeyh@master.debian.org>  Mon,  9 Feb 1998 13:38:55 -0800
+
+filters (1.4) unstable; urgency=low
+
+  * Use debhelper.
+
+ -- Joey Hess <joeyh@master.debian.org>  Sat,  7 Feb 1998 19:38:35 -0800
+
 filters (1.3) unstable; urgency=low
 
   * Libc6.
