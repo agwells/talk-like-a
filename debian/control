@@ -1,7 +1,7 @@
 Source: filters
 Section: games
 Priority: optional
-Build-Depends: debhelper, flex
+Build-Depends: debhelper (>= 2.1.0), flex
 Maintainer: Joey Hess <joeyh@debian.org>
 Standards-Version: 3.2.1.0
 

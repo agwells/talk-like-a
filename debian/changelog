@@ -1,3 +1,9 @@
+filters (2.12) unstable; urgency=low
+
+  * Use debhelper v2.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 25 Sep 2000 15:06:11 -0700
+
 filters (2.11) unstable; urgency=low
 
   * Corrected the man page, which was misrepresenting me as the author of

@@ -4,6 +4,9 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+# This is the debhelper compatibility version to use.
+export DH_COMPAT=2
+
 build: build-stamp
 build-stamp:
 	dh_testdir
@@ -29,7 +32,7 @@ binary-arch: build
 	dh_testroot
 	dh_clean -k
 	dh_installdirs
-	$(MAKE) PREFIX=debian/tmp install
+	$(MAKE) PREFIX=debian/filters install
 	dh_installdocs README SAMPLES
 	dh_installexamples
 	dh_installmenu
