@@ -35,14 +35,14 @@ s/(\b)O(\w)/$1Oo$2/g;
 # Fix the word "bork", which will have been mangled to "burk"
 # by above commands. Note that any occurence of "burk" in the input
 # gets changed to "boork", so it's completly safe to do this:
-s/\bburk\b/bork/;
+s/\b([Bb])urk\b/$1ork/g;
 
 # Stuff to do to letters that are the first letter of any word.
 s/\be/i/g;
 s/\bE/I/g;
 
 # Stuff that always happens.
-s/teeun/shun/g; # this actually has the effect of changing "tion" to "shun".
+s/tiun/shun/g; # this actually has the effect of changing "tion" to "shun".
 s/the/zee/g;
 s/The/Zee/g;
 tr/vVwW/fFvV/;
@@ -56,8 +56,8 @@ s/En/Un/g; # this actually has the effect of changing "An" to "Un".
 s/eoo/oo/g; # this actually has the effect of changing "au" to "oo".
 s/Eoo/Oo/g; # this actually has the effect of changing "Au" to "Oo".
 
-# Change "ow" at end of word to "oo".
-s/uv\b/oo\b/g;
+# Change "ow" to "oo".
+s/uv/oo/g;
 
 # Change 'i' to 'ee', but not at the beginning of a word,
 # and only affect the first 'i' in each word.

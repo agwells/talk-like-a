@@ -1,3 +1,9 @@
+filters (2.9) unstable; urgency=low
+
+  * Fixed "burk" to "bork" globally. Closes: #52589
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 12 Dec 1999 14:14:41 -0800
+
 filters (2.8) unstable; urgency=low
 
   * makesample.sh is now careful to make sure each program is executable
