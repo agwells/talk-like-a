@@ -1,3 +1,10 @@
+filters (2.10) unstable; urgency=low
+
+  * upside-down: 5 and 2 are the best available upside-down versions of
+    themselves. I had it backwards.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 29 Jun 2000 16:23:59 -0700
+
 filters (2.9) unstable; urgency=low
 
   * Fixed "burk" to "bork" globally. Closes: #52589
