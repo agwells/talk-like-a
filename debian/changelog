@@ -1,3 +1,10 @@
+filters (2.34) unstable; urgency=low
+
+  * Add uniencode filter. Because υɳіϲоⅾе is fun.
+  * Fix filters man page to escape hyphens. Because υɳіϲоⅾе is fun.
+
+ -- Joey Hess <joeyh@debian.org>  Sat,  6 Nov 2004 13:37:51 -0500
+
 filters (2.33) unstable; urgency=low
 
   * Better flex fixups; make sure to link with -lfl even if building

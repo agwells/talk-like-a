@@ -1,6 +1,6 @@
 LEX	= flex
 BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak
-OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd censor spammer
+OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd censor spammer uniencode
 CFLAGS	= -O2 -lfl
 INSTALL_PROGRAM = install
 
