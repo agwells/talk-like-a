@@ -2,7 +2,7 @@
 
 LEX	 = flex
 
-ALL	 = jethro kraut cockney jive nyc ken
+ALL	 = jethro kraut cockney jive nyc ken ky00te
 OTHER	 = eleet b1ff chef jibberish upside-down rasterman
 
 all:	$(OTHER) $(ALL)
@@ -21,6 +21,7 @@ samples:	$(ALL) $(OTHER)
 
 clean:
 	$(RM) -f core *.o *~ $(ALL) *.c SAMPLES
+	cd ky00te.dir && make clean
 
 .SUFFIXES: .l
 
@@ -35,6 +36,9 @@ clean:
 
 .dir:	
 	cd $<; make
+
+ky00te:
+	cd ky00te.dir && make
 
 kraut:
 	cd kraut.dir && lex kraut.l

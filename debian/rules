@@ -32,13 +32,11 @@ binary-arch: build
 	dh_clean -k
 	dh_installdirs
 	$(MAKE) PREFIX=debian/filters install
-	dh_installdocs README SAMPLES
+	dh_installdocs README SAMPLES ky00te.dir/README.ky00te
 	dh_installexamples
 	dh_installmenu
-#	dh_installinit
 	dh_installcron
 	dh_installmanpages
-#	dh_undocumented
 	dh_installchangelogs
 	dh_strip
 	dh_compress
@@ -46,7 +44,6 @@ binary-arch: build
 	dh_installdeb
 	dh_shlibdeps
 	dh_gencontrol
-#	dh_makeshlibs
 	dh_md5sums
 	dh_builddeb
 

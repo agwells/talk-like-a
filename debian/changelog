@@ -1,3 +1,12 @@
+filters (2.18) unstable; urgency=low
+
+  * ky00te is free! That leaves only newspeak in filters-nonfree.
+  * A big thanks to Edward Betts for contacting authors.
+  * Fixed echo -n bashism in SAMPLES construction.
+  * rasterman: Added flim!
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 30 Jun 2001 18:51:39 -0400
+
 filters (2.17) unstable; urgency=low
 
   * ken: WAP fixes.

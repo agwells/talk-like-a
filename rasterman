@@ -12,6 +12,7 @@ while (<>) {
 	s/\bthough\b/tho/gi;
 	s/\bnope\b/nup/gi;
 	s/\baustralia\b/oz/gi;
+	s/\bfilm\b/flim/gi;
 	s/\bsucks\b/sux/gi;
 	s/\benough\b/enuff/gi;
 	s/\ba lot\b/a shitload/gi;

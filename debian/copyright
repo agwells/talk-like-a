@@ -37,7 +37,7 @@ The rasterman filter was pulled out of
 http://www.xach.com/xachbot/xachbot-2000-07-15.tar.gz, which is as a whole
 copyright (C) 1997 Zachary Beane and is GPL'd.
 
-The ken filter is now in the public domain. It's author, Stephen K Mulrine,
+The ken filter is now in the public domain. Its author, Stephen K Mulrine,
 confirmed the new copyright in this email:
 
   From: Stephen Mulrine <stephen@moroder.scotnet.co.uk>
@@ -54,4 +54,20 @@ confirmed the new copyright in this email:
   Certainly, it would be an honour to have it included in the Debian
   distribution so I hereby release ken into the public domain.
 
+The ky00te filter is now relicensed under the GPL. Its author, Brent
+Edwards, confirmed the new copyright in this email:
+
+  From: Brent Edwards <chipuni@hypersurf.com>
+  Date: Sat, 30 Jun 2001 09:37:53 -0700
+  To: Edward Betts <edward@debian.org>
+  Subject: Re: Is this the author of the ky00te filter?
+
+  Dear Edward,
+          You have my permission to put the ky00te filter into the GNU GPL
+  license.  (Though the license will be far longer than the program itself!)
+
+                          -- Brent Edwards
+
 Everything else is copyright 1999-2001 by Joey Hess, under the terms of GPL.
+The full text of the GNU GPL can be found in /usr/share/common-licenses/GPL
+on Debian systems.
