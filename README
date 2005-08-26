@@ -2,6 +2,8 @@ This is a collection of filters to do all sorts of strange things to text.
 B1ff, the Swedish Chef, and an eleet filter are included, along with many,
 many more.
 
+http://kitenet.net/programs/filters
+
 Since the original versions of some of these filters have copyright
 problems, I have done a "clean room" re-implementation of the original lex
 filters in perl. I did this without looking at the original code to the
