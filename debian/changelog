@@ -1,3 +1,9 @@
+filters (2.36) UNRELEASED; urgency=low
+
+  * Added pirate filter. TODO: copyright, man page integration, makefile int
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 25 Aug 2005 23:28:25 -0400
+
 filters (2.35) unstable; urgency=low
 
   * Add nethackify filter. Closes: #317656

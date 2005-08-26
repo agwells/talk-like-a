@@ -1,0 +1,123 @@
+#!/usr/bin/perl -p
+
+# an array, not a hash. because order is important
+@trans_table=(
+	'\bmy\b' => 'me',
+	'\bboss\b' => 'admiral',
+	'\bmanager\b' => 'admiral',
+	'\b[Cc]aptain\b' => "Cap'n",
+	'\bmyself\b' => 'meself',
+	'\byour\b' => 'yer',
+	'\byou\b' => 'ye',
+	'\bfriend\b' => 'matey',
+	'\bfriends\b' => 'maties',
+	'\bco[-]?worker\b' => 'shipmate',
+	'\bco[-]?workers\b' => 'shipmates',
+	'\bearlier\b' => 'afore',
+	'\bold\b' => 'auld',
+	'\bthe\b' => "th'",
+	'\bof\b' =>  "o'",
+	'\bdon\'t\b' => "dern't",
+	'\bdo not\b' => "dern't",
+	'\bnever\b' => "ne'er",
+	'\bever\b' => "e'er",
+	'\bover\b' => "o'er",
+	'\bYes\b' => 'Aye',
+	'\bNo\b' => 'Nay',
+	'\bdon\'t know\b' => "dinna",
+	'\bhadn\'t\b' => "ha'nae",
+	'\bdidn\'t\b' =>  "di'nae",
+	'\bwasn\'t\b' => "weren't",
+	'\bhaven\'t\b' => "ha'nae",
+	'\bfor\b' => 'fer',
+	'\bbetween\b' => 'betwixt',
+	'\baround\b' => "aroun'",
+	'\bto\b' => "t'",
+	'\bit\'s\b' => "'tis",
+	'\bwoman\b' => 'wench',
+	'\blady\b' => 'wench',
+	'\bwife\b' => 'lady',
+	'\bgirl\b' => 'lass',
+	'\bgirls\b' => 'lassies',
+	'\bguy\b' => 'lubber',
+	'\bman\b' => 'lubber',
+	'\bfellow\b' => 'lubber',
+	'\bdude\b' => 'lubber',
+	'\bboy\b' => 'lad',
+	'\bboys\b' => 'laddies',
+	'\bchildren\b' => 'minnows',
+	'\bkids\b' => 'minnows',
+	'\bhim\b' => 'that scurvey dog',
+	'\bher\b' => 'that comely wench',
+	'\bhim\.\b' => 'that drunken sailor',
+	'\bHe\b' => 'The ornery cuss',
+	'\bShe\b' => 'The winsome lass',
+	'\bhe\'s\b' => 'he be',
+	'\bshe\'s\b' => 'she be',
+	'\bwas\b' => "were bein'",
+	'\bHey\b' => 'Avast',
+	'\bher\.\b' => 'that lovely lass',
+	'\bfood\b' => 'chow',
+	'\broad\b' => 'sea',
+	'\broads\b' => 'seas',
+	'\bstreet\b' => 'river',
+	'\bstreets\b' => 'rivers',
+	'\bhighway\b' => 'ocean',
+	'\bhighways\b' => 'oceans',
+	'\bcar\b' => 'boat',
+	'\bcars\b' => 'boats',
+	'\btruck\b' => 'schooner',
+	'\btrucks\b' => 'schooners',
+	'\bSUV\b' => 'ship',
+	'\bmachine\b' => 'contraption',
+	'\bairplane\b' => 'flying machine',
+	'\bjet\b' => 'flying machine',
+	'\bdriving\b' => 'sailing',
+	'\bdrive\b' => 'sail',
+);
+
+while (@trans_table) {
+	$key=shift @trans_table;
+	$value=shift @trans_table;
+	s/$key/$value/g;
+}
+
+s/ing\b/in'/g;
+s/ings\b/in's/g;
+s/(\.[ \t])/avast($1,3)/eg;
+s/([!\?][ \t])/avast($1,2)/eg; # Greater chance after exclamation
+
+sub avast {
+	my $stub=shift;
+	my $chance=shift;
+
+	my @shouts=(
+		", avast$stub",
+		"$stub Ahoy!",
+		", and a bottle of rum!",
+		", by Blackbeard's sword$stub",
+		", by Davy Jones' locker$stub",
+		"$stub Walk the plank!",
+		"$stub Aarrr!",
+		"$stub Yaaarrrrr!",
+		", pass the grog!",
+		", and dinna spare the whip!",
+		", with a chest full of booty$stub",
+		", and a bucket o' chum$stub",
+		", we'll keel-haul ye!",
+		"$stub Shiver me timbers!",
+		"$stub And hoist the mainsail!",
+		"$stub And swab the deck!",
+		", ye scurvey dog$stub",
+		"$stub Fire the cannons!",
+		", to be sure$stub",
+		", I'll warrant ye$stub",
+	);
+
+	if (int rand($chance) == 1) {
+		return @shouts[rand @shouts]." ";
+	}
+	else {
+		return $stub;
+	}
+}
