@@ -98,6 +98,9 @@ has the following license statement:
 The nethackify filter is copyright 2004 by G�kan Seng�
 <gurkan@linuks.mine.nu> and is released under the gpl.
 
+The pirate filter was converted from a php version in the funfilters, which
+are Copyright 2003 by Dougal Campbell and are licensed under the GPL.
+
 Everything else is copyright 1999-2005 by Joey Hess, under the terms of GPL.
 The full text of the GNU GPL can be found in /usr/share/common-licenses/GPL
 on Debian systems.

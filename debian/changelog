@@ -1,12 +1,14 @@
-filters (2.36) UNRELEASED; urgency=low
+filters (2.36) unstable; urgency=low
 
-  * Added pirate filter. TODO: copyright, man page integration, makefile int
+  * Impress all yer maties on talk like a pirate day with th' new priate
+    filter, by Dougal Campbell, to be sure.
+  * Retroactively spiced up th' changelog. Shiver me timbers! 
 
  -- Joey Hess <joeyh@debian.org>  Thu, 25 Aug 2005 23:28:25 -0400
 
 filters (2.35) unstable; urgency=low
 
-  * Add nethackify filter. Closes: #317656
+  * Ad| nethackify filtcr. Closes: #317656
   * Add automatic webpage update gunk.
 
  -- Joey Hess <joeyh@debian.org>  Thu, 25 Aug 2005 22:24:29 -0400
@@ -123,7 +125,7 @@ filters (2.20) unstable; urgency=low
 
   * Woo hoo! JWZ has placed newspeak under a BSD-ish license, so it moves
     in from filters-nonfree. Which is now empty, and will be removed.
-  * Added studly caps filter by Nick Phillips <nwp@lemon-computing.com>.
+  * AdDed StudLy cAps FiltEr bY NiCk PHillIps <nwp@lemon-computing.com>.
 
  -- Joey Hess <joeyh@debian.org>  Mon,  6 Aug 2001 20:38:49 -0400
 
@@ -163,8 +165,8 @@ filters (2.15) unstable; urgency=low
 
 filters (2.14) unstable; urgency=low
 
-  * Hahaha. Added a rasterman filter. (Not just "raster" as I worry about
-    namespace pollution.)
+  * hahaha. addde a rasterman filter. (nto just "raster" as i woryr about
+      namespaec pollution.)
 
  -- Joey Hess <joeyh@debian.org>  Mon, 27 Nov 2000 20:00:28 -0800
 
@@ -252,7 +254,7 @@ filters (2.2) unstable; urgency=low
 
 filters (2.1) unstable; urgency=low
 
-  * Added upside down filter, which well, turns text upside down.
+  'umop ap!sdn fxaf sujnf `77am y)!ym `jaf7!j umop ap!sdn pappe *  
 
  -- Joey Hess <joeyh@debian.org>  Sat, 20 Feb 1999 18:22:43 -0800
 
@@ -280,7 +282,7 @@ filters (1.7) unstable; urgency=low
 
 filters (1.6) unstable; urgency=low
 
-  * Added eleet filter, thanks to Jeremy Worrells <jworrell@priacc.com>.
+  * 4dd3d 3l33t f1lt3r, th4nk5 t0 j3r3my w0rr3ll5 <jworrell@priacc.com>.
 
  -- Joey Hess <joeyh@debian.org>  Fri,  6 Mar 1998 11:41:29 -0800
 

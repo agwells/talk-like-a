@@ -84,8 +84,8 @@ while (@trans_table) {
 
 s/ing\b/in'/g;
 s/ings\b/in's/g;
-s/(\.[ \t])/avast($1,3)/eg;
-s/([!\?][ \t])/avast($1,2)/eg; # Greater chance after exclamation
+s/(\.( |\t|$))/avast($1,3)/eg;
+s/([!\?]( \t|$))/avast($1,2)/eg; # Greater chance after exclamation
 
 sub avast {
 	my $stub=shift;
