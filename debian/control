@@ -9,6 +9,7 @@ Package: filters
 Architecture: any
 Conflicts: filters-nonfree
 Replaces: filters-nonfree
+Suggests: bsdgames
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: a collection of filters, including B1FF and the Swedish Chef
  A collection of filters to do all sorts of strange things to text.
