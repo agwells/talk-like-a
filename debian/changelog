@@ -1,4 +1,4 @@
-filters (2.37) UNRELEASED; urgency=low
+filters (2.37) unstable; urgency=low
 
   * Suggest bsdgames, which contains pig and rot13.
 
