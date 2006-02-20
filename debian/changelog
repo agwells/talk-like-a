@@ -1,3 +1,9 @@
+filters (2.39) unstable; urgency=low
+
+  * Add kenny filter. Closes: #317656
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 20 Feb 2006 16:27:25 -0500
+
 filters (2.38) unstable; urgency=low
 
   * Munged accented characters in man page.

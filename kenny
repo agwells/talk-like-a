@@ -1,0 +1,384 @@
+#!/usr/bin/perl -w
+#
+# kenny.pl -- translate from and to KennySpeak
+# 
+# $Revision: 1.7 $
+#
+# Licensed unter the Artistic License:
+# http://www.perl.com/language/misc/Artistic.html
+#
+# (C) 2001,2002 by Christian Garbs <mitch@cgarbs.de>, http://www.cgarbs.de
+#                  Alan Eldridge <alane@geeksrus.net>
+#
+# KennySpeak invented by Kohan Ikin <syneryder@namesuppressed.com>
+#                        http://www.namesuppressed.com/kenny/
+
+#
+# $Id: kenny.pl,v 1.7 2002/01/06 22:09:52 mitch Exp $
+#
+
+use strict;
+
+#
+# This is Perl POD documentation.
+# You can generate a nice manpage with "pod2man kenny.pl > kenny.man".
+# Or have a look at "perldoc perlpod" for other options
+#
+
+=head1 NAME
+
+kenny.pl -- translate from and to KennySpeak
+
+=head1 SYNOPSIS
+
+B<kenny.pl>
+S<[ B<-h> ]>
+S<[ B<-u> ]>
+S<[ B<-k> | B<-d> ]>
+S<[ I<file1> ] [ I<file2> ] ...>
+
+=head1 OVERVIEW
+
+kenny.pl translates a given text from or to B<KennySpeak>. KennySpeak
+looks like this:
+
+    "Ppfmfp ppmffm mfmppfmpm, fmpmfpmppffm'fpmmpp
+     pmpmffpmfpmfmppmpm Pmpmppppppppffm!"
+
+=head1 DESCRIPTION
+
+kenny.pl will read the given filenames, translate them and print the
+results on stdout. If you don't give a filename, stdin is used. A F<->
+as a filename means stdin.
+
+Without any parameters, kenny.pl will look at the first line of input
+and guess which way you want to translate. If kenny.pl guesses wrong,
+you must select the translation mode using the B<-k> or B<-d> switch.
+
+=head2 Switches
+
+=over 5
+
+=item B<-h>
+
+This will print a short notice and a quick summary of the available
+switches.
+
+=item B<-u>
+
+This will convert German umlauts to Ae, Oe, Ue, ae, oe, ue and ss
+so that they can be kennyfied correctly.
+
+=item B<-k>
+
+Kennyfy. This forces the input to be translated into KennySpeak.
+
+=item B<-d>
+
+Dekennyfy. This forces the input to be translated back from
+KennySpeak.
+
+=back
+
+=head1 VERSION
+
+This is $Revision: 1.7 $.
+
+=head1 BUGS
+
+The B<-u> switch might not work for charsets other than Latin-1. You
+might try to convert the kenny.pl script using B<recode> to change it
+from Latin-1 to your preferred charset.
+
+=head1 CREDITS
+
+kenny.pl was written by B<Christian Garbs>. Look on his homepage for
+newer versions of kenny.pl. Bug reports or comments about the program
+should be sent to him:
+       Christian Garbs <F<mitch@cgarbs.de>>
+       F<http://www.cgarbs.de/weird.en.html>
+
+KennySpeak was invented by B<Kohan Ikin>. See his homepage for an
+online version of the original B<KennyTranslator>:
+       Kohan Ikin <F<syneryder@namesuppressed.com>>
+       F<http://www.namesuppressed.com/kenny/>
+
+Alan Eldridge <F<alane@geeksrus.net>> patched in a signal handler to
+print an appropriate message when kenny.pl is killed.
+
+=head1 COPYRIGHT
+
+kenny.pl is licensed unter the B<Artistic License> which can be found
+at F<http://www.perl.com/language/misc/Artistic.html>. This license
+has been chosen for keeping compatibility with the original KennySpeak
+format.
+
+=cut
+
+
+
+######################################################################
+#
+# CHANGELOG
+#
+# $Log: kenny.pl,v $
+# Revision 1.7  2002/01/06 22:09:52  mitch
+# Included patch by Alan Eldridge <alane@geeksrus.net>
+# to show a message when kenny.pl is killed.
+#
+# Revision 1.6  2001/07/20 19:04:49  mitch
+# Removed warnings with Perl 5.6. 
+# Thanks go to Alan Eldridge <alane@geeksrus.net>
+#
+# Revision 1.5  2001/07/15 10:27:57  mitch
+# Included notice about -u and charsets other than Latin-1.
+#
+# Revision 1.4  2001/07/14 13:16:30  mitch
+# Initial release.
+#
+#
+#
+######################################################################
+
+
+
+#
+# finally{}, the source code!
+#
+
+
+
+##### Declaration of function prototypes
+
+sub generateKenny();
+sub generateDeKenny($);
+sub guessDialect($);
+sub translate($);
+sub addGermanUmlauts($);
+sub printHelp();
+sub theyKilledKenny();
+
+
+
+##### Default values for various option:
+
+my $dialect = 0;  # Translate from or to KennySpeak?
+                  # 0=guess, 1=encode, 2=decode
+
+my $umlauts = 0;  # Convert German Umlauts before translation?
+                  # TRUE=ÄÖÜäöüß => Ae, Oe, Ue, ae, ou, ue, ss
+
+
+
+##### The KennySpeak translation tables:
+
+my $kenny   = generateKenny();          # encoding table
+my $dekenny = generateDeKenny($kenny);  # decoding table
+
+
+
+##### Install signal handlers
+
+$SIG{HUP} = \&theyKilledKenny;
+$SIG{INT} = \&theyKilledKenny;
+$SIG{QUIT} = \&theyKilledKenny;
+$SIG{TERM} = \&theyKilledKenny;
+
+
+
+##### Parse commandline arguments
+
+# "-h" switch (print help):
+
+if (grep /^-h$/, @ARGV) {
+    printHelp();
+    exit 0;
+}
+
+# "-u" switch (convert German umlauts):
+
+if ((defined $ARGV[0]) && ($ARGV[0] eq "-u")) {
+    $umlauts = 1;
+    shift @ARGV;
+} elsif ((defined $ARGV[1]) && ($ARGV[1] eq "-u")) {
+    $umlauts = 1;
+    splice @ARGV, 1, 1;
+}
+
+# "-k" and "-d" switch (force encoding/decoding):
+
+if (defined $ARGV[0]) {
+    if ($ARGV[0] eq "-k") {
+        $dialect = 1;
+        shift @ARGV;
+    } elsif ($ARGV[0] eq "-d") {
+        $dialect = 2;
+        shift @ARGV;
+    }
+}
+
+
+
+##### add German umlauts to encoding if desired:
+
+if ($umlauts) {
+    addGermanUmlauts($kenny);
+}
+
+
+
+##### Process the given input files (or stdin of none given)
+
+while (my $line=<>) {
+    chomp $line;
+    $dialect = guessDialect($line) unless $dialect;
+    $line = translate($line);
+    print "$line\n";
+}
+
+
+
+##### That's all, folks!
+
+exit 0;
+
+
+##### Signal handler, if we're kill(1)ed
+
+sub theyKilledKenny()
+{
+    print "Oh my God! They killed Kenny! You bastards!\n";
+    exit 0;
+}
+
+
+
+##### Guess whether input is already kennyfied:
+
+sub guessDialect($)
+{
+    my $line = shift;
+    $line =~ tr/a-zA-Z//cd;
+    if (($line =~ tr/mfpMFP//c) > 0) {
+        return 1;
+    } else {
+        return 2;
+    }
+}
+
+
+
+##### Encode/decode a given line
+
+sub translate($)
+{
+    my $in  = shift;
+    my $out = "";
+    if ($dialect == 1)
+    {
+        $out .= exists $kenny->{$1} ? $kenny->{$1} : $1 while ($in =~ s/^(.)//);
+    } else {
+        my @chars = split //, $in;
+        while (@chars) {
+            if ((@chars > 2) and (exists $dekenny->{$chars[0]}->{$chars[1]}->{$chars[2]})) {
+                $out .= $dekenny->{$chars[0]}->{$chars[1]}->{$chars[2]};
+                shift @chars;
+                shift @chars;
+                shift @chars;
+            } else {
+                $out .= shift @chars;
+            }
+        }
+    }
+    return $out;
+}
+
+
+
+##### Generate KennySpeak encoding table
+
+sub generateKenny()
+{
+    my %kenny;
+
+    # lower case characters
+
+    my ($a, $b, $c) = (0,0,0);
+    for my $char ("a".."z") {
+	my $foo = $a.$b.$c;
+	$foo =~ tr/012/mpf/;
+	$kenny{$char} = $foo;
+	$c++;
+	if ($c == 3) {
+	    $c=0;
+	    $b++;
+	    if ($b == 3) {
+		$b=0;
+		$a++;
+	    }
+	}
+    }
+
+    # upper case characters
+
+    map { $kenny{uc $_} = ucfirst $kenny{$_} } keys %kenny;
+
+    return \%kenny;
+}
+
+
+
+##### Generate KennySpeak decoding table
+
+sub generateDeKenny($)
+{
+    my %dekenny;
+    my $kenny = $_[0];
+    foreach my $key (keys %{$kenny})
+    {
+	my ($a, $b, $c) = split //, $kenny->{$key};
+	if (! exists $dekenny{$a}) {
+	    $dekenny{$a} = {};
+	}
+	if (! exists $dekenny{$a}->{$b}) {
+	    $dekenny{$a}->{$b} = {};
+	}
+	$dekenny{$a}->{$b}->{$c} = $key;
+    }
+
+    return \%dekenny;
+}
+
+
+
+##### Add German Umlaut conversion to KennySpeak encoding table
+
+sub addGermanUmlauts($)
+{
+    my $kenny = $_[0];
+    $kenny->{"ä"} = $kenny->{"a"} . $kenny->{"e"};
+    $kenny->{"ö"} = $kenny->{"o"} . $kenny->{"e"};
+    $kenny->{"ü"} = $kenny->{"u"} . $kenny->{"e"};
+    $kenny->{"Ä"} = $kenny->{"A"} . $kenny->{"e"};
+    $kenny->{"Ö"} = $kenny->{"O"} . $kenny->{"e"};
+    $kenny->{"Ü"} = $kenny->{"U"} . $kenny->{"e"};
+    $kenny->{"ß"} = $kenny->{"s"} x 2;
+}
+
+
+
+##### Print short help message
+
+sub printHelp()
+{
+    print <<'EOF';
+kenny.pl $Revision: 1.7 $ by Christian Garbs <mitch@cgarbs.de>
+Use "pod2man kenny.pl > kenny.man" to generate the man page.
+Usage: kenny.pl [ -h ] [ -u ] [ -k | -d ] [ file1 ] [ file2 ] ...
+-h : print this help message
+-u : convert German umlauts before translation
+-k : force encoding to KennySpeak
+-d : force decoding from KennySpeak
+EOF
+    ;
+}
