@@ -105,7 +105,12 @@ The kenny filter is copyright (C) 2001,2002 by Christian Garbs
 <mitch@cgarbs.de>, Alan Eldridge <alane@geeksrus.net>, and is licensed
 under the Artistic license.
 
-Everything else is copyright 1999-2005 by Joey Hess, under the terms of GPL.
+The scottish fileter is copyright 2007 by Adam Borowski
+<kilobyte@angband.pl>, and is licensed under the GPL.
+
+Everything else is copyright 1999-2007 by Joey Hess, under the terms of
+GPL.
+
 On Debian systems, the full text of the GNU GPL can be found in
 /usr/share/common-licenses/GPL and the Artistic license in 
 /usr/share/common-licenses/Artistic

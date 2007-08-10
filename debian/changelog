@@ -1,8 +1,9 @@
 filters (2.40) UNRELEASED; urgency=low
 
   * Update url to web page in README.
+  * Add scottish filter by Adam Borowski. Closes: #436168
 
- -- Joey Hess <joeyh@debian.org>  Thu, 17 May 2007 00:12:46 -0400
+ -- Joey Hess <joeyh@debian.org>  Thu, 09 Aug 2007 17:18:26 -0700
 
 filters (2.39) unstable; urgency=low
 
