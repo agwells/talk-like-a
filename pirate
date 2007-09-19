@@ -19,7 +19,7 @@
 	'\bof\b' =>  "o'",
 	'\bdon\'t\b' => "dern't",
 	'\bdo not\b' => "dern't",
-	'\bnever\b' => "ne'er",
+	'\bnever\b' => "no nay ne'er",
 	'\bever\b' => "e'er",
 	'\bover\b' => "o'er",
 	'\bYes\b' => 'Aye',
@@ -34,6 +34,7 @@
 	'\baround\b' => "aroun'",
 	'\bto\b' => "t'",
 	'\bit\'s\b' => "'tis",
+	'\bIt\'s\b' => 'It be',
 	'\bwoman\b' => 'wench',
 	'\blady\b' => 'wench',
 	'\bwife\b' => 'lady',
@@ -74,6 +75,13 @@
 	'\bjet\b' => 'flying machine',
 	'\bdriving\b' => 'sailing',
 	'\bdrive\b' => 'sail',
+	'\bwith\b' => "wi'",
+	'\bam\b' => 'be',
+	'\bis\b' => 'be',
+	'\bare\b' => 'be',
+	'\bwas\b' => 'be',
+	'\bwere\b' => 'be',
+	'\bwere\b' => 'be',
 );
 
 while (@trans_table) {
@@ -86,6 +94,12 @@ s/ing\b/in'/g;
 s/ings\b/in's/g;
 s/(\.( |\t|$))/avast($1,3)/eg;
 s/([!\?]( \t|$))/avast($1,2)/eg; # Greater chance after exclamation
+s/\Br\B/roll()/eg;
+
+sub roll {
+	return 'r' x (rand(5)+1) if rand > 0.5;
+	return 'r';
+}
 
 sub avast {
 	my $stub=shift;
@@ -112,6 +126,7 @@ sub avast {
 		"$stub Fire the cannons!",
 		", to be sure$stub",
 		", I'll warrant ye$stub",
+		"$stub Arr, me hearty!",
 	);
 
 	if (int rand($chance) == 1) {
