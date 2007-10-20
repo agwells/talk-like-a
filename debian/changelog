@@ -1,8 +1,8 @@
-filters (2.42) UNRELEASED; urgency=low
+filters (2.42) unstable; urgency=low
 
   * Moved from subversion to git.
 
- -- Joey Hess <joeyh@debian.org>  Mon, 15 Oct 2007 23:38:25 -0400
+ -- Joey Hess <joeyh@debian.org>  Fri, 19 Oct 2007 20:37:33 -0400
 
 filters (2.41) unstable; urgency=low
 
