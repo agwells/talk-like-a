@@ -1,0 +1,20 @@
+#!/usr/bin/perl
+
+if (! @ARGV) {
+	@ARGV=qw(linus git linux rebase merge cherry-pick branch);
+}
+
+my $coolstuff=join("|", map { "\Q$_\E" } @ARGV);
+
+my $len=0;
+while (<STDIN>) {
+	while(/(($coolstuff)[.?!]*)/ig) {
+		$len+=length($1)+1;
+		if ($len > 70) {
+			print "\n";
+			$len=0;
+		}
+		print $1." ";
+	}
+}
+print "\n" if $len;

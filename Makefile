@@ -1,7 +1,7 @@
 LEX	= flex
 BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify
 OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd \
-	  censor spammer uniencode pirate kenny scottish
+	  censor spammer uniencode pirate kenny scottish fanboy
 CFLAGS	= -O2 -lfl
 INSTALL_PROGRAM = install
 
