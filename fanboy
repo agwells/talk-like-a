@@ -8,7 +8,7 @@ my %topics=(
 		naked sabdfl community)],
 	debian => [qw(Debian rules rule ian murdock upstream release
 		stable unstable testing apt apt-get deb developer NM RM
-		NMU FTBFS BTS ITP DFSG non-free free)],
+		NMU FTBFS BTS ITP DFSG non-free free d.o)],
 );
 
 if (! @ARGV) {
