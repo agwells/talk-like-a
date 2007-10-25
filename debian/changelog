@@ -1,8 +1,8 @@
-filters (2.43) UNRELEASED; urgency=low
+filters (2.43) unstable; urgency=low
 
   * Added the fanboy filter.
 
- -- Joey Hess <joeyh@debian.org>  Wed, 24 Oct 2007 18:00:19 -0400
+ -- Joey Hess <joeyh@debian.org>  Thu, 25 Oct 2007 04:58:44 -0400
 
 filters (2.42) unstable; urgency=low
 
