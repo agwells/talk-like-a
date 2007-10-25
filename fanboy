@@ -2,13 +2,13 @@
 
 my %topics=(
 	git => [qw(linus git linux rebase rebased merge merged cherry-pick
-		branch branched branches git-*)],
+		branch branched branches git-* push pull pushed pulled)],
 	ubuntu => [qw(Mark MOTU ubuntu debian rock rocks rule dapper
 		feisty fiesty gutsy hoary edgy universe launchpad gnome desktop
 		naked sabdfl community)],
 	debian => [qw(Debian rules rule ian murdock upstream release
 		stable unstable testing apt apt-get deb developer NM RM
-		NMU FTBFS BTS ITP)],
+		NMU FTBFS BTS ITP DFSG non-free free)],
 );
 
 if (! @ARGV) {
