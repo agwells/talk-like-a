@@ -23,7 +23,7 @@ my $total_awesomeness_dude=join("|",
 		$_=quotemeta($_);
 		s/\\\*/.*/g;
 		s/\\\?/./g;
-		$_;
+		qr/\b$_\b/;
 	} reverse sort @ARGV);
 
 my $len=0;
