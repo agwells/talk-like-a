@@ -2,10 +2,16 @@
 
 if (! @ARGV) {
 	@ARGV=qw(linus git linux rebase rebased merge merged cherry-pick
-		branch branched branches);
+		branch branched branches git-*);
 }
 
-my $coolstuff=join("|", map { "\Q$_\E" } reverse sort @ARGV);
+my $coolstuff=join("|", 
+	map {
+		$_=quotemeta($_);
+		s/\\\*/.*/g;
+		s/\\\?/./g;
+		$_;
+	} reverse sort @ARGV);
 
 my $len=0;
 my $indent="";
