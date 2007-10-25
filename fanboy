@@ -1,20 +1,46 @@
 #!/usr/bin/perl
 
 if (! @ARGV) {
-	@ARGV=qw(linus git linux rebase merge cherry-pick branch);
+	@ARGV=qw(linus git linux rebase redbased merge merged cherry-pick
+		branch branched branches);
 }
 
-my $coolstuff=join("|", map { "\Q$_\E" } @ARGV);
+my $coolstuff=join("|", map { "\Q$_\E" } reverse sort @ARGV);
 
 my $len=0;
+my $indent="";
+my $indent_printed=0;
 while (<STDIN>) {
-	while(/(($coolstuff)[.?!]*)/ig) {
-		$len+=length($1)+1;
-		if ($len > 70) {
-			print "\n";
-			$len=0;
+	if (/$coolstuff/) {
+		if (/^([>|][>|\s]*)/) {
+			if ($indent ne $1) {
+				print "\n" if $len;
+				$len=0;
+				$indent=$1;
+				$indent_printed=0;
+			}
 		}
-		print $1." ";
+		else {
+			if (length $indent && $indent_printed) {
+				print "\n";
+				$len=0;
+			}
+			$indent="";
+			$indent_printed=0;
+		}
+
+		while(/(($coolstuff)[.?!]*)/ig) {
+			$len+=length($1)+1;
+			if ($len > 70) {
+				print "\n";
+				$len=0;
+			}
+			if (length $indent && ! $indent_printed) {
+				print $indent;
+				$indent_printed=1;
+			}
+			print $1." ";
+		}
 	}
 }
 print "\n" if $len;
