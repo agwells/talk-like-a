@@ -1,11 +1,21 @@
 #!/usr/bin/perl
 
+my %topics=(
+	git => [qw(linus git linux rebase rebased merge merged cherry-pick
+		branch branched branches git-*)],
+	ubuntu => [qw(Mark MOTU ubuntu debian rock rocks rule naked dapper
+		feisty fiesty gutsy hoary edgy universe launchpad gnome desktop
+		sabdfl)],
+);
+
 if (! @ARGV) {
-	@ARGV=qw(linus git linux rebase rebased merge merged cherry-pick
-		branch branched branches git-*);
+	@ARGV=@{$topics{git}};
+}
+elsif (@ARGV == 1 && exists $topics{$ARGV[0]}) {
+	@ARGV=@{$topics{$ARGV[0]}};
 }
 
-my $coolstuff=join("|", 
+my $total_awesomeness_dude=join("|", 
 	map {
 		$_=quotemeta($_);
 		s/\\\*/.*/g;
@@ -17,7 +27,7 @@ my $len=0;
 my $indent="";
 my $indent_printed=0;
 while (<STDIN>) {
-	if (/$coolstuff/) {
+	if (/$total_awesomeness_dude/) {
 		if (/^([>|][>|\s]*)/) {
 			if ($indent ne $1) {
 				print "\n" if $len;
@@ -35,7 +45,7 @@ while (<STDIN>) {
 			$indent_printed=0;
 		}
 
-		while(/(($coolstuff)[.?!]*)/ig) {
+		while(/(($total_awesomeness_dude)[.?!]*)/ig) {
 			$len+=length($1)+1;
 			if ($len > 70) {
 				print "\n";
