@@ -5,6 +5,7 @@ Build-Depends: debhelper (>= 4), flex, bison | byacc | btyacc, dpkg-dev (>= 1.9.
 Maintainer: Joey Hess <joeyh@debian.org>
 Standards-Version: 3.7.2
 Vcs-Git: git://git.kitenet.net/filters
+Homepage: http://kitenet.net/~joey/code/filters/
 
 Package: filters
 Architecture: any
