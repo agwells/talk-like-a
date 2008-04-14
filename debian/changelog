@@ -1,3 +1,10 @@
+filters (2.44) unstable; urgency=low
+
+  * Work around dpkg bug #476138. Closes: #475979
+  * Use CC consistently.
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 14 Apr 2008 13:26:53 -0400
+
 filters (2.43) unstable; urgency=low
 
   * Added the fanboy filter.

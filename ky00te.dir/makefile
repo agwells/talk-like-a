@@ -5,13 +5,13 @@ clean:
 	rm -f ../ky00te
 
 ../ky00te: y.tab.o lex.yy.o
-	cc $(CFLAGS) -o ../ky00te lex.yy.o y.tab.o -lfl
+	$(CC) -o ../ky00te lex.yy.o y.tab.o $(CFLAGS)
 
 lex.yy.o: lex.yy.c y.tab.h
-	cc $(CFLAGS) -c lex.yy.c
+	$(CC) $(CFLAGS) -c lex.yy.c
 
 y.tab.o: y.tab.c
-	cc $(CFLAGS) -c y.tab.c
+	$(CC) $(CFLAGS) -c y.tab.c
 
 lex.yy.c: ky00te.lex
 	flex ky00te.lex
