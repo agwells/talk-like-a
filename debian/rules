@@ -1,41 +1,7 @@
 #!/usr/bin/make -f
-
-build: build-stamp
-build-stamp:
-	dh_testdir
-	$(MAKE)
-	$(MAKE) samples
-	touch build-stamp
-
-clean:
-	dh_testdir
-	dh_testroot
-	rm -f build-stamp
-	$(MAKE) clean
-	dh_clean
-
-binary-indep: build
-
-binary-arch: build
-	dh_testdir
-	dh_testroot
-	dh_clean -k
-	dh_installdirs
-	$(MAKE) PREFIX=debian/filters install
-	dh_installdocs README SAMPLES ky00te.dir/README.ky00te
-	dh_installchangelogs
-	dh_strip
-	dh_compress
-	dh_fixperms
-	dh_installdeb
-	dh_shlibdeps
-	dh_gencontrol
-	dh_md5sums
-	dh_builddeb
+%:
+	dh $@
 
 # Not intended for use by anyone except the author.
 announcedir:
 	@echo ${HOME}/src/joeywiki/code/filters/news
-
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary

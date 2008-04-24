@@ -16,15 +16,15 @@ ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -g
 endif
 
-all:	$(OTHER) $(BUILD)
+all:	$(OTHER) $(BUILD) samples
 
 install:	$(BUILD) $(OTHER)
-	install -d $(PREFIX)/usr/games
-	$(INSTALL_PROGRAM) $(BUILD) $(PREFIX)/usr/games/
-	install $(OTHER) $(PREFIX)/usr/games/
-	install -d $(PREFIX)/usr/share/man/man6
-	install -m 0644 filters.6 $(PREFIX)/usr/share/man/man6
-	cd $(PREFIX)/usr/share/man/man6 && \
+	install -d $(DESTDIR)/usr/games
+	$(INSTALL_PROGRAM) $(BUILD) $(DESTDIR)/usr/games/
+	install $(OTHER) $(DESTDIR)/usr/games/
+	install -d $(DESTDIR)/usr/share/man/man6
+	install -m 0644 filters.6 $(DESTDIR)/usr/share/man/man6
+	cd $(DESTDIR)/usr/share/man/man6 && \
 		$(foreach prog,$(BUILD) $(OTHER),ln -s filters.6 $(prog).6;)
 
 samples:	$(BUILD) $(OTHER)
