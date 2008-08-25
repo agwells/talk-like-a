@@ -29,7 +29,7 @@ install:	$(BUILD) $(OTHER)
 
 samples:	$(BUILD) $(OTHER)
 	-rm -f SAMPLES
-	PATH=.:$$PATH; export PATH; echo $(BUILD) $(OTHER) |xargs -n 1 sh makesample.sh
+	PATH=.:$$PATH; export PATH; echo $(BUILD) $(OTHER) |grep -v fanboy |xargs -n 1 sh makesample.sh
 
 clean:
 	$(RM) -f core *.o *~ $(BUILD) *.c SAMPLES

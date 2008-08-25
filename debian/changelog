@@ -1,3 +1,9 @@
+filters (2.46) UNRELEASED; urgency=low
+
+  * fanboy: Improve docs and remove from SAMPLES. Closes: #496588
+
+ -- Joey Hess <joeyh@debian.org>  Mon, 25 Aug 2008 18:20:53 -0400
+
 filters (2.45) unstable; urgency=low
 
   * Use debhelper v7; rules file minimisation to 3 lines.
