@@ -283,6 +283,6 @@ aw		printf("or");
 		    case 5: ECHO; break;
 		    }
 		}
-.		printf(yytext);
+.		printf("%s", yytext);
 \n		printf("\n");
 %%

@@ -1,3 +1,10 @@
+filters (2.47) UNRELEASED; urgency=low
+
+  * Patch from Anssi Hannula to avoid warnings when
+    compiling with -Werror=format-security.
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 09 Jul 2009 22:53:42 -0400
+
 filters (2.46) unstable; urgency=low
 
   * fanboy: Improve docs and remove from SAMPLES. Closes: #496588

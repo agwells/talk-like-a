@@ -586,7 +586,7 @@ robably|ventually|[Oo]bvious|[Bb]asic|{W}[Oo]nly|otally	|
 [.,!?]\"([^\n\".!]+[.!])?\n/[\n\t ]	printf("%c  Hail Big Brother!\"%s",Y0,yytext+2);
 \"([.,!?][^\n\".!]+[.!])?\n/[\n\t ]	printf("%c  Hail Big Brother!\"%s",Y1,yytext+2);
 
-.			printf(yytext);
+.			printf("%s", yytext);
 \n			printf("\n");
 
 %{
