@@ -23,7 +23,7 @@
 #include <string.h> // for strlen()
 #include <time.h> // for time()
 
-#define ALLOW_FILE_IO 1
+#define ALLOW_FILE_IO 0
 
 
 /* strips 'reduction' characters from the end of the input string and returns the result
