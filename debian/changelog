@@ -1,4 +1,4 @@
-filters (2.47) UNRELEASED; urgency=low
+filters (2.47) unstable; urgency=low
 
   * Patch from Anssi Hannula to avoid warnings when
     compiling with -Werror=format-security.
@@ -6,7 +6,7 @@ filters (2.47) UNRELEASED; urgency=low
     words. Contributed by Andrew J. Buehler.
   * Converted debian/copyright to machine parseable format.
 
- -- Joey Hess <joeyh@debian.org>  Thu, 09 Jul 2009 22:53:42 -0400
+ -- Joey Hess <joeyh@debian.org>  Sat, 11 Jul 2009 16:47:23 -0400
 
 filters (2.46) unstable; urgency=low
 

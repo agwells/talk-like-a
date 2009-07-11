@@ -1,10 +1,11 @@
 This is the filters package.
 
 This package was put together by Joey Hess <joeyh@debian.org>, using
-sources from all over.
+sources from all over, and rewriting from scratch certian filters that did
+not have a free (or any) license.
 
 Files: *
-Copyright: 1999-2009 Joey Hess <joey@kitenet.net>
+Copyright: 1996-2009 Joey Hess <joey@kitenet.net>
 License: GPL-2+
  The full text of the GPL is distributed as GPL in filters's source,
  and is distributed in /usr/share/common-licenses/GPL-2 on Debian systems.
