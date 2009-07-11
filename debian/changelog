@@ -2,6 +2,9 @@ filters (2.47) UNRELEASED; urgency=low
 
   * Patch from Anssi Hannula to avoid warnings when
     compiling with -Werror=format-security.
+  * scramble: New filter that scambles the inner letters of
+    words. Contributed by Andrew J. Buehler.
+  * Converted debian/copyright to machine parseable format.
 
  -- Joey Hess <joeyh@debian.org>  Thu, 09 Jul 2009 22:53:42 -0400
 

@@ -1,5 +1,5 @@
 LEX	= flex
-BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify
+BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify scramble
 OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd \
 	  censor spammer uniencode pirate kenny scottish fanboy
 CFLAGS	= -O2 -lfl
@@ -29,13 +29,14 @@ install:	$(BUILD) $(OTHER)
 
 samples:	$(BUILD) $(OTHER)
 	-rm -f SAMPLES
-	PATH=.:$$PATH; export PATH; echo $(BUILD) $(OTHER) |grep -v fanboy |xargs -n 1 sh makesample.sh
+	PATH=.:$$PATH; export PATH; echo $(BUILD) $(OTHER) | xargs -n 1 sh makesample.sh
 
 clean:
-	$(RM) -f core *.o *~ $(BUILD) *.c SAMPLES
+	$(RM) -f core *.o *~ $(BUILD) SAMPLES
 	cd ky00te.dir && make clean
 	rm -f kraut.dir/lex.yy.c
 	cd nethackify.dir && make clean
+	cd scramble.dir && make clean
 
 .SUFFIXES: .l
 
@@ -59,3 +60,6 @@ kraut:
 
 nethackify:
 	cd nethackify.dir && make
+
+scramble: 
+	cd scramble.dir && make
