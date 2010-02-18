@@ -1,3 +1,10 @@
+filters (2.48) UNRELEASED; urgency=low
+
+  * Mention that some filters support reading from input files.
+    Closes: #569764
+
+ -- Joey Hess <joeyh@debian.org>  Thu, 18 Feb 2010 13:56:51 -0500
+
 filters (2.47) unstable; urgency=low
 
   * Patch from Anssi Hannula to avoid warnings when
