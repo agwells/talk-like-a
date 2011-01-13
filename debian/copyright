@@ -1,8 +1,5 @@
-This is the filters package.
-
-This package was put together by Joey Hess <joeyh@debian.org>, using
-sources from all over, and rewriting from scratch certian filters that did
-not have a free (or any) license.
+Format: http://dep.debian.net/deps/dep5/
+Source: Contributed by many folks.
 
 Files: *
 Copyright: 1996-2009 Joey Hess <joey@kitenet.net>
@@ -20,7 +17,7 @@ Copyright: 1989 John Sparks
 License: other
   /* This is in the public domain. Do with it as you will. *\
 
-Files: cockney.l, jive.l, nyc.l
+Files: cockney.l jive.l nyc.l
 Copyright: 1986 Daniel V Klein <dvk@lonewolf.com>
 License: GPL
  Daniel confirmed the copyright in this email:
@@ -41,7 +38,7 @@ License: GPL
 
 Files: rasterman
 Copyright: 1997 Zachary Beane
-License: GPL
+License: GPL-2
 
 Files: ken.l
 Copyright: Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
@@ -65,7 +62,7 @@ License: other
 
 Files: ky00te.dir/*
 Copyright: 1994 Brent E. Edwards
-License: GPL
+License: GPL-2
  The ky00te filter is now relicensed under the GPL. Its author
  confirmed the new license in this email:
  .
@@ -114,11 +111,11 @@ License: other
 
 Files: nethackify
 Copyright: 2004 G�kan Seng� <gurkan@linuks.mine.nu>
-License: GPL
+License: GPL-2
 
 Files: pirate
 Copyright: 2003 Dougal Campbell
-License: GPL
+License: GPL-2
  Converted from a php version in the funfilters.
 
 Files: kenny
@@ -134,3 +131,7 @@ Copyright: 2007 Adam Borowski <kilobyte@angband.pl>
 License: GPL-3+
  The full text of the GPL version 3 can be found in 
  /usr/share/common-licenses/GPL-3 on Debian systems.
+
+License: GPL-2
+ The full text of the GPL is distributed as GPL in filters's source,
+ and is distributed in /usr/share/common-licenses/GPL-2 on Debian systems.
