@@ -3,7 +3,7 @@
 my %topics=(
 	git => [qw(linus git linux rebase rebased merge merged cherry-pick
 		branch branched branches git-* push pull pushed pulled)],
-	ubuntu => [qw(Mark MOTU ubuntu debian rock rocks rule dapper
+	ubuntu => [qw(Mark MOTU PPA ubuntu debian rock rocks rule dapper
 		feisty fiesty gutsy hoary hardy edgy
 		universe launchpad gnome desktop naked sabdfl community)],
 	debian => [qw(Debian rules rule ian murdock upstream release
