@@ -1,3 +1,9 @@
+filters (2.49) UNRELEASED; urgency=low
+
+  * scottish: Fix typo. Closes: #688905
+
+ -- Joey Hess <joeyh@debian.org>  Wed, 26 Sep 2012 15:46:28 -0400
+
 filters (2.48) unstable; urgency=low
 
   * Mention that some filters support reading from input files.

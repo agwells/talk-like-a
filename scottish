@@ -22,7 +22,7 @@ my @repl=qw(
   doesn't:don't		at_a$:atta		ith$:it'
   ered$:'red		into$:inta		^before:'fore
   wit'_':wit_'		wit'_t:wit_t		wit'_w:wit_w
-  wit'_y:wit_y		get_a:git_a		ally$:'lly$
+  wit'_y:wit_y		get_a:git_a		ally$:'lly
   ^my:me		^i_think$:methinks	nay_w:na_w
   ^one$:'un		^'un_a:one_a		at_ta$:atta
   ot_ta$:otta		^isn't$:ain't		^so_th:s'th
