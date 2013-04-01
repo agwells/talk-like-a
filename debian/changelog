@@ -1,6 +1,7 @@
 filters (2.49) UNRELEASED; urgency=low
 
   * scottish: Fix typo. Closes: #688905
+  * lolcat: New filter.
 
  -- Joey Hess <joeyh@debian.org>  Wed, 26 Sep 2012 15:46:28 -0400
 
