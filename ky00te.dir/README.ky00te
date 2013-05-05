@@ -1,0 +1,83 @@
+This program is (c) 1994, Brent E. Edwards.  Feel free to distribute the
+complete program world-wide.  (Please do NOT break apart this text file
+from the program.)  
+
+This program is under absolutely no warrantee of any kind.  
+
+If you have any questions about this program, please send them to 
+edwardsb@cs.rpi.edu.
+
+This program is dedicated to Conrad Wong.
+
+This program is catware.  If you find it useful in any way, pay for this
+program by spending one hour petting one or several cats.
+
+[ Revised to plain GPL by author, see copyright file. -- Joey Hess ]
+
+===================================================
+
+
+Purpose:
+   This program places a very cute (and familiar to FurryMuck fans)
+   accent to any text file.  It is designed for UNIX systems.  
+   It requires cc, lex, and yacc to be in your path.
+
+Compiling:
+   To compile on a UNIX system, type 'make'
+
+Running:
+   To do a line-by-line translation of your text, type 'ky00te'.
+   Control-D will halt the program.
+
+   To convert a text file and display it on the screen, type
+   'ky00te < filename | more', where filename is the file to convert.
+
+   To convert a text file and save it to a file, type
+   'ky00te < filename.in > filename.out', where filename.in is the
+   file to convert and filename.out is the place to put it.
+
+   You can also add an accent to the output of any program by
+   typing '<normal program execution> | ky00te'. 
+
+Petting the cat:
+   Stroke with the furs, not against them.
+
+====================================================
+
+Program version information:
+
+Program version 1.00:  13 December 1994
+
+Program version 1.10:  15 December 1994
+   Version 1.00 was a memory hog.  Also, adds 'fur' and 'meow' to
+list of cat-ch phrases.  
+
+Program version 1.11:  16 December 1994
+   With Tobias Kuhler's (ukjp@rz.uni-karlsruhe.de) repeated suggestion,
+   the program now only doubles (not triples) 'r' and no longer capitalizes
+   fur.  He also suggested the following improvements:
+          at a, at the -> atta
+          in a, in the -> ynna
+          is a, is the -> yssa
+          on a, on the -> onna
+      with a, with the -> wyffa
+                   the -> da
+                   you -> ya
+                   and -> 'n
+                  with -> wyf
+                    to -> ta
+
+   This version also no longer uses the same 'meow'; it switches between
+   'meow', 'mew', and 'mu' (weighted to the first).
+
+   I've also added:
+	        lot of -> lotta
+	         is so -> yssa
+		  when -> w'en
+		  with -> wyf   (when used to start a word)
+                  your -> yer
+	      not, n't -> na'
+	      
+
+   The README file has been reorganized, and the dedication made explicit.
+

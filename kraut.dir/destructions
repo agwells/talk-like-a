@@ -1,0 +1,36 @@
+                                     Kraut
+                               +++++++++++++++++
+Compiling Kraut:
+
+You should have the files: kraut.c and kraut.l and lex.yy.c
+
+
+kraut.l must be run thru the unix 'lex' utility to produce the file lex.yy.c
+Then compile kraut.c and lex.yy.c to produce kraut
+
+     $lex kraut.l
+     $cc kraut.c lex.yy.c -o kraut
+  (You may get a list of warnings from the compiler. Ignore them.)
+
+Note: lex.yy.c is included in this package. You only need to use lex if you
+wish to make changes to kraut. 
+
+Using Kraut:
+
+ Kraut uses standard input and output.
+
+examples:
+
+To translate a file called 'note' and output kraut to a file called 'knote':
+
+     $ cat note | kraut > knote
+
+To translate a file called 'note' and just print it to the screen:
+
+     $ cat note | kraut
+
+To have kraut wait to translate what you type at the keyboard and return it in
+kraut on your screen:
+
+     $ kraut
+

@@ -1,0 +1,14 @@
+#!/usr/bin/perl -p
+# Elmer Fudd. GPL 2001 by Joey Hess <joey@kitenet.net>
+s/[rl]/w/g;
+s/qu/qw/g;
+s/th\b/f/g;
+s/th\B/d/g;
+s/n\./n, uh-hah-hah-hah. /g;
+s/[RL]/W/g;
+s/Qu/Qw/g;
+s/QU/QW/g;
+s/TH\b/F/g;
+s/TH\B/D/g;
+s/Th/D/g;
+s/N\./N, uh-hah-hah-hah./g;

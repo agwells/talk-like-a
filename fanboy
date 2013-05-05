@@ -1,0 +1,65 @@
+#!/usr/bin/perl
+
+my %topics=(
+	git => [qw(linus git linux rebase rebased merge merged cherry-pick
+		branch branched branches git-* push pull pushed pulled)],
+	ubuntu => [qw(Mark MOTU PPA ubuntu debian rock rocks rule dapper
+		feisty fiesty gutsy hoary hardy edgy
+		universe launchpad gnome desktop naked sabdfl community)],
+	debian => [qw(Debian rules rule ian murdock upstream release
+		stable unstable testing apt apt-get deb developer NM RM
+		NMU FTBFS BTS ITP DFSG non-free free d.o)],
+);
+
+if (! @ARGV) {
+	@ARGV=@{$topics{git}};
+}
+elsif (@ARGV == 1 && exists $topics{lc $ARGV[0]}) {
+	@ARGV=@{$topics{lc $ARGV[0]}};
+}
+
+my $total_awesomeness_dude=join("|", 
+	map {
+		$_=quotemeta($_);
+		s/\\\*/.*/g;
+		s/\\\?/./g;
+		qr/\b$_\b/;
+	} reverse sort @ARGV);
+
+my $len=0;
+my $indent="";
+my $indent_printed=0;
+while (<STDIN>) {
+	if (/$total_awesomeness_dude/i) {
+		if (/^([>|][>|\s]*)/) {
+			if ($indent ne $1) {
+				print "\n" if $len;
+				$len=0;
+				$indent=$1;
+				$indent_printed=0;
+			}
+		}
+		else {
+			if (length $indent && $indent_printed) {
+				print "\n";
+				$len=0;
+			}
+			$indent="";
+			$indent_printed=0;
+		}
+
+		while(/(($total_awesomeness_dude)[.?!]*)/ig) {
+			$len+=length($1)+1;
+			if ($len > 70) {
+				print "\n";
+				$len=0;
+			}
+			if (length $indent && ! $indent_printed) {
+				print $indent;
+				$indent_printed=1;
+			}
+			print $1." ";
+		}
+	}
+}
+print "\n" if $len;
