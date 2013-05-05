@@ -1,0 +1,101 @@
+#!/usr/bin/perl
+
+$row = "!qwertyuiop!asdfghjkl!zxcvbnm!";
+@row_array = split(//, $row);
+
+while (<>) {
+	chomp;
+	y/A-Z/a-z/;
+	s/\byou\b/u/gi;
+	s/\bpeople\b/ppl/gi;
+	s/\bthrough\b/thru/gi;
+	s/\bthough\b/tho/gi;
+	s/\bnope\b/nup/gi;
+	s/\baustralia\b/oz/gi;
+	s/\bfilm\b/flim/gi;
+	s/\bsucks\b/sux/gi;
+	s/\benough\b/enuff/gi;
+	s/\ba lot\b/a shitload/gi;
+	s/\bstuff\b/shit/gi;
+	s/, /.. /g;
+	s/\.$/.../g;
+
+	@lets = split(//);
+
+	$strlen = $#lets;
+
+	for ($x = 0; $x < $strlen; $x++) {
+		if (rand() < 0.01) {
+		    swap(\@lets, $x, $x + 1);
+		    next;
+		}
+
+		if (rand() < 0.10 && $lets[$x] eq " ") {
+		    swap(\@lets, $x - 1, $x - 2);
+		    next;
+		}
+
+		if(rand() < 0.01) {
+		    $i = insert_adjacent(\@lets, $x, $lets[$x]);
+		    $strlen += $i;
+		    next;
+		}
+
+		if(rand() < 0.01) {
+		    splice(@lets, $x, 1);
+		    $strlen--;
+		    next;
+		}
+	}
+
+	print join("", @lets) . "\n";
+}
+
+sub insert_adjacent {
+    my($aref, $pos, $let) = @_;
+    
+    
+    $newlet = get_adjacent($let);
+
+    if( !$newlet ) {
+	return 0;
+    }
+
+    splice(@$aref, $pos + 1, 0, $newlet);
+    return 1;
+}
+
+
+sub get_adjacent {
+    my($let) = @_;
+
+    return 0 if $let !~ /[a-zA-Z]/;
+
+    $i = index($row, $let);
+    $before = $row_array[$i - 1];
+    $after = $row_array[$i + 1];
+
+    
+
+    if( $before eq "!" || (rand() < rand() && $after ne "!"))  {
+	return $after;
+    } else {
+	return $before;
+    }
+}
+
+sub swap {
+    my($aref, $n, $m) = @_;
+    my($tmp);
+
+    if(defined($$aref[$n]) && defined($$aref[$m])) {
+	if(! (($$aref[$n] =~ /[A-Z ]/ && $$aref[$m] =~ /[A-Z ]/) ||
+	      ($$aref[$n] =~ /[a-z ]/ && $$aref[$m] =~ /[a-z ]/) )) {
+	    return;
+	}
+	$tmp = $$aref[$n];
+	$$aref[$n] = $$aref[$m];
+	$$aref[$m] = $tmp;
+    }
+}
+

@@ -1,0 +1,61 @@
+#!/usr/bin/perl
+# Censor filter.
+# Copyright 2002 by Joey Hess under the terms of the GNU GPL.
+
+# Yes, this program is self-modifying code, if you want it to be.
+if (exists $ENV{ADD_WORD}) {
+	open(IN, $0) || die "cannot read myself";
+	@lines=<IN>;
+	close IN;
+	open OUT, ">$0" || die "cannot write myself";
+	for (@lines) {
+		print OUT $_;
+		if (/^__DATA__\n$/) {
+			open(DATAOUT, "|sort|uniq|column >> $0");
+			$ENV{ADD_WORD} =~ y/n-za-m/a-z/;
+			print DATAOUT "$ENV{ADD_WORD}\n";
+			print DATAOUT join("\n", 
+					map { chomp; split ' ', $_ } <DATA>);
+			close DATAOUT;
+			exit;
+		}
+	}
+}
+
+$censored = join("|", reverse sort { $a cmp $b } 
+		grep { length $_ }
+		map { chomp; y/a-z/n-za-m/; split ' ', $_ } <DATA>);
+
+while (<>) {
+	s/\b($censored)ed/CENSORED/ig; # don't say "CENSOREDed"
+	s/\b($censored)/CENSORED/ig;
+	print $_;
+}
+
+__DATA__
+ahqr		enaql		gjng		pbpx		t-fcbg
+anxrq		encr		grng		pbzrvat		t\f+fcbg
+avccyr		erne		guebng		pbzvat		tebva
+bcravat		fangpu		gvg		pebgpu		ubbgre
+beny		fchax		gvggl		penc		ubeal
+betl		fcrez		gvggvr		penpx		ubyr
+betnfz		fcuvapgre	hgrehf		pernz		uhzc
+certanag	fghq		ihyin		phag		unaqwbo
+cevpx		fgnss		intvan		phz		urnq
+chff		fhpx		ivetva		phzzvat		wvfz
+chffl		fjnyybj		ivoengbe	pnzr		xabo
+chffvrf		fperj		jbzo		preivk		xvff
+chovp		frk		jrg		pureel		ybir
+chqraqhz	frkhny		juber		pyvg		ybire
+chzc		frrq		kkk		pyvgbevf	ybirq
+cnagvrf		frzra		nany		pyvggl		ybnq
+crargengr	funsg		nerbyn		pyvznk		ynovn
+crargengrq	funt		nff		qevyyrq		ynvq
+cravf		funttvat	nffubyr		qrsybjre	yrfovna
+crgre		fuvg		obbo		qvpx		yvcf
+crpxre		fvrt\furvy	oernfg		qvyqb		znfgheong
+cunyyhf		fyhg		ohgg		rebgvp		znfgheongr
+cvff		fyhggvfu	ohggbpx		rerpgvba	znfgheongvat
+ebfrohq		fyvg		onyy		rkcbfrq		znzznel
+ebq		gbathr		ovgpu		shpx		znzznevrf
+ehg		gbby		oybj		snpvny
