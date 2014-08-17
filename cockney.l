@@ -15,19 +15,13 @@ EW [ \t.,;!\?$]
 
 %Start junk
 
+%option noyywrap
+
 %%
 
 %{
-	void eos() {
-	    if (yytext[yyleng-1] == '.')
-		dintI();
-	    else
-		unput(yytext[yyleng-1]);
-	}
-
-	void plastc() {
-	    unput(yytext[yyleng-1]);
-	}
+void eos();
+void plastc();
 %}
 
 <junk>.			{	srandom(time(0L)); unput(yytext[0]); BEGIN 0; }
@@ -102,6 +96,19 @@ ime{EW}			{	printf("oime"); eos(); }
 \n				printf("\n");
 
 %%
+
+void eos()
+{
+    if (yytext[yyleng-1] == '.')
+    dintI();
+    else
+    unput(yytext[yyleng-1]);
+}
+
+void plastc()
+{
+    unput(yytext[yyleng-1]);
+}
 
 caseify(c)
 char c;

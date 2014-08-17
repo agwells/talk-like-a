@@ -1,3 +1,10 @@
+filters (2.50) UNRELEASED; urgency=medium
+
+  * Reorganize some code to support building with clang.
+    Closes: #758450 Thanks, Alexander.
+
+ -- Joey Hess <joeyh@debian.org>  Sun, 17 Aug 2014 15:46:17 -0400
+
 filters (2.49) unstable; urgency=low
 
   * scottish: Fix typo. Closes: #688905

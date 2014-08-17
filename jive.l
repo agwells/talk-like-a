@@ -17,13 +17,13 @@
 %o 1500
 BW [ \t\(]
 EW [ \t.,;!\?$\)]
+%option noyywrap
 %%
+
 %{
-	void plastc()
-	{
-		unput(yytext[yyleng-1]);
-	}
+    void plastc();
 %}
+
 @[Bb]egin(.*)		|
 ".so ".*$			printf("%s", yytext);
 {BW}send			printf("%ct'row",yytext[0]);
@@ -201,6 +201,11 @@ against				printf("agin'");
 meta				printf("meta-fuckin'");
 cally				printf("c'l");
 %%
+
+void plastc()
+{
+    unput(yytext[yyleng-1]);
+}
 
 caseify(c)
 char c;
