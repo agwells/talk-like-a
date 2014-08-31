@@ -1,9 +1,9 @@
-filters (2.50) UNRELEASED; urgency=medium
+filters (2.50) unstable; urgency=medium
 
   * Reorganize some code to support building with clang.
     Closes: #758450 Thanks, Alexander.
 
- -- Joey Hess <joeyh@debian.org>  Sun, 17 Aug 2014 15:46:17 -0400
+ -- Joey Hess <joeyh@debian.org>  Sun, 31 Aug 2014 14:16:58 -0700
 
 filters (2.49) unstable; urgency=low
 
