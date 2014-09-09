@@ -1,3 +1,10 @@
+filters (2.52) UNRELEASED; urgency=medium
+
+  * Rename lolcat to LOLCAT to avoid collision with a fine rainbow colored cat.
+    Closes: #760910
+
+ -- Joey Hess <joeyh@debian.org>  Tue, 09 Sep 2014 10:03:14 -0400
+
 filters (2.51) unstable; urgency=medium
 
   * Include lolcat in installation, which was missed by accident.
