@@ -1,3 +1,9 @@
+filters (2.53) unstable; urgency=medium
+
+  * Orphaned the Debian package.
+
+ -- Joey Hess <joeyh@debian.org>  Sat, 08 Nov 2014 00:38:19 -0400
+
 filters (2.52) unstable; urgency=medium
 
   * Rename lolcat to LOLCAT to avoid collision with a fine rainbow colored cat.
