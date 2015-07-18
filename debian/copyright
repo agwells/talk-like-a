@@ -9,12 +9,12 @@ License: GPL-2+
 
 Files: jethro.l
 Copyright: 1993 Duane Paulson <ci922@cleveland.freenet.edu>
-License: other
+License: other-1
   **   Public domain. Use at your own risk. Y'all come back now, heah?
 
 Files: kraut.l
 Copyright: 1989 John Sparks
-License: other
+License: other-2
   /* This is in the public domain. Do with it as you will. *\
 
 Files: cockney.l jive.l nyc.l
@@ -42,7 +42,7 @@ License: GPL-2
 
 Files: ken.l
 Copyright: Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
-License: other
+License: other-3
  The ken filter is now in the public domain. Its author confirmed the
  new license in this email:
  .
@@ -63,6 +63,7 @@ License: other
 Files: ky00te.dir/*
 Copyright: 1994 Brent E. Edwards
 License: GPL-2
+Comment:
  The ky00te filter is now relicensed under the GPL. Its author
  confirmed the new license in this email:
  .
@@ -79,7 +80,7 @@ License: GPL-2
 
 Files: newspeak.l
 Copyright: 1991 Jamie Zawinski <jwz@jwz.org>
-License: other
+License: other-4
  The newspeak filter is now relicensed under a BSD-like copyright. Its
  author established the new copyright in this email:
  .
@@ -106,7 +107,7 @@ License: other
 
 Files: studly
 Copyright: Nick Phillips <nwp@lemon-computing.com>
-License: other
+License: other-5
  # just for reference, you may do whatever you like with this file.
 
 Files: nethackify
@@ -116,7 +117,7 @@ License: GPL-2
 Files: pirate
 Copyright: 2003 Dougal Campbell
 License: GPL-2
- Converted from a php version in the funfilters.
+Comment: Converted from a php version in the funfilters.
 
 Files: kenny
 Copyright:
