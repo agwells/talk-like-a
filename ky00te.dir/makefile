@@ -5,7 +5,7 @@ clean:
 	rm -f ../ky00te
 
 ../ky00te: y.tab.o lex.yy.o
-	$(CC) -o ../ky00te lex.yy.o y.tab.o $(CFLAGS)
+	$(CC) -o ../ky00te lex.yy.o y.tab.o $(CFLAGS) -lfl
 
 lex.yy.o: lex.yy.c y.tab.h
 	$(CC) $(CFLAGS) -c lex.yy.c

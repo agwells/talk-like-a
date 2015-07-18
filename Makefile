@@ -2,7 +2,7 @@ LEX	= flex
 BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify scramble
 OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd \
 	  censor spammer uniencode pirate kenny scottish fanboy LOLCAT
-CFLAGS	= -O2 -lfl
+CFLAGS	= -O2
 export CFLAGS
 INSTALL_PROGRAM = install
 
@@ -34,16 +34,14 @@ samples:	$(BUILD) $(OTHER)
 clean:
 	$(RM) -f core *.o *~ $(BUILD) SAMPLES
 	cd ky00te.dir && make clean
-	rm -f kraut.dir/lex.yy.c
 	cd nethackify.dir && make clean
-	cd scramble.dir && make clean
 
 .SUFFIXES: .l
 
 .l:
 	$(RM) $*.c
 	$(LEX) -t $< > $*.c
-	$(CC) -o $@ $*.c $(CFLAGS)
+	$(CC) -o $@ $*.c $(CFLAGS) -lfl
 	$(RM) $*.c
 
 .SUFFIXES: .dir
@@ -54,12 +52,7 @@ clean:
 ky00te:
 	cd ky00te.dir && make
 
-kraut:
-	cd kraut.dir && lex kraut.l
-	cd kraut.dir && $(CC) kraut.c lex.yy.c -o ../kraut
-
 nethackify:
 	cd nethackify.dir && make
 
-scramble: 
-	cd scramble.dir && make
+scramble: scramble.c
