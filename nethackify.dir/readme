@@ -1,9 +1,0 @@
-
-nethackify
-tries to write text ala nethack
-
-cat /etc/motd/ | nhprint
-/exec -o nhprint "good morning :)"
-
-released under the gpl
-copyright 2004 by Gürkan Sengün <gurkan@linuks.mine.nu>

@@ -34,7 +34,6 @@ samples:	$(BUILD) $(OTHER)
 clean:
 	$(RM) -f core *.o *~ $(BUILD) SAMPLES
 	cd ky00te.dir && make clean
-	cd nethackify.dir && make clean
 
 .SUFFIXES: .l
 
@@ -52,7 +51,5 @@ clean:
 ky00te:
 	cd ky00te.dir && make
 
-nethackify:
-	cd nethackify.dir && make
-
+nethackify: nethackify.c
 scramble: scramble.c
