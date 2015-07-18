@@ -52,30 +52,26 @@ void nethackify(char* str)
 
 int main(int argc, char **argv)
 {
-    int i,c;
+    int i,c, ch;
     struct timeval tv;
-    FILE *f;
-    char ch[1];
 
     srand((gettimeofday(&tv,NULL),tv.tv_usec));
     if (argc==1) {
-	f=stdin;
-	while(fread(ch,1,1,f)) {
+	while((ch = getchar()) != EOF) {
 	    for(c=0; c<strlen(normal); c++) {
-	        if(normal[c]==ch[0]) {
+	        if(normal[c]==ch) {
 		    switch(myrandom(5)) {
-			case 4: if(nethack5[c]!=' ') ch[0]=nethack5[c];
-	    	        case 3: if(nethack4[c]!=' ') ch[0]=nethack4[c];
-			case 2: if(nethack3[c]!=' ') ch[0]=nethack3[c]; break;
-			case 1: if(nethack2[c]!=' ') ch[0]=nethack2[c]; break;
-			case 0: ch[0]=nethack1[c]; break;
+			case 4: if(nethack5[c]!=' ') ch=nethack5[c];
+	    	        case 3: if(nethack4[c]!=' ') ch=nethack4[c];
+			case 2: if(nethack3[c]!=' ') ch=nethack3[c]; break;
+			case 1: if(nethack2[c]!=' ') ch=nethack2[c]; break;
+			case 0: ch=nethack1[c]; break;
 			default: break;
 		    }
 		}
 	    }
-	    printf("%c",ch[0]);
+	    printf("%c",ch);
 	}
-	fclose(f);
     } else {
 	for(i=1; i<argc; i++) {
 	    nethackify(argv[i]);
