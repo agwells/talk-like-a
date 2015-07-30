@@ -110,7 +110,7 @@ Copyright: Nick Phillips <nwp@lemon-computing.com>
 License: other-5
  # just for reference, you may do whatever you like with this file.
 
-Files: nethackify
+Files: nethackify.c
 Copyright: 2004 G�kan Seng� <gurkan@linuks.mine.nu>
 License: GPL-2
 
