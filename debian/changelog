@@ -1,4 +1,4 @@
-filters (2.54) UNRELEASED; urgency=medium
+filters (2.54) unstable; urgency=medium
 
   * Fix UTF-8 handling in uniencode. Closes: #508003
     Thanks, Marius Gavrilescu.
@@ -13,7 +13,7 @@ filters (2.54) UNRELEASED; urgency=medium
     to allow eg, building with hardening.
     Thanks, Marius Gavrilescu.
 
- -- Joey Hess <id@joeyh.name>  Thu, 30 Jul 2015 12:20:20 -0400
+ -- Joey Hess <id@joeyh.name>  Thu, 30 Jul 2015 14:33:57 -0400
 
 filters (2.53) unstable; urgency=medium
 
