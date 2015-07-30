@@ -2,18 +2,16 @@ LEX	= flex
 BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify scramble
 OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd \
 	  censor spammer uniencode pirate kenny scottish fanboy LOLCAT
-CFLAGS	= -O2
+ifndef CFLAGS
+CFLAGS = -O2
+endif
+CFLAGS += $(CPPFLAGS)
 export CFLAGS
 INSTALL_PROGRAM = install
 
 # DEB_BUILD_OPTIONS suport, to control binary stripping.
 ifeq (,$(findstring nostrip,$(DEB_BUILD_OPTIONS)))
 INSTALL_PROGRAM += -s
-endif
-
-# And debug building.
-ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
-CFLAGS += -g
 endif
 
 all:	$(OTHER) $(BUILD)
@@ -36,16 +34,13 @@ clean:
 .l:
 	$(RM) $*.c
 	$(LEX) -t $< > $*.c
-	$(CC) -o $@ $*.c $(CFLAGS) -lfl
+	$(CC) -o $@ $*.c $(CFLAGS) -lfl $(LDFLAGS)
 	$(RM) $*.c
 
 .SUFFIXES: .dir
 
-.dir:	
+.dir:
 	cd $<; make
-
-ky00te:
-	cd ky00te.dir && make
 
 nethackify: nethackify.c
 scramble: scramble.c
