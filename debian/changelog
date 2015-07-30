@@ -9,6 +9,9 @@ filters (2.54) UNRELEASED; urgency=medium
   * Fix NAME section of manpage. Closes: #775035
     Thanks, Marius Gavrilescu.
   * Remove SAMPLES file for deterministic builds.
+  * Makefile: Propigate input CFLAGS and LDFLAGS through to the compiler
+    to allow eg, building with hardening.
+    Thanks, Marius Gavrilescu.
 
  -- Joey Hess <id@joeyh.name>  Thu, 30 Jul 2015 12:20:20 -0400
 
