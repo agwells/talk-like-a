@@ -8,6 +8,7 @@ filters (2.54) UNRELEASED; urgency=medium
     Thanks, Marius Gavrilescu.
   * Fix NAME section of manpage. Closes: #775035
     Thanks, Marius Gavrilescu.
+  * Remove SAMPLES file for deterministic builds.
 
  -- Joey Hess <id@joeyh.name>  Thu, 30 Jul 2015 12:20:20 -0400
 

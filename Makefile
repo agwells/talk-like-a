@@ -16,7 +16,7 @@ ifneq (,$(findstring debug,$(DEB_BUILD_OPTIONS)))
 CFLAGS += -g
 endif
 
-all:	$(OTHER) $(BUILD) samples
+all:	$(OTHER) $(BUILD)
 
 install:	$(BUILD) $(OTHER)
 	install -d $(DESTDIR)/usr/games
@@ -27,12 +27,8 @@ install:	$(BUILD) $(OTHER)
 	cd $(DESTDIR)/usr/share/man/man6 && \
 		$(foreach prog,$(BUILD) $(OTHER),ln -s filters.6 $(prog).6;)
 
-samples:	$(BUILD) $(OTHER)
-	-rm -f SAMPLES
-	PATH=.:$$PATH; export PATH; echo $(BUILD) $(OTHER) | xargs -n 1 sh makesample.sh
-
 clean:
-	$(RM) -f core *.o *~ $(BUILD) SAMPLES
+	$(RM) -f core *.o *~ $(BUILD)
 	cd ky00te.dir && make clean
 
 .SUFFIXES: .l
