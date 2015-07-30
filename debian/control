@@ -13,7 +13,7 @@ Conflicts: filters-nonfree
 Replaces: filters-nonfree
 Suggests: bsdgames
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: a collection of filters, including B1FF and the Swedish Chef
+Description: collected filters, including B1FF and the Swedish Chef
  A collection of filters to do all sorts of strange things to text.
  This includes such favorites as B1FF and the Swedish Chef, and a wide
  range of others.
