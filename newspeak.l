@@ -43,7 +43,6 @@ unsigned int fcounter = 0;
 #define Y2	yytext[2]
 #define Y3	yytext[3]
 #define C	caseify
-#define C1	caseify1
 
 #define CAP(string)	capstring(0, (string),0)
 #define WCAP(string)	capstring(Y0,(string),1)
@@ -678,8 +677,6 @@ _caseify(c,i)
 
 caseify(c)
     char c;
-{	_caseify(c,0);	}
-
-caseify1(c)
-    char c;
-{	_caseify(c,1);	}
+{
+	return _caseify(c,0);
+}
