@@ -18,11 +18,15 @@
 BW [ \t\(]
 EW [ \t.,;!\?$\)]
 %option noyywrap
-%%
 
 %{
-    void plastc();
+    void plastc(void);
+    char caseify(char);
+    void expletive(void);
+    void thing(char);
 %}
+
+%%
 
 @[Bb]egin(.*)		|
 ".so ".*$			printf("%s", yytext);
@@ -207,7 +211,7 @@ void plastc()
     unput(yytext[yyleng-1]);
 }
 
-caseify(c)
+char caseify(c)
 char c;
 {
 	if (yytext[0] <= 'Z')
@@ -216,7 +220,7 @@ char c;
 		return (c);
 }
 
-thing(c)
+void thing(c)
 char c;
 {
 	static short	count = 0;
@@ -234,7 +238,8 @@ char c;
 			break;
 		}
 }
-expletive()
+
+void expletive()
 {
 	static short	count = 0;
 	static short	which = 0;

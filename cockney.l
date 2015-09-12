@@ -17,12 +17,21 @@ EW [ \t.,;!\?$]
 
 %option noyywrap
 
-%%
-
 %{
-void eos();
-void plastc();
+#include<time.h>
+void eos(void);
+void plastc(void);
+char caseify(char);
+void I(void);
+void bloody(void);
+void set_did(short);
+void clear_did(void);
+void dintI(void);
+void pooped(void);
+void expletive(void);
 %}
+
+%%
 
 <junk>.			{	srandom(time(0L)); unput(yytext[0]); BEGIN 0; }
 {BW}[Tt]he{EW}		{	ECHO; bloody(); }
@@ -110,7 +119,7 @@ void plastc()
     unput(yytext[yyleng-1]);
 }
 
-caseify(c)
+char caseify(c)
 char c;
 {
     if (yytext[0] <= 'Z')
@@ -120,7 +129,7 @@ char c;
 }
 
 
-I()
+void I()
 {
 /*    extern long random(); */
 
@@ -133,7 +142,7 @@ I()
 static short b_count = 0;
 static short b_which = 0;
 
-bloody()
+void bloody()
 {
 	if (b_count++ % 2 == 0) {
 		switch (b_which++ % 4) {
@@ -147,17 +156,18 @@ bloody()
 
 static short did = 0;
 
-set_did(val)
+void set_did(val)
+short val;
 {
     did = val;
 }
 
-clear_did()
+void clear_did()
 {
     did = 0;
 }
 
-dintI()
+void dintI()
 {
 /*    extern long random(); */
 
@@ -170,7 +180,7 @@ dintI()
     clear_did();
 }
 
-pooped()
+void pooped()
 {
 /*    extern long random(); */
 
@@ -187,7 +197,7 @@ pooped()
 	}
 }
 
-expletive()
+void expletive()
 {
 /*
 Blimey

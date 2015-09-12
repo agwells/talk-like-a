@@ -12,10 +12,13 @@ BW [ \t]
 SP [ \t]
 EW [ \t.,;!\?$]
 
-%%
 %{
-    void plastc();
+    void plastc(void);
+    char caseify(char);
+    void expletive(void);
 %}
+
+%%
 ".so ".*$			printf("%s", yytext);
 [ao]ther			printf("%cdder", yytext[0]=='a'?'a':'u');
 [Nn]othing			printf("%cuttin'", yytext[0]);
@@ -76,7 +79,7 @@ void plastc()
     yyunput(yytext[yyleng-1], yytext);
 }
 
-caseify(c)
+char caseify(c)
 char c;
 {
 	if (yytext[0] <= 'Z')
@@ -88,7 +91,7 @@ char c;
 short	count = 0;
 short	which = 0;
 
-expletive()
+void expletive()
 {
 	if (count++ % 4 == 0) {
 		switch (which++ % 5) {

@@ -51,6 +51,12 @@ unsigned int fcounter = 0;
 #define WCOMP(string1,string2)	compstring(Y0,(string1),(string2),1)
 
 #define	DUMP()			printf("%s",yytext)
+
+void capstring(char, char*, int);
+void compstring(char, char*, char*, int);
+char _caseify(char, int);
+char caseify(char);
+
 %}
 
 %e 8000
@@ -643,14 +649,14 @@ robably|ventually|[Oo]bvious|[Bb]asic|{W}[Oo]nly|otally	|
 %}
 
 %%
-main()
+int main()
 {
 	yylex();
 	printf("\nHail Big Brother!\n");
 }
 
 
-capstring(firstchar,string,i)
+void capstring(firstchar,string,i)
     char firstchar, *string;
     int i;
 {
@@ -659,7 +665,7 @@ capstring(firstchar,string,i)
 	printf("%s",string+1);
 }
 
-compstring(firstchar,string1,string2,i)
+void compstring(firstchar,string1,string2,i)
     char firstchar, *string1, *string2;
     int i;
 {
@@ -667,7 +673,7 @@ compstring(firstchar,string1,string2,i)
 	capstring(0,string2,i);
 }
 
-_caseify(c,i)
+char _caseify(c,i)
     char c;
     int i;
 {
@@ -675,7 +681,7 @@ _caseify(c,i)
 	else return (c);
 }
 
-caseify(c)
+char caseify(c)
     char c;
 {
 	return _caseify(c,0);

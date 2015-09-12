@@ -1,9 +1,12 @@
 %{
 
 #include <stdio.h>
+#include <stdlib.h>
 typedef int INT;
 
 #define YYSTYPE INT
+extern int yylex (void);
+int yyerror(char*);
 
 %}
 
