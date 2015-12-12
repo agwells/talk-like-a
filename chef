@@ -33,7 +33,7 @@ s/o/oo/g;
 # Have to double "Oo" seperatly.
 s/(\b)O(\w)/$1Oo$2/g;
 # Fix the word "bork", which will have been mangled to "burk"
-# by above commands. Note that any occurence of "burk" in the input
+# by above commands. Note that any occurrence of "burk" in the input
 # gets changed to "boork", so it's completly safe to do this:
 s/\b([Bb])urk\b/$1ork/g;
 

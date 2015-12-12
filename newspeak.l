@@ -20,7 +20,7 @@
  *	rm lex.yy.c
  *
  *	This must be compiled with "flex", not normal "lex".  Lex has
- *	some builtin, unchangable limits which this program exceeds.
+ *	some builtin, unchangeable limits which this program exceeds.
  *	This has been verified to work with flex version 2.3.7, and
  *	may not work with flex version 2.3.6.
  *
@@ -350,7 +350,7 @@ China|[Jj]apan|[Tt]aiwan|{THE}?[Pp]hillipines|[Ii]ndia	|
 
 %{
 	/******************************
-	 * Miscelaneous Translations  *
+	 * Miscellaneous Translations *
 	 ******************************/
 %}
 

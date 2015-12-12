@@ -169,7 +169,7 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 [Dd]og			SUB("Dawg");
 [Ll]awyer		|
 [Ll]egal{BW}counc[ei]l	|
-[Ll]egal{BW}councellor	|
+[Ll]egal{BW}councillor	|
 [Aa]ttorney		|
 [Aa]ttorney{BW}[Aa]t{BW}[Ll]aw SUB("City slicker");
 
