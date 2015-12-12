@@ -171,7 +171,7 @@ int main(int argc, char **argv) {
   c = fgetc(infile);
   
   if(feof(infile)) {
-    printf("Reached EOF while reading the first character of the input file!\n");
+    fprintf(stderr, "Reached EOF while reading the first character of the input file!\n");
     free(word);
     return 4;
   }
