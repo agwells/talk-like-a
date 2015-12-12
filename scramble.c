@@ -120,7 +120,7 @@ char *clear_string(char *string) {
 
 int main(int argc, char **argv) {
   int word_length;
-  char c, tempchar, *word;
+  char c, tempchar, *word, *rword;
   FILE *infile, *outfile;
   
 #if ALLOW_FILE_IO
@@ -172,12 +172,19 @@ int main(int argc, char **argv) {
   
   if(feof(infile)) {
     printf("Reached EOF while reading the first character of the input file!\n");
+    free(word);
     return 4;
   }
   
   while(!feof(infile)) {
     if(isalpha(c)) {
-      word = realloc(word, word_length+2); // one for the new character, one for the null
+      rword = realloc(word, word_length+2); // one for the new character, one for the null
+      if(rword == NULL){
+        free(word);
+        fprintf(stderr, "Unable to allocate memory\n");
+        return 5;
+      }
+      word = rword;
       word[word_length] = c;
       word[word_length + 1] = '\0'; // duplicate addition with the next line, but possibly more readable
       word_length++;
