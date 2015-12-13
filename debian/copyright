@@ -2,7 +2,7 @@ Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Source: Gathered from many sources, including old usenet posts in the 90's.
 
 Files: *
-Copyright: 1996-2009 Joey Hess <joey@kitenet.net>
+Copyright: 1996-2009 Joey Hess <id@joeyh.name>
 License: GPL-2+
  The full text of the GPL is distributed as GPL in filters's source,
  and is distributed in /usr/share/common-licenses/GPL-2 on Debian systems.
