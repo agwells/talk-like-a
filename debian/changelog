@@ -1,4 +1,4 @@
-filters (2.55) UNRELEASED; urgency=medium
+filters (2.55) unstable; urgency=medium
 
   * Fix build warnings.
     Thanks, Marius Gavrilescu.
@@ -7,7 +7,7 @@ filters (2.55) UNRELEASED; urgency=medium
   * A few other minor fixes.
   * Update urls.
 
- -- Joey Hess <id@joeyh.name>  Sat, 12 Sep 2015 17:16:08 -0400
+ -- Joey Hess <id@joeyh.name>  Sun, 13 Dec 2015 14:54:48 -0400
 
 filters (2.54) unstable; urgency=medium
 
