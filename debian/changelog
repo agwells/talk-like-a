@@ -2,6 +2,9 @@ filters (2.55) UNRELEASED; urgency=medium
 
   * Fix build warnings.
     Thanks, Marius Gavrilescu.
+  * scramble: Fix missing free and improve error handling.
+    Thanks, Marius Gavrilescu
+  * A few other minor fixes.
 
  -- Joey Hess <id@joeyh.name>  Sat, 12 Sep 2015 17:16:08 -0400
 
