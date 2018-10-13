@@ -7,9 +7,9 @@ const originalText = fs
   })
   .toString();
 
-const filters = ["chef", "LOLCAT"].map(f => [f]);
+const filters = ["chef", "LOLCAT", "cockney"].map(f => [f]);
 
-test.each(filters)("chef", filterName => {
+test.each(filters)("Comparing filter output to Unix version", filterName => {
   const expectedTransform = fs.readFileSync(
     path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
     { encoding: "UTF8" }

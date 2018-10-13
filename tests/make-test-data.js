@@ -44,24 +44,30 @@ const sampleText = fs.readFileSync(
   { encoding: "UTF8", flag: "r" }
 );
 
-filters.forEach(filterName => {
-  console.log(`${filterName}...`);
-  const result1 = child_process
-    .execSync(filterName, {
-      input: sampleText
-    })
-    .toString();
-  const result2 = child_process
-    .execSync(filterName, {
-      input: sampleText
-    })
-    .toString();
-  if (result1 !== result2) {
-    console.log(`WARNING: Filter '${filterName}' is non-idempotent. :(`);
-  } else {
-    fs.writeFileSync(
-      path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
-      result1
-    );
-  }
-});
+Promise.all(
+  filters.map(async function(filterName) {
+    console.log(`${filterName}...`);
+    const result1 = child_process
+      .execSync(filterName, {
+        input: sampleText
+      })
+      .toString();
+    await new Promise(function(resolve) {
+      setTimeout(resolve, 2000);
+    });
+    const result2 = child_process
+      .execSync(filterName, {
+        input: sampleText
+      })
+      .toString();
+    if (result1 !== result2) {
+      console.log(`WARNING: Filter '${filterName}' is non-idempotent. :(`);
+    } else {
+      fs.writeFileSync(
+        path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
+        result1
+      );
+    }
+    console.log(`... ${filterName}`);
+  })
+);
