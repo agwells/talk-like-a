@@ -1,20 +1,22 @@
 const fs = require("fs");
 const path = require("path");
 
-const sampleText = fs
+const originalText = fs
   .readFileSync(path.join(__dirname, "moby-dick-chapter-1.txt"), {
     encoding: "UTF8"
   })
   .toString();
 
-test("chef", () => {
-  const expectedChefText = fs.readFileSync(
-    path.join(__dirname, "moby-dick-chapter-1.chef.txt"),
+const filters = ["chef", "LOLCAT"].map(f => [f]);
+
+test.each(filters)("chef", filterName => {
+  const expectedTransform = fs.readFileSync(
+    path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
     { encoding: "UTF8" }
   );
 
-  const chef = require("../src/chef").default;
-  const generatedChefText = chef(sampleText);
+  const filterFn = require(`../src/${filterName}`).default;
+  const generatedTransform = filterFn(originalText);
 
-  expect(generatedChefText).toStrictEqual(expectedChefText);
+  expect(generatedTransform).toStrictEqual(expectedTransform);
 });
