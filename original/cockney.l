@@ -9,9 +9,9 @@
  */
 %}
 
-BW [ \t\n]
+BW [^A-Za-z0-9_]
 SP [ \t]+
-EW [ \t.,;!\?$]
+EW [^A-Za-z0-9_]
 
 %Start junk
 
@@ -33,8 +33,8 @@ void expletive(void);
 
 %%
 
-<junk>.			{	srandom(time(0L)); unput(yytext[0]); BEGIN 0; }
-{BW}[Tt]he{EW}		{	ECHO; bloody(); }
+<junk>.			{	unput(yytext[0]); BEGIN 0; }
+{BW}[Tt]he{EW}		{	bloody(); }
 {BW}[Ss]teal{EW}	{	printf("%c%cick",yytext[0],yytext[1]-5);
 				eos();
 			}
@@ -45,6 +45,7 @@ void expletive(void);
 {BW}were{EW}		|
 {BW}was{EW}		{	printf("%cwuz",yytext[0]); eos(); }
 [Hh]ello			printf("'%cllo", caseify('u'));
+{BW}[Hh]old			printf("%c'owld",yytext[0]);
 {BW}[Hh]			printf("%c'",yytext[0]);
 {BW}[Yy]our{EW}		{	printf("%.2ser",yytext); eos(); }
 {BW}it{EW}		{	printf("%.2s'",yytext); eos(); }
@@ -53,8 +54,11 @@ void expletive(void);
 {BW}my{EW}		{	printf("%.2se",yytext); eos(); }
 {BW}th(is|at){EW}	{	printf("%.5s", yytext); eos(); }
 {BW}[Ww]e{SP}went{EW}	|
-{BW}[Ww]e{SP}had{EW}	|
-{BW}[Ww]e{SP}did{EW}	{	printf("%.*s",yyleng-1,yytext);
+{BW}[Ww]e{SP}did{EW}	{	printf("%.*s",(int)yyleng-1,yytext);
+				set_did(2);
+				eos();
+			}
+{BW}[Ww]e{SP}had{EW}	{	printf("%.*s'ad",4,yytext);
 				set_did(2);
 				eos();
 			}
@@ -67,7 +71,7 @@ void expletive(void);
 			}
 {BW}I{EW}		{	I(); eos(); }
 
-[Yy]ou{SP}[^aeiouy]	{	printf("%c'", yytext[0]); plastc(); }
+{BW}[Yy]ou{SP}[^aeiouy]	{	printf("%.2s", yytext); plastc(); unput('\'');}
 [Ww]hat{SP}are{EW}	{	printf("%cotta", yytext[0]); eos(); }
 
 {BW}other		|
@@ -108,10 +112,14 @@ ime{EW}			{	printf("oime"); eos(); }
 
 void eos()
 {
-    if (yytext[yyleng-1] == '.')
-    dintI();
-    else
-    unput(yytext[yyleng-1]);
+    if (yytext[yyleng-1] == '.') {
+    	dintI();
+	} else if (yytext[yyleng-1] == '?') {
+		printf(", roit?");
+		clear_did();
+	} else {
+		plastc();
+	}
 }
 
 void plastc()
@@ -128,12 +136,10 @@ char c;
 	return (c);
 }
 
-
+static short I_count = 0;
 void I()
 {
-/*    extern long random(); */
-
-    if (random() % 100 < 20)
+	if (I_count++ % 5 == 1)
 	printf("%cOy",yytext[0]);
     else
 	printf("%cI",yytext[0]);
@@ -146,12 +152,15 @@ void bloody()
 {
 	if (b_count++ % 2 == 0) {
 		switch (b_which++ % 4) {
-			case 0: printf("bloody "); break;
-			case 1: printf("flinkin' "); break;
-			case 2: printf("bleedin' "); break;
-			case 3: printf("soddin' "); break;
-			}
+			case 0: printf("%sbloody", yytext); break;
+			case 1: printf("%sflinkin'", yytext); break;
+			case 2: printf("%sbleedin'", yytext); break;
+			case 3: printf("%ssoddin'", yytext); break;
 		}
+	} else {
+		printf("%.*s", (int)yyleng-1, yytext);
+	}
+	plastc();
 }
 
 static short did = 0;
@@ -167,24 +176,26 @@ void clear_did()
     did = 0;
 }
 
+static short dinti_count = 0;
+
 void dintI()
 {
-/*    extern long random(); */
-
-    if ((did == 1) && (random() % 100 < 50))
-	printf(", didn'I?");
-    else if ((did == 2) && (random() % 100 < 50))
-	printf(", din't we?");
-    else
-	printf(".");
-    clear_did();
+	if (did > 0 && dinti_count++ % 2 == 0) {
+    	if ((did == 1))
+			printf(", didn'I?");
+		else if ((did == 2))
+			printf(", din't we?");
+	}
+	else
+		printf(".");
+	clear_did();
 }
+
+static short pooped_count = 0;
 
 void pooped()
 {
-/*    extern long random(); */
-
-    switch (random() % 3) {
+    switch (pooped_count++ % 3) {
 	case 0:
 	    printf("%cknackered", yytext[0]);
 	    break;
