@@ -2,8 +2,8 @@
 # Eleet filter, Copyright 1999,2002 by Joey Hess under the terms of the GNU GPL.
 BEGIN {
 	#             abcdefghijklmnopqrstuvwxyz
-	$transstring="4bcd3fgh1jklmn0pqr5tuvwxyz";
-	$t="tr/a-zA-Z/$transstring$transstring/";
+	$transstring="4bcd3fgh1jklmn0pqr5tuvwxyz4BCD3FGH1JKLMN0PQR5TUVWXYZ";
+	$t="tr/a-zA-Z/$transstring/";
 }
 s/porn/pr0n/g;
 s/elite/l33t/g;

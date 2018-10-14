@@ -17,8 +17,8 @@ const filters = [
   //  "b1ff",
   "censor",
   "chef",
-  "cockney",
-  "eleet",
+  "./cockney",
+  "./eleet",
   "fanboy",
   "fudd",
   "jethro",
@@ -45,10 +45,14 @@ const sampleText = fs.readFileSync(
 );
 
 Promise.all(
-  filters.map(async function(filterName) {
+  filters.map(async function(filterCommand) {
+    let filterName = filterCommand;
+    if (filterCommand.startsWith("./")) {
+      filterName = filterName.substr(2);
+    }
     console.log(`${filterName}...`);
     const result1 = child_process
-      .execSync(filterName, {
+      .execSync(filterCommand, {
         input: sampleText
       })
       .toString();
@@ -56,7 +60,7 @@ Promise.all(
       setTimeout(resolve, 2000);
     });
     const result2 = child_process
-      .execSync(filterName, {
+      .execSync(filterCommand, {
         input: sampleText
       })
       .toString();

@@ -7,7 +7,7 @@ const originalText = fs
   })
   .toString();
 
-const filters = ["chef", "LOLCAT", "cockney"].map(f => [f]);
+const filters = ["chef", "LOLCAT", "cockney", "eleet"].map(f => [f]);
 
 test.each(filters)("Comparing filter output to Unix version", filterName => {
   const expectedTransform = fs
