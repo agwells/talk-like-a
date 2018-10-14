@@ -41,30 +41,49 @@ function cockney(initialString) {
     return "";
   }
 
-  let did = 0;
-
-  function set_did(val) {
-    did = val;
-  }
-
-  function clear_did() {
-    did = 0;
-  }
-
   let dintI_count = 0;
-  function dintI() {
-    try {
-      if (dintI_count++ % 2 === 0) {
-        if (did == 1) {
-          return ", didn'I?";
-        } else if (did == 2) {
-          return ", din't we?";
+  /**
+   * Every other sentence that contains "I/we went/had/did", tag "..., didn't I/we?"
+   * on the end.
+   *
+   * @param {number} offset
+   * @param {string} fullstring
+   * @returns
+   */
+  function dintI(offset, fullstring) {
+    let sentence = fullstring
+      .substr(0, offset + 1)
+      .match(/(?:^|(?:\w|')[.?])([^.?]+)$/);
+    if (sentence && sentence.length && sentence[1]) {
+      sentence = sentence[1].trim();
+
+      // Find out if the sentence contains an "I" phrase
+      let iOrWe = false;
+      const indexOfI = sentence.search(/\b(I|Oy) did\b/);
+      if (indexOfI !== -1) {
+        iOrWe = "I";
+      }
+      // Find out if the sentence contains a "we" phrase.
+      // If it has both "I" and "we", then use whichever came first
+      // in the sentence (because that's most likely to be the subject
+      // of the sentence's action, so it makes the most sense for it to
+      // agree with the final phrase.)
+      const indexOfWe = sentence.search(/\b[Ww]e\s(?:went|had|did)\b/);
+      if (indexOfWe !== -1 && (!iOrWe || indexOfWe < indexOfI)) {
+        iOrWe < "we";
+      }
+      if (iOrWe && dintI_count++ % 2 === 0) {
+        // Find the full text of the preceeding sentence.
+
+        switch (iOrWe) {
+          case "I":
+            return ", didn'I?";
+          case "we":
+            return ", din't we?";
         }
       }
-      return ".";
-    } finally {
-      clear_did();
     }
+    return ".";
   }
 
   let pooped_count = 0;
@@ -121,20 +140,8 @@ function cockney(initialString) {
       .replace(/\bmy\b/g, "me")
       // this/that
       .replace(/\b(?:this|that)\b/g, "$&")
-      // We went/had/did => affects end-sentence "didn't I/we?"
-      // TODO: This won't work in non-lexer mode...
-      .replace(/\b[Ww]e\s(?:went|had|did)\b/g, match => {
-        set_did(2);
-        return match;
-      })
       // I went/had/did => I did
-      // TODO: Also sets end-sentence "didn't I/w", but that won't
-      // work in non-lexer mode...
-      .replace(/\bI\s(?:went|had|did)\b/g, () => {
-        set_did(1);
-        // return I() + " did";
-        return "I did";
-      })
+      .replace(/\bI\s(?:went|had|did)\b/g, () => "I did")
       // I => Oy (sometimes)
       .replace(/\bI\b/g, () => I())
       // What are => Wotta (eos)
@@ -191,11 +198,13 @@ function cockney(initialString) {
       .replace(/([^e])ight/g, "$1oit")
       // (sentence)? -> (sentence), roit?
       .replace(/(\w|')\?/g, (match, p1) => {
-        clear_did();
         return p1 + ", roit?";
       })
       // (sentence). -> (sentence), din't I?
-      .replace(/(\w|')\./g, (match, p1) => p1 + dintI())
+      .replace(
+        /(\w|')\./g,
+        (match, p1, offset, fulltext) => p1 + dintI(offset, fulltext)
+      )
   );
 }
 
