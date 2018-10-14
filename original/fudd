@@ -4,7 +4,7 @@ s/[rl]/w/g;
 s/qu/qw/g;
 s/th\b/f/g;
 s/th\B/d/g;
-s/n\./n, uh-hah-hah-hah. /g;
+s/n\./n, uh-hah-hah-hah./g;
 s/[RL]/W/g;
 s/Qu/Qw/g;
 s/QU/QW/g;

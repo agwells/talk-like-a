@@ -20,7 +20,7 @@ const filters = [
   "./cockney",
   "./eleet",
   "fanboy",
-  "fudd",
+  "./fudd",
   "jethro",
   // "jibberish",
   "jive",
