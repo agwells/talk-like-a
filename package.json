@@ -4,7 +4,8 @@
   "description": "A port of the debian \"filters\" package to JavaScript",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch './tests/index.test.js'"
+    "test": "jest --watch './tests/index.test.js'",
+    "make-test-data": "$NODE ./tests/make-test-data.js"
   },
   "repository": {
     "type": "git",

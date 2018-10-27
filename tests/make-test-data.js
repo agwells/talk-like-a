@@ -17,23 +17,27 @@ const filters = [
   //  "b1ff",
   "censor",
   "chef",
-  "./cockney",
-  "./eleet",
+  "cockney",
+  "eleet",
   "fanboy",
-  "./fudd",
+  "fudd",
   "jethro",
   // "jibberish",
   "jive",
   "ken",
+  // "kenny",
+  // "ky00te",
   "kenny",
   "kraut",
   "LOLCAT",
+  //  "nethackify",
   "newspeak",
   "nyc",
   // "pirate",
   // "rasterman",
   "scottish",
   //  "scramble",
+  //  "spammer",
   "studly",
   // "uniencode",
   "upside-down"
@@ -45,11 +49,8 @@ const sampleText = fs.readFileSync(
 );
 
 Promise.all(
-  filters.map(async function(filterCommand) {
-    let filterName = filterCommand;
-    if (filterCommand.startsWith("./")) {
-      filterName = filterName.substr(2);
-    }
+  filters.map(async function(filterName) {
+    let filterCommand = `./original/${filterName}`;
     console.log(`${filterName}...`);
     const result1 = child_process
       .execSync(filterCommand, {
