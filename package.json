@@ -1,5 +1,5 @@
 {
-  "name": "filters",
+  "name": "textfilters",
   "version": "0.0.1",
   "description": "A port of the debian \"filters\" package to JavaScript",
   "main": "index.js",
@@ -8,11 +8,11 @@
     "make-test-data": "$NODE ./tests/make-test-data.js"
   },
   "repository": {
-    "type": "git",
-    "url": "git://git.joeyh.name/filters"
+    "type": "github",
+    "url": "agwells/textfilters"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Aaron Wells",
+  "license": "GPL",
   "devDependencies": {
     "jest": "^23.6.0",
     "prettier": "1.14.3"
