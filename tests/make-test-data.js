@@ -14,7 +14,7 @@ const child_process = require("child_process");
  * I have to tweak the "original" to use a RNG that I can replicate in JS.
  */
 const filters = [
-  //  "b1ff",
+  "b1ff",
   "censor",
   "chef",
   "cockney",

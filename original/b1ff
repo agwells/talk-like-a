@@ -2,6 +2,13 @@
 # B1FF filter.
 # Copyright 1999 by Joey Hess under the terms of the GNU GPL.
 
+my $seed = 1;
+sub fakeRand {
+	my ($max) = @_;
+	$seed = $seed * 48271 % 0x7fffffff;
+	return $seed % $max;
+}
+
 # I use an array, not a hash. because order is important.
 @trans_table=(
 	'\bEVERYONE\b' => 'EVRY 1',
@@ -68,22 +75,21 @@ while (@trans_table) {
 
 s/(\!+)/$1.make_exclimation()/eg;
 s/(\?+)/$1.make_question()/eg;
-s/I/rand 3 > 2 ? '1' : 'I'/eg; # change 1/3 of I's to 1's
+s/I/(fakeRand 3) > 2 ? '1' : 'I'/eg; # change 1/3 of I's to 1's
 
 @punct=('.','!',',');
 
 s/\.  /. /g;
-s/\./$punct[int(rand 3)]/eg;
+s/\./$punct[int(fakeRand 3)]/eg;
 s/\,/./g;
-
 
 # b1ff can't hold down on shift too well!!!!!!!1!
 sub make_exclimation {
-	my $length=shift || int(rand 5);
+	my $length=shift || int(fakeRand 5);
 	my $ret='!';
 	my $last=0;
 	for (1..$length) {
-		if (! $last && int(rand 3) eq 2) {
+		if (! $last && int(fakeRand 3) eq 2) {
 			$ret.="1";
 			$last=1;
 		}
@@ -97,15 +103,15 @@ sub make_exclimation {
 
 # ask questions excitedly?!?!?!?!
 sub make_question {
-	my $length=shift || int(rand 5) + 1;
+	my $length=shift || int(fakeRand 5) + 1;
 	my $ret='';
 	my $last=0;
 	while (length($ret) < $length) {
-		if (! $last && int(rand 5) > 2) {
+		if (! $last && int(fakeRand 5) > 2) {
 			$ret.="?!";
 			$last=1;
 		}
-		elsif (! $last && int(rand 5) > 3) {
+		elsif (! $last && int(fakeRand 5) > 3) {
 			$ret.="?1";
 			$last=1;
 		}
