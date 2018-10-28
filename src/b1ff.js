@@ -1,118 +1,120 @@
-#!/usr/bin/perl -p
-# B1FF filter.
-# Copyright 1999 by Joey Hess under the terms of the GNU GPL.
+// #!/usr/bin/perl -p
+// # B1FF filter.
+// # Copyright 1999 by Joey Hess under the terms of the GNU GPL.
 
-# I use an array, not a hash. because order is important.
-@trans_table=(
-	'\bEVERYONE\b' => 'EVRY 1',
-	'\bEVERYBODY\b' => 'EVRY BUDY',
-	'\bEVERY\b' => 'EVRY',
-	'\bONE\b' => '1',
-	'\bAND\b' => '+',
-	'\bYOU' => 'U',
-	'\bITS\b' => 'IT"S',
-	'\bIT\'S\b' => 'ITS',
-	'\bIS\b' => 'IZ',
-	'\bLINUX\b' => 'LINUS',
-	'\bUNIX\b' => 'THE MANEFRA1M O/S',
-	'\bWINDOWS\b' => 'WINDOWZ (IT RULEZ MAN!)',
-	'\bYOU\'RE\b' => 'YOUR',
-	'\bTHEM\b' => 'THUM',
-	'\bHERE\b' => 'HERE',
-	'\bTHEY\'RE\b' => 'THE1R',
-	'\bTHEIR\b' => 'THERE',
-	'\bWAS\b' => 'WUZ',
-	'\bMACINTOSH\b' => 'IMAC', # too 90's?
-	'\bVERY\b' => 'TOTALLY',
-	'\bCOMPUTER\b' => 'VIC-20',
-	'\bWHETHER\b' => 'WHETHUR',
-	'\b(?:H|CR)ACKER\b' => 'KEWL HACKER D00D!',
-	'\bOF\b' => 'UV',
-	'\bGNU\b' => 'NEW',
-	'\bQUITE\b' => 'REAL',
-	'\bFREE\b' => 'FREE!',
+const { getRandFn } = require("./lib.js");
 
-	'HOME' => 'HUM',
-	'COME' => 'CUM',
-	'MICRO' => 'MIKRO',
-	'GOVERN' => 'GUVERN',
-	'PERSON' => 'D00D',
-	'SOME' => 'SUM',
-	'WRITE' => 'RITE',
-	'REAL' => 'REEL',
-	'LITE' => 'L1TE',
-	'BIAN' => 'B1AN',
-	'TION' => 'SHUN',
-	'FOR' => '4',
-	'TO' => '2',
-	'ATE' => '8',
-	'\b2TALLY\b' => 'TOTALY', # fix from line above
-	'LL' => 'L',
-	'OO' => '00',
-	'MATE' => 'M8',
-	'ER' => 'UR',
-	'S+\b' => 'Z',
-	'KN' => 'N',
-	'IE' => 'EI',
-);
-
-$_=uc;
-s/;/,/g;
-s/'//g;
-
-while (@trans_table) {
-	$key=shift @trans_table;
-	$value=shift @trans_table;
-	s/$key/$value/g;
-}
-
-s/(\!+)/$1.make_exclimation()/eg;
-s/(\?+)/$1.make_question()/eg;
-s/I/rand 3 > 2 ? '1' : 'I'/eg; # change 1/3 of I's to 1's
-
-@punct=('.','!',',');
-
-s/\.  /. /g;
-s/\./$punct[int(rand 3)]/eg;
-s/\,/./g;
-
-
-# b1ff can't hold down on shift too well!!!!!!!1!
-sub make_exclimation {
-	my $length=shift || int(rand 5);
-	my $ret='!';
-	my $last=0;
-	for (1..$length) {
-		if (! $last && int(rand 3) eq 2) {
-			$ret.="1";
-			$last=1;
-		}
-		else {
-			$ret.="!";
-			$last=0;
-		}
-	}
-	return $ret;
-}
-
-# ask questions excitedly?!?!?!?!
-sub make_question {
-	my $length=shift || int(rand 5) + 1;
-	my $ret='';
-	my $last=0;
-	while (length($ret) < $length) {
-		if (! $last && int(rand 5) > 2) {
-			$ret.="?!";
-			$last=1;
-		}
-		elsif (! $last && int(rand 5) > 3) {
-			$ret.="?1";
-			$last=1;
-		}
-		else {
-			$ret.="?";
-			$last=0;
-		}
-	}
-	return $ret;
-}
+// # I use an array, not a hash. because order is important.
+module.exports = function b1ff(initialString) {
+  const rand = getRandFn();
+  return initialString
+    .split("\n")
+    .map(line => {
+      return (
+        line
+          .toUpperCase()
+          .replace(/;/g, ",")
+          .replace(/'/g, "")
+          .replace(/\bEVERYONE\b/g, "EVRY 1")
+          .replace(/\bEVERYBODY\b/g, "EVRY BUDY")
+          .replace(/\bEVERY\b/g, "EVRY")
+          .replace(/\bONE\b/g, "1")
+          .replace(/\bAND\b/g, "+")
+          .replace(/\bYOU/g, "U")
+          .replace(/\bITS\b/g, 'IT"S')
+          .replace(/\bIT\'S\b/g, "ITS")
+          .replace(/\bIS\b/g, "IZ")
+          .replace(/\bLINUX\b/g, "LINUS")
+          .replace(/\bUNIX\b/g, "THE MANEFRA1M O/S")
+          .replace(/\bWINDOWS\b/g, "WINDOWZ (IT RULEZ MAN!)")
+          .replace(/\bYOU\'RE\b/g, "YOUR")
+          .replace(/\bTHEM\b/g, "THUM")
+          .replace(/\bHERE\b/g, "HERE")
+          .replace(/\bTHEY\'RE\b/g, "THE1R")
+          .replace(/\bTHEIR\b/g, "THERE")
+          .replace(/\bWAS\b/g, "WUZ")
+          .replace(/\bMACINTOSH\b/g, "IMAC") // too 90's?
+          .replace(/\bVERY\b/g, "TOTALLY")
+          .replace(/\bCOMPUTER\b/g, "VIC-20")
+          .replace(/\bWHETHER\b/g, "WHETHUR")
+          .replace(/\b(?:H|CR)ACKER\b/g, "KEWL HACKER D00D!")
+          .replace(/\bOF\b/g, "UV")
+          .replace(/\bGNU\b/g, "NEW")
+          .replace(/\bQUITE\b/g, "REAL")
+          .replace(/\bFREE\b/g, "FREE!")
+          .replace(/HOME/g, "HUM")
+          .replace(/COME/g, "CUM")
+          .replace(/MICRO/g, "MIKRO")
+          .replace(/GOVERN/g, "GUVERN")
+          .replace(/PERSON/g, "D00D")
+          .replace(/SOME/g, "SUM")
+          .replace(/WRITE/g, "RITE")
+          .replace(/REAL/g, "REEL")
+          .replace(/LITE/g, "L1TE")
+          .replace(/BIAN/g, "B1AN")
+          .replace(/TION/g, "SHUN")
+          .replace(/FOR/g, "4")
+          .replace(/TO/g, "2")
+          .replace(/ATE/g, "8")
+          .replace(/\b2TALLY\b/g, "TOTALY") // fix from line above
+          .replace(/LL/g, "L")
+          .replace(/OO/g, "00")
+          .replace(/MATE/g, "M8")
+          .replace(/ER/g, "UR")
+          .replace(/S+\b/g, "Z")
+          .replace(/KN/g, "N")
+          .replace(/IE/g, "EI")
+          .replace(/!+/g, match => {
+            let ret = match + "!";
+            const length = rand() % 5;
+            let prevWasMangled = false;
+            for (let i = 0; i < length; i++) {
+              // b1ff can't hold down on shift too well!!!!!!!1!
+              if (!prevWasMangled && rand() % 3 === 2) {
+                ret = ret + "1";
+                prevWasMangled = true;
+              } else {
+                ret = ret + "!";
+                prevWasMangled = false;
+              }
+            }
+            return ret;
+          })
+          .replace(/\?+/g, match => {
+            let ret = "";
+            const length = (rand() % 5) + 1;
+            let prevWasMangled = false;
+            while (ret.length < length) {
+              if (!prevWasMangled && rand() % 5 > 2) {
+                ret = ret + "?!";
+                prevWasMangled = true;
+              } else if (!prevWasMangled && rand() % 5 > 3) {
+                ret = ret + "?1";
+                prevWasMangled = true;
+              } else {
+                ret = ret + "?";
+                prevWasMangled = false;
+              }
+            }
+            return match + ret;
+          })
+          .replace(/I/g, () => (rand() % 3 > 2 ? "1" : "I"))
+          // I guess b1ff doesn't use two spaces after his periods. How 90s-rude!
+          .replace(/\.  /g, ". ")
+          .replace(/\./g, () => {
+            switch (rand() % 3) {
+              case 0:
+                return ".";
+              case 1:
+                return "!";
+              case 2:
+                return ",";
+            }
+          })
+          // TODO: why are we replacing all commas with periods, after randomly
+          // replacing one third of periods with commas?
+          .replace(/,/g, ".")
+      );
+    })
+    .join("\n");
+};
