@@ -28,6 +28,7 @@ install:	$(BUILD) $(OTHER)
 clean:
 	$(RM) -f core *.o *~ $(BUILD)
 	cd ky00te.dir && make clean
+	$(RM) -f cockney.c jethro.c jive.c ken.c kraut.c newspeak.c nyc.c
 
 .SUFFIXES: .l
 
