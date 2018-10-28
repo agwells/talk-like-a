@@ -7,7 +7,7 @@
  * @param {string} initialString
  * @returns {string}
  */
-function chef(initialString) {
+module.exports = function chef(initialString) {
   // This whole function will be just a chain of
   // string.replace() calls.
   return (
@@ -83,8 +83,4 @@ function chef(initialString) {
       // # Special punctuation of the end of sentances but only at end of lines.
       .replace(/([.?!])$/gm, "$1\nBork Bork Bork!")
   );
-}
-
-module.exports = {
-  default: chef
 };

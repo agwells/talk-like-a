@@ -7,7 +7,7 @@
  * @param {string} initialString
  * @returns {string}
  */
-function LOLCAT(initialString) {
+module.exports = function LOLCAT(initialString) {
   return (
     initialString
       .toLowerCase()
@@ -82,8 +82,4 @@ function LOLCAT(initialString) {
       .replace(/es/g, "ez")
       .toUpperCase()
   );
-}
-
-module.exports = {
-  default: LOLCAT
 };

@@ -13,7 +13,7 @@
  * @param {string} initialString
  * @return {string}
  */
-function cockney(initialString) {
+module.exports = function cockney(initialString) {
   let I_count = 0;
   function I() {
     if (I_count++ % 5 === 1) {
@@ -206,6 +206,4 @@ function cockney(initialString) {
         (match, p1, offset, fulltext) => p1 + dintI(offset, fulltext)
       )
   );
-}
-
-module.exports = { default: cockney };
+};

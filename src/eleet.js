@@ -5,7 +5,7 @@ from = from + from.toUpperCase();
 let to = "4bcd3fgh1jklmn0pqr5tuvwxyz";
 to = to + to.toUpperCase();
 
-function eleet(initialString) {
+module.exports = function eleet(initialString) {
   let tweakedString = initialString
     .replace(/porn/gi, "pr0n")
     .replace(/elite/gi, "l33t");
@@ -20,8 +20,4 @@ function eleet(initialString) {
     }
   }
   return translatedString.join("").replace(/porn/gi);
-}
-
-module.exports = {
-  default: eleet
 };

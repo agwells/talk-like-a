@@ -1,6 +1,6 @@
 // # Elmer Fudd. GPL 2001 by Joey Hess <joey@kitenet.net>
 
-function fudd(initialString) {
+module.exports = function fudd(initialString) {
   return initialString
     .replace(/[rl]/g, "w")
     .replace(/qu/g, "qw")
@@ -14,8 +14,4 @@ function fudd(initialString) {
     .replace(/TH\B/g, "D")
     .replace(/Th/g, "D")
     .replace(/N\./g, "N, uh-hah-hah-hah.");
-}
-
-module.exports = {
-  default: fudd
 };

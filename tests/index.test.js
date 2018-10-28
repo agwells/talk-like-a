@@ -17,7 +17,7 @@ test.each(filters)("Comparing filter output to Unix version", filterName => {
     )
     .toString();
 
-  const filterFn = require(`../src/${filterName}`).default;
+  const filterFn = require(`../src/${filterName}`);
 
   expect(filterFn(originalText).split(" ")).toEqual(
     expectedTransform.split(" ")
