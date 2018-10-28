@@ -25,7 +25,7 @@ sub fakeRand {
 	'\bWINDOWS\b' => 'WINDOWZ (IT RULEZ MAN!)',
 	'\bYOU\'RE\b' => 'YOUR',
 	'\bTHEM\b' => 'THUM',
-	'\bHERE\b' => 'HERE',
+	# '\bHERE\b' => 'HERE',
 	'\bTHEY\'RE\b' => 'THE1R',
 	'\bTHEIR\b' => 'THERE',
 	'\bWAS\b' => 'WUZ',
@@ -50,10 +50,11 @@ sub fakeRand {
 	'LITE' => 'L1TE',
 	'BIAN' => 'B1AN',
 	'TION' => 'SHUN',
-	'FOR' => '4',
-	'TO' => '2',
+	'FOR(R|E\b)?' => '4',
+	'\bTO(?=\b|NIGHT|NITE|DAY|MORROW|GETHER|WARD|MATO)' => '2',
+	'TOO' => '2',
 	'ATE' => '8',
-	'\b2TALLY\b' => 'TOTALY', # fix from line above
+	# '\b2TALLY\b' => 'TOTALY', # fix from line above
 	'LL' => 'L',
 	'OO' => '00',
 	'MATE' => 'M8',
@@ -73,18 +74,18 @@ while (@trans_table) {
 	s/$key/$value/g;
 }
 
-s/(\!+)/$1.make_exclimation()/eg;
-s/(\?+)/$1.make_question()/eg;
-s/I/(fakeRand 3) > 2 ? '1' : 'I'/eg; # change 1/3 of I's to 1's
-
 @punct=('.','!',',');
 
 s/\.  /. /g;
 s/\./$punct[int(fakeRand 3)]/eg;
-s/\,/./g;
+#s/\,/./g;
+
+s/(\!+)/$1.make_exclamation()/eg;
+s/(\?+)/$1.make_question()/eg;
+s/I/(fakeRand 3) > 2 ? '1' : 'I'/eg; # change 1/3 of I's to 1's
 
 # b1ff can't hold down on shift too well!!!!!!!1!
-sub make_exclimation {
+sub make_exclamation {
 	my $length=shift || int(fakeRand 5);
 	my $ret='!';
 	my $last=0;

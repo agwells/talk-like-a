@@ -29,7 +29,7 @@ module.exports = function b1ff(initialString) {
           .replace(/\bWINDOWS\b/g, "WINDOWZ (IT RULEZ MAN!)")
           .replace(/\bYOU\'RE\b/g, "YOUR")
           .replace(/\bTHEM\b/g, "THUM")
-          .replace(/\bHERE\b/g, "HERE")
+          // .replace(/\bHERE\b/g, "HERE")
           .replace(/\bTHEY\'RE\b/g, "THE1R")
           .replace(/\bTHEIR\b/g, "THERE")
           .replace(/\bWAS\b/g, "WUZ")
@@ -53,10 +53,11 @@ module.exports = function b1ff(initialString) {
           .replace(/LITE/g, "L1TE")
           .replace(/BIAN/g, "B1AN")
           .replace(/TION/g, "SHUN")
-          .replace(/FOR/g, "4")
-          .replace(/TO/g, "2")
+          .replace(/FOR(R|E\b)?/g, "4")
+          .replace(/\bTO(?=\b|NIGHT|NITE|DAY|MORROW|GETHER|WARD|MATO)/g, "2")
+          .replace(/TOO/g, "2")
           .replace(/ATE/g, "8")
-          .replace(/\b2TALLY\b/g, "TOTALY") // fix from line above
+          // .replace(/\b2TALLY\b/g, "TOTALY") // fix from line above
           .replace(/LL/g, "L")
           .replace(/OO/g, "00")
           .replace(/MATE/g, "M8")
@@ -64,6 +65,18 @@ module.exports = function b1ff(initialString) {
           .replace(/S+\b/g, "Z")
           .replace(/KN/g, "N")
           .replace(/IE/g, "EI")
+          // I guess b1ff doesn't use two spaces after his periods. How 90s-rude!
+          .replace(/\.  /g, ". ")
+          .replace(/\./g, () => {
+            switch (rand() % 3) {
+              case 0:
+                return ".";
+              case 1:
+                return "!";
+              case 2:
+                return ",";
+            }
+          })
           .replace(/!+/g, match => {
             let ret = match + "!";
             const length = rand() % 5;
@@ -99,21 +112,6 @@ module.exports = function b1ff(initialString) {
             return match + ret;
           })
           .replace(/I/g, () => (rand() % 3 > 2 ? "1" : "I"))
-          // I guess b1ff doesn't use two spaces after his periods. How 90s-rude!
-          .replace(/\.  /g, ". ")
-          .replace(/\./g, () => {
-            switch (rand() % 3) {
-              case 0:
-                return ".";
-              case 1:
-                return "!";
-              case 2:
-                return ",";
-            }
-          })
-          // TODO: why are we replacing all commas with periods, after randomly
-          // replacing one third of periods with commas?
-          .replace(/,/g, ".")
       );
     })
     .join("\n");
