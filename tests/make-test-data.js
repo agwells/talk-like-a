@@ -9,9 +9,9 @@ const child_process = require("child_process");
  *
  * Note: This of course requires having the "filters" package installed.
  *
- * TODO: Some of the filters (which I've commented out) are non-idempotent.
- * So I'll need to figure out what to do with them later. (Possibly compile
- * my own build that uses a specific randomization seed?)
+ * TODO: Some of the filters (which I've commented out) give randomized output,
+ * which makes them unsuitable for use in unit tests. If I want to port those,
+ * I have to tweak the "original" to use a RNG that I can replicate in JS.
  */
 const filters = [
   //  "b1ff",
@@ -66,7 +66,7 @@ Promise.all(
       })
       .toString();
     if (result1 !== result2) {
-      console.log(`WARNING: Filter '${filterName}' is non-idempotent. :(`);
+      console.log(`WARNING: Filter '${filterName}' is non-deterministic. :(`);
     } else {
       fs.writeFileSync(
         path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),

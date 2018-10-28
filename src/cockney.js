@@ -7,6 +7,8 @@
  *	Reproduction permitted so long as this notice is retained.
  */
 
+const { getRandFn } = require("./lib.js");
+
 /**
  *
  *
@@ -14,9 +16,9 @@
  * @return {string}
  */
 module.exports = function cockney(initialString) {
-  let I_count = 0;
+  const I_rand = getRandFn();
   function I() {
-    if (I_count++ % 5 === 1) {
+    if (I_rand() % 5 === 1) {
       return "Oy";
     } else {
       return "I";
@@ -41,7 +43,8 @@ module.exports = function cockney(initialString) {
     return "";
   }
 
-  let dintI_count = 0;
+  const dintI_rand = getRandFn();
+
   /**
    * Every other sentence that contains "I/we went/had/did", tag "..., didn't I/we?"
    * on the end.
@@ -70,9 +73,9 @@ module.exports = function cockney(initialString) {
       // agree with the final phrase.)
       const indexOfWe = sentence.search(/\b[Ww]e\s(?:went|had|did)\b/);
       if (indexOfWe !== -1 && (!iOrWe || indexOfWe < indexOfI)) {
-        iOrWe < "we";
+        iOrWe = "we";
       }
-      if (iOrWe && dintI_count++ % 2 === 0) {
+      if (iOrWe && dintI_rand() % 2 === 0) {
         // Find the full text of the preceeding sentence.
 
         switch (iOrWe) {
@@ -86,9 +89,9 @@ module.exports = function cockney(initialString) {
     return ".";
   }
 
-  let pooped_count = 0;
+  const pooped_rand = getRandFn();
   function pooped() {
-    switch (pooped_count++ % 3) {
+    switch (pooped_rand() % 3) {
       case 0:
         return "knackered";
       case 1:

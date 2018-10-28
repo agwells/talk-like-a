@@ -110,6 +110,11 @@ ime{EW}			{	printf("oime"); eos(); }
 
 %%
 
+long fakeRand(long* seed) {
+	*seed = *seed * 48271 % 0x7fffffff;
+	return (*seed);
+}
+
 void eos()
 {
     if (yytext[yyleng-1] == '.') {
@@ -136,10 +141,10 @@ char c;
 	return (c);
 }
 
-static short I_count = 0;
+long Iseed = 1;
 void I()
 {
-	if (I_count++ % 5 == 1)
+	if (fakeRand(&Iseed) % 5 == 1)
 	printf("%cOy",yytext[0]);
     else
 	printf("%cI",yytext[0]);
@@ -168,7 +173,11 @@ static short did = 0;
 void set_did(val)
 short val;
 {
-    did = val;
+	// Use whichever "did" or "we" came first in the sentence, because that's
+	// most likely to be the subject of the sentence.
+	if (did == 0) {
+	    did = val;
+	}
 }
 
 void clear_did()
@@ -176,26 +185,21 @@ void clear_did()
     did = 0;
 }
 
-static short dinti_count = 0;
-
-void dintI()
-{
-	if (did > 0 && dinti_count++ % 2 == 0) {
-    	if ((did == 1))
-			printf(", didn'I?");
-		else if ((did == 2))
-			printf(", din't we?");
-	}
+long dintISeed = 1;
+void dintI() {
+	if ((did == 1) && (fakeRand(&dintISeed) % 2 == 0))
+		printf(", didn'I?");
+	else if ((did == 2) && (fakeRand(&dintISeed) % 2 == 0))
+		printf(", din't we?");
 	else
 		printf(".");
 	clear_did();
 }
 
-static short pooped_count = 0;
-
+long poopedSeed = 1;
 void pooped()
 {
-    switch (pooped_count++ % 3) {
+    switch (fakeRand(&poopedSeed) % 3) {
 	case 0:
 	    printf("%cknackered", yytext[0]);
 	    break;
