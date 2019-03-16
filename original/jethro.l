@@ -51,8 +51,8 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Hh]ear{EW}	SESUB("Heah");
 {SW}[Cc]ar{EW}		|
 {SW}[Aa]uto{EW}		|
-{SW}[Rr]elax{EW}	SESUB("Set a spell -- put yore feet up");
 {SW}[Aa]utomobile{EW}	SESUB("Gasoline buggy");
+{SW}[Rr]elax{EW}	SESUB("Set a spell -- put yore feet up");
 [Ss]wimming{BW}pool	SUB("Cement pond");
 [Pp]ool{BW}table	SUB("Fancy eatin table");
 [Pp]ool{BW}cue		|
@@ -60,22 +60,22 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Bb][r]?oil{EW}	|
 {SW}[Bb]ake{EW}		|
 {SW}[Ff]ry{EW}		|
-{SW}[Ss]aute{EW}	|
+{SW}[Ss]aute[e]?{EW}	|
 {SW}[Cc]ook{EW}	SESUB("Whomp up");
 {SW}[Bb][r]?oiling{EW}	|
 {SW}[Bb]akeing{EW}	|
 {SW}[Ff]rying{EW}	|
-{SW}[Ss]auteing{EW}	|
+{SW}[Ss]aute[e]?ing{EW}	|
 {SW}[Cc]ooking{EW}	SESUB("Whompin up");
 {SW}[Bb][r]?oiled{EW}	|
 {SW}[Bb]aked{EW}	|
-{SW}[Ff]ryed{EW}	|
-{SW}[Ss]auted{EW}	|
+{SW}[Ff]r[yi]ed{EW}	|
+{SW}[Ss]aute[e]?d{EW}	|
 {SW}[Cc]ooked{EW}	SESUB("Done whomped up");
 {SW}[Bb][r]?oils{EW}	|
 {SW}[Bb]akes{EW}	|
-{SW}[Ff]rys{EW}		|
-{SW}[Ss]autes{EW}	|
+{SW}[Ff]r[yi][e]?s{EW}		|
+{SW}[Ss]aute[e]?s{EW}	|
 {SW}[Cc]ooks{EW}	SESUB("Whomps up");
 {SW}[Gg]roceries{EW}	|
 {SW}[Ff]ood{EW}		SESUB("Vittles");
