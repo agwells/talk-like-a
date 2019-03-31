@@ -1,8 +1,16 @@
 #!/usr/bin/perl
 # Ⅽоηνеrt аѕⅽіі tօ υtf‐8.
 use utf8;
-binmode STDIN, ":utf8";
-binmode STDOUT, ":utf8";
+binmode(STDIN, ':encoding(utf-8)');
+binmode(STDOUT, ':encoding(utf-8)');
+binmode(STDERR, ':encoding(utf-8)');
+
+my $seed = 1;
+sub fakeRand {
+	my ($max) = @_;
+	$seed = $seed * 48271 % 0x7fffffff;
+	return $seed % $max;
+}
 
 %Δ=(
 "~" => [],
@@ -80,7 +88,7 @@ while (<>) {
 	foreach $ם (split //) {
 		if (exists $Δ{$ם} && @{$Δ{$ם}}) {
 			@ה=@{$Δ{$ם}};
-			print chr($ה[rand @ה]);
+			print chr($ה[fakeRand int(@ה)]);
 		}
 		else {
 			print $ם

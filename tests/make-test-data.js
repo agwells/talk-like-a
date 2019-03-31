@@ -39,38 +39,35 @@ const filters = [
   //  "scramble",
   //  "spammer",
   "studly",
-  // "uniencode",
+  "uniencode",
   "upside-down"
 ];
 
 const sampleText = fs.readFileSync(
   path.join(__dirname, "moby-dick-chapter-1.txt"),
-  { encoding: "UTF8", flag: "r" }
+  { encoding: "utf8", flag: "r" }
 );
 
 Promise.all(
   filters.map(async function(filterName) {
     let filterCommand = `./original/${filterName}`;
     console.log(`${filterName}...`);
-    const result1 = child_process
-      .execSync(filterCommand, {
-        input: sampleText
-      })
-      .toString();
-    await new Promise(function(resolve) {
-      setTimeout(resolve, 2000);
+    const result1 = child_process.execSync(filterCommand, {
+      input: sampleText
     });
-    const result2 = child_process
-      .execSync(filterCommand, {
-        input: sampleText
-      })
-      .toString();
-    if (result1 !== result2) {
+    // await new Promise(function(resolve) {
+    //   setTimeout(resolve, 2000);
+    // });
+    const result2 = child_process.execSync(filterCommand, {
+      input: sampleText
+    });
+    if (result1.toString("utf8") !== result2.toString("utf8")) {
       console.log(`WARNING: Filter '${filterName}' is non-deterministic. :(`);
     } else {
       fs.writeFileSync(
         path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
-        result1
+        result1,
+        { encoding: "utf8" }
       );
     }
     console.log(`... ${filterName}`);
