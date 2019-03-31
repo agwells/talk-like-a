@@ -1,6 +1,6 @@
 LEX	= flex
 BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify scramble
-OTHER	= eleet b1ff chef jibberish upside-down rasterman studly fudd \
+OTHER	= eleet b1ff chef jibberish upside_down rasterman studly fudd \
 	  censor spammer uniencode pirate kenny scottish fanboy LOLCAT
 ifndef CFLAGS
 CFLAGS = -O2
