@@ -7,11 +7,17 @@ const originalText = fs
   })
   .toString();
 
-const filters = ["b1ff", "chef", "LOLCAT", "cockney", "eleet", "fudd"].map(
-  f => [f]
-);
+const filters = [
+  "b1ff",
+  "chef",
+  "cockney",
+  "eleet",
+  "fudd",
+  "jethro",
+  "LOLCAT"
+].map(f => [f]);
 
-test.each(filters)("Comparing filter output to Unix version", filterName => {
+test.each(filters)("%s", filterName => {
   const expectedTransform = fs
     .readFileSync(
       path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),

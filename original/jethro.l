@@ -7,9 +7,9 @@
 %a 9000
 %o 7000
 
-SW	[\n \"(]
-EW	[\n ".",\"!?):;]
-BW	[\n ]
+BW [^A-Za-z0-9_]
+SW [^A-Za-z0-9_]
+EW [^A-Za-z0-9_]
 
 %{
  /* 
@@ -33,8 +33,10 @@ BW	[\n ]
 #define SSUB(A) fprintf(yyout, "%c%c%s", *yytext, *A|(*(yytext+1)&32), A+1);
 #define SESUB(A) fprintf(yyout, "%c%c%s", *yytext, *A|(*(yytext+1)&32), A+1); PUTLAST;
 #define ESUB(A) fprintf(yyout, "%c%s", *A|(*yytext&32), A+1); PUTLAST;
+#define EECHO printf("%.*s", (int)yyleng-1, yytext); plastc();
 
 #include <string.h>
+void plastc(void);
 
 char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: jethro.l,v 1.1 94/05/08 23:41:58 bgriffin Final $"
 ;
@@ -54,9 +56,9 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Aa]utomobile{EW}	SESUB("Gasoline buggy");
 {SW}[Rr]elax{EW}	SESUB("Set a spell -- put yore feet up");
 [Ss]wimming{BW}pool	SUB("Cement pond");
-[Pp]ool{BW}table	SUB("Fancy eatin table");
+[Pp]ool{BW}table	SUB("Fancy eatin' table");
 [Pp]ool{BW}cue		|
-[Cc]ue{BW}stick		SUB("Fancy pot passer");
+[Cc]ue{BW}stick		SUB("Fancy pot passuh");
 {SW}[Bb][r]?oil{EW}	|
 {SW}[Bb]ake{EW}		|
 {SW}[Ff]ry{EW}		|
@@ -66,7 +68,7 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Bb]akeing{EW}	|
 {SW}[Ff]rying{EW}	|
 {SW}[Ss]aute[e]?ing{EW}	|
-{SW}[Cc]ooking{EW}	SESUB("Whompin up");
+{SW}[Cc]ooking{EW}	SESUB("Whompin' up");
 {SW}[Bb][r]?oiled{EW}	|
 {SW}[Bb]aked{EW}	|
 {SW}[Ff]r[yi]ed{EW}	|
@@ -98,7 +100,7 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Bb]ar{EW}		SESUB("Dance hall");
 {SW}[Bb]ars{EW}		SESUB("Dance halls");
 {SW}[Ss]aloon		|
-{SW}[Cc]ocktail{BW}lounge SESUB("Dance hall");
+{SW}[Cc]ocktail{BW}lounge SSUB("Dance hall");
 {SW}[Ww]hore		|
 {SW}[Pp]rostitute	|
 {SW}[Ss]lut		SSUB("Dance hall girl");
@@ -112,9 +114,9 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Ll]evi[']?s{EW}	SESUB("Overhalls");
 {SW}[Ss]hoe		SSUB("High-button shoe");
 {SW}[Jj]acket		SSUB("Coat");
-{SW}[Ss]hotgun		SSUB("Fowlin piece");
+{SW}[Ss]hotgun		SSUB("Fowlin' piece");
 {SW}[Rr]evolver		|
-{SW}[Gg]un		SSUB("Shootin iron");
+{SW}[Gg]un		SSUB("Shootin' iron");
 {SW}[Rr]ifle		SSUB("Ozark longrifle");
 {SW}[Ll]ibrar[yi]	SSUB("Liberry");
 [Ww]ash			SUB("Warsh");
@@ -122,7 +124,7 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 [Ff]ry{BW}pan		|
 [Ff]rying{BW}pan	|
 [Ss]aute{BW}pan		SUB("Skillet");
-{SW}[Aa]nimal		SSUB("Critter");
+{SW}[Aa]nimal		SSUB("Crittuh");
 {SW}FBI{EW}		|
 {SW}F.B.I.{EW}		|
 {SW}CIA{EW}		|
@@ -171,10 +173,10 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 [Ll]egal{BW}counc[ei]l	|
 [Ll]egal{BW}councillor	|
 [Aa]ttorney		|
-[Aa]ttorney{BW}[Aa]t{BW}[Ll]aw SUB("City slicker");
+[Aa]ttorney{BW}[Aa]t{BW}[Ll]aw SUB("City slickuh");
 
 {SW}[Tt]han{EW}		SESUB("Then");
-[Cc]haracterize		SUB("Show");
+[Cc]haracteri[zs]e		SUB("Show");
 {SW}[Vv]ery{EW}		|
 {SW}[Ee]xtremely{EW}	|
 {SW}[Rr]eally{EW}	|
@@ -191,7 +193,7 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Ss]ick{EW}		SESUB("Ailin'");
 {SW}I'm{BW}not{EW}	SESUB("I aint");
 {SW}[Ss]cared{EW}	SESUB("A-skeert");
-{SW}[Ss]care		SSUB("Skeer");
+{SW}[Ss]care		SSUB("Skeuh");
 {SW}[Hh]ave{EW}		SESUB("Got");
 {SW}[Pp]ossess{EW}	SESUB("Have");
 {SW}[Hh]elp		SSUB("Hep");
@@ -210,9 +212,9 @@ char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: j
 {SW}[Ww]ere{EW}		SESUB("Wuz");
 {SW}[Ww]asn't{EW}	SESUB("Wasunt");
 [Ee]very		SUB("Ever");
-{SW}[Ww]ant/s		SSUB("Is after");
-{SW}[Ww]anted{EW}	SESUB("Was after");
-{SW}[Ww]anting{EW}	SESUB("Hankering after");
+{SW}[Ww]ants		SSUB("Is aftuh");
+{SW}[Ww]anted{EW}	SESUB("Was aftuh");
+{SW}[Ww]anting{EW}	SESUB("Hankerin' aftuh");
 {SW}[Dd]oesn't{EW}	|
 {SW}[Dd]on't{EW}	SESUB("Dasent");
 {SW}[Yy]ou'll{EW}	SESUB("Y'all will");
@@ -226,7 +228,7 @@ tion			SUB("shun");
 {SW}[Yy]ou{EW}		SESUB("Y'all");
 {SW}[Ff]or{EW}		SESUB("Fer");
 {SW}[Tt]he{EW}		SESUB("Duh");
-ing			SUB("in");
+ing{EW}			ESUB("in'");
 {SW}[Tt]oo{EW}		SESUB("Besides");
 {SW}[Tt]o{EW}		SESUB("Tuh");
 {SW}[Aa][n]?{EW}	SESUB("Ah");
@@ -237,16 +239,14 @@ ing			SUB("in");
 {SW}I'm{EW}		SESUB("Ahm a");
 {SW}I'll{EW}		SESUB("Ahl");
 {SW}I'd{EW}		SESUB("Ah wood");
-'nt			*(yytext)=(char)'u'; SUB("unt");
+n't			*(yytext)=(char)'u'; SUB("unt");
 're			SUB(" is");
 've			SUB(" done");
-eed{EW}			ECHO;
-ed{EW}			ESUB("d");
 {SW}[Oo]wn{EW}		|
 {SW}[Tt]own{EW}		|
 {SW}[Dd]own{EW}		|
 {SW}[Gg]own{EW}		|
-{SW}[Bb]rown{EW}	ECHO;
+{SW}[Bb]rown{EW}	EECHO;
 wn{EW}			ESUB("ed");
 {SW}[Bb]elow{EW}	|
 {SW}[Kk]now{EW}		|
@@ -255,11 +255,15 @@ wn{EW}			ESUB("ed");
 {SW}[Hh]ow{EW}		|
 {SW}[Nn]ow{EW}		|
 {SW}[Bb]row{EW}		|
-{SW}[Ss]how{EW}		ECHO;
+{SW}[Ss]how{EW}		EECHO;
 ow{EW}			ESUB("er");
 re{EW}			|
 er{EW}			ESUB("uh");
-{SW}[Hh]er{EW}		ECHO;
+{SW}[Hh]er{EW}		EECHO;
 !			SUB(". Ye DAWGies!!!");
 
 %%
+
+void plastc() {
+    unput(yytext[yyleng-1]);
+}
