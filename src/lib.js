@@ -43,4 +43,12 @@ function sameCap(replacement) {
 
 const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
 
-module.exports = { getRandFn, sameCap };
+/**
+ *
+ * @param {string} letter
+ */
+function isUpperCase(letter) {
+  return STARTS_WITH_UPPER.test(letter);
+}
+
+module.exports = { getRandFn, isUpperCase, sameCap };

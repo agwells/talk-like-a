@@ -14,7 +14,8 @@ const filters = [
   "eleet",
   "fudd",
   "jethro",
-  "LOLCAT"
+  "LOLCAT",
+  "studly"
 ].map(f => [f]);
 
 test.each(filters)("%s", filterName => {
