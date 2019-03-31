@@ -40,7 +40,7 @@ const filters = [
   //  "spammer",
   "studly",
   "uniencode",
-  "upside-down"
+  "upside_down"
 ];
 
 const sampleText = fs.readFileSync(
