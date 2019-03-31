@@ -21,6 +21,16 @@ function getRandFn(seed = 1) {
 }
 getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
 
+const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
+
+/**
+ *
+ * @param {string} letter
+ */
+function isUpperCase(letter) {
+  return STARTS_WITH_UPPER.test(letter);
+}
+
 /**
  * A helper function equivalent to the "SSUB/SESUB" macro in the original. It creates
  * a regex replace callback method, which will make sure the replacement text
@@ -41,14 +51,25 @@ function sameCap(replacement) {
   };
 }
 
-const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
-
 /**
- *
- * @param {string} letter
+ * Emulates perl's tr/// aka y/// "translate" operator.
+ * @see https://perldoc.perl.org/perlop.html#Quote-Like-Operators
+ * @param {string} initialString
+ * @param {string} searchList
+ * @param {string} replacementList
  */
-function isUpperCase(letter) {
-  return STARTS_WITH_UPPER.test(letter);
+function tr(initialString, searchList, replacementList) {
+  return initialString
+    .split("")
+    .map(c => {
+      let k = searchList.indexOf(c);
+      if (k === -1) {
+        return c;
+      } else {
+        return replacementList.charAt(k);
+      }
+    })
+    .join("");
 }
 
-module.exports = { getRandFn, isUpperCase, sameCap };
+module.exports = { getRandFn, isUpperCase, sameCap, tr };
