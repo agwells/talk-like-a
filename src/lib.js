@@ -21,4 +21,26 @@ function getRandFn(seed = 1) {
 }
 getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
 
-module.exports = { getRandFn };
+/**
+ * A helper function equivalent to the "SSUB/SESUB" macro in the original. It creates
+ * a regex replace callback method, which will make sure the replacement text
+ * has the same initial capitalization as the original text.
+ * @param {string} replacement
+ */
+function sameCap(replacement) {
+  const lowercaseReplacement =
+    replacement[0].toLowerCase() + replacement.slice(1);
+  const uppercaseReplacement =
+    replacement[0].toUpperCase() + replacement.slice(1);
+  return function(match) {
+    if (STARTS_WITH_UPPER.test(match)) {
+      return uppercaseReplacement;
+    } else {
+      return lowercaseReplacement;
+    }
+  };
+}
+
+const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
+
+module.exports = { getRandFn, sameCap };

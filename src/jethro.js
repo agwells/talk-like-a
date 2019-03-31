@@ -1,5 +1,3 @@
-// %{
-//  /*
 //  **   jethro  v. 1.00 06/10/93
 //  **   Duane Paulson <ci922@cleveland.freenet.edu> "dap"
 //  **   Hillbilly text filter. Compile with lex, then C.
@@ -13,26 +11,9 @@
 //  --------  ----  ---  -----------------------------------------------------
 //  06/10/93  1.00  dap  Initial release.
 //  8.May.94  1.10  beg  Fixed for HP-UX
+//  31/03/19  2.00  agw  Ported to JavaScript
 //  *************************************************************************/
-// char WhAt[]="@(#)Duane Paulson's hillbilly text filter. (jethro)\n@(#)$Header: jethro.l,v 1.1 94/05/08 23:41:58 bgriffin Final $"
-// ;
-
-//  /* jethro.l */
-// %e 7000
-// %k 5000
-// %p 9000
-// %n 2000
-// %a 9000
-// %o 7000
-
-// SW	[\n \"(]
-// EW	[\n ".",\"!?):;]
-// BW	[\n ]
-// #define PUTLAST unput(*(yytext+strlen(yytext)-1));
-// #define SUB(A) fprintf(yyout, "%c%s", *A|(*yytext&32), A+1);
-// #define SSUB(A) fprintf(yyout, "%c%c%s", *yytext, *A|(*(yytext+1)&32), A+1);
-// #define SESUB(A) fprintf(yyout, "%c%c%s", *yytext, *A|(*(yytext+1)&32), A+1); PUTLAST;
-// #define ESUB(A) fprintf(yyout, "%c%s", *A|(*yytext&32), A+1); PUTLAST;
+const sameCap = require("./lib").sameCap;
 
 /**
  * @param {string} originalString
@@ -417,25 +398,3 @@ function jethro(originalString) {
 }
 
 module.exports = jethro;
-
-/**
- * A helper function equivalent to the "SSUB/SESUB" macro in the original. It creates
- * a regex replace callback method, which will make sure the replacement text
- * has the same initial capitalization as the original text.
- * @param {string} replacement
- */
-function sameCap(replacement) {
-  const lowercaseReplacement =
-    replacement[0].toLowerCase() + replacement.slice(1);
-  const uppercaseReplacement =
-    replacement[0].toUpperCase() + replacement.slice(1);
-  return function(match) {
-    if (STARTS_WITH_UPPER.test(match)) {
-      return uppercaseReplacement;
-    } else {
-      return lowercaseReplacement;
-    }
-  };
-}
-
-const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
