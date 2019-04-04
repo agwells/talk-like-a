@@ -17,7 +17,7 @@ my @repl=qw(
   ^es:'s		^ex:'s			^not$:na
   ^no$:nay		n't_have:n'tve		^is$:be
   ^are$:be		have:haf		abl:'bl
-  ^you$:ye		^your:yer		^you':ye'
+  ^you$:ye		^your:yer 	^you':ye'
   noth:nuth		^this$:'tis		^here:'ere
   doesn't:don't		at_a$:atta		ith$:it'
   ered$:'red		into$:inta		^before:'fore

@@ -15,6 +15,7 @@ const filters = [
   "fudd",
   "jethro",
   "LOLCAT",
+  "scottish",
   "studly",
   "uniencode",
   "upside_down"
