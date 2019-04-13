@@ -21,9 +21,14 @@ char *nethack3=" [ [L       \\                              ";
 char *nethack4="    [              \\                       ";
 char *nethack5="    _               \\                      ";
 
-int myrandom(float max)
+long fakeRand(long* seed) {
+	*seed = *seed * 48271 % 0x7fffffff;
+	return (*seed);
+}
+long myFakeRandSeed = 1;
+int myrandom(long max)
 {
-   return ((int)(max*rand()/(RAND_MAX+1.0)));
+   return (fakeRand(&myFakeRandSeed) % max);
 }
 
 void nethackify(char* str)
@@ -55,7 +60,6 @@ int main(int argc, char **argv)
     int i,c, ch;
     struct timeval tv;
 
-    srand((gettimeofday(&tv,NULL),tv.tv_usec));
     if (argc==1) {
 	while((ch = getchar()) != EOF) {
 	    for(c=0; c<strlen(normal); c++) {

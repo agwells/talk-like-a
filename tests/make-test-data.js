@@ -30,7 +30,7 @@ const filters = [
   "kenny",
   "kraut",
   "LOLCAT",
-  //  "nethackify",
+  "nethackify",
   "newspeak",
   "nyc",
   // "pirate",
