@@ -35,9 +35,26 @@ function isUpperCase(letter) {
  * A helper function equivalent to the "SSUB/SESUB" macro in the original. It creates
  * a regex replace callback method, which will make sure the replacement text
  * has the same initial capitalization as the original text.
+ * @param {string} match
  * @param {string} replacement
  */
-function sameCap(replacement) {
+function sameCap(match, replacement) {
+  if (STARTS_WITH_UPPER.test(match)) {
+    return replacement[0].toUpperCase() + replacement.slice(1);
+  } else {
+    return replacement[0].toLowerCase() + replacement.slice(1);
+  }
+}
+
+/**
+ * Creates a String.prototype.replace() callback method, which will make sure
+ * the replacement text has the same initial capitalization as the original text.
+ * (Equivalent to SSUB/SESUB macro in the Lexer based scripts)
+ *
+ * @param {string} replacement
+ * @return {(match: string) => string}
+ */
+function sameCapReplacer(replacement) {
   const lowercaseReplacement =
     replacement[0].toLowerCase() + replacement.slice(1);
   const uppercaseReplacement =
@@ -72,4 +89,4 @@ function tr(initialString, searchList, replacementList) {
     .join("");
 }
 
-module.exports = { getRandFn, isUpperCase, sameCap, tr };
+module.exports = { getRandFn, isUpperCase, sameCap, sameCapReplacer, tr };

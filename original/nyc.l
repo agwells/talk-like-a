@@ -59,18 +59,13 @@ ause				printf("awze");
 {BW}under			printf(" unner");
 {BW}to{EW}		{	printf(" tuh"); plastc(); }
 [Aa]ctual			printf("%cckshul", yytext[0]);
-negro				printf("spade");
-[Pp]uerto{SP}[Rr]ican		printf("%cpic", caseify('s'));
-[Ii]talian			printf("%creaser", caseify('g'));
-[Jj]ewish			printf("%cew boy", yytext[0]);
-[Jj]ew				printf("%cebe", caseify('h'));
 [a-z]":"		{	*(yytext+1) = ',';
 				printf("%s like, uhh:",yytext);
 			}
 [a-z]"?"		{	*(yytext+1) = ',';
 				printf("%s or what?",yytext);
 			}
-!				printf("!  Okay?");
+!				printf("! Okay?");
 [a-z]"."		{	printf("%s", yytext);expletive();}
 %%
 
@@ -95,11 +90,11 @@ void expletive()
 {
 	if (count++ % 4 == 0) {
 		switch (which++ % 5) {
-			case 0: printf("  Okay?"); break;
-			case 1: printf("  Right?"); break;
-			case 2: printf("  Yuh got me so fahr?"); break;
-			case 3: printf("  Ya' dig?"); break;
-			case 4: printf("  Yuh with me?"); break;
+			case 0: printf(" Okay?"); break;
+			case 1: printf(" Right?"); break;
+			case 2: printf(" Yuh got me so fahr?"); break;
+			case 3: printf(" Ya' dig?"); break;
+			case 4: printf(" Yuh with me?"); break;
 			}
 		}
 }

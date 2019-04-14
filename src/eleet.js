@@ -1,5 +1,5 @@
 // Eleet filter, Copyright 1999, 2002 by Joey Hess under the terms of the GNU GPL.
-const { sameCap, tr } = require("./lib");
+const { sameCapReplacer, tr } = require("./lib");
 
 let from = "abcdefghijklmnopqrstuvwxyz";
 from = from + from.toUpperCase();
@@ -9,8 +9,8 @@ to = to + to.toUpperCase();
 module.exports = function eleet(initialString) {
   return tr(
     initialString
-      .replace(/porn/g, sameCap("pr0n"))
-      .replace(/elite/g, sameCap("l33t")),
+      .replace(/porn/g, sameCapReplacer("pr0n"))
+      .replace(/elite/g, sameCapReplacer("l33t")),
     from,
     to
   );
