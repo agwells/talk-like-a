@@ -15,6 +15,7 @@ const filters = [
   "fudd",
   "jethro",
   "LOLCAT",
+  "nethackify",
   "scottish",
   "studly",
   "uniencode",
