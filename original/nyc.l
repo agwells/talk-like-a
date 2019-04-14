@@ -13,7 +13,6 @@ SP [ \t]
 EW [ \t.,;!\?$]
 
 %{
-    void plastc(void);
     char caseify(char);
     void expletive(void);
 %}
@@ -39,14 +38,14 @@ t{SP}you			printf("tcha");
 ldn't			|
 dn't				printf("n't");
 isn't				printf("ain't");
-er{EW}			{	printf("uh"); plastc(); }
-ing{EW}			{	printf("in'"); plastc(); }
+er/{EW}				printf("uh");
+ing/{EW}			printf("in'");
 [Ww]ord			|
 [Hh]eard		|
 [BbGgLlPpSs]urg		|
 [CcHh][eu]r[ntv]		printf("%coi%c", yytext[0], yytext[yyleng-1]);
 [^Mm]mer[^aeiouhrs]		printf("%cmoi%c", yytext[0], yytext[yyleng-1]);
-[Oo]re{EW}		{	printf("%cwh", caseify('a')); plastc(); }
+[Oo]re/{EW}			printf("%cwh", caseify('a'));
 [Oo]r				printf("%cwh", caseify('a'));
 [Oo]f				printf("%chv", caseify('u'));
 tion				printf("shun");
@@ -57,7 +56,7 @@ ause				printf("awze");
 [Oo]ff				printf("%cwhf", caseify('a'));
 [Ss]tupid			printf("%ctoopid", yytext[0]);
 {BW}under			printf(" unner");
-{BW}to{EW}		{	printf(" tuh"); plastc(); }
+{BW}to/{EW}			printf(" tuh");
 [Aa]ctual			printf("%cckshul", yytext[0]);
 [a-z]":"		{	*(yytext+1) = ',';
 				printf("%s like, uhh:",yytext);
@@ -69,10 +68,6 @@ ause				printf("awze");
 [a-z]"."		{	printf("%s", yytext);expletive();}
 %%
 
-void plastc()
-{
-    yyunput(yytext[yyleng-1], yytext);
-}
 
 char caseify(c)
 char c;
