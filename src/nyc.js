@@ -58,32 +58,14 @@ const rawRules = [
   ["[Dd]on't", simpleSameCapReplacer('doan')],
   ["(ldn't|dn't)", () => "n't"],
   ["isn't", () => "ain't"],
-  [
-    `er${EW}`,
-    (match, { plastc }) => {
-      plastc(match);
-      return 'uh';
-    },
-  ],
-  [
-    `ing${EW}`,
-    (match, { plastc }) => {
-      plastc(match);
-      return "in'";
-    },
-  ],
+  [`er(?=${EW})`, () => 'uh'],
+  [`ing(?=${EW})`, () => "in'"],
   [
     `([Ww]ord|[Hh]eard|[BbGgLlPpSs]urg|[CcHh][eu]r[ntv])`,
     (match) => match[0] + 'oi' + match.slice(-1),
   ],
   [`[^Mm]mer[^aeiouhrs]`, (match) => match[0] + 'moi' + match.slice(-1)],
-  [
-    `[Oo]re${EW}`,
-    (match, { plastc }) => {
-      plastc(match);
-      return sameCap(match, 'awh');
-    },
-  ],
+  [`[Oo]re(?=${EW})`, sameCapReplacer('awh')],
   [`[Oo]r`, sameCapReplacer('awh')],
   [`[Oo]f`, sameCapReplacer('uhv')],
   [`tion`, () => `shun`],
@@ -92,13 +74,7 @@ const rawRules = [
   ['[Oo]ff', sameCapReplacer('awhf')],
   ['[Ss]tupid', simpleSameCapReplacer('stoopid')],
   [`${BW}under`, () => ' unner'],
-  [
-    `${BW}to${EW}`,
-    (match, { plastc }) => {
-      plastc(match);
-      return ' tuh';
-    },
-  ],
+  [`${BW}to(?=${EW})`, () => ' tuh'],
   [`[Aa]ctual`, simpleSameCapReplacer('ackshul')],
   [`[a-z]:`, (match) => `${match[0]}, like, uhh:`],
   [`[a-z]\\?`, (match) => `${match[0]}, or what?`],
@@ -145,13 +121,6 @@ function nyc(originalString) {
     }
   };
 
-  // A helper function to be used by rules. Pushes the last character in the
-  // match, back into the stream of not-yet-processed text.
-  // (This is mostly used as the equivalent of a RegExp "look-ahead" expression.)
-  const plastc = function(match) {
-    remaining = match.slice(-1) + remaining;
-  };
-
   // Simulate the way a Lex scanner would do things
   while (remaining.length > 0) {
     /**
@@ -178,7 +147,7 @@ function nyc(originalString) {
       remaining = remaining.slice(1);
     } else {
       remaining = remaining.slice(bestMatch.match.length);
-      out += bestMatch.replacer(bestMatch.match, { plastc, expletive });
+      out += bestMatch.replacer(bestMatch.match, { expletive });
     }
   }
   return out;
