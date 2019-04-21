@@ -33,7 +33,7 @@ const filters = [
   'newspeak',
   'nyc',
   'pirate',
-  // "rasterman",
+  'rasterman',
   'scottish',
   //  "scramble",
   //  "spammer",
