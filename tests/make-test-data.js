@@ -34,7 +34,7 @@ const filters = [
   'pirate',
   'rasterman',
   'scottish',
-  //  "scramble",
+  'scramble',
   'spammer',
   'studly',
   'uniencode',

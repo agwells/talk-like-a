@@ -25,6 +25,12 @@
 
 #define ALLOW_FILE_IO 0
 
+long fakeRandSeed = 1;
+long fakeRand() {
+	fakeRandSeed = fakeRandSeed * 48271 % 0x7fffffff;
+	return (fakeRandSeed);
+}
+
 
 /* strips 'reduction' characters from the end of the input string and returns the result
  * works only if strlen(string> >= reduction, which is the case in the only place it is presently called

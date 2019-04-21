@@ -25,8 +25,7 @@ BW [ 	]
 EW [ 	.,;!?]
 %{
     char buf[128];
-long fakeRandSeed = 1;
-long fakeRand(long* seed);
+long fakeRand();
 %}
 
 %%
@@ -39,7 +38,7 @@ upstairs	printf("up the apples and pears");
 [Mm]outh	printf("North and South");
 [Ff]ace		printf("Boat Race");
 [Tt]rouble	printf("Barney Rubble");
-wife		{	switch(fakeRand(&fakeRandSeed)%2)
+wife		{	switch(fakeRand()%2)
 			{
 			case 0: printf("trouble and strife"); break;
 			case 1: printf("ole lady"); break;
@@ -66,21 +65,21 @@ Those		printf("Them");
 those		printf("them");
 " those"	printf(" them");
 "(those"	printf("(them");
-"The "		{   switch(fakeRand(&fakeRandSeed)%5)
+"The "		{   switch(fakeRand()%5)
 		    {
 		    case 0: printf("The bleedin' "); break;
 		    default: ECHO; break;
 		    }
 		}
 "The"		ECHO;
-" the "		{   switch(fakeRand(&fakeRandSeed)%5)
+" the "		{   switch(fakeRand()%5)
 		    {
 		    case 0: printf(" the bleedin' "); break;
 		    default: ECHO; break;
 		    }
 		}
 [" "(]the	ECHO;
-"the "		{   switch(fakeRand(&fakeRandSeed)%5)
+"the "		{   switch(fakeRand()%5)
 		    {
 		    case 0: printf(" the bleedin' "); break;
 		    default: ECHO; break;
@@ -179,7 +178,7 @@ Directory	printf("Lockup");
 directory	printf("lockup");
 Directories	printf("Lockups");
 directories	printf("lockups");
-[Pp]rocess	{   switch(fakeRand(&fakeRandSeed)%2)
+[Pp]rocess	{   switch(fakeRand()%2)
 		    {
 		    case 0: printf("Queen Bess"); break;
 		    case 1: printf("Rudolf 'Ess"); break;
@@ -205,7 +204,7 @@ directories	printf("lockups");
 [Cc]ompiler	printf("Martin Tyler");
 [Ss]tring	printf("Emperor Ming");
 [Bb]rain	printf("Michael Caine");
-[Pp][Aa][Ss][Cc][Aa][Ll]	{   switch(fakeRand(&fakeRandSeed)%2)
+[Pp][Aa][Ss][Cc][Aa][Ll]	{   switch(fakeRand()%2)
 				    {
 				    case 0: printf("Pall Mall"); break;
 				    case 1: printf("Roald Dahl"); break;
@@ -225,7 +224,7 @@ stops		printf("puts the mockers on");
 stop		printf("put the mockers on");
 STOP		printf("Put The Mockers On");
 [Ll]ondoner	printf("Cockney");
-friend		{   switch(fakeRand(&fakeRandSeed)%3)
+friend		{   switch(fakeRand()%3)
 		    {
 		    case 0: printf("mucker"); break;
 		    case 1: printf("mate"); break;
@@ -237,7 +236,7 @@ friend		{   switch(fakeRand(&fakeRandSeed)%3)
 " h"		printf(" '");
 " H"		printf(" '");
 " C-"		printf(" Bruce Lee-");
-" C "		{        switch(fakeRand(&fakeRandSeed)%4)
+" C "		{        switch(fakeRand()%4)
 			 {
 			 case 0: printf(" Bruce Lee "); break;
 			 case 1: printf(" Circus Flea "); break;
@@ -259,7 +258,7 @@ aw		printf("or");
 " thing"	printf(" fing");
 
 "ing "		printf("in' ");
-". "		{   switch(fakeRand(&fakeRandSeed)%32)
+". "		{   switch(fakeRand()%32)
 		    {
 		    case 0: printf(". I'll get out me spoons. "); break;
 		    case 1: printf(". Yer can't 'ave a knees-up wivout a joanna. "); break;
@@ -268,14 +267,14 @@ aw		printf("or");
 		    default: ECHO; break;
 		    }
 		}
-"? "		{   switch(fakeRand(&fakeRandSeed)%3)
+"? "		{   switch(fakeRand()%3)
 		    {
 		    case 0: printf(", mate? "); break;
 		    case 1: printf(", guv? "); break;
 		    case 2: printf(", squire? "); break;
 		    }
 		}
-"! "		{   switch(fakeRand(&fakeRandSeed)%6)
+"! "		{   switch(fakeRand()%6)
 		    {
 		    case 0: printf(", cor blimey! "); break;
 		    case 1: printf("! Struth! "); break;
@@ -289,7 +288,8 @@ aw		printf("or");
 \n		printf("\n");
 %%
 
-long fakeRand(long* seed) {
-	*seed = *seed * 48271 % 0x7fffffff;
-	return (*seed);
+long fakeRandSeed = 1;
+long fakeRand() {
+	fakeRandSeed = fakeRandSeed * 48271 % 0x7fffffff;
+	return (fakeRandSeed);
 }

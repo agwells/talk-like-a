@@ -7,8 +7,7 @@ typedef int INT;
 #define YYSTYPE INT
 extern int yylex (void);
 int yyerror(char*);
-long fakeRandSeed = 1;
-long fakeRand(long* seed);
+long fakeRand();
 
 %}
 
@@ -41,11 +40,11 @@ s:
 	| s t
 	| s ' ' 
           {  
-	    if (fakeRand(&fakeRandSeed) % 30 < 1)
+	    if (fakeRand() % 30 < 1)
 	      {
 		int inRand;
 
-		inRand = fakeRand(&fakeRandSeed) % 5;
+		inRand = fakeRand() % 5;
 
 		switch(inRand)
 		  {
@@ -84,7 +83,7 @@ t:	CUTE   { printf("ky00te!"); }
       | FUR    { printf("fur"); }
       | MEOW   { int inRand;
 		 
-		 inRand = fakeRand(&fakeRandSeed) % 5;
+		 inRand = fakeRand() % 5;
 
 		 switch(inRand)
 		   {
@@ -135,7 +134,8 @@ int main()
   return 0;
 }
 
-long fakeRand(long* seed) {
-	*seed = *seed * 48271 % 0x7fffffff;
-	return (*seed);
+long fakeRandSeed = 1;
+long fakeRand() {
+	fakeRandSeed = fakeRandSeed * 48271 % 0x7fffffff;
+	return (fakeRandSeed);
 }
