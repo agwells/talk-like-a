@@ -1,5 +1,5 @@
 LEX	= flex
-BUILD	= jethro kraut cockney jive nyc ken ky00te newspeak nethackify scramble
+BUILD	= jethro kraut cockney nyc ken ky00te newspeak nethackify scramble
 OTHER	= eleet b1ff chef jibberish upside_down rasterman studly fudd \
 	  censor spammer uniencode pirate kenny scottish fanboy LOLCAT
 ifndef CFLAGS
@@ -28,7 +28,7 @@ install:	$(BUILD) $(OTHER)
 clean:
 	$(RM) -f core *.o *~ $(BUILD)
 	cd ky00te.dir && make clean
-	$(RM) -f cockney.c jethro.c jive.c ken.c kraut.c newspeak.c nyc.c
+	$(RM) -f cockney.c jethro.c ken.c kraut.c newspeak.c nyc.c
 
 .SUFFIXES: .l
 

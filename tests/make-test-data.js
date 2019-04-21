@@ -23,7 +23,6 @@ const filters = [
   'fudd',
   'jethro',
   // "jibberish",
-  'jive',
   'ken',
   'kenny',
   'kraut',
