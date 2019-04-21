@@ -19,7 +19,7 @@ const filters = [
   //  'jibberish',
   // 'ken',
   // 'kenny',
-  // 'ky00te',
+  'ky00te',
   //  'kraut',
   'LOLCAT',
   'nethackify',
