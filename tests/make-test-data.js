@@ -32,7 +32,7 @@ const filters = [
   'nethackify',
   'newspeak',
   'nyc',
-  // "pirate",
+  'pirate',
   // "rasterman",
   'scottish',
   //  "scramble",

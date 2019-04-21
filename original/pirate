@@ -1,5 +1,16 @@
 #!/usr/bin/perl -p
 
+my $seed = 1;
+sub fakeRand {
+	my ($max) = @_;
+	# rand(0) behaves like rand(1)
+	if ($max == 0) {
+		return 1;
+	}
+	$seed = $seed * 48271 % 0x7fffffff;
+	return $seed % $max;
+}
+
 # an array, not a hash. because order is important
 @trans_table=(
 	'\bmy\b' => 'me',
@@ -97,7 +108,7 @@ s/([!\?]( \t|$))/avast($1,2)/eg; # Greater chance after exclamation
 s/\Br\B/roll()/eg;
 
 sub roll {
-	return 'r' x (rand(5)+1) if rand > 0.5;
+	return 'r' x (fakeRand(5)+1) if fakeRand(2) > 0;
 	return 'r';
 }
 
@@ -129,8 +140,8 @@ sub avast {
 		"$stub Arr, me hearty!",
 	);
 
-	if (int rand($chance) == 1) {
-		return @shouts[rand @shouts]." ";
+	if (int fakeRand($chance) == 1) {
+		return @shouts[fakeRand(scalar @shouts)]." ";
 	}
 	else {
 		return $stub;
