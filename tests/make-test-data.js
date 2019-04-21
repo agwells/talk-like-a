@@ -27,7 +27,7 @@ const filters = [
   'ken',
   'kenny',
   'kraut',
-  // "ky00te",
+  'ky00te',
   'LOLCAT',
   'nethackify',
   'newspeak',
