@@ -1,4 +1,4 @@
-const { getRandFn } = require('./lib');
+const { simuLex } = require('./lib');
 
 const CUTE = 'ky00te!';
 const FLUFF = '*fluff!*';
@@ -113,19 +113,7 @@ const rawRules = [
   ['r', () => 'rr'],
 ];
 
-/**
- * @type {[RegExp, (match: string, util: any) => string][]}
- */
-const rules = rawRules.map(
-  /**
-   *
-   * @param {[string, (match: string) => string]} param0
-   * @returns {[RegExp, (match: string) => string]}
-   */
-  function([regex, replacer]) {
-    return [new RegExp(`^${regex}`), replacer];
-  },
-);
+const rules = simuLex.preprocessRules(rawRules);
 
 /**
  *
@@ -133,39 +121,6 @@ const rules = rawRules.map(
  * @returns {string}
  */
 function ky00te(originalString) {
-  let remaining = originalString;
-  let out = '';
-  const rand = getRandFn();
-
-  // Simulate the way a Lex scanner would do things
-  while (remaining.length > 0) {
-    /**
-     * @type {{match: string, replacer: (match: string, util: any) => string}}
-     */
-    let bestMatch = null;
-    let bestMatchLength = 0;
-
-    // Test every rule the remaining text, every time.
-    // If multiple rules match, use the one with the longest matching text.
-    // If there's a tie for longest matching text, use the rule that appears
-    // higher up in the list of rules.
-    rules.forEach(function([regex, replacer]) {
-      const matches = remaining.match(regex);
-      if (matches && matches[0].length > bestMatchLength) {
-        bestMatch = { match: matches[0], replacer };
-        bestMatchLength = matches[0].length;
-      }
-    });
-    if (bestMatch === null) {
-      // If there is no match for the current string, pass the first letter
-      // through unchanged.
-      out += remaining[0];
-      remaining = remaining.slice(1);
-    } else {
-      remaining = remaining.slice(bestMatch.match.length);
-      out += bestMatch.replacer(bestMatch.match, { rand });
-    }
-  }
-  return out;
+  return simuLex(originalString, rules);
 }
 module.exports = ky00te;

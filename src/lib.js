@@ -21,7 +21,7 @@ function getRandFn(seed = 1) {
 }
 getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
 
-const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
+const STARTS_WITH_UPPER = new RegExp('^[A-Z]');
 
 /**
  *
@@ -69,6 +69,61 @@ function sameCapReplacer(replacement) {
 }
 
 /**
+ *
+ * @param {string} originalString
+ * @param {[RegExp, (match: string, util: any) => string][]} rules
+ * @param {any} extraUtils
+ * @return {string}
+ */
+function simuLex(originalString, rules, extraUtils = {}) {
+  let remaining = originalString;
+  let out = '';
+  const rand = getRandFn();
+
+  // Simulate the way a Lex scanner would do things
+  while (remaining.length > 0) {
+    /**
+     * @type {null | {match: string, replacer: (match: string, util: any) => string}}
+     */
+    let bestMatch = null;
+    let bestMatchLength = 0;
+
+    // Test every rule the remaining text, every time.
+    // If multiple rules match, use the one with the longest matching text.
+    // If there's a tie for longest matching text, use the rule that appears
+    // higher up in the list of rules.
+    rules.forEach(function([regex, replacer]) {
+      const matches = remaining.match(regex);
+      if (matches && matches[0].length > bestMatchLength) {
+        bestMatch = { match: matches[0], replacer };
+        bestMatchLength = matches[0].length;
+      }
+    });
+    if (bestMatch === null) {
+      // If there is no match for the current string, pass the first letter
+      // through unchanged.
+      out += remaining[0];
+      remaining = remaining.slice(1);
+    } else {
+      remaining = remaining.slice(bestMatch.match.length);
+      out += bestMatch.replacer(bestMatch.match, { rand, ...extraUtils });
+    }
+  }
+  return out;
+}
+simuLex.preprocessRules =
+  /**
+   *
+   * @param {[string, (match: string, util: any) => string][]} rawRules
+   * @returns {[RegExp, (match: string, util: any) => string][]}
+   */
+  function(rawRules) {
+    return rawRules.map(function([regex, replacer]) {
+      return [new RegExp(`^${regex}`), replacer];
+    });
+  };
+
+/**
  * Emulates perl's tr/// aka y/// "translate" operator.
  * @see https://perldoc.perl.org/perlop.html#Quote-Like-Operators
  * @param {string} initialString
@@ -77,8 +132,8 @@ function sameCapReplacer(replacement) {
  */
 function tr(initialString, searchList, replacementList) {
   return initialString
-    .split("")
-    .map(c => {
+    .split('')
+    .map((c) => {
       let k = searchList.indexOf(c);
       if (k === -1) {
         return c;
@@ -86,7 +141,14 @@ function tr(initialString, searchList, replacementList) {
         return replacementList.charAt(k);
       }
     })
-    .join("");
+    .join('');
 }
 
-module.exports = { getRandFn, isUpperCase, sameCap, sameCapReplacer, tr };
+module.exports = {
+  getRandFn,
+  isUpperCase,
+  sameCap,
+  sameCapReplacer,
+  simuLex,
+  tr,
+};
