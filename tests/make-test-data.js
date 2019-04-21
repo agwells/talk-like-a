@@ -1,6 +1,6 @@
-const fs = require("fs");
-const path = require("path");
-const child_process = require("child_process");
+const fs = require('fs');
+const path = require('path');
+const child_process = require('child_process');
 
 /**
  * This script runs our test corpus through each of the filters from the
@@ -14,38 +14,37 @@ const child_process = require("child_process");
  * I have to tweak the "original" to use a RNG that I can replicate in JS.
  */
 const filters = [
-  "b1ff",
-  "censor",
-  "chef",
-  "cockney",
-  "eleet",
-  "fanboy",
-  "fudd",
-  "jethro",
+  'b1ff',
+  'censor',
+  'chef',
+  'cockney',
+  'eleet',
+  'fanboy',
+  'fudd',
+  'jethro',
   // "jibberish",
-  "jive",
-  "ken",
-  // "kenny",
+  'jive',
+  'ken',
+  'kenny',
+  'kraut',
   // "ky00te",
-  "kenny",
-  "kraut",
-  "LOLCAT",
-  "nethackify",
-  "newspeak",
-  "nyc",
+  'LOLCAT',
+  'nethackify',
+  'newspeak',
+  'nyc',
   // "pirate",
   // "rasterman",
-  "scottish",
+  'scottish',
   //  "scramble",
   //  "spammer",
-  "studly",
-  "uniencode",
-  "upside_down"
+  'studly',
+  'uniencode',
+  'upside_down',
 ];
 
 const sampleText = fs.readFileSync(
-  path.join(__dirname, "moby-dick-chapter-1.txt"),
-  { encoding: "utf8", flag: "r" }
+  path.join(__dirname, 'moby-dick-chapter-1.txt'),
+  { encoding: 'utf8', flag: 'r' },
 );
 
 Promise.all(
@@ -53,23 +52,23 @@ Promise.all(
     let filterCommand = `./original/${filterName}`;
     console.log(`${filterName}...`);
     const result1 = child_process.execSync(filterCommand, {
-      input: sampleText
+      input: sampleText,
     });
     // await new Promise(function(resolve) {
     //   setTimeout(resolve, 2000);
     // });
     const result2 = child_process.execSync(filterCommand, {
-      input: sampleText
+      input: sampleText,
     });
-    if (result1.toString("utf8") !== result2.toString("utf8")) {
+    if (result1.toString('utf8') !== result2.toString('utf8')) {
       console.log(`WARNING: Filter '${filterName}' is non-deterministic. :(`);
     } else {
       fs.writeFileSync(
         path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
         result1,
-        { encoding: "utf8" }
+        { encoding: 'utf8' },
       );
     }
     console.log(`... ${filterName}`);
-  })
+  }),
 );
