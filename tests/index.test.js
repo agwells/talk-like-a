@@ -17,7 +17,7 @@ const filters = [
   'fudd',
   'jethro',
   //  'jibberish',
-  // 'ken',
+  'ken',
   // 'kenny',
   'ky00te',
   'kraut',
