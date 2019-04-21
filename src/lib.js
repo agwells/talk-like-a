@@ -11,7 +11,7 @@
  * sorta-random-seeming sequence of integers each time.
  *
  * @param {number} [seed = 1]
- * @returns {function(): number}
+ * @returns {() => number}
  */
 function getRandFn(seed = 1) {
   return function rand() {

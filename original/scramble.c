@@ -94,7 +94,7 @@ char *scramble_string(char *string) {
     j = 0;
     tmpstr = strdup(string);
     while(len > 0) {
-      i = rand() % len;
+      i = fakeRand() % len;
       ret[j] = tmpstr[i];
       j++;
       while(tmpstr[i] != '\0') {
@@ -169,7 +169,7 @@ int main(int argc, char **argv) {
   outfile = stdout;
 #endif
 
-  srand(time(NULL)); // needed for scramble_string() to actually be random
+  // srand(time(NULL)); // needed for scramble_string() to actually be random
   
   word_length = 0;
   word = malloc(sizeof(char));
