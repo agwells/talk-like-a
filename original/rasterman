@@ -7,7 +7,7 @@ binmode(STDERR, ':encoding(utf-8)');
 my $seed = 1;
 sub fakeRand {
 	$seed = $seed * 48271 % 0x7fffffff;
-	return $seed / 0x7fffffff;
+	return ($seed % 100)/100;
 }
 
 $row = "!qwertyuiop!asdfghjkl!zxcvbnm!";
@@ -79,7 +79,7 @@ sub insert_adjacent {
 sub get_adjacent {
     my($let) = @_;
 
-    return 0 if $let !~ /[a-zA-Z]/;
+    return 0 if $let !~ /[a-z]/;
 
     $i = index($row, $let);
     $before = $row_array[$i - 1];
@@ -87,7 +87,7 @@ sub get_adjacent {
 
     
 
-    if( $before eq "!" || (fakeRand() < fakeRand() && $after ne "!"))  {
+    if( $before eq "!" || ((fakeRand() < fakeRand()) && $after ne "!"))  {
 	return $after;
     } else {
 	return $before;
@@ -99,8 +99,7 @@ sub swap {
     my($tmp);
 
     if(defined($$aref[$n]) && defined($$aref[$m])) {
-	if(! (($$aref[$n] =~ /[A-Z ]/ && $$aref[$m] =~ /[A-Z ]/) ||
-	      ($$aref[$n] =~ /[a-z ]/ && $$aref[$m] =~ /[a-z ]/) )) {
+	if(! ($$aref[$n] =~ /[a-z ]/ && $$aref[$m] =~ /[a-z ]/) ) {
 	    return;
 	}
 	$tmp = $$aref[$n];
