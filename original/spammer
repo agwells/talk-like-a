@@ -4,14 +4,30 @@
 #
 # Doesn't always generate proper engrish, but then neither do
 # spammers.
- 
+
+my $seed = 1;
+sub fakeRand {
+	my ($max) = @_;
+	$seed = $seed * 48271 % 0x7fffffff;
+
+	if (defined $max) {
+		if ($max == 0) {
+			return 0;
+		} else {
+			return $seed % $max;
+		}
+	} else {
+		return ($seed % 100) / 100;
+	}
+}
+
 sub c {
-	return $_[rand @_];
+	return $_[fakeRand(scalar @_)];
 }
 
 sub line_of_yelling {
 	my @lines=split(/\n/, shift);
-	my $n=rand @lines;
+	my $n=fakeRand(scalar @lines);
 	$lines[$n] = uc($lines[$n]);
 	return join("\n", @lines);
 }
@@ -22,15 +38,15 @@ sub for_free {
 
 my $hits=0;
 
-if (rand > 0.75) {
+if (fakeRand() > 0.75) {
 	$hits++;
 	$spam .= "Dear Friend, ";
 }
-elsif (rand > 0.9) {
+elsif (fakeRand() > 0.9) {
 	$hits++;
 	$spam .= "Below is the result of your feedback form".c(qw{: . ..})."\n";
 }
-elsif (rand > 0.75) {
+elsif (fakeRand() > 0.75) {
 	$hits++;
 	$spam .= "This message is not spam!\n";
 }
@@ -39,7 +55,7 @@ while (<>) {
 	# Try to trigger spam trappers. Keep count of the number of unique
 	# ones triggered.
 	@results = (
-		s/^(Subject:\s+.*)/$1. ' ' x (rand(20) + 40) . rand(1000000)/eig,
+		s/^(Subject:\s+.*)/$1. ' ' x (fakeRand(20) + 40) . fakeRand(1000000)/eig,
 		s/free\b/for_free()/eig,
 		s/(email|message|e-mail|mail)\b/$1 (sent in compliance with regulations)/i,
 		s/(join|register|order|apply)/$1 today/ig,
@@ -62,7 +78,7 @@ while (<>) {
 		s/cdrom\b/addresses on cd/ig,
 		s/click\b/click here/ig,
 		s/viagra/c('VIAGRA', 'natural viagra', 'herbal viagra')/eig,
-		s/\btraffic\b/rand > 0.6 ? 'more web traffic' : 'traffic'/eig,
+		s/\btraffic\b/fakeRand() > 0.6 ? 'more web traffic' : 'traffic'/eig,
 		s/targeted/targeted traffic/ig,
 		s/limited/LIMITED TIME OFFER/ig,
 		s/buy\b/buy direct/ig,
@@ -119,19 +135,19 @@ while (<>) {
 	
 	# Cute things that don't cause real hits.
 	s/\.(com|org|net|edu)\b/".".c(qw(info biz name))/eig;
-	s/([Ee])nglish/${1}ngrish/g if rand > 0.66;
+	s/([Ee])nglish/${1}ngrish/g if fakeRand() > 0.66;
 	$spam .= $_;
 }
 
 $hits += $_ foreach @overallresults;
 
-if (rand > 0.5) {
+if (fakeRand() > 0.5) {
 	# random line breaks make spam look
 	# more professional
 	# or is it just written in Notepad?
-	$spam =~ s/ /rand > 0.95 ? "\n" : " "/eg;
+	$spam =~ s/ /fakeRand() > 0.95 ? "\n" : " "/eg;
 }
-elsif (rand > 0.75) {
+elsif (fakeRand() > 0.75) {
 	# I write my spam in MS WORD!
 	$spam =~ s/\n/ /g;
 }
@@ -139,12 +155,12 @@ else {
 	$spam=line_of_yelling($spam);
 }
 
-if (rand > 0.8 || $hits < 5) {
+if (fakeRand() > 0.8 || $hits < 5) {
 	$spam .= "\nThis is a ".c(qw(one 1))." time ".c(qw(email e-mail offer)).c(qw(! .));
 	$hits++;
 }
 
-if (rand > 0.7 || $hits < 5) {
+if (fakeRand() > 0.7 || $hits < 5) {
 	$spam .= "\n" . c('-' x 78, '~' x 70, '---', '', '', '', "\n\n\n\n") . "\n" .
 	      c('To remove your address from ', 'To be removed from', 'To get off from',
 	        'To unsubscribe from', 'To receive no further notices on',
@@ -162,11 +178,11 @@ if (rand > 0.7 || $hits < 5) {
 # Desperate to make it look like a spam now, I insert arbitrary
 # junk.
 while ($hits < 5) {
-	if (rand > 0.66) {
+	if (fakeRand() > 0.66) {
 		$spam=line_of_yelling($spam);
 		$hits++;
 	}
-	elsif (rand > 0.5) {
+	elsif (fakeRand() > 0.5) {
 		# Insert a spam phrase after the end of a sentence.
 		@spam_phrases = ('FREE CONSULATATION', 'INSTANT ACCESS',
 			'PURE PROFIT', 'STOCK PICK', 'VIAGRA', 'WINNER',
@@ -177,16 +193,16 @@ while ($hits < 5) {
 			for_free());
 		$hits += $spam =~ s/\.\s+([A-Z])/". ".ucfirst(c(@spam_phrases)). "! $1"/es;
 	}
-	elsif (rand > 0.75) {
+	elsif (fakeRand() > 0.75) {
 		# large hexadecimal block
 		my @hex = ('A'..'F', 0..9);
-		for (1..70 + rand(9)) {
-			$spam .= $hex[rand @hex];
+		for (1..70 + fakeRand(9)) {
+			$spam .= $hex[fakeRand(scalar @hex)];
 		}
 		$spam .= "\n";
 		$hits++;
 	}
-	elsif (rand > 0.75) {
+	elsif (fakeRand() > 0.75) {
 		$spam .= c("SSPLTM ", "{%RAND%} ");
 		$hits++;
 	}

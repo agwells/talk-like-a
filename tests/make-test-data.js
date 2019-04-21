@@ -36,7 +36,7 @@ const filters = [
   'rasterman',
   'scottish',
   //  "scramble",
-  //  "spammer",
+  'spammer',
   'studly',
   'uniencode',
   'upside_down',
