@@ -66,7 +66,6 @@ Th                  printf("D");
 [Jj]on              printf("Hansel");
 
 [a-f]"!"       {printf("%s Naturlich!",yytext);}
-[p-z]"!"       {printf("%s Sieg Heil!",yytext);}
 .              printf("%s", yytext);
 \n             printf("\n");
 
