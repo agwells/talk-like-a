@@ -9,7 +9,7 @@ const originalText = fs
 
 const filters = [
   'b1ff',
-  // 'censor',
+  'censor',
   'chef',
   'cockney',
   'eleet',
