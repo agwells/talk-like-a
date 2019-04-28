@@ -11,10 +11,14 @@ const { getRandFn } = require('./lib');
  * @param {string} originalString
  */
 function spammer(originalString) {
-  const rand = getRandFn();
+  const prng = getRandFn();
+  const rand = (max) => {
+    const seed = prng();
+    return max === 0 ? 0 : seed % max;
+  };
 
   function randPct() {
-    return (rand() % 100) / 100;
+    return (prng() % 100) / 100;
   }
 
   /**
@@ -22,7 +26,7 @@ function spammer(originalString) {
    * @param {...string} strings
    */
   function oneOf(...strings) {
-    return strings[rand() % strings.length];
+    return strings[rand(strings.length)];
   }
 
   /**
@@ -31,7 +35,7 @@ function spammer(originalString) {
    */
   function line_of_yelling(str) {
     const $lines = str.split('\n');
-    const $n = rand() % $lines.length;
+    const $n = rand($lines.length);
     $lines[$n] = $lines[$n].toUpperCase();
     return $lines.join('\n');
   }
@@ -62,13 +66,13 @@ function spammer(originalString) {
     $spam += 'This message is not spam!\n';
   }
 
-  /**
+  /**rand(
    * @type {[RegExp, string|((...match: string[]) => string)][]}
    */
   const replacers = [
     [
       /^(Subject:\s+.*)/g,
-      '$1' + ' '.repeat((rand() % 20) + 40) + (rand() % 1000000),
+      (...match) => match[1] + ' '.repeat(rand(20) + 40) + rand(1000000),
     ],
     [/free\b/gi, for_free],
     [
@@ -161,7 +165,9 @@ function spammer(originalString) {
   // An array to keep track of which replacers get used.
   const results = replacers.map(() => 0);
   $spam += originalString
-    .split('\n')
+    // Simulate perl's "while (<>)"; drop the last empty string if the input
+    // ends with a "\n"
+    .split(/\n(?!$)/)
     .map((line) => {
       let lineSoFar = line;
       replacers.forEach((replacer, i) => {
@@ -274,9 +280,9 @@ function spammer(originalString) {
     } else if (randPct() > 0.75) {
       // # large hexadecimal block
       const hex = 'ABCDEF0123456789';
-      const end = (rand() % 9) + 70;
+      const end = rand(9) + 70;
       for (let i = 1; i <= end; i++) {
-        $spam += hex[rand() % 16];
+        $spam += hex[rand(16)];
       }
       $spam += '\n';
       $hits++;
