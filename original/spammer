@@ -26,7 +26,7 @@ sub c {
 }
 
 sub line_of_yelling {
-	my @lines=split(/\n/, shift);
+	my @lines=split(/\n/, shift, -1);
 	my $n=fakeRand(scalar @lines);
 	$lines[$n] = uc($lines[$n]);
 	return join("\n", @lines);
