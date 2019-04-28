@@ -1,38 +1,54 @@
 #!/usr/bin/perl
 # jibberish -- run filters in random order
 
-$ENV{PATH}.=":/usr/games";
+# $ENV{PATH}.=":/usr/games";
+
+my $seed = 1;
+sub fakeRand {
+	my ($max) = @_;
+	$seed = $seed * 48271 % 0x7fffffff;
+
+	if (defined $max) {
+		if ($max == 0) {
+			return 0;
+		} else {
+			return $seed % $max;
+		}
+	} else {
+		return ($seed % 100) / 100;
+	}
+}
 
 @all= qw(
-eleet
-b1ff
-chef
-jethro
-upside-down
-kraut
-cockney
-pirate
-nyc
-ken
-ky00te
-rasterman
-newspeak
-studly
-censor
-spammer
+./original/eleet
+./original/b1ff
+./original/chef
+./original/jethro
+./original/upside_down
+./original/kraut
+./original/cockney
+./original/pirate
+./original/nyc
+./original/ken
+./original/ky00te
+./original/rasterman
+./original/newspeak
+./original/studly
+./original/censor
+./original/spammer
 );
 
 # shuffle order
-srand;
+#srand;
 for (0..$#all) {
-	my $n= @all*rand;
-	my $was= $all[$_];
-	$all[$_]= $all[$n];
-	$all[$n]= $was;
+	my $n = fakeRand(scalar @all);
+	my $was = $all[$_];
+	$all[$_] = $all[$n];
+	$all[$n] = $was;
 }
 
 # start the pipe...
-my $pipe= join '|', @all[0..3 + rand(5)];
+my $pipe= join '|', @all[0..3 + fakeRand(5)];
 open FILTER, "$pipe|"
 	or die "Never mind...\n";
 

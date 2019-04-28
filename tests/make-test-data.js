@@ -22,7 +22,7 @@ const filters = [
   'fanboy',
   'fudd',
   'jethro',
-  // "jibberish",
+  'jibberish',
   'ken',
   'kenny',
   'kraut',
