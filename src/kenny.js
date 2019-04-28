@@ -10,7 +10,7 @@
 // #
 // # KennySpeak invented by Kohan Ikin <syneryder@namesuppressed.com>
 // #                        http://www.namesuppressed.com/kenny/
-const { tr } = require('./lib');
+const { tr } = require("./lib");
 
 // ##### Generate KennySpeak encoding table
 function generateKenny() {
@@ -19,8 +19,8 @@ function generateKenny() {
 
   let $a, $b, $c;
   $a = $b = $c = 0;
-  'abcdefghijklmnopqrstuvwxyz'.split('').forEach(($char) => {
-    let $foo = tr(`${$a}${$b}${$c}`, '012', 'mpf');
+  "abcdefghijklmnopqrstuvwxyz".split("").forEach($char => {
+    let $foo = tr(`${$a}${$b}${$c}`, "012", "mpf");
     // # lower case characters
     $kenny[$char] = $foo;
     // # upper case characters
@@ -49,7 +49,7 @@ const kennyTranslationTable = generateKenny();
 function kenny(originalString) {
   return originalString.replace(
     /[a-zA-Z]/g,
-    (match) => kennyTranslationTable[match],
+    match => kennyTranslationTable[match]
   );
 }
 

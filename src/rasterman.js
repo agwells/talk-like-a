@@ -1,7 +1,7 @@
-const { getRandFn, tr } = require('./lib');
+const { getRandFn, tr } = require("./lib");
 
-const $row = '!qwertyuiop!asdfghjkl!zxcvbnm!';
-const $row_array = $row.split('');
+const $row = "!qwertyuiop!asdfghjkl!zxcvbnm!";
+const $row_array = $row.split("");
 
 /**
  *
@@ -66,7 +66,7 @@ function rasterman(originalString) {
     let $before = $row_array[$i - 1];
     let $after = $row_array[$i + 1];
 
-    if ($before === '!' || (fakeRand() < fakeRand() && $after !== '!')) {
+    if ($before === "!" || (fakeRand() < fakeRand() && $after !== "!")) {
       return $after;
     } else {
       return $before;
@@ -74,31 +74,31 @@ function rasterman(originalString) {
   }
 
   return originalString
-    .split('\n')
-    .map((originalLine) => {
+    .split("\n")
+    .map(originalLine => {
       let line = originalLine
         .toLowerCase()
-        .replace(/\byou\b/g, 'u')
-        .replace(/\bpeople\b/g, 'ppl')
-        .replace(/\bthrough\b/g, 'thru')
-        .replace(/\bthough\b/g, 'tho')
-        .replace(/\bnope\b/g, 'nup')
-        .replace(/\baustralia\b/g, 'oz')
-        .replace(/\bfilm\b/g, 'flim')
-        .replace(/\bsucks\b/g, 'sux')
-        .replace(/\benough\b/g, 'enuff')
-        .replace(/\ba lot\b/g, 'a shitload')
-        .replace(/\bstuff\b/g, 'shit')
-        .replace(/, /g, '.. ')
-        .replace(/\.$/g, '...');
-      let $lets = line.split('');
+        .replace(/\byou\b/g, "u")
+        .replace(/\bpeople\b/g, "ppl")
+        .replace(/\bthrough\b/g, "thru")
+        .replace(/\bthough\b/g, "tho")
+        .replace(/\bnope\b/g, "nup")
+        .replace(/\baustralia\b/g, "oz")
+        .replace(/\bfilm\b/g, "flim")
+        .replace(/\bsucks\b/g, "sux")
+        .replace(/\benough\b/g, "enuff")
+        .replace(/\ba lot\b/g, "a shitload")
+        .replace(/\bstuff\b/g, "shit")
+        .replace(/, /g, ".. ")
+        .replace(/\.$/g, "...");
+      let $lets = line.split("");
       let $strlen = line.length - 1;
       for (let $x = 0; $x < $strlen; $x++) {
         if (fakeRand() < 0.01) {
           swap($lets, $x, $x + 1);
           continue;
         }
-        if (fakeRand() < 0.1 && $lets[$x] === ' ') {
+        if (fakeRand() < 0.1 && $lets[$x] === " ") {
           swap($lets, $x - 1, $x - 2);
           continue;
         }
@@ -113,9 +113,9 @@ function rasterman(originalString) {
           continue;
         }
       }
-      return $lets.join('');
+      return $lets.join("");
     })
-    .join('\n');
+    .join("\n");
 }
 
 module.exports = rasterman;
