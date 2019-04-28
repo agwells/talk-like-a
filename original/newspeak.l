@@ -332,7 +332,7 @@ J\.?\ ?R\.?\ \"?Bob\"?\ Dobbs	printf("doubleplus crimethinker");
 [Ee]ngland|{THE}?[Uu]nited{W}[Kk]ingdom			|
 ({THE}?[Uu]nited{W}[Ss]tates{W}[Oo]f{W})?[Aa]merica	|
 {THE}?[Uu]nited{W}[Ss]tates|USA|"U.S.A."|[Cc]anada	|
-[Gg]ermany|[Ii]srael|[Ee]urope				printf("Oceana");
+[Gg]ermany|[Ii]srael|[Ee]urope				printf("Oceania");
 
 Iranian|Iraqu?i|Libyan|Russian|African|Egyptian		printf("Eurasian");
 Iran|Iraq|Libya|Russia|Africa|Egypt			|

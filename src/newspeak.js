@@ -379,7 +379,7 @@ const rawRules = [
   [/[Ee]ngland|{THE}?[Uu]nited{W}[Kk]ingdom/.source, null],
   [/({THE}?[Uu]nited{W}[Ss]tates{W}[Oo]f{W})?[Aa]merica/.source, null],
   [/{THE}?[Uu]nited{W}[Ss]tates|USA|U\.S\.A\.|[Cc]anada/.source, null],
-  [/[Gg]ermany|[Ii]srael|[Ee]urope/.source, () => 'Oceana'],
+  [/[Gg]ermany|[Ii]srael|[Ee]urope/.source, () => 'Oceania'],
 
   [/Iranian|Iraqu?i|Libyan|Russian|African|Egyptian/.source, () => 'Eurasian'],
   [/Iran|Iraq|Libya|Russia|Africa|Egypt/.source, null],
