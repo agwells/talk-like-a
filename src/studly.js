@@ -9,7 +9,7 @@
 //     (($c + $offset) % 4) != 2 and print($c) or $c =~ tr/[A-Za-z]/[a-zA-Z]/, print $c;
 // }
 
-const isUpperCase = require("./lib").isUpperCase;
+const isUpperCase = require('./lib').isUpperCase;
 
 /**
  *
@@ -17,7 +17,7 @@ const isUpperCase = require("./lib").isUpperCase;
  */
 function studly(initialString) {
   return initialString
-    .split("")
+    .split('')
     .map((c, offset) => {
       if (offset % 4 !== 2) {
         return c;
@@ -25,7 +25,7 @@ function studly(initialString) {
         return isUpperCase(c) ? c.toLowerCase() : c.toUpperCase();
       }
     })
-    .join("");
+    .join('');
 }
 
 module.exports = studly;

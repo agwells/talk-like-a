@@ -1,6 +1,6 @@
 // $_=reverse lc$_;s@"@''@g;y/[]{A-R}<>()a-y1-9,!.?`'/][}        Joey Hess
 // {><)(eq)paj6y!fk7wuodbjsfn^mxhl2Eh59L86`i'%,/;s@k@>|@g#   joey@kitenet.net
-const tr = require("./lib").tr;
+const tr = require('./lib').tr;
 
 /**
  *
@@ -12,18 +12,18 @@ function upside_down(initialString) {
     // that too.
     initialString
       .toLowerCase()
-      .split("\n")
-      .map(line =>
+      .split('\n')
+      .map((line) =>
         line
-          .split("")
+          .split('')
           .reverse()
-          .join("")
+          .join('')
       )
-      .join("\n")
+      .join('\n')
       .replace(/"/g, `''`),
     "[]{}<>()abcdefghijklmnopqrstuvwxy123456789,!.?`'",
     "[]}{><)(eq)paj6y!fk7wuodbjsfn^mxhl2Eh59L86`i'%,,"
-  ).replace(/k/g, ">|");
+  ).replace(/k/g, '>|');
 }
 
 module.exports = upside_down;

@@ -21,7 +21,7 @@ function getRandFn(seed = 1) {
 }
 getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
 
-const STARTS_WITH_UPPER = new RegExp("^[A-Z]");
+const STARTS_WITH_UPPER = new RegExp('^[A-Z]');
 
 /**
  *
@@ -77,7 +77,7 @@ function sameCapReplacer(replacement) {
  */
 function simuLex(originalString, rules, extraUtils = {}) {
   let remaining = originalString;
-  let out = "";
+  let out = '';
   const rand = getRandFn();
 
   // Simulate the way a Lex scanner would do things
@@ -132,8 +132,8 @@ simuLex.preprocessRules =
  */
 function tr(initialString, searchList, replacementList) {
   return initialString
-    .split("")
-    .map(c => {
+    .split('')
+    .map((c) => {
       let k = searchList.indexOf(c);
       if (k === -1) {
         return c;
@@ -141,7 +141,7 @@ function tr(initialString, searchList, replacementList) {
         return replacementList.charAt(k);
       }
     })
-    .join("");
+    .join('');
 }
 
 module.exports = {
@@ -150,5 +150,5 @@ module.exports = {
   sameCap,
   sameCapReplacer,
   simuLex,
-  tr
+  tr,
 };

@@ -17,7 +17,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-const getRandFn = require("./lib").getRandFn;
+const getRandFn = require('./lib').getRandFn;
 
 const all_one_letter = /^(.)\1*$/;
 
@@ -33,16 +33,16 @@ function scramble_string(toScramble, rand) {
   }
   let scrambled;
   do {
-    let tmpstr = toScramble.split("");
+    let tmpstr = toScramble.split('');
     scrambled = [];
     while (tmpstr.length) {
       let i = rand() % tmpstr.length;
       scrambled.push(tmpstr[i]);
       tmpstr.splice(i, 1);
     }
-  } while (toScramble === scrambled.join(""));
+  } while (toScramble === scrambled.join(''));
 
-  return scrambled.join("");
+  return scrambled.join('');
 }
 
 /**
@@ -55,7 +55,7 @@ function scramble(originalString) {
   // Scramble the middle letters of words.
   return originalString.replace(
     /(?<=[A-Za-z])[A-Za-z]{2,}(?=[A-Za-z])/g,
-    match => scramble_string(match, rand)
+    (match) => scramble_string(match, rand)
   );
 }
 

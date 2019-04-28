@@ -43,7 +43,7 @@ const filters = [
 
 const sampleText = fs.readFileSync(
   path.join(__dirname, 'moby-dick-chapter-1.txt'),
-  { encoding: 'utf8', flag: 'r' },
+  { encoding: 'utf8', flag: 'r' }
 );
 
 Promise.all(
@@ -65,9 +65,9 @@ Promise.all(
       fs.writeFileSync(
         path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
         result1,
-        { encoding: 'utf8' },
+        { encoding: 'utf8' }
       );
     }
     console.log(`... ${filterName}`);
-  }),
+  })
 );

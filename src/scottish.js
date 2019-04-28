@@ -74,7 +74,7 @@ const repl = [
   [/\bisn't\b/g, `ain't`],
   [/\bso th/g, `s'th`],
   [/ned\b/g, `n'd`],
-  [/\bbecause/g, `'cause`]
+  [/\bbecause/g, `'cause`],
 ].reduce(
   /**
    *
@@ -92,10 +92,10 @@ const repl = [
      */
     const initialUpper = [
       new RegExp(
-        regexText.replace(/(?<!\\)([a-z])/, match => match.toUpperCase()),
-        "g"
+        regexText.replace(/(?<!\\)([a-z])/, (match) => match.toUpperCase()),
+        'g'
       ),
-      replaceWith.replace(/[a-z]/, match => match.toUpperCase())
+      replaceWith.replace(/[a-z]/, (match) => match.toUpperCase()),
     ];
     variants.push(initialUpper);
 
@@ -104,10 +104,10 @@ const repl = [
      */
     const allUpper = [
       new RegExp(
-        regexText.replace(/(?<!\\)([a-z])/g, match => match.toUpperCase()),
-        "g"
+        regexText.replace(/(?<!\\)([a-z])/g, (match) => match.toUpperCase()),
+        'g'
       ),
-      replaceWith.replace(/[a-z]/g, match => match.toUpperCase())
+      replaceWith.replace(/[a-z]/g, (match) => match.toUpperCase()),
     ];
     variants.push(allUpper);
 

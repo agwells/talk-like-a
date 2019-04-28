@@ -7,7 +7,7 @@
  *	Reproduction permitted so long as this notice is retained.
  */
 
-const { getRandFn } = require("./lib.js");
+const { getRandFn } = require('./lib.js');
 
 /**
  *
@@ -19,9 +19,9 @@ module.exports = function cockney(initialString) {
   const I_rand = getRandFn();
   function I() {
     if (I_rand() % 5 === 1) {
-      return "Oy";
+      return 'Oy';
     } else {
-      return "I";
+      return 'I';
     }
   }
 
@@ -31,7 +31,7 @@ module.exports = function cockney(initialString) {
     if (b_count++ % 2 === 0) {
       switch (b_which++ % 4) {
         case 0:
-          return " bloody";
+          return ' bloody';
         case 1:
           return " flinkin'";
         case 2:
@@ -40,7 +40,7 @@ module.exports = function cockney(initialString) {
           return " soddin'";
       }
     }
-    return "";
+    return '';
   }
 
   const dintI_rand = getRandFn();
@@ -64,7 +64,7 @@ module.exports = function cockney(initialString) {
       let iOrWe = false;
       const indexOfI = sentence.search(/\b(I|Oy) did\b/);
       if (indexOfI !== -1) {
-        iOrWe = "I";
+        iOrWe = 'I';
       }
       // Find out if the sentence contains a "we" phrase.
       // If it has both "I" and "we", then use whichever came first
@@ -73,31 +73,31 @@ module.exports = function cockney(initialString) {
       // agree with the final phrase.)
       const indexOfWe = sentence.search(/\b[Ww]e\s(?:went|had|did)\b/);
       if (indexOfWe !== -1 && (!iOrWe || indexOfWe < indexOfI)) {
-        iOrWe = "we";
+        iOrWe = 'we';
       }
       if (iOrWe && dintI_rand() % 2 === 0) {
         // Find the full text of the preceeding sentence.
 
         switch (iOrWe) {
-          case "I":
+          case 'I':
             return ", didn'I?";
-          case "we":
+          case 'we':
             return ", din't we?";
         }
       }
     }
-    return ".";
+    return '.';
   }
 
   const pooped_rand = getRandFn();
   function pooped() {
     switch (pooped_rand() % 3) {
       case 0:
-        return "knackered";
+        return 'knackered';
       case 1:
-        return "shagged out";
+        return 'shagged out';
       default:
-        return "done in";
+        return 'done in';
     }
   }
   // void expletive()
@@ -113,13 +113,13 @@ module.exports = function cockney(initialString) {
   return (
     initialString
       // Half the time, insert a mild swear after "the"
-      .replace(/\b[Tt]he\b/g, match => `${match}${bloody()}`)
+      .replace(/\b[Tt]he\b/g, (match) => `${match}${bloody()}`)
       // steal => nick
-      .replace(/\bSteal\b/g, "Nick")
-      .replace(/\bsteal\b/g, "nick")
+      .replace(/\bSteal\b/g, 'Nick')
+      .replace(/\bsteal\b/g, 'nick')
       // stole => nicked
-      .replace(/\bStole\b/g, "Nicked")
-      .replace(/\bstole\b/g, "nicked")
+      .replace(/\bStole\b/g, 'Nicked')
+      .replace(/\bstole\b/g, 'nicked')
       // tired => (slang)
       .replace(/\btired\b/g, () => pooped())
       // You see => Y'see
@@ -127,81 +127,81 @@ module.exports = function cockney(initialString) {
       // and => 'n'
       .replace(/\band\b/g, "'n'")
       // were/was => wuz
-      .replace(/\b(?:were|was)\b/g, "wuz")
+      .replace(/\b(?:were|was)\b/g, 'wuz')
       // hello => 'ullo
       .replace(/Hello/g, "'Ullo")
       .replace(/hello/g, "'ullo")
       // h- => '-
       .replace(/\b[Hh]/g, "'")
       // your => yer
-      .replace(/\b([Yy])our\b/g, "$1er")
+      .replace(/\b([Yy])our\b/g, '$1er')
       // it => i'
       .replace(/\bit\b/g, "i'")
       // go => gow
-      .replace(/\bgo\b/g, "gow")
+      .replace(/\bgo\b/g, 'gow')
       // my => me
-      .replace(/\bmy\b/g, "me")
+      .replace(/\bmy\b/g, 'me')
       // this/that
-      .replace(/\b(?:this|that)\b/g, "$&")
+      .replace(/\b(?:this|that)\b/g, '$&')
       // I went/had/did => I did
-      .replace(/\bI\s(?:went|had|did)\b/g, () => "I did")
+      .replace(/\bI\s(?:went|had|did)\b/g, () => 'I did')
       // I => Oy (sometimes)
       .replace(/\bI\b/g, () => I())
       // What are => Wotta (eos)
-      .replace(/([Ww])hat\s+are\b/g, "$1otta")
+      .replace(/([Ww])hat\s+are\b/g, '$1otta')
       // -other => -uvver
-      .replace(/(\b|[MmNnRr])other/g, "$1uvver")
+      .replace(/(\b|[MmNnRr])other/g, '$1uvver')
       // mouth/south => mouf/souf
-      .replace(/([MmSs])outh/g, "$1owf")
+      .replace(/([MmSs])outh/g, '$1owf')
       // couth/youth => coof/yoof
-      .replace(/([cYy])outh/, "$1oof")
+      .replace(/([cYy])outh/, '$1oof')
       // -uth => -uf
-      .replace(/([^o]u)th/g, "$1f")
+      .replace(/([^o]u)th/g, '$1f')
       // th- => f- (except "this", "that", and "the-")
-      .replace(/\bth(?!e|is\b|at\b)/g, "f")
+      .replace(/\bth(?!e|is\b|at\b)/g, 'f')
       // ath/eth/ith/oth => af/ef/if/of
-      .replace(/([AaEeIiOo])th(?![em])/g, "$1f")
+      .replace(/([AaEeIiOo])th(?![em])/g, '$1f')
       // oothe => oove
-      .replace(/oothe/g, "oove")
+      .replace(/oothe/g, 'oove')
       // eithe/eethe => eeve
-      .replace(/e[ei]the/g, "eeve")
+      .replace(/e[ei]the/g, 'eeve')
       // ooth/eeth => oof/eef
-      .replace(/(oo|ee)th/g, "$1f")
+      .replace(/(oo|ee)th/g, '$1f')
       // athe/ethe/ithe => avve/evve/ivve
-      .replace(/([aei])the/g, "$1vve")
+      .replace(/([aei])the/g, '$1vve')
       // th => v (except "this", "that", and "the")
-      .replace(/\Bth|\bth(?!(e|at|is)\b)/g, "v")
+      .replace(/\Bth|\bth(?!(e|at|is)\b)/g, 'v')
       // -ime => -oime
-      .replace(/ime\b/g, "oime")
+      .replace(/ime\b/g, 'oime')
       // -ake/-ame => -ike/-ime
-      .replace(/a([km])e\b/g, "i$1e")
+      .replace(/a([km])e\b/g, 'i$1e')
       // -old- => -owld-
-      .replace(/([^r][Oo])ld/g, "$1wld")
+      .replace(/([^r][Oo])ld/g, '$1wld')
       // -ond-/-und- => -unn-
-      .replace(/([^AaEeIiOoUu])[uo]nd\B/g, "$1unn")
+      .replace(/([^AaEeIiOoUu])[uo]nd\B/g, '$1unn')
       // -ing => -in' (eos)
       .replace(/ing\b/g, "in'")
       // getter -> ge'er
       .replace(/([^dg])get+(?!h)/g, "$1ge'")
       // ail => aiw
-      .replace(/ail/g, "aiw")
+      .replace(/ail/g, 'aiw')
       // any => enny
-      .replace(/any/g, "enny")
+      .replace(/any/g, 'enny')
       // -ray/-say => -righ/-sigh
-      .replace(/([rSs])ay\b/g, "$1igh")
+      .replace(/([rSs])ay\b/g, '$1igh')
       // way => why
-      .replace(/way/g, "why")
+      .replace(/way/g, 'why')
       // -bit/-hit => -bi'/-hi'
       .replace(/([BbHh])it\b/g, "$1i'")
       // -ait => -ite
-      .replace(/ait\b/g, "ite")
+      .replace(/ait\b/g, 'ite')
       // -ize- => -oize-
-      .replace(/([^e])ize(?!n)/g, "$1oize")
+      .replace(/([^e])ize(?!n)/g, '$1oize')
       // -ight => -oit
-      .replace(/([^e])ight/g, "$1oit")
+      .replace(/([^e])ight/g, '$1oit')
       // (sentence)? -> (sentence), roit?
       .replace(/(\w|')\?/g, (match, p1) => {
-        return p1 + ", roit?";
+        return p1 + ', roit?';
       })
       // (sentence). -> (sentence), din't I?
       .replace(

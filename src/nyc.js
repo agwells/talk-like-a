@@ -1,4 +1,4 @@
-const { simuLex, sameCap, sameCapReplacer } = require("./lib");
+const { simuLex, sameCap, sameCapReplacer } = require('./lib');
 // %{
 // /*
 //  *	Lex filter to transform plain English into Brooklyn English.
@@ -13,9 +13,9 @@ const { simuLex, sameCap, sameCapReplacer } = require("./lib");
 // SP [ \t]
 // EW [ \t.,;!\?$]
 
-const BW = "[ \\t]";
-const SP = "[ \\t]";
-const EW = "[ \\t.,;!?$]";
+const BW = '[ \\t]';
+const SP = '[ \\t]';
+const EW = '[ \\t.,;!?$]';
 
 /**
  * For cases where the replacement text needs to have the same first letter
@@ -40,46 +40,46 @@ function simpleSameCapReplacer(replacement) {
  * @type {[string, (match: string, utils: any) => string][]}
  */
 const rawRules = [
-  ["[ao]ther", match => (match[0] === "a" ? "adder" : "udder")],
-  ["[Nn]othing", simpleSameCapReplacer("nuttin'")],
-  ["[Tt]hin", simpleSameCapReplacer("tin")],
-  ["[Tt]hir", simpleSameCapReplacer("toi")],
-  ["[Tt]h[ei]", match => sameCap(match, `d${match.slice(-1)}`)],
-  ["[Tt]hat", sameCapReplacer("dat")],
+  ['[ao]ther', (match) => (match[0] === 'a' ? 'adder' : 'udder')],
+  ['[Nn]othing', simpleSameCapReplacer("nuttin'")],
+  ['[Tt]hin', simpleSameCapReplacer('tin')],
+  ['[Tt]hir', simpleSameCapReplacer('toi')],
+  ['[Tt]h[ei]', (match) => sameCap(match, `d${match.slice(-1)}`)],
+  ['[Tt]hat', sameCapReplacer('dat')],
   [`I'm${SP}going${SP}to`, () => "I'manna"],
-  [`going${SP}to`, () => "gonna"],
-  [`want${SP}to`, () => "wanna"],
-  [`t${SP}you`, () => "tcha"],
-  [`[Dd]id${SP}you${SP}[eaiou]`, match => match[0] + `'j` + match.slice(-1)],
+  [`going${SP}to`, () => 'gonna'],
+  [`want${SP}to`, () => 'wanna'],
+  [`t${SP}you`, () => 'tcha'],
+  [`[Dd]id${SP}you${SP}[eaiou]`, (match) => match[0] + `'j` + match.slice(-1)],
   [`[Dd]id${SP}you`, simpleSameCapReplacer("d'ja")],
-  [`[Yy]ou`, simpleSameCapReplacer("yuh")],
-  [`[Hh]ow${SP}are${SP}you`, simpleSameCapReplacer("howahrya")],
+  [`[Yy]ou`, simpleSameCapReplacer('yuh')],
+  [`[Hh]ow${SP}are${SP}you`, simpleSameCapReplacer('howahrya')],
   [`[Ww]ith`, simpleSameCapReplacer("wit'")],
-  ["[Dd]on't", simpleSameCapReplacer("doan")],
+  ["[Dd]on't", simpleSameCapReplacer('doan')],
   ["(ldn't|dn't)", () => "n't"],
   ["isn't", () => "ain't"],
-  [`er(?=${EW})`, () => "uh"],
+  [`er(?=${EW})`, () => 'uh'],
   [`ing(?=${EW})`, () => "in'"],
   [
     `([Ww]ord|[Hh]eard|[BbGgLlPpSs]urg|[CcHh][eu]r[ntv])`,
-    match => match[0] + "oi" + match.slice(-1)
+    (match) => match[0] + 'oi' + match.slice(-1),
   ],
-  [`[^Mm]mer[^aeiouhrs]`, match => match[0] + "moi" + match.slice(-1)],
-  [`[Oo]re(?=${EW})`, sameCapReplacer("awh")],
-  [`[Oo]r`, sameCapReplacer("awh")],
-  [`[Oo]f`, sameCapReplacer("uhv")],
+  [`[^Mm]mer[^aeiouhrs]`, (match) => match[0] + 'moi' + match.slice(-1)],
+  [`[Oo]re(?=${EW})`, sameCapReplacer('awh')],
+  [`[Oo]r`, sameCapReplacer('awh')],
+  [`[Oo]f`, sameCapReplacer('uhv')],
   [`tion`, () => `shun`],
-  [`(alk|our[st]|or[st])`, match => `awh${match.slice(-1)}`],
-  ["ause", () => "awze"],
-  ["[Oo]ff", sameCapReplacer("awhf")],
-  ["[Ss]tupid", simpleSameCapReplacer("stoopid")],
-  [`${BW}under`, () => " unner"],
-  [`${BW}to(?=${EW})`, () => " tuh"],
-  [`[Aa]ctual`, simpleSameCapReplacer("ackshul")],
-  [`[a-z]:`, match => `${match[0]}, like, uhh:`],
-  [`[a-z]\\?`, match => `${match[0]}, or what?`],
-  [`!`, () => "! Okay?"],
-  [`[a-z]\\.`, (match, { expletive }) => `${match}${expletive()}`]
+  [`(alk|our[st]|or[st])`, (match) => `awh${match.slice(-1)}`],
+  ['ause', () => 'awze'],
+  ['[Oo]ff', sameCapReplacer('awhf')],
+  ['[Ss]tupid', simpleSameCapReplacer('stoopid')],
+  [`${BW}under`, () => ' unner'],
+  [`${BW}to(?=${EW})`, () => ' tuh'],
+  [`[Aa]ctual`, simpleSameCapReplacer('ackshul')],
+  [`[a-z]:`, (match) => `${match[0]}, like, uhh:`],
+  [`[a-z]\\?`, (match) => `${match[0]}, or what?`],
+  [`!`, () => '! Okay?'],
+  [`[a-z]\\.`, (match, { expletive }) => `${match}${expletive()}`],
 ];
 
 const rules = simuLex.preprocessRules(rawRules);
@@ -95,14 +95,14 @@ function nyc(originalString) {
   const expletive = function() {
     if (count++ % 4 === 0) {
       return [
-        " Okay?",
-        " Right?",
-        " Yuh got me so fahr?",
+        ' Okay?',
+        ' Right?',
+        ' Yuh got me so fahr?',
         " Ya' dig?",
-        " Yuh with me?"
+        ' Yuh with me?',
       ][which++ % 5];
     } else {
-      return "";
+      return '';
     }
   };
 
