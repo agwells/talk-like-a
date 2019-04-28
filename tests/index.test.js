@@ -23,7 +23,7 @@ const filters = [
   'kraut',
   'LOLCAT',
   'nethackify',
-  // 'newspeak',
+  'newspeak',
   'nyc',
   'pirate',
   'rasterman',
