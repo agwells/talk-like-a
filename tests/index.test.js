@@ -1,12 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const originalText = fs
-  .readFileSync(path.join(__dirname, 'moby-dick-chapter-1.txt'), {
-    encoding: 'UTF8',
-  })
-  .toString();
-
+const sampleTexts = ['moby-dick-chapter-1.txt', 'manpage.txt'];
 const filters = [
   'b1ff',
   'censor',
@@ -33,19 +28,33 @@ const filters = [
   'studly',
   'uniencode',
   'upside_down',
-].map((f) => [f]);
+];
 
-test.each(filters)('%s', (filterName) => {
-  const expectedTransform = fs
-    .readFileSync(
-      path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
-      { encoding: 'UTF8' }
-    )
-    .toString();
+sampleTexts.forEach((filename) =>
+  describe(filename, () => {
+    let originalText = '';
+    beforeAll(() => {
+      originalText = fs
+        .readFileSync(path.join(__dirname, filename), {
+          encoding: 'UTF8',
+        })
+        .toString();
+    });
 
-  const filterFn = require(`../src/${filterName}`);
+    filters.forEach((filterName) =>
+      test(filterName, () => {
+        const expectedTransform = fs
+          .readFileSync(path.join(__dirname, `${filename}.${filterName}.txt`), {
+            encoding: 'UTF8',
+          })
+          .toString();
+        filterName;
+        const filterFn = require(`../src/${filterName}`);
 
-  expect(filterFn(originalText).split(' ')).toEqual(
-    expectedTransform.split(' ')
-  );
-});
+        expect(filterFn(originalText).split(' ')).toEqual(
+          expectedTransform.split(' ')
+        );
+      })
+    );
+  })
+);

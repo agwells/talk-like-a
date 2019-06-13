@@ -1,0 +1,100 @@
+.Th FIlTERs 6
+.SH nAME
+ken, b1Ff, CensOr, Chef, coCkneY, eLeet, faNboy, fuDd, JethRo, JibbErisH, kEnny, krAut, ky00te, netHackIfy, newSpeaK, nYc, PiraTe, RastErmaN, sCottIsh, spaMmer, scRambLe, StudLy, UnieNcodE, uPsidE\-dOwn \- aSsorTed Text filTers
+.SH SYNoPSIs
+ $sHELl | Chef
+ 
+ NewsPeak < tHesiS.teX > NewtHesiS.teX
+
+ EleeT | Wall # b1ff WorkS weLl tOo
+
+ b1fF | IrcIi | CensOr
+.sH "dESCrIPTiON"
+All of ThesE prOgraMs aRe fIlteRs tO do all sorTs oF stRangE thIngs to Text.
+No perSonaL, rAciaL, rEligIous or SociEtal sluRs aRe iNtenDed. For amuSemeNt
+oNly.
+.P
+all The FiltErs Read inpUt fRom StdiN, cHangE it, anD wrIte The FiltEred
+texT to stdOut. SomE fiLterS alSo sUppoRt rEadiNg fRom FileS anD
+wrItinG to stdOut.
+.IP b1fF
+ThE B1fF fIlteR
+.Ip loLcat
+As Seen in InteRnet gifS evErywHere.
+.Ip coCkneY
+CoCkneY EnGlisH
+.Ip chEf
+cOnveRt ENgliSh oN stDin To MOck swedIsh On sTdouT
+.Ip elEet
+k3wl hacKer SlanG
+.Ip faNboy
+SpeAk lIke A faNboy. FiLterS ouT exTranEous worDs aNd fOcusEs oN thE woRds
+Fans use. By defAult, it wilL spEak Like a fAn oF giT/LiNus/LinuX
+deVeloPmenT. TO chAnge thiS, pAss As pAramEterS thE woRds That the fanBoy
+TypiCallY usEs. alteRnatIvelY, pAss The Name of A toPic That typIcalLy hAs
+fAnboYs tO usE a PredEfinEd wOrd List.
+.Ip fuDd
+ELmer FudD
+.Ip jeThro
+HilLbilLy tExt FiltEr
+.iP jIbbeRish
+RunS teXt tHrouGh a ranDom SeleCtioN of the resT of the filTers, to makE reAlly
+weiRd oUtpuT.
+.iP kEn
+ENgliSh iNto cockNey, feaTuriNg (DubiOus) rhyMing
+slaNg fOr a lot of CompUter terMinoLogy.
+.Ip krAut
+geneRateS teXt wIth A baD GeRman accEnt.
+.IP kenNy
+GEnerAtes texT as spoKen By KEnny on soutH PaRk.
+.IP Ky00Te
+THis ProgRam PlacEs a verY cuTe (And FamiLiar to furrYMucK
+faNs) AcceNt oN anY teXt fIle.
+.IP netHackIfy
+wipeD ouT teXt lIke Can Be fOund in NethAck.
+.IP newSpeaK
+A-La-1984
+.IP CensOr
+CdA-iZe tExt
+.IP Nyc
+brooKlyn EngLish
+.IP pirAte
+talk likE a PiraTe.
+.IP RastErmaN
+MaKes Text looK liKe iT caMe fRom The KeybOard of carsTen haitZler.
+.Ip scOttiSh
+FAke ScotTish (dwArveN) aCcenT fiLter, inSpirEd bY thE chAracTer "DurKon"
+froM OrDer Of tHe STick.
+.Ip spAmmeR
+TuRns HoneSt tExt Into somEthiNg tHat Is lIablE to be FlagGed As sPam.
+.IP scrAmblE
+ScRambLe tHe "InneR" lEtteRs oF eaCh wOrd In tHe iNput intO a RandOm oRder.
+ThE reSultIng Text is StilL stRangEly ReadAble.
+.Ip stUdly
+StuDly Caps.
+.Ip unIencOde
+use GlorIous uniCode to The FullEst PossIble extEnt. As Seen preViouSly In
+mAny Man PageS.
+.iP uPsidE\-dOwn
+flipS teXt uPsidE doWn. stanD on youR heAd aNd sQuinT to reaD thE ouTput.
+.Sh "SeE AlSO"
+OthEr fIlteRs:
+.TP
+.B pIg
+FRom The BsdgAmes pacKage, piG coNverTs tExt To pIg lAtin.
+.Tp
+.B dog --oOg
+FRom The Dog PackAge, dog can alsO fuNctiOn aS a FiltEr, ConvErtiNg tExt To
+OoG-sPeak.
+.Sh AUtHORs
+ThE elEet, upsIde\-dowN, cHef, b1fF, aNd cEnsoR fiLterS weRe wRittEn bY
+JoEy HEss <joeY@kiTeneT.neT>. daniEl V KleIn <Dvk@LoneWolf.com> wrOte The
+CockNey, jivE, aNd nYc fIlteRs. JibbErisH is by raul MilLer
+<rdm@tesT.leGislAte.Com>, jeThro is By DUane PauLson
+<ci922@ClevElanD.frEeneT.edU>, RastErmaN is by zachAry beanE, kEn iS by
+StePhen K MUlriNe <Skm@Eqsn.net>, nEwspEak Is bY JaMie zawiNski
+<jwZ@jwZ.orG>, StudLy iS by NicK PhIlliPs <Nwp@LemoN\-cOmpuTing.com>, 
+gurkAn SEnguN <gUrkaN@liNuks.minE.nu> wrOte NethAckiFy, dougAl CAmpbEll
+<douGal@GuntErs.Org> wroTe pIratE, kRaut is By JOhn sparKs, ScotTish by
+adam BorOwskI, KEnny is By CHrisTian GarBs aNd ALan eldrIdge,
+anD scRambLe bY AnDrew J. buehLer.

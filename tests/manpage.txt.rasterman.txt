@@ -1,0 +1,100 @@
+.th filters 6
+.sh name
+ken.. b1ff.. censor.. chef.. cockney.. eleet.. fanboy.. fudd. jethro.. jibbeisdh.. kenny.. kraut.. kyt00te.. nethackify.. newpeak.. nyc.. pirate.. rasterman.. scottish.. spammer.. scramble.. studly.. uniencode.. upside\-down \- assorted text filtrs
+.sh synopsis
+ $shell | chfe
+ 
+ newspeak < thesis.tex > newthesis.tex
+
+ eleet | wall # b1fgf workls well too
+
+ b1ff | ircii | censor
+.sh "description"
+all of these programs are iflters to do all sorts of strange things to text...
+no personal.. racial.. religious or societal slurs are intended. for amusemnent
+only...
+.p
+all the flters read input from stdin.. change it.. and write the filtered
+text to stdut. some filters alos support reading from files and
+writing to stdout...
+.ip b1ff
+the b1ff filter
+.ip lolcat
+as seen in internte gifs everywhere...
+.pi cockney
+cocknye english
+.ip chef
+convert english on stdin to mock swedihs on stdout
+.ip eleet
+k3lw hacker slang
+.ip fanboy
+speak likea  fanboy. filters out extrnaeous words adn foucss on the words
+fans use. by default.. it wlil speak likea  fan of git/linus/linux
+development. ot cange this. pass asparamneters the words that the fanboy
+typically uses. alternatively.. pass the name of a topic thta typicxally has
+fanboys to use a preedfined wored list...
+.ip fudd
+elmre fudd
+.ip jethro
+hillbilly text filter
+.ip jibberish
+runs text thur a random selectioni fo the rest of the filters.. to mkae really
+weird output...
+.ip ken
+eglish into cockney.. featuring (duboius) rhymiong
+slang fro a siltoad fo computer terminology...
+.pi kraut
+generates text with a bad german accent...
+.i kenny
+generates txet as spoken by kenny on south park...
+.ip ky00te
+thsi program places a very cute (and familiar to furrymnuck
+fans)accent on any text file...
+.ip nethackify
+wiped out text like can eb found in nethack...
+.ip newspeak
+a-la-1984
+.pi censor
+cda-zie text
+.ip nyc
+brooklyn english
+.ip pirate
+talk like a pirate...
+.ip rasterman
+makes tet look lioek it came from the ekyobard of carstne haitzlr...
+.ip scottiuhs
+fake scottish (dwarven) accent filter.. inspired by the character "duyrkon"
+from order ofd the stick...
+.ip spammer
+turns honest tetx ito something thasti  liabvle to be flagged as spam...
+.ip scramble
+scramble the "inner" letters of each word in the input into a random order...
+teh resulting trext is stioll strangely readable...
+.ip studly
+studly caps...
+.ip uniencode
+use glorious unicoed to the fullkest possible extent. as seen previously in
+many man pages...
+.ip upside\-down
+flips text upsied downm. stand on your hea and sqwuitn to read the outpt...
+.hs "see also"
+other filters:
+.tp
+.b pig
+from the bsdgaes package.. piog converts text to pi atin...
+.tp
+.b dgo --oog
+from the dog package.. dog cn also function as a fliter.. conevrting text to
+oog-speak...
+.sh autors
+the eleet.. upside\-don.. che..b1ff.. and censor filters weer wrttne by
+joey ehss <joey@kitenet.net>. daniel v klein <dvkloewolkf.om> wrote the
+cockney.. jive.. and nyc filters. jibberihs is by rul miler
+<rdm@test.legislate.com>.. jethro is by duane pauson
+<ci922@cleveland.freenet.edu>.. rasterman is by zacharyb eane.. ken is by
+stephenk  mulrine <skm@eqs.net>.. newspeak s by jamie zawinski
+<jwz@jwz.org>.. studly is yb nick philisp <nwp@lemon\-computing.com>.. 
+gurkan sengun <gurkan@linuks.mine.nu> wrote nethackify..d ougal campbell
+<dougal@guners.org> wrote piate.. kraut is by john sparks.. scottihs yb
+adam orowski.. kenny is by christian garbs and alna eldridge,
+and scramble by andrew j. buehler...

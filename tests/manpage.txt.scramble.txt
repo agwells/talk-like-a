@@ -1,0 +1,100 @@
+.TH FLEIRTS 6
+.SH NMAE
+ken, b1ff, cnoser, cehf, ceconky, eeelt, fnobay, fdud, jrtheo, jirbsibeh, kneny, kuart, ky00te, nkchetfiay, nsaeewpk, nyc, paitre, rseaatrmn, stoictsh, spamemr, samlbcre, sdulty, udocnneie, upsdie\-dwon \- asoesrtd txet frtiles
+.SH SYISONPS
+ $SLEHL | cehf
+ 
+ nepewsak < tsehis.tex > nshietwes.tex
+
+ eeelt | wlal # b1ff wrkos wlel too
+
+ b1ff | iIcrI | coesnr
+.SH "DIICOEPTSRN"
+All of tsehe pormrgas are frtlies to do all srtos of srtgnae tighns to txet.
+No psoraenl, ricaal, roueiligs or sicteoal surls are innedetd. For anusmmeet
+olny.
+.P
+All the fteirls raed iupnt form sdtin, chagne it, and wirte the feteirld
+txet to sdotut. Smoe ftreils aslo sproput reaindg form fiels and
+wiitrng to sdtout.
+.IP b1ff
+The B1FF ftelir
+.IP localt
+As seen in itenrent gfis erwvyehere.
+.IP ccoenky
+Cocenky Enslgih
+.IP cehf
+cvrneot Eiglsnh on sditn to Mcok Sesidwh on sotdut
+.IP eelet
+K3wl hkacer snlag
+.IP fonaby
+Sapek lkie a fboany. Ftilers out euanetoxrs wdors and fsoeucs on the wodrs
+fnas use. By dfeault, it wlil seapk lkie a fan of git/Lnius/luinx
+dvnompeelet. To canhge tihs, psas as pearremtas the wdors taht the fnaboy
+tlyaclpiy uess. Altvitaerelny, psas the nmae of a tiopc taht tilcyalpy has
+fbnoyas to use a pefiderend wrod lsit.
+.IP fdud
+Emler Fdud
+.IP jerhto
+Hlllliiby txet ftlier
+.IP jibrsbeih
+Rnus txet troghuh a radonm sceiloten of the rset of the feitrls, to mkae relaly
+werid ouuptt.
+.IP ken
+Elsgnih itno Cecnkoy, fruatieng (duouibs) ryhmnig
+snlag for a lot of cmouetpr toroeglminy.
+.IP kuart
+Gtrenaees txet wtih a bad Gemran acecnt.
+.IP kneny
+Geeratens txet as sepokn by Knney on Sutoh Prak.
+.IP ky00te
+Tihs proagrm pacles a vrey ctue (and famliair to FycrrMuuk
+fnas) ancect on any txet flie.
+.IP nkcaitfehy
+Wiepd out txet lkie can be fnoud in nctheak.
+.IP nsewapek
+A-la-1984
+.IP cenosr
+CDA-ize txet
+.IP nyc
+Bokoylrn Esiglnh
+.IP pratie
+Tlak lkie a pitare.
+.IP rramsetan
+Maeks txet look lkie it cmae form the korbayed of Csertan Hilteazr.
+.IP stistoch
+Fkae sotiscth (davrwen) ancect fetilr, isprined by the crhaeatcr "Dorkun"
+form Oderr of the Sitck.
+.IP spmmaer
+Truns hnoest txet itno soietmnhg taht is lialbe to be fgeglad as sapm.
+.IP sbrcmlae
+Slrmbace the "iennr" lretets of ecah wrod in the iupnt itno a rdoanm oderr.
+The rnsiutelg txet is stlil sraneglty radlbaee.
+.IP sdtluy
+Sutdly cpas.
+.IP uoceindne
+Use giuorlos uincdoe to the fullset pislobse eexntt. As seen prlousviey in
+mnay man paegs.
+.IP updsie\-dwon
+Fpils txet uisdpe dwon. Stnad on yuor haed and siqnut to raed the otuupt.
+.SH "SEE ASLO"
+Ohetr fleitrs:
+.TP
+.B pig
+Form the begdasms pcagake, pig cntreovs txet to pig ltian.
+.TP
+.B dog --oog
+Form the dog packgae, dog can aslo fticnoun as a fetlir, ceitnonrvg txet to
+OOG-saepk.
+.SH ATROUHS
+The eelet, upisde\-dwon, cehf, b1ff, and cesonr freilts wree wittren by
+Jeoy Hses <jeoy@ketneit.net>. Dnaeil V Kilen <dvk@looelwnf.com> wtroe the
+cckenoy, jvie, and nyc feitrls. jirebbish is by Rual Melilr
+<rdm@tset.leigltase.com>, jtreho is by Danue Puosaln
+<ci922@claenlved.ferneet.edu>, ramrsaten is by Zarcahy Bneae, ken is by
+Speehtn K Mlriune <skm@esqn.net>, naewespk is by Jmiae Zwnasiki
+<jwz@jwz.org>, sdltuy is by Ncik Phllpiis <nwp@lomen\-cuimpontg.com>, 
+Gaurkn Senugn <gaukrn@lnuiks.mnie.nu> wtore naehfikcty, Dgoual Clpaebml
+<duoagl@gurntes.org> worte ptraie, kruat is by Jhon Sakrps, stiotsch by
+Aadm Bskowroi, Kneny is by Ctihirasn Grbas and Aaln Eilrdgde,
+and smarclbe by Anrdew J. Blheuer.

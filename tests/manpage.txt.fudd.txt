@@ -1,0 +1,100 @@
+.F FIWTEWS 6
+.SH NAME
+ken, b1ff, censow, chef, cockney, eweet, fanboy, fudd, jedwo, jibbewish, kenny, kwaut, ky00te, nedackify, newspeak, nyc, piwate, wastewman, scottish, spammew, scwambwe, studwy, uniencode, upside\-down \- assowted text fiwtews
+.SH SYNOPSIS
+ $SHEWW | chef
+ 
+ newspeak < desis.tex > newdesis.tex
+
+ eweet | waww # b1ff wowks weww too
+
+ b1ff | iwcII | censow
+.SH "DESCWIPTION"
+Aww of dese pwogwams awe fiwtews to do aww sowts of stwange dings to text.
+No pewsonaw, waciaw, wewigious ow societaw swuws awe intended. Fow amusement
+onwy.
+.P
+Aww de fiwtews wead input fwom stdin, change it, and wwite de fiwtewed
+text to stdout. Some fiwtews awso suppowt weading fwom fiwes and
+wwiting to stdout.
+.IP b1ff
+De B1FF fiwtew
+.IP wowcat
+As seen in intewnet gifs evewywhewe.
+.IP cockney
+Cockney Engwish
+.IP chef
+convewt Engwish on stdin to Mock Swedish on stdout
+.IP eweet
+K3ww hackew swang
+.IP fanboy
+Speak wike a fanboy. Fiwtews out extwaneous wowds and focuses on de wowds
+fans use. By defauwt, it wiww speak wike a fan of git/Winus/winux
+devewopment. To change dis, pass as pawametews de wowds dat de fanboy
+typicawwy uses. Awtewnativewy, pass de name of a topic dat typicawwy has
+fanboys to use a pwedefined wowd wist.
+.IP fudd
+Ewmew Fudd
+.IP jedwo
+Hiwwbiwwy text fiwtew
+.IP jibbewish
+Wuns text dwough a wandom sewection of de west of de fiwtews, to make weawwy
+weiwd output.
+.IP ken
+Engwish into Cockney, featuwing (dubious) whyming
+swang fow a wot of computew tewminowogy.
+.IP kwaut
+Genewates text wif a bad Gewman accent.
+.IP kenny
+Genewates text as spoken by Kenny on Souf Pawk.
+.IP ky00te
+Dis pwogwam pwaces a vewy cute (and famiwiaw to FuwwyMuck
+fans) accent on any text fiwe.
+.IP nedackify
+Wiped out text wike can be found in nedack.
+.IP newspeak
+A-wa-1984
+.IP censow
+CDA-ize text
+.IP nyc
+Bwookwyn Engwish
+.IP piwate
+Tawk wike a piwate.
+.IP wastewman
+Makes text wook wike it came fwom de keyboawd of Cawsten Haitzwew.
+.IP scottish
+Fake scottish (dwawven) accent fiwtew, inspiwed by de chawactew "Duwkon"
+fwom Owdew of de Stick.
+.IP spammew
+Tuwns honest text into someding dat is wiabwe to be fwagged as spam.
+.IP scwambwe
+Scwambwe de "innew" wettews of each wowd in de input into a wandom owdew.
+De wesuwting text is stiww stwangewy weadabwe.
+.IP studwy
+Studwy caps.
+.IP uniencode
+Use gwowious unicode to de fuwwest possibwe extent. As seen pweviouswy in
+many man pages.
+.IP upside\-down
+Fwips text upside down, uh-hah-hah-hah. Stand on youw head and sqwint to wead de output.
+.SH "SEE AWSO"
+Odew fiwtews:
+.TP
+.B pig
+Fwom de bsdgames package, pig convewts text to pig watin, uh-hah-hah-hah.
+.TP
+.B dog --oog
+Fwom de dog package, dog can awso function as a fiwtew, convewting text to
+OOG-speak.
+.SH AUDOWS
+De eweet, upside\-down, chef, b1ff, and censow fiwtews wewe wwitten by
+Joey Hess <joey@kitenet.net>. Daniew V Kwein <dvk@wonewowf.com> wwote de
+cockney, jive, and nyc fiwtews. jibbewish is by Wauw Miwwew
+<wdm@test.wegiswate.com>, jedwo is by Duane Pauwson
+<ci922@cwevewand.fweenet.edu>, wastewman is by Zachawy Beane, ken is by
+Stephen K Muwwine <skm@eqsn, uh-hah-hah-hah.net>, newspeak is by Jamie Zawinski
+<jwz@jwz.owg>, studwy is by Nick Phiwwips <nwp@wemon\-computing.com>, 
+Guwkan Sengun <guwkan@winuks.mine.nu> wwote nedackify, Dougaw Campbeww
+<dougaw@guntews.owg> wwote piwate, kwaut is by John Spawks, scottish by
+Adam Bowowski, Kenny is by Chwistian Gawbs and Awan Ewdwidge,
+and scwambwe by Andwew J. Buehwew.

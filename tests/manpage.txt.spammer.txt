@@ -1,0 +1,106 @@
+Below is the result of your feedback form:
+.TH FILTERS 6
+.SH NAME
+ken, b1ff, censor, chef, cockney, eleet, fanboy, fudd, jethro, jibberish, kenny, kraut, ky00te, nethackify, newspeak, nyc, pirate, rasterman, scottish, businessman, scramble, studly, uniencode, upside\-down \- assorted text filters
+.SH SYNOPSIS
+ $SHELL | chef
+ 
+ newspeak < thesis.tex > newthesis.tex
+
+ eleet | wall # b1ff works well too
+
+ b1ff | ircII | censor
+.SH "DESCRIPTION"
+All of these programs are filters to do all sorts of strange things to text.
+No personal, racial, religious or societal slurs are intended. For amusement
+only.
+.P
+All the filters read input from stdin, change it, and write the filtered
+text to stdout. Some filters also support reading from files and
+writing to stdout.
+.IP b1ff
+The B1FF filter
+.IP lolcat
+As seen in internet gifs everywhere.
+.IP cockney
+Cockney Engrish
+.IP chef
+CONVERT ENGLISH ON STDIN TO MOCK SWEDISH ON STDOUT
+.IP eleet
+K3wl hacker slang
+.IP fanboy
+Speak like a fanboy. Filters out extraneous words and focuses on the words
+fans use. By default, it will speak like a fan of git/Linus/linux
+development. To change this, pass as parameters the words that the fanboy
+typically uses. Alternatively, pass the name of a topic that typically has
+fanboys to use a predefined word list.
+.IP fudd
+Elmer Fudd
+.IP jethro
+Hillbilly text filter
+.IP jibberish
+Runs text through a random selection of the rest of the filters, to make really
+weird output.
+.IP ken
+Engrish into Cockney, featuring (dubious) rhyming
+slang for a lot of computer terminology.
+.IP kraut
+Generates text with a bad German accent.
+.IP kenny
+Generates text as spoken by Kenny on South Park.
+.IP ky00te
+This program places a very cute (and familiar to FurryMuck
+fans) accent on any text file.
+.IP nethackify
+Wiped out text like can be found in nethack.
+.IP newspeak
+A-la-1984
+.IP censor
+CDA-ize text
+.IP nyc
+Brooklyn English
+.IP pirate
+Talk like a pirate.
+.IP rasterman
+Makes text look like it came from the keyboard of Carsten Haitzler.
+.IP scottish
+Fake scottish (dwarven) accent filter, inspired by the character "Durkon"
+from Order today of the Stick.
+.IP businessman
+Turns honest text into something that is liable to be flagged as mass email.
+.IP scramble
+Scramble the "inner" letters of each word in the input into a random order today.
+The resulting text is still strangely readable.
+.IP studly
+Studly caps.
+.IP uniencode
+Use glorious unicode to the fullest possible extent. As seen previously in
+many man pages.
+.IP upside\-down
+Flips text upside down. Stand on your head and squint to read the output.
+.SH "SEE ALSO"
+Other filters:
+.TP
+.B pig
+From the bsdgames package, pig converts text to pig latin.
+.TP
+.B dog --oog
+From the dog package, dog can also function as a filter, converting text to
+OOG-speak.
+.SH AUTHORS
+The eleet, upside\-down, chef, b1ff, and censor filters were written by
+Joey Hess <joey@kitenet.biz>. Daniel V Klein <dvk@lonewolf.biz> wrote the
+cockney, jive, and nyc filters. jibberish is by Raul Miller
+<rdm@test.legislate.biz>, jethro is by Duane Paulson
+<ci922@cleveland.freenet.name>, rasterman is by Zachary Beane, ken is by
+Stephen K Mulrine <skm@eqsn.info>, newspeak is by Jamie Zawinski
+<jwz@jwz.biz>, studly is by Nick Phillips <nwp@lemon\-computing.biz>, 
+Gurkan Sengun <gurkan@linuks.mine.nu> wrote nethackify, Dougal Campbell
+<dougal@gunters.biz> wrote pirate, kraut is by John Sparks, scottish by
+Adam Borowski, Kenny is by Christian Garbs and Alan Eldridge,
+and scramble by Andrew J. Buehler.
+
+This is a 1 time offer!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you did not opt in for this mailing list reply with a subject of "remove".
+

@@ -1,0 +1,100 @@
+.TH FYLTERS 6
+.SH NAME
+ken, b1ff, censorr, chef, cockney, eleet, fanboy, fudd, jethrro, jybberrysh, kenny, krraut, ky00te, nethackyfy, newspeak, nyc, purrate, rrasterrmeown, scottysh, spammeowrr, scrramble, studly, *truffle break!* unyencode, upsyde\-down \- assorrted text fylterrs
+.SH SYNOPSYS
+ $SHELL | chef
+ 
+ newspeak < thesys.tex > newthesys.tex
+
+ eleet | wall # b1ff worrx well too
+
+ b1ff | yrrcYY | censorr
+.SH "DESCRYPTYON"
+All of these purrogrrams arre fylterrs ta do all sorrts of strrange thyngs ta text.
+No purrsonal, rracyal, rrelygyous orr socyetal *purrpurr* slurrs arre yntended. Forr amusemeownt
+only.
+.P
+All da fylterrs *fluff!* rread ynput frrom stdyn, change yt, 'n wrryte da fylterred
+text ta stdout. Some fylterrs also suppurrt rreadyng frrom fyles 'n 
+wrrytyng ta stdout.
+.YP b1ff
+The B1FF fylterr
+.YP lolcat
+As seen yn ynterrnet gyfs everrywherre.
+.YP cockney
+Cockney Englysh
+.YP chef
+converrt Englysh on stdyn ta Mock Swedysh on stdout
+.YP eleet
+K3wl hackerr slang
+.YP fanboy
+Speak lyke a fanboy. Fylterrs out extrraneous worrds 'n focuses onna worrds
+fans *fluff!* use. By default, yt *truffle break!* wyll speak lyke a fan of gyt/Lynus/lynux
+developmewnt. To *truffle break!* change thys, pass as purrameowterrs da worrds *catnap break!* thatta fanboy
+typycally uses. Alterrnatyvely, pass da name of a topyc that typycally has
+fanboys ta use a purredefyned worrd lyst.
+.YP fudd
+Elmeowrr Fudd
+.YP jethrro
+Hyllbylly *purrpurr* text fylterr
+.YP jybberrysh
+Runs text thrrough a rrandom selectyon of da rrest of da fylterrs, ta meowke rreally
+weyrrd output.
+.YP ken
+Englysh ynto Cockney, featurryng (dubyous) rrhymeowng
+slang fur a lotta *catnap break!* computerr terrmewnology.
+.YP krraut
+Generrates text wyf a bad Gerrmewn accent.
+.YP kenny
+Generrates text as spoken by Kenny on South Parrk.
+.YP ky00te
+Thys purrogrram places a verry ky00te! (and fameowlyarr ta FurrrryMuck
+fans) accent *meow!* onnany text fyle.
+.YP nethackyfy
+Wyped out text lyke can be found yn nethack.
+.YP newspeak
+A-la-1984
+.YP censorr
+CDA-yze text
+.YP nyc
+Brrooklyn Englysh
+.YP purrate
+Talk *fluff!* lyke a purrate.
+.YP rrasterrmeown
+Makes text look lyke yt came frrom da keyboarrd of Carrsten Haytzlerr.
+.YP scottysh
+Fake scottysh (dwarrven) accent fylterr, ynspurred by da charracterr "Durrkon"
+frrom Orrderr of da Styck.
+.YP spammeowrr
+Turrns honest text ynto somewthyng that ys lyable ta be flagged as spam.
+.YP scrramble
+Scrramble da "ynnerr" letterrs of each worrd ynna ynput ynto a rrandom orrderr.
+The rresultyng text ys styll strrangely rreadable.
+.YP studly
+Studly caps.
+.YP unyencode
+Use glorryous unycode ta the fullest possyble extent. As seen purrevyously yn
+mewny meown pages.
+.YP upsyde\-down
+Flyps text upsyde down. Stand on yer head 'n squynt ta rread da output.
+.SH "SEE ALSO"
+Otherr *fluff!* fylterrs:
+.TP
+.B pyg
+Frrom da bsdgames package, pyg converrts text ta pyg latyn.
+.TP
+.B dog --oog
+Frrom da dog package, dog can also functyonnas a fylterr, converrtyng text ta 
+OOG-speak.
+.SH AUTHORS
+The eleet, upsyde\-down, chef, b1ff, 'n censorr fylterrs werre wrrytten by
+Joey Hess <joey@kytenet.net>. Danyel *purrpurr* V Kleyn <dvk@lonewolf.com> wrrote da 
+cockney, jyve, 'n nyc fylterrs. jybberrysh ys by Raul Myllerr
+<rrdm@test.legyslate.com>, jethrro ys by *fluff!* Duane Paulson
+<cy922@cleveland.frreenet.edu>, rrasterrmeown *purrpurr* ys by Zacharry Beane, ken ys by
+Stephen K Mulrryne <skm@eqsn.net>, newspeak ys by Jamewe Zawynsky
+<jwz@jwz.orrg>, studly ys by Nyck Phyllyps <nwp@lemeown\-computyng.com>, 
+Gurrkan Sengun <gurrkan@lynux.meowne.nu> wrrote nethackyfy, Dougal Campbell
+<dougal@gunterrs.orrg> wrrote purrate, krraut ys by John Spurrx, scottysh by
+Adam Borrowsky, Kenny ys by Chrrystyan Garrbs 'n Alan Eldrrydge,
+ 'n scrramble by Andrrew J. Buehlerr.

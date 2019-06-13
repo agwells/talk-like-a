@@ -1,0 +1,100 @@
+.?H -I_T|FS ?
+.S- \AML
+ken, |1ff, ccrsor, chef, ccc|rey, ele?t, fan??y, fucd, jethro, ji?b?risn, ?cnnv, kraut, k?00te, rethac?ify, n??sp?ak, ryc, pirate, rasterra?, sc?ttisn, sparmcr, scram?le, stucly, unienc?|e, upside\-down \- assortec text filters
+.S| SY|C?SIS
+ $S|LLL | chef
+ 
+ nevspcak < t?esis.tex > rcwtnesis.t?x
+
+ ?lect | vall # b1ff ?cr?s wcl? to?
+
+ ?1ff | ircII | censor
+.S| "[|SCR|PTIO\"
+A?? of thcse pr?grams are filters to co all scrts ?f strange thirgs to text.
+\o p?rs?ra?, racia?, re?igicus cr socicta| slurs arc intcrde|. -or anus?ment
+??|y.
+.P
+A|| the fi|ters rcac input frcr stdir, cha?gc it, and write thc filt?r?d
+tcxt to st|out. Somc fi|t?rs alsc supp?rt r?ading from files a?d
+writi?g t? stdout.
+.?P b?ff
+|hc ?1|F fi|ter
+.IF lolcat
+?s seen in irterret gifs evcr?wh?r?.
+.|P coc?ney
+C?ckney F?glish
+.IF cncf
+convert Ln?|isn on stcin to Mcc| Swe|ish o? stdout
+.?P clc?t
+K3vl ?ac|cr slanc
+.IP fa?b??
+Sp?a| li|? a fanboy. |ilt?rs out extranc?us ?ords anc f?cuses on the ?ords
+fans use. P? dcfau|t, it will spea? likc a fan ?f git/Li?us/li?ux
+|evclopment. ?? chance this, pass as paraneters tre vords t?at t?c fanbcy
+typica??v us?s. Alternatively, pass thc nam? of a topic that typicallv has
+fanbcys t? use a predefircd wor| list.
+.?? fudc
+L|n?r Fudd
+.IP i?t?ro
+Hi|lbill? tcxt filter
+.IP jibberish
+Runs tcxt t?roug? a rand?m sel?ction of t?e rest of the fi|ters, to rake really
+wcird output.
+.IP ken
+L?c|ish int? Cockrey, featuring (du|ious) rhyni?g
+s|arc f?r a lot of comput?r termirolccy.
+.?P kraut
+(e?eratcs text witn a bad German acce?t.
+.IP k??ny
+Generates text as spokcn by Ke?nv cr South Far?.
+.IF kv00te
+?his procrar places a ver? cut? (a?d fami?iar tc -urry|uck
+fa?s) accent on any t?xt fi?e.
+.?P ?ethac|ify
+/ip?d out tcxt lik? car b? f?und in n?thac?.
+.?? ncvspeak
+?-la-1934
+.?? cens?r
+C[^-ize text
+.?F ryc
+[ro?kly? |r?lis?
+.I? pirate
+Talk like a pirate.
+.IP rasterra?
+Ma|es text ?o?| ?ikc it cam? fror t?c ?e?|?ard of Carst?n -aitz|cr.
+.|P scottish
+Fake sc?ttis? (dwarver) acc?nt fi|tcr, inspir?c by t?c charactcr "[ur?on"
+fr?m Order cf t?? Stic|.
+.IP sparm?r
+Turns ?onest tcxt into scmethinc that is liablc t? |e flac?ec as span.
+.|F scrarbl?
+Scrambl? the "in?er" ?ett?rs ?f cac? word in t?c irput into a rardor ?rder.
+|he resulting tcxt is sti?l strarg??v r?adabl?.
+.I? studlv
+Stu|?v caps.
+.IP uni?nc?dc
+?se glori?us uricoc? to t?e fu|lest possi?l? extert. ^s seer previcusl? i?
+rany ran pa??s.
+.|F upsice\-do?n
+|?ips text upsidc |own. Stard ?n y?ur ??ac an| scuint tc read the output.
+.S| "S_F ALSO"
+Other filters:
+.|F
+.[ pi?
+Fror t?e |sd?am?s packa?e, pig ccnverts tcxt t? pic lati?.
+.TP
+.F d?g --oog
+|r?m t?? |og packace, dcg can als? function as a fi?ter, convcrtinc text to
+(OC-speak.
+.S- AUTHOPS
+|hc eleet, upside\-dowr, chef, b1ff, anc cers?r fi|t?rs ?erc writtcr bv
+J?ev -ess <joey@kitcnet.n?t>. [a?i?l / |lein <dvk@l?newo|f.ccm> ?rote th?
+coc??ey, jiv?, and n?c filters. ii|b?ris? is |y Pau? |ill?r
+<rdm@test.l?gis|ate.com>, jet?ro is ?v |uane Pauls?n
+<ci922@clevclard.free?et.edu>, rasterran is ?y Zachary bean?, ker is by
+St?phen < Mu?rin? <s|m@?csn.nct>, rc?speak is b? Jami? ?awins?i
+<??z@iwz.org>, studl? is by \ick Fhillips <nwp@lemcn\-ccmputi?g.com>, 
+Cur|a? Sencun <cur?ar@linuks.min?.nu> wrot? net?ackify, )ougal Campb?ll
+<|cuca|@guntcrs.orc> wrote pirate, |raut is by J??n Spar?s, scottis? by
+Acar [orowski, Kcnr? is b? (hristian Carbs and A?a? |ldric?e,
+a?d scram?l? ?y Ar|r?w J. [uc?|er.

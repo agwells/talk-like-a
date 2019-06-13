@@ -1,0 +1,100 @@
+.TH FILTERS 6
+.SH NAME
+ken, b1ff, censor, chef, cockney, eleet, fanboy, fudd, jethro, jibberish, kenny, kraut, ky00te, nethackify, newspeak, nyc, pirate, rasterman, scottish, spammuh, scramble, studly, uniencode, upside\-down \- assorted text filters
+.SH SYNOPSIS
+ $SHELL | chef
+ 
+ newspeak < thesis.tex > newthesis.tex
+
+ eleet | wall # b1ff works well besides
+
+ b1ff | ircII | censor
+.SH "DESCRIPTION"
+All uv these programs is filters tuh do all sorts uv strange things tuh text.
+Nope personal, racial, religyus ore societal slurs is intended. Fer amusement
+only.
+.P
+All duh filters read input from stdin, change it, and write duh filtered
+text tuh stdout. Some filters also support readin' from files and
+writin' tuh stdout.
+.IP b1ff
+Duh B1FF filtuh
+.IP lolcat
+As seen in internet gifs everwheuh.
+.IP cockney
+Cockney English
+.IP chef
+convert English on stdin tuh Mock Swedish on stdout
+.IP eleet
+K3wl hackuh slang
+.IP fanboy
+Speak like ah fanboy. Filters out extraneous words and focuses on duh words
+fans use. By default, it will speak like ah fan uv git/Linus/linux
+development. Tuh change this, pass as parameters duh words that duh fanboy
+typically uses. Alternatively, pass duh name uv ah topic that typically has
+fanboys tuh use ah predefined word list.
+.IP fudd
+Elmuh Fudd
+.IP jethro
+Hillbilly text filtuh
+.IP jibberish
+Runs text through ah random selecshun uv duh rest uv duh filters, tuh make right
+weird output.
+.IP ken
+English into Cockney, featurin' (dubyus) rhymin'
+slang fer ah lot uv computuh terminology.
+.IP kraut
+Generates text with ah bad German accent.
+.IP kenny
+Generates text as spoken by Kenny on South Park.
+.IP ky00te
+This program places ah right cute (and familiar tuh FurryMuck
+fans) accent on any text file.
+.IP nethackify
+Wiped out text like c'n be found in nethack.
+.IP newspeak
+Ah-la-1984
+.IP censor
+CDA-ize text
+.IP nyc
+Brooklyn English
+.IP pirate
+Talk like ah pirate.
+.IP rasterman
+Makes text look like it came from duh keyboard uv Carsten Haitzluh.
+.IP scottish
+Fake scottish (dwarven) accent filtuh, inspired by duh charactuh "Durkon"
+from Orduh uv duh Stick.
+.IP spammuh
+Turns honest text into somethin' that is liable tuh be flagged as spam.
+.IP scramble
+Scramble duh "innuh" letters uv each word in duh input into ah random orduh.
+Duh resultin' text is still strangely readable.
+.IP studly
+Studly caps.
+.IP uniencode
+Use gloryus unicode tuh duh fullest possible extent. As seen prevyusly in
+many man pages.
+.IP upside\-down
+Flips text upside down. Stand on yore head and squint tuh read duh output.
+.SH "SEE ALSO"
+Othuh filters:
+.TP
+.B pig
+From duh bsdgames package, pig converts text tuh pig latin.
+.TP
+.B dawg --oog
+From duh dawg package, dawg c'n also funcshun as ah filtuh, convertin' text tuh
+OOG-speak.
+.SH AUTHORS
+Duh eleet, upside\-down, chef, b1ff, and censor filters wuz written by
+Joey Hess <joey@kitenet.net>. Daniel V Klein <dvk@lonewolf.com> wrote duh
+cockney, jive, and nyc filters. jibberish is by Raul Milluh
+<rdm@test.legislate.com>, jethro is by Duane Paulson
+<ci922@cleveland.freenet.edu>, rasterman is by Zachary Beane, ken is by
+Stephen K Mulrine <skm@eqsn.net>, newspeak is by Jamie Zawinski
+<jwz@jwz.org>, studly is by Nick Phillips <nwp@lemon\-computin'.com>, 
+Gurkan Sengun <gurkan@linuks.mine.nu> wrote nethackify, Dougal Campbell
+<dougal@shootin' ironters.org> wrote pirate, kraut is by John Sparks, scottish by
+Adam Borowski, Kenny is by Christian Garbs and Alan Eldridge,
+and scramble by Andrew J. Buehluh.

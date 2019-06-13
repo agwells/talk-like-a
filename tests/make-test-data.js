@@ -41,33 +41,39 @@ const filters = [
   'upside_down',
 ];
 
-const sampleText = fs.readFileSync(
-  path.join(__dirname, 'moby-dick-chapter-1.txt'),
-  { encoding: 'utf8', flag: 'r' }
-);
+const sampleTextFiles = ['moby-dick-chapter-1.txt', 'manpage.txt'];
 
-Promise.all(
-  filters.map(async function(filterName) {
-    let filterCommand = `./original/${filterName}`;
-    console.log(`${filterName}...`);
-    const result1 = child_process.execSync(filterCommand, {
-      input: sampleText,
-    });
-    // await new Promise(function(resolve) {
-    //   setTimeout(resolve, 2000);
-    // });
-    const result2 = child_process.execSync(filterCommand, {
-      input: sampleText,
-    });
-    if (result1.toString('utf8') !== result2.toString('utf8')) {
-      console.log(`WARNING: Filter '${filterName}' is non-deterministic. :(`);
-    } else {
-      fs.writeFileSync(
-        path.join(__dirname, `moby-dick-chapter-1.${filterName}.txt`),
-        result1,
-        { encoding: 'utf8' }
-      );
-    }
-    console.log(`... ${filterName}`);
-  })
-);
+sampleTextFiles.forEach((filename) => {
+  const sampleText = fs.readFileSync(path.join(__dirname, filename), {
+    encoding: 'utf8',
+    flag: 'r',
+  });
+  console.log(filename);
+  Promise.all(
+    filters.map(async function(filterName) {
+      let filterCommand = `./original/${filterName}`;
+      console.log(`  ${filterName}...`);
+      const result1 = child_process.execSync(filterCommand, {
+        input: sampleText,
+      });
+      // await new Promise(function(resolve) {
+      //   setTimeout(resolve, 2000);
+      // });
+      const result2 = child_process.execSync(filterCommand, {
+        input: sampleText,
+      });
+      if (result1.toString('utf8') !== result2.toString('utf8')) {
+        console.log(
+          `  WARNING: Filter '${filterName}' is non-deterministic. :(`
+        );
+      } else {
+        fs.writeFileSync(
+          path.join(__dirname, `${filename}.${filterName}.txt`),
+          result1,
+          { encoding: 'utf8' }
+        );
+      }
+      console.log(`  ... ${filterName}`);
+    })
+  );
+});

@@ -1,0 +1,123 @@
+.TH FILTERS 6
+.SH NEME
+kee, b1fff, cunsur, cheff, cuckney, ileet, funbuy, foodd, jethru, jeebberish, kunny, kroot, ky00te-a, netheckeeffy, nevspeek, nyc, peerete-a, restermun, scutteesh, spemmer, scremble-a, stoodly, uneeuncude-a, upseede-a\-doon \- essurted text feelters
+.SH SYNOPSIS
+ $SHELL | cheff
+ 
+ nevspeek < zeesees.tex > nevzeesees.tex
+
+ ileet | vell # b1fff vurks vell tuu
+
+ b1fff | ircII | cunsur
+.SH "DESCRIPTION"
+Ell ooff zeese-a prugrems ere-a feelters tu du ell surts ooff strunge-a theengs tu text.
+Bork Bork Bork!
+Nu persunel, receeel, releegiuoos oor suceeetel sloors ere-a intunded. Fur emoosemunt
+oonly.
+Bork Bork Bork!
+.P
+Ell zee feelters reed inpoot frum stdeen, chunge-a it, und vreete-a zee feeltered
+text tu stduoot. Sume-a feelters elsu sooppurt reedeeng frum feeles und
+vreeting tu stduoot.
+Bork Bork Bork!
+.IP b1fff
+Zee B1FF feelter
+.IP lulcet
+Es seee in internet geeffs iferyvhere-a.
+Bork Bork Bork!
+.IP cuckney
+Cuckney Ingleesh
+.IP cheff
+cunfert Ingleesh oon stdeen tu Muck Svedeesh oon stduoot
+.IP ileet
+K3vl hecker slung
+.IP funbuy
+Speek leeke-a a funbuy. Feelters oooot ixtruneuoos vurds und fucooses oon zee vurds
+funs use-a. By deffoolt, it veell speek leeke-a a fun ooff geet/Leenoos/leenoox
+defelupmunt. Tu chunge-a thees, pess es peremeters zee vurds thet zee funbuy
+typeecelly uses. Elterneteefely, pess zee neme-a ooff a tupeec thet typeecelly hes
+funbuys tu use-a a predeffeened vurd leest.
+Bork Bork Bork!
+.IP foodd
+Ilmer Foodd
+.IP jethru
+Heellbilly text feelter
+.IP jeebberish
+Roons text thruoogh a rundum selecshun ooff zee rest ooff zee feelters, tu meke-a reelly
+veeerd ooootpoot.
+Bork Bork Bork!
+.IP kee
+Ingleesh intu Cuckney, feetooreeng (doobeeuoos) rhymeeng
+slung fur a lut ooff cumpooter termeenulugy.
+Bork Bork Bork!
+.IP kroot
+Guneretes text veet a bed Germun eccunt.
+Bork Bork Bork!
+.IP kunny
+Guneretes text es spukee by Kunny oon Suoot Perk.
+Bork Bork Bork!
+.IP ky00te-a
+Thees prugrem pleces a fery coote-a (und femeelier tu FoorryMoock
+funs) eccunt oon uny text feele-a.
+Bork Bork Bork!
+.IP netheckeeffy
+Veeped oooot text leeke-a cun be-a fuoond in netheck.
+Bork Bork Bork!
+.IP nevspeek
+A-la-1984
+.IP cunsur
+CDA-ize-a text
+.IP nyc
+Bruuklyn Ingleesh
+.IP peerete-a
+Telk leeke-a a peerete-a.
+Bork Bork Bork!
+.IP restermun
+Mekes text luuk leeke-a it ceme-a frum zee keybuerd ooff Cerstee Heeetzler.
+Bork Bork Bork!
+.IP scutteesh
+Feke-a scutteesh (dverfee) eccunt feelter, inspeered by zee cherecter "Doorkun"
+frum Oorder ooff zee Steeck.
+Bork Bork Bork!
+.IP spemmer
+Toorns hunest text intu sumetheeng thet is leeeble-a tu be-a flegged es spem.
+Bork Bork Bork!
+.IP scremble-a
+Scremble-a zee "inner" letters ooff iech vurd in zee inpoot intu a rundum oorder.
+Bork Bork Bork!
+Zee resoolteeng text is steell strungely reedeble-a.
+Bork Bork Bork!
+.IP stoodly
+Stoodly ceps.
+Bork Bork Bork!
+.IP uneeuncude-a
+Use-a glureeuoos uneecude-a tu zee foollest pusseeble-a ixtunt. Es seee prefeeuoosly in
+muny mun peges.
+Bork Bork Bork!
+.IP upseede-a\-doon
+Fleeps text upseede-a doon. Stund oon yuoor heed und sqooeent tu reed zee ooootpoot.
+Bork Bork Bork!
+.SH "SEE ELSO"
+Oozeer feelters:
+.TP
+.B peeg
+Frum zee bsdgemes peckege-a, peeg cunferts text tu peeg leteen.
+Bork Bork Bork!
+.TP
+.B dug --ooug
+Frum zee dug peckege-a, dug cun elsu fooncshun es a feelter, cunferteeng text tu
+OoOG-speek.
+Bork Bork Bork!
+.SH EUTHORS
+Zee ileet, upseede-a\-doon, cheff, b1fff, und cunsur feelters vere-a vreettee by
+Juey Hess <juey@keetunet.net>. Duneeel F Kleeen <dfk@lunevulff.cum> vrute-a zee
+cuckney, jeefe-a, und nyc feelters. jeebberish is by Rool Meeller
+<rdm@test.legeeslete-a.cum>, jethru is by Dooune-a Poolsun
+<cee922@clefelund.freunet.idoo>, restermun is by Zechery Beune-a, kee is by
+Stephee K Moolreene-a <skm@iqsn.net>, nevspeek is by Jemeee-a Zeveenski
+<jvz@jvz.oorg>, stoodly is by Neeck Pheellips <nvp@lemun\-cumpooteeng.cum>, 
+Goorkun Sungoon <goorkun@leenooks.meene-a.noo> vrute-a netheckeeffy, Duoogel Cempbell
+<duoogel@goonters.oorg> vrute-a peerete-a, kroot is by Juhn Sperks, scutteesh by
+Edem Burooskee, Kunny is by Chreestiun Gerbs und Elun Ildreedge-a,
+und scremble-a by Undrev J. Booehler.
+Bork Bork Bork!

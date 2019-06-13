@@ -1,0 +1,100 @@
+.TH FILTER-r-rS 6
+.SH NAME
+ken, b1ff, kensor, khef, kockney, eleet, fanboy, fudd, jedro, jibberisch, kenny, kraut, ky00te, nedackify, newspeak, nyc, pirate, r-r-rasterman, scottisch, spammer, scramble, studly, uniencode, upside\-down \- assorted text filters
+.SH SYNOPSIS
+ $SHELL | khef
+ 
+ newspeak < desis.tex > newdesis.tex
+
+ eleet | vall # b1ff vorks vell too
+
+ b1ff | ircII | kensor
+.SH "DESCR-r-rIPTION"
+All uff dese programs are filters to do all sorts uff strange dingkts to text.
+Nein personal, r-r-racial, r-r-religious or societal slurs are intended. For amusement
+only.
+.P
+All ze filters r-r-read input from stdin, khange it, undt w-r-rite ze filtered
+text to stdout. Some filters also support r-r-readingkt from files and
+w-r-ritingkt to stdout.
+.IP b1ff
+Ze B1FF filter
+.IP lolcat
+As seen in internet gifs eferywhere.
+.IP kockney
+Cockney Englisch
+.IP khef
+confert Englisch on stdin to Mock Swedisch on stdout
+.IP eleet
+K3wl hacker slang
+.IP fanboy
+Speak like a fanboy. Filters out extraneous vords undt focuses on ze words
+fans use. By default, it vill speak like a fan uff git/Linus/linux
+defelopment. To khange dis, pass as parameters ze words dat ze fanboy
+typically uses. Alternatifely, pass ze name uff a topic dat typically has
+fanboys to use a predefined vord list.
+.IP fudd
+Elmer Fudd
+.IP jedro
+Hillbilly text filter
+.IP jibberisch
+R-r-runs text drough a r-r-random selection uff de r-r-rest uff de filters, to make r-r-really
+weird output.
+.IP ken
+Englisch into Kockney, featuringkt (dubious) r-r-rhymingkt
+slang for a lot uff computer terminology.
+.IP kraut
+Generates text mitt a bad German accent.
+.IP kenny
+Generates text as spoken by Kenny on Soud Park.
+.IP ky00te
+Dis program places a fery kute (and familiar to FurryMuck
+fans) accent on any text file.
+.IP nedackify
+Viped out text like kan be found in nedack.
+.IP newspeak
+A-la-1984
+.IP kensor
+CDA-ize text
+.IP nyc
+Brooklyn Englisch
+.IP pirate
+Talk like a pirate.
+.IP r-r-rasterman
+Makes text look like it kame from ze keyboard uff Carsten Haitzler.
+.IP scottisch
+Fake scottisch (dwarfen) accent filter, inspired by ze character "Durkon"
+from Order uff de Stick.
+.IP spammer
+Turns honest text into somedingkt dat ist liable to be flagged as spam.
+.IP scramble
+Scramble ze "inner" letters uff each vord in ze input into a r-r-random order.
+Ze resultingkt text ist still strangely r-r-readable.
+.IP studly
+Studly kaps.
+.IP uniencode
+Use glorious unicode to ze fullest possible extent. As seen prefiously in
+many man pages.
+.IP upside\-down
+Flips text upside down. Stand on your head undt squint to r-r-read ze output.
+.SH "SEE ALSO"
+Oder filters:
+.TP
+.B pig
+From ze bsdgames package, pig konferts text to pig latin.
+.TP
+.B dog --oog
+From ze dog package, dog kan also function as a filter, konfertingkt text to
+OOG-speak.
+.SH AUTHOR-r-rS
+Ze eleet, upside\-down, khef, b1ff, undt censor filters vere vritten by
+Joey Hess <joey@kitenet.net>. Daniel F Klein <dfk@lonewolf.com> vrote de
+cockney, jife, undt nyc filters. jibberisch ist by R-r-raul Miller
+<rdm@test.legislate.com>, jedro ist by Duane Paulson
+<ci922@clefeland.freenet.edu>, r-r-rasterman ist by Zachary Beane, ken ist by
+Stephen K Mulrine <skm@eqsn.net>, newspeak ist by Jamie Zawinski
+<jwz@jwz.org>, studly ist by Nick Phillips <nwp@lemon\-computingkt.com>, 
+Gurkan Sengun <gurkan@linuks.mine.nu> vrote nedackify, Dougal Kampbell
+<dougal@gunters.org> vrote pirate, kraut ist by Johann Sparks, scottisch by
+Adam Borowski, Kenny ist by Khristian Garbs undt Alan Eldridge,
+and scramble by Andrew J. Buehler.

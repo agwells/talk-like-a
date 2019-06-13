@@ -1,0 +1,100 @@
+.TH F1LT3R5 6
+.5H N4M3
+k3n, b1ff, c3n50r, ch3f, c0ckn3y, 3l33t, f4nb0y, fudd, j3thr0, j1bb3r15h, k3nny, kr4ut, ky00t3, n3th4ck1fy, n3w5p34k, nyc, p1r4t3, r45t3rm4n, 5c0tt15h, 5p4mm3r, 5cr4mbl3, 5tudly, un13nc0d3, up51d3\-d0wn \- 4550rt3d t3xt f1lt3r5
+.5H 5YN0P515
+ $5H3LL | ch3f
+ 
+ n3w5p34k < th3515.t3x > n3wth3515.t3x
+
+ 3l33t | w4ll # b1ff w0rk5 w3ll t00
+
+ b1ff | 1rc11 | c3n50r
+.5H "D35CR1PT10N"
+4ll 0f th353 pr0gr4m5 4r3 f1lt3r5 t0 d0 4ll 50rt5 0f 5tr4ng3 th1ng5 t0 t3xt.
+N0 p3r50n4l, r4c14l, r3l1g10u5 0r 50c13t4l 5lur5 4r3 1nt3nd3d. F0r 4mu53m3nt
+0nly.
+.P
+4ll th3 f1lt3r5 r34d 1nput fr0m 5td1n, ch4ng3 1t, 4nd wr1t3 th3 f1lt3r3d
+t3xt t0 5td0ut. 50m3 f1lt3r5 4l50 5upp0rt r34d1ng fr0m f1l35 4nd
+wr1t1ng t0 5td0ut.
+.1P b1ff
+Th3 B1FF f1lt3r
+.1P l0lc4t
+45 533n 1n 1nt3rn3t g1f5 3v3rywh3r3.
+.1P c0ckn3y
+C0ckn3y 3ngl15h
+.1P ch3f
+c0nv3rt 3ngl15h 0n 5td1n t0 M0ck 5w3d15h 0n 5td0ut
+.1P 3l33t
+K3wl h4ck3r 5l4ng
+.1P f4nb0y
+5p34k l1k3 4 f4nb0y. F1lt3r5 0ut 3xtr4n30u5 w0rd5 4nd f0cu535 0n th3 w0rd5
+f4n5 u53. By d3f4ult, 1t w1ll 5p34k l1k3 4 f4n 0f g1t/L1nu5/l1nux
+d3v3l0pm3nt. T0 ch4ng3 th15, p455 45 p4r4m3t3r5 th3 w0rd5 th4t th3 f4nb0y
+typ1c4lly u535. 4lt3rn4t1v3ly, p455 th3 n4m3 0f 4 t0p1c th4t typ1c4lly h45
+f4nb0y5 t0 u53 4 pr3d3f1n3d w0rd l15t.
+.1P fudd
+3lm3r Fudd
+.1P j3thr0
+H1llb1lly t3xt f1lt3r
+.1P j1bb3r15h
+Run5 t3xt thr0ugh 4 r4nd0m 53l3ct10n 0f th3 r35t 0f th3 f1lt3r5, t0 m4k3 r34lly
+w31rd 0utput.
+.1P k3n
+3ngl15h 1nt0 C0ckn3y, f34tur1ng (dub10u5) rhym1ng
+5l4ng f0r 4 l0t 0f c0mput3r t3rm1n0l0gy.
+.1P kr4ut
+G3n3r4t35 t3xt w1th 4 b4d G3rm4n 4cc3nt.
+.1P k3nny
+G3n3r4t35 t3xt 45 5p0k3n by K3nny 0n 50uth P4rk.
+.1P ky00t3
+Th15 pr0gr4m pl4c35 4 v3ry cut3 (4nd f4m1l14r t0 FurryMuck
+f4n5) 4cc3nt 0n 4ny t3xt f1l3.
+.1P n3th4ck1fy
+W1p3d 0ut t3xt l1k3 c4n b3 f0und 1n n3th4ck.
+.1P n3w5p34k
+4-l4-1984
+.1P c3n50r
+CD4-1z3 t3xt
+.1P nyc
+Br00klyn 3ngl15h
+.1P p1r4t3
+T4lk l1k3 4 p1r4t3.
+.1P r45t3rm4n
+M4k35 t3xt l00k l1k3 1t c4m3 fr0m th3 k3yb04rd 0f C4r5t3n H41tzl3r.
+.1P 5c0tt15h
+F4k3 5c0tt15h (dw4rv3n) 4cc3nt f1lt3r, 1n5p1r3d by th3 ch4r4ct3r "Durk0n"
+fr0m 0rd3r 0f th3 5t1ck.
+.1P 5p4mm3r
+Turn5 h0n35t t3xt 1nt0 50m3th1ng th4t 15 l14bl3 t0 b3 fl4gg3d 45 5p4m.
+.1P 5cr4mbl3
+5cr4mbl3 th3 "1nn3r" l3tt3r5 0f 34ch w0rd 1n th3 1nput 1nt0 4 r4nd0m 0rd3r.
+Th3 r35ult1ng t3xt 15 5t1ll 5tr4ng3ly r34d4bl3.
+.1P 5tudly
+5tudly c4p5.
+.1P un13nc0d3
+U53 gl0r10u5 un1c0d3 t0 th3 full35t p0551bl3 3xt3nt. 45 533n pr3v10u5ly 1n
+m4ny m4n p4g35.
+.1P up51d3\-d0wn
+Fl1p5 t3xt up51d3 d0wn. 5t4nd 0n y0ur h34d 4nd 5qu1nt t0 r34d th3 0utput.
+.5H "533 4L50"
+0th3r f1lt3r5:
+.TP
+.B p1g
+Fr0m th3 b5dg4m35 p4ck4g3, p1g c0nv3rt5 t3xt t0 p1g l4t1n.
+.TP
+.B d0g --00g
+Fr0m th3 d0g p4ck4g3, d0g c4n 4l50 funct10n 45 4 f1lt3r, c0nv3rt1ng t3xt t0
+00G-5p34k.
+.5H 4UTH0R5
+Th3 3l33t, up51d3\-d0wn, ch3f, b1ff, 4nd c3n50r f1lt3r5 w3r3 wr1tt3n by
+J03y H355 <j03y@k1t3n3t.n3t>. D4n13l V Kl31n <dvk@l0n3w0lf.c0m> wr0t3 th3
+c0ckn3y, j1v3, 4nd nyc f1lt3r5. j1bb3r15h 15 by R4ul M1ll3r
+<rdm@t35t.l3g15l4t3.c0m>, j3thr0 15 by Du4n3 P4ul50n
+<c1922@cl3v3l4nd.fr33n3t.3du>, r45t3rm4n 15 by Z4ch4ry B34n3, k3n 15 by
+5t3ph3n K Mulr1n3 <5km@3q5n.n3t>, n3w5p34k 15 by J4m13 Z4w1n5k1
+<jwz@jwz.0rg>, 5tudly 15 by N1ck Ph1ll1p5 <nwp@l3m0n\-c0mput1ng.c0m>, 
+Gurk4n 53ngun <gurk4n@l1nuk5.m1n3.nu> wr0t3 n3th4ck1fy, D0ug4l C4mpb3ll
+<d0ug4l@gunt3r5.0rg> wr0t3 p1r4t3, kr4ut 15 by J0hn 5p4rk5, 5c0tt15h by
+4d4m B0r0w5k1, K3nny 15 by Chr15t14n G4rb5 4nd 4l4n 3ldr1dg3,
+4nd 5cr4mbl3 by 4ndr3w J. Bu3hl3r.
