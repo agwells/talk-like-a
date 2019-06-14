@@ -57,12 +57,14 @@ module.exports = function cockney(initialString) {
     let sentence = fullstring
       .substr(0, offset + 1)
       .match(/(?:^|(?:\w|')[.?])([^.?]+)$/);
+
     if (sentence && sentence.length && sentence[1]) {
-      sentence = sentence[1].trim();
+      let sentenceStr = sentence[1].trim();
 
       // Find out if the sentence contains an "I" phrase
+      /** @type {false | string} */
       let iOrWe = false;
-      const indexOfI = sentence.search(/\b(I|Oy) did\b/);
+      const indexOfI = sentenceStr.search(/\b(I|Oy) did\b/);
       if (indexOfI !== -1) {
         iOrWe = 'I';
       }
@@ -71,7 +73,7 @@ module.exports = function cockney(initialString) {
       // in the sentence (because that's most likely to be the subject
       // of the sentence's action, so it makes the most sense for it to
       // agree with the final phrase.)
-      const indexOfWe = sentence.search(/\b[Ww]e\s(?:went|had|did)\b/);
+      const indexOfWe = sentenceStr.search(/\b[Ww]e\s(?:went|had|did)\b/);
       if (indexOfWe !== -1 && (!iOrWe || indexOfWe < indexOfI)) {
         iOrWe = 'we';
       }
@@ -100,15 +102,6 @@ module.exports = function cockney(initialString) {
         return 'done in';
     }
   }
-  // void expletive()
-  // {
-  // /*
-  // Blimey
-  // Stright a light
-  // 'Strewth
-  // Cor blimey
-  // */
-  // }
 
   return (
     initialString

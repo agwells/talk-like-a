@@ -10,13 +10,14 @@
  * Returns a rand() function that can be called repeatedly to get the same
  * sorta-random-seeming sequence of integers each time.
  *
- * @param {number} [seed = 1]
+ * @param {number} [initialSeed = 1]
  * @returns {() => number}
  */
-function getRandFn(seed = 1) {
+function getRandFn(initialSeed = 1) {
+  let curSeed = initialSeed;
   return function rand() {
-    seed = (seed * 48271) % getRandFn.PSEUDO_RAND_MAX;
-    return seed;
+    curSeed = (curSeed * 48271) % getRandFn.PSEUDO_RAND_MAX;
+    return curSeed;
   };
 }
 getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
@@ -111,6 +112,7 @@ function simuLex(originalString, rules, extraUtils = {}) {
   }
   return out;
 }
+
 simuLex.preprocessRules =
   /**
    *

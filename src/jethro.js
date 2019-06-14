@@ -168,7 +168,7 @@ function jethro(originalString) {
       .replace(/\b[Ss]hotgun/g, sameCapReplacer('Fowlin piece'))
       // {SW}[Rr]evolver		|
       // {SW}[Gg]un		SSUB("Shootin iron");
-      .replace(/\b([Rr]evolver|[Gg]un)/g, sameCapReplacer('Shootin iron'))
+      .replace(/\b([Rr]evolver|[Gg]un)/g, sameCapReplacer('Shooting iron'))
       // {SW}[Rr]ifle		SSUB("Ozark longrifle");
       .replace(/\b[Rr]ifle/g, sameCapReplacer('Ozark longrifle'))
       // {SW}[Ll]ibrar[yi]	SSUB("Liberry");

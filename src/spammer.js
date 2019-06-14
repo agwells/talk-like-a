@@ -66,7 +66,7 @@ function spammer(originalString) {
     $spam += 'This message is not spam!\n';
   }
 
-  /**rand(
+  /**
    * @type {[RegExp, string|((...match: string[]) => string)][]}
    */
   const replacers = [

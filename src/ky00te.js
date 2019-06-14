@@ -19,7 +19,7 @@ const YA = ' ya';
 const AN = " 'n ";
 const TA = ' ta ';
 const WEN = " w'en ";
-const NA = " na'"; /*UN*/
+const NA = " na'";
 /**
  *
  * @param {() => number} rand
@@ -86,7 +86,7 @@ const rawRules = [
   ['pr', () => PURR],
   ['p[aeiou]*r', () => PURR],
   ['f[aeiou]+r', () => FUR],
-  ['m[aeiou]+(?=[^.,s?! ])', (match, { rand }) => MEOW(rand)] /*UN*/,
+  ['m[aeiou]+(?=$|[^.,s?! ])', (match, { rand }) => MEOW(rand)] /*UN*/,
   ['at a', () => ATTA],
   ['at the', () => ATTA],
   ['in a', () => YNNA],
@@ -99,14 +99,14 @@ const rawRules = [
   ['with a', () => WYFFA],
   ['with the', () => WYFFA],
   ['lot of', () => LOTTA],
-  ['(\b| )with(\b| )', () => WYF],
-  ['(\b| )with', () => WYFF],
-  ['(\b| )the(\b| )', () => DA],
-  ['(\b| )your', () => YER],
-  ['(\b| )you', () => YA],
-  ['(\b| )and(\b| )', () => AN],
-  ['(\b| )to(\b| )', () => TA],
-  ['(\b| )when(\b| )', () => WEN],
+  ['(\n| )with($|\b| )', () => WYF],
+  ['(\n| )with', () => WYFF],
+  ['(\n| )the($|\b| )', () => DA],
+  ['(\n| )your', () => YER],
+  ['(\n| )you', () => YA],
+  ['(\n| )and($|\b| )', () => AN],
+  ['(\n| )to($|\b| )', () => TA],
+  ['(\n| )when($|\b| )', () => WEN],
   ["n't", () => NA] /*UN*/,
   [' not', () => NA] /*UN*/,
   [`[ \t]`, (match, { rand }) => SPACE(rand)],
