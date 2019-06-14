@@ -53,4 +53,4 @@ function kenny(originalString) {
   );
 }
 
-module.exports = kenny;
+module.exports = { kenny };

@@ -348,4 +348,4 @@ function ken(originalString) {
   return simuLex(originalString, rules);
 }
 
-module.exports = ken;
+module.exports = { ken };

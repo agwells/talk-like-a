@@ -159,4 +159,4 @@ function censor(originalString) {
   return originalString.replace(censorRE, 'CENSORED');
 }
 
-module.exports = censor;
+module.exports = { censor };

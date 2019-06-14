@@ -28,4 +28,4 @@ function studly(initialString) {
     .join('');
 }
 
-module.exports = studly;
+module.exports = { studly };

@@ -415,4 +415,4 @@ function jethro(originalString) {
   );
 }
 
-module.exports = jethro;
+module.exports = { jethro };

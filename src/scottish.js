@@ -127,4 +127,4 @@ function scottish(initialString) {
   );
 }
 
-module.exports = scottish;
+module.exports = { scottish };

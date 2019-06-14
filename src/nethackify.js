@@ -49,4 +49,4 @@ function nethackify(str) {
   return modStr.join('');
 }
 
-module.exports = nethackify;
+module.exports = { nethackify };

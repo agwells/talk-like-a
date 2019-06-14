@@ -44,7 +44,7 @@ describe.each(filters)('%s', (filterName) => {
       }
     );
     const filterFn = require(`../src/${filterName}`);
-    const transformedText = filterFn(originalText);
+    const transformedText = filterFn[filterName](originalText);
 
     expect(transformedText.split(/\s/)).toEqual(expectedTransform.split(/\s/));
   });

@@ -118,4 +118,4 @@ function rasterman(originalString) {
     .join('\n');
 }
 
-module.exports = rasterman;
+module.exports = { rasterman };

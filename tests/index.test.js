@@ -34,7 +34,7 @@ describe.each(filters)('%s', (filterName) => {
       encoding: 'UTF8',
     });
     const filterFn = require(`../src/${filterName}`);
-    const transformedText = filterFn(originalText);
+    const transformedText = filterFn[filterName](originalText);
 
     expect(transformedText.split(/\s/)).toMatchSnapshot();
   });

@@ -5,7 +5,7 @@
 const { getRandFn } = require('./lib.js');
 
 // # I use an array, not a hash. because order is important.
-module.exports = function b1ff(initialString) {
+function b1ff(initialString) {
   const rand = getRandFn();
   return initialString
     .split('\n')
@@ -115,4 +115,6 @@ module.exports = function b1ff(initialString) {
       );
     })
     .join('\n');
-};
+}
+
+module.exports = { b1ff };

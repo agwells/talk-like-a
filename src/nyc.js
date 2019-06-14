@@ -109,4 +109,4 @@ function nyc(originalString) {
   return simuLex(originalString, rules, { expletive });
 }
 
-module.exports = nyc;
+module.exports = { nyc };

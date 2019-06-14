@@ -15,7 +15,7 @@ const { getRandFn } = require('./lib.js');
  * @param {string} initialString
  * @return {string}
  */
-module.exports = function cockney(initialString) {
+function cockney(initialString) {
   const I_rand = getRandFn();
   function I() {
     if (I_rand() % 5 === 1) {
@@ -202,4 +202,6 @@ module.exports = function cockney(initialString) {
         (match, p1, offset, fulltext) => p1 + dintI(offset, fulltext)
       )
   );
-};
+}
+
+module.exports = { cockney };

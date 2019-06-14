@@ -6,7 +6,7 @@ from = from + from.toUpperCase();
 let to = '4bcd3fgh1jklmn0pqr5tuvwxyz';
 to = to + to.toUpperCase();
 
-module.exports = function eleet(initialString) {
+function eleet(initialString) {
   return tr(
     initialString
       .replace(/porn/g, sameCapReplacer('pr0n'))
@@ -14,7 +14,7 @@ module.exports = function eleet(initialString) {
     from,
     to
   );
-};
+}
 
 // # These are not in common usage anymore.
 // #s:h:|-|:ig;
@@ -24,3 +24,5 @@ module.exports = function eleet(initialString) {
 // #s:w:\\/\\/:ig;
 // #s:v:\\/:ig;
 // #s:x:><:ig;
+
+module.exports = { eleet };

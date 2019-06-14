@@ -1,22 +1,22 @@
 // # jibberish -- run filters in random order
 const { getRandFn } = require('./lib');
 
-const eleet = require('./eleet');
-const b1ff = require('./b1ff');
-const chef = require('./chef');
-const jethro = require('./jethro');
-const upside_down = require('./upside_down');
-const klaus = require('./klaus');
-const cockney = require('./cockney');
-const pirate = require('./pirate');
-const nyc = require('./nyc');
-const ken = require('./ken');
-const ky00te = require('./ky00te');
-const rasterman = require('./rasterman');
-const newspeak = require('./newspeak');
-const studly = require('./studly');
-const censor = require('./censor');
-const spammer = require('./spammer');
+const { eleet } = require('./eleet');
+const { b1ff } = require('./b1ff');
+const { chef } = require('./chef');
+const { jethro } = require('./jethro');
+const { upside_down } = require('./upside_down');
+const { klaus } = require('./klaus');
+const { cockney } = require('./cockney');
+const { pirate } = require('./pirate');
+const { nyc } = require('./nyc');
+const { ken } = require('./ken');
+const { ky00te } = require('./ky00te');
+const { rasterman } = require('./rasterman');
+const { newspeak } = require('./newspeak');
+const { studly } = require('./studly');
+const { censor } = require('./censor');
+const { spammer } = require('./spammer');
 
 /**
  *
@@ -57,7 +57,6 @@ function jibberish(originalString) {
   // # start the pipe...
   const mutators = all.slice(0, 4 + (rand() % 5));
 
-  let newText = originalString;
   return originalString
     .split(/\n(?!$)/)
     .map((line) => mutators.reduce((newLine, fn) => fn(newLine), line))
@@ -69,4 +68,4 @@ function jibberish(originalString) {
   // # But you have to ask yourself: how important is it to optimize
   // # the generation of jibberish?
 }
-module.exports = jibberish;
+module.exports = { jibberish };

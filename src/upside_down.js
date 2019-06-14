@@ -26,4 +26,4 @@ function upside_down(initialString) {
   ).replace(/k/g, '>|');
 }
 
-module.exports = upside_down;
+module.exports = { upside_down };

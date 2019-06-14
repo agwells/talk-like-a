@@ -153,4 +153,4 @@ function avast(fakeRand, stub, chance) {
   }
 }
 
-module.exports = pirate;
+module.exports = { pirate };

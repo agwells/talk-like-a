@@ -72,4 +72,4 @@ function klaus(originalString) {
   return simuLex(originalString, rules);
 }
 
-module.exports = klaus;
+module.exports = { klaus };

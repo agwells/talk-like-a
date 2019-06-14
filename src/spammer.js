@@ -296,4 +296,4 @@ function spammer(originalString) {
   return `${$spam}\n`;
 }
 
-module.exports = spammer;
+module.exports = { spammer };

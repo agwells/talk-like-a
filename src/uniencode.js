@@ -123,4 +123,4 @@ function uniencode(initialString) {
     .join('');
 }
 
-module.exports = uniencode;
+module.exports = { uniencode };

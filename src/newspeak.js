@@ -759,4 +759,4 @@ function newspeak(originalText) {
   return simuLex(originalText, rules) + '\nHail Big Brother!\n';
 }
 
-module.exports = newspeak;
+module.exports = { newspeak };

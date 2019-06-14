@@ -123,4 +123,4 @@ const rules = simuLex.preprocessRules(rawRules);
 function ky00te(originalString) {
   return simuLex(originalString, rules);
 }
-module.exports = ky00te;
+module.exports = { ky00te };

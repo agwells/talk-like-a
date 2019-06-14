@@ -59,4 +59,4 @@ function scramble(originalString) {
   );
 }
 
-module.exports = scramble;
+module.exports = { scramble };
