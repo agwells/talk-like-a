@@ -1,14 +1,13 @@
+/**
+ *	Lex filter to transform plain English into Brooklyn English.
+ *	No racial or societal slurs are intended.  For amusement only.
+ *
+ *	Reproduction permitted so long as this notice is retained.
+ *
+ * @copyright 1986 by Daniel Klein.
+ * @author Aaron Wells
+ */
 const { simuLex, sameCap, sameCapReplacer } = require('./lib');
-// %{
-// /*
-//  *	Lex filter to transform plain English into Brooklyn English.
-//  *	No racial or societal slurs are intended.  For amusement only.
-//  *
-//  *	Copyright 1986 by Daniel Klein.
-//  *
-//  *	Reproduction permitted so long as this notice is retained.
-//  */
-// %}
 // BW [ \t]
 // SP [ \t]
 // EW [ \t.,;!\?$]

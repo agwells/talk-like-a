@@ -1,9 +1,14 @@
-// # Talk like a spammer. Copyright 2002 by Joey Hess <joeyh@debian.org>
-// # Licensed under the GPL.
-// #
-// # Doesn't always generate proper engrish, but then neither do
-// # spammers.
-
+/**
+ * Talk like a spammer.
+ *
+ * Doesn't always generate proper engrish, but then neither do
+ * spammers.
+ *
+ * Licensed under the GPL.
+ *
+ * @copyright 2002 Joey Hess <joeyh@debian.org>
+ * @author Aaron Wells
+ */
 const { getRandFn } = require('./lib');
 
 /**

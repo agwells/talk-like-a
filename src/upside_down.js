@@ -1,5 +1,9 @@
-// $_=reverse lc$_;s@"@''@g;y/[]{A-R}<>()a-y1-9,!.?`'/][}        Joey Hess
-// {><)(eq)paj6y!fk7wuodbjsfn^mxhl2Eh59L86`i'%,/;s@k@>|@g#   joey@kitenet.net
+/**
+ * Flips text upside down. Stand on your head and squint to read the output.
+ *
+ * @copyright 2000 Joey Hess <joey@kitenet.net>
+ * @author Aaron Wells
+ */
 const tr = require('./lib').tr;
 
 /**

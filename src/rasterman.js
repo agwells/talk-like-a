@@ -1,3 +1,9 @@
+/**
+ * Makes text look like it came from the keyboard of Carsten Haitzler.
+ *
+ * @copyright 1997 Zachary Beane
+ * @author Aaron Wells
+ */
 const { getRandFn, tr } = require('./lib');
 
 const $row = '!qwertyuiop!asdfghjkl!zxcvbnm!';

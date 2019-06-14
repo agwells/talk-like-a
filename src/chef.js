@@ -1,5 +1,9 @@
-// Swedish Chef filter. Bork Bork Bork!
-// Copyright 1999 by Joey Hess under the terms of the GNU GPL.
+/**
+ * Swedish Chef filter. Bork Bork Bork!
+ *
+ * @copyright 1999 by Joey Hess under the terms of the GNU GPL.
+ * @author Aaron Wells
+ */
 
 /**
  * Note that the order of the commands in this program is very important!

@@ -1,5 +1,9 @@
-// # Censor filter.
-// # Copyright 2002 by Joey Hess under the terms of the GNU GPL.
+/**
+ * Censor filter.
+ *
+ * @copyright 2002 by Joey Hess under the terms of the GNU GPL.
+ * @author Aaron Wells
+ */
 
 const tr = require('./lib').tr;
 

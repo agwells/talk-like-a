@@ -1,7 +1,12 @@
 {
   "name": "textfilters",
-  "version": "0.0.1",
+  "version": "0.9.0",
   "description": "A port of the debian \"filters\" package to JavaScript",
+  "files": [
+    "/src/",
+    "/original/filters.6",
+    "/original/debian/copyright"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "jest --watch './tests/index.test.js'",
@@ -15,7 +20,7 @@
     "url": "agwells/textfilters"
   },
   "author": "Aaron Wells",
-  "license": "GPL",
+  "license": "SEE LICENSE IN original/debian/copyright",
   "devDependencies": {
     "@types/jest": "^24.0.11",
     "jest": "^24.5.0",

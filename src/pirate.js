@@ -1,3 +1,9 @@
+/**
+ * Talk like a pirate
+ *
+ * @copyright 2003 Dougal Campbell
+ * @author Aaron Wells
+ */
 const getRandFn = require('./lib').getRandFn;
 
 /**

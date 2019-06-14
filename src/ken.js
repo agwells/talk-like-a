@@ -1,17 +1,13 @@
-/*
+/**
  * ken:
  * will turn English into Cockney, featuring (dubious) rhyming slang for a lot
  * of computer terminology.
  *
- * Written by Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
- * Make copies if you want etc.etc.
- *
- * Contacted author in June 2001, asked him to clarify the license, he replied
- * with some improvements and placed the program in the public domain.
- *         -- Edward Betts <edward@debian.org> Mon, 11 Jun 2001 12:04:29 +0100
- *
  * ken is named after Ken the Chirpy Cockney Character from the Viz Comic (tm),
  * who speaks somewhat like that.
+ *
+ * @author Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
+ * @author Aaron Wells
  */
 
 const { simuLex } = require('./lib');

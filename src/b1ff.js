@@ -1,6 +1,9 @@
-// #!/usr/bin/perl -p
-// # B1FF filter.
-// # Copyright 1999 by Joey Hess under the terms of the GNU GPL.
+/**
+ * B1FF filter.
+ *
+ * @copyright 1999 by Joey Hess under the terms of the GNU GPL.
+ * @author Aaron Wells
+ */
 
 const { getRandFn } = require('./lib.js');
 

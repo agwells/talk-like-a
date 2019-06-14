@@ -1,8 +1,10 @@
-// #!/usr/bin/perl
-// # Ⅽоηνеrt аѕⅽіі tօ υtf‐8.
-// use utf8;
-// binmode STDIN, ":utf8";
-// binmode STDOUT, ":utf8";
+/**
+ * Use glorious unicode to the fullest possible extent. As seen previously in
+ * many man pages.
+ *
+ * @copyright 2004 Joey Hess <joeyh@debian.org>
+ * @author Aaron Wells
+ */
 
 const getRandFn = require('./lib').getRandFn;
 

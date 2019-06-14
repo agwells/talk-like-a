@@ -1,4 +1,11 @@
 /**
+ * Miscellaneous utility functions
+ *
+ * @copyright Aaron Wells 2019
+ * @author Aaron Wells
+ */
+
+/**
  * Generate a predictable but randomish number generator. Specifically, this is
  * the algorithm known as "MINSTD"
  *

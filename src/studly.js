@@ -1,13 +1,10 @@
-// # stUdLy cAPs, after emacs studly.el -- the commented line is just
-// # to remind diehards how it *should* be done ;)
-// #
-// # just for reference, you may do whatever you like with this file.
-// #
-// # -- nwp@lemon-computing.com
-
-// for (my $offset = 0; defined(my $c = getc); $offset++) {
-//     (($c + $offset) % 4) != 2 and print($c) or $c =~ tr/[A-Za-z]/[a-zA-Z]/, print $c;
-// }
+/**
+ * stUdLy cAPs, after emacs studly.el -- the commented line is just
+ * to remind diehards how it *should* be done ;)
+ *
+ * @copyright Nick Phillips <nwp@lemon-computing.com>
+ * @author Aaron Wells
+ */
 
 const isUpperCase = require('./lib').isUpperCase;
 

@@ -1,18 +1,9 @@
-//  **   jethro  v. 1.00 06/10/93
-//  **   Duane Paulson <ci922@cleveland.freenet.edu> "dap"
-//  **   Hillbilly text filter. Compile with lex, then C.
-//  **   syntax will be:
-//  **	  jethro <input_file >output_file.
-//  **   Public domain. Use at your own risk. Y'all come back now, heah?
-//  */
-//  /*************************************************************************
-// 				REVISION LOG
-//  when      ver   who  change
-//  --------  ----  ---  -----------------------------------------------------
-//  06/10/93  1.00  dap  Initial release.
-//  8.May.94  1.10  beg  Fixed for HP-UX
-//  31/03/19  2.00  agw  Ported to JavaScript
-//  *************************************************************************/
+/**
+ * Hillbilly text filter.
+ *
+ * @author Duane Paulson <ci922@cleveland.freenet.edu> "dap"
+ * @author Aaron Wells
+ */
 const sameCapReplacer = require('./lib').sameCapReplacer;
 
 /**

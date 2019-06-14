@@ -1,13 +1,13 @@
+/**
+ * nethackify
+ * tries to write text ala nethack
+ *
+ * Wiped out text like can be found in nethack.
+ *
+ * @copyright 2004 G�kan Seng� <gurkan@linuks.mine.nu>
+ * @author Aaron Wells
+ */
 const getRandFn = require('./lib').getRandFn;
-// /*
-// nethackify
-// tries to write text ala nethack
-
-// cat /etc/motd/ | nethackify
-// /exec -o nethackify "good morning :)"
-
-// gurkan@linuks.mine.nu
-// */
 
 const NORMAL__ = 'ABCDEFGHIKLMNOPQRTUVWZbdeghjklmnoqwy:;01678';
 const NETHACK1 = '^P(|||C||||||CFCP|J/V/|cccni||nrccvv.,C|o/3';

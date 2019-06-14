@@ -1,7 +1,10 @@
-// #!/usr/bin/perl -w
-// # Fake scottish (dwarven) accent filter, by Adam Borowski, inspired by the
-// # character "Durkon" from Order of the Stick by Rich Burlew.  GPL, 2007.
-// use strict;
+/**
+ * Fake scottish (dwarven) accent filter, by Adam Borowski, inspired by the
+ * character "Durkon" from Order of the Stick by Rich Burlew.  GPL, 2007
+ *
+ * @copyright 2007 Adam Borowski
+ * @author Aaron Wells
+ */
 
 /**
  * @type {[RegExp, string][]}

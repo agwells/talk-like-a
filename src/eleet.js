@@ -1,4 +1,11 @@
-// Eleet filter, Copyright 1999, 2002 by Joey Hess under the terms of the GNU GPL.
+/**
+ * Eleet filter
+ *
+ * K3wl hacker slang
+ *
+ * @copyright 1999, 2002 by Joey Hess under the terms of the GNU GPL.
+ * @author Aaron Wells
+ */
 const { sameCapReplacer, tr } = require('./lib');
 
 let from = 'abcdefghijklmnopqrstuvwxyz';

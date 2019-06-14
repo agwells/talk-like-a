@@ -1,39 +1,24 @@
-// %{	-*- Mode:Fundamental -*-
-// /*
-//  *	newspeak.l, version 1.1.
-//  *	Lex filter to transform plain English into NewSpeak.
-//  *	Copyright (c) 1991 Jamie Zawinski <jwz@jwz.org>.
-//  *
-//  *      Permission to use, copy, modify, distribute, and sell this
-//  *      software and its documentation for any purpose is hereby granted
-//  *      without fee, provided that the above copyright notice appear in
-//  *      all copies and that both that copyright notice and this
-//  *      permission notice appear in supporting documentation.  No
-//  *      representations are made about the suitability of this software
-//  *      for any purpose.  It is provided "as is" without express or
-//  *      implied warranty.
-//  *
-//  *	To compile:
-//  *
-//  *	flex newspeak.l
-//  *	cc -O -o newspeak lex.yy.c
-//  *	rm lex.yy.c
-//  *
-//  *	This must be compiled with "flex", not normal "lex".  Lex has
-//  *	some builtin, unchangeable limits which this program exceeds.
-//  *	This has been verified to work with flex version 2.3.7, and
-//  *	may not work with flex version 2.3.6.
-//  *
-//  *	You can get 'flex' by anonymous FTP to prep.ai.mit.edu, or
-//  *	anywhere else you get GNU software.
-//  *
-//  *	Run this like so:  "newspeak < some-text-file | more"
-//  *
-//  *	There are some design notes near the end.  Suggestions and
-//  *	improvements to this code are more than welcome.
-//  *	Hail Big Brother!
-//  *---------------------------------------------------------------------------
-//  */
+/**
+ *	newspeak.l, version 1.1.
+ *	Lex filter to transform plain English into NewSpeak.
+ *	Copyright (c) 1991 Jamie Zawinski <jwz@jwz.org>.
+ *
+ *      Permission to use, copy, modify, distribute, and sell this
+ *      software and its documentation for any purpose is hereby granted
+ *      without fee, provided that the above copyright notice appear in
+ *      all copies and that both that copyright notice and this
+ *      permission notice appear in supporting documentation.  No
+ *      representations are made about the suitability of this software
+ *      for any purpose.  It is provided "as is" without express or
+ *      implied warranty.
+ *
+ *	There are some design notes near the end.  Suggestions and
+ *	improvements to this code are more than welcome.
+ *	Hail Big Brother!
+ *
+ * @copyright 1991 Jamie Zawinski <jwz@jwz.org>.
+ * @author Aaron Wells
+ */
 const { sameCapReplacer: CAP, sameCap, simuLex } = require('./lib');
 
 /**

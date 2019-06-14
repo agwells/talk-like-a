@@ -1,10 +1,11 @@
-/*
- *	Lex filter to transform plain English into Cockney English.
- *	No racial or societal slurs are intended.  For amusement only.
+/**
+ * Lex filter to transform plain English into Cockney English.
+ * No racial or societal slurs are intended.  For amusement only.
  *
- *	Copyright 1986 by Daniel Klein.
+ * Reproduction permitted so long as this notice is retained.
  *
- *	Reproduction permitted so long as this notice is retained.
+ * @copyright 1986 by Daniel Klein.
+ * @author Aaron Wells
  */
 
 const { getRandFn } = require('./lib.js');

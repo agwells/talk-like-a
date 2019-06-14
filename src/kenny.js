@@ -1,15 +1,15 @@
-// # kenny.pl -- translate from and to KennySpeak
-// #
-// # $Revision: 1.7 $
-// #
-// # Licensed unter the Artistic License:
-// # http://www.perl.com/language/misc/Artistic.html
-// #
-// # (C) 2001,2002 by Christian Garbs <mitch@cgarbs.de>, http://www.cgarbs.de
-// #                  Alan Eldridge <alane@geeksrus.net>
-// #
-// # KennySpeak invented by Kohan Ikin <syneryder@namesuppressed.com>
-// #                        http://www.namesuppressed.com/kenny/
+/**
+ * translate from and to KennySpeak
+ * Licensed unter the Artistic License:
+ * http://www.perl.com/language/misc/Artistic.html
+ *
+ * @copyright 2001,2002 by Christian Garbs <mitch@cgarbs.de>, http://www.cgarbs.de
+ *                  Alan Eldridge <alane@geeksrus.net>
+ *
+ * @author KennySpeak invented by Kohan Ikin <syneryder@namesuppressed.com>
+ *                        http://www.namesuppressed.com/kenny/
+ * @author Aaron Wells
+ */
 const { tr } = require('./lib');
 
 // ##### Generate KennySpeak encoding table

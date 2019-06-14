@@ -1,4 +1,8 @@
-// # jibberish -- run filters in random order
+/**
+ * jibberish -- run filters in random order
+ *
+ * @author Aaron Wells
+ */
 const { getRandFn } = require('./lib');
 
 const { eleet } = require('./eleet');

@@ -1,12 +1,12 @@
-// # lolcatz filtur
-// # Copyright 2013 by Joey Hess under the terms of the GNU GPL.
-
 /**
+ * lolcatz filtur
  *
+ * As seen in internet gifs everywhere.
  *
- * @param {string} initialString
- * @returns {string}
+ * @copyright 2013 by Joey Hess under the terms of the GNU GPL.
+ * @author Aaron Wells
  */
+
 function LOLCAT(initialString) {
   return (
     initialString

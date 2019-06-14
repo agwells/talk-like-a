@@ -1,3 +1,10 @@
+/**
+ * This program places a very cute (and familiar to FurryMuck fans)
+ * accent to any text file.
+ *
+ * @copyright 1994 Brent E. Edwards
+ * @author Aaron Wells
+ */
 const { simuLex } = require('./lib');
 
 const CUTE = 'ky00te!';

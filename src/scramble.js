@@ -1,11 +1,12 @@
-/* Scramble the "inner" letters of each word in the input into a random order, and output the result. Non-word (that is, non-alphabetical) characters, and the first and last letters of each word, are left alone.
- * Output to something other than stdout will append to the file instead of overwriting it - this may be undesirable, and can be changed if so.
- */
-
-/* Copyright 2009-07-11 Andrew J. Buehler.
- */
-
-/*   This program is free software: you can redistribute it and/or modify
+/**
+ * Scramble the "inner" letters of each word in the input into a random order,
+ * and output the result. Non-word (that is, non-alphabetical) characters, and
+ * the first and last letters of each word, are left alone.
+ *
+ * @copyright 2009-07-11 Andrew J. Buehler.
+ * @author Aaron Wells
+ *
+ *   This program is free software: you can redistribute it and/or modify
  *   it under the terms of the GNU General Public License as published by
  *   the Free Software Foundation, either version 3 of the License, or
  *   (at your option) any later version.

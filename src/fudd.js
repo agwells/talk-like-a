@@ -1,4 +1,10 @@
-// # Elmer Fudd. GPL 2001 by Joey Hess <joey@kitenet.net>
+/**
+ * Elmer Fudd
+ *
+ * @copyright 2001 GPL by Joey Hess
+ * @author Joey Hess <joey@kitenet.net>
+ * @author Aaron Wells
+ */
 
 function fudd(initialString) {
   return initialString
