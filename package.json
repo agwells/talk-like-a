@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch './tests/index.test.js'",
+    "test:original": "jest --watch './tests/against-originals.test.js'",
     "make-test-data": "$NODE ./tests/make-test-data.js",
     "compile-and-make-test-data": "make -C original clean && make -C original all && $NODE ./tests/make-test-data.js"
   },
