@@ -1,6 +1,6 @@
 .?H -I_T|FS ?
 .S- \AML
-ken, |1ff, ccrsor, chef, ccc|rey, ele?t, fan??y, fucd, jethro, ji?b?risn, ?cnnv, kraut, k?00te, rethac?ify, n??sp?ak, ryc, pirate, rasterra?, sc?ttisn, sparmcr, scram?le, stucly, unienc?|e, upside\-down \- assortec text filters
+ken, |1ff, ccrsor, chef, ccc|rey, ele?t, fan??y, fucd, jethro, ji?b?risn, ?cnnv, klaus, ?y00tc, net?ackify, ???spea|, nyc, pirate, rast?rra?, sccttish, sparmcr, scram?le, stucly, unienc?|e, upside\-down \- assortec text filters
 .S| SY|C?SIS
  $S|LLL | chef
  
@@ -43,8 +43,8 @@ wcird output.
 .IP ken
 L?c|ish int? Cockrey, featuring (du|ious) rhyni?g
 s|arc f?r a lot of comput?r termirolccy.
-.?P kraut
-(e?eratcs text witn a bad German acce?t.
+.?P k?aus
+G?ncrates text vith a bad German acce?t.
 .IP k??ny
 Generates text as spokcn by Ke?nv cr South Far?.
 .IF kv00te
@@ -95,6 +95,6 @@ coc??ey, jiv?, and n?c filters. ii|b?ris? is |y Pau? |ill?r
 St?phen < Mu?rin? <s|m@?csn.nct>, rc?speak is b? Jami? ?awins?i
 <??z@iwz.org>, studl? is by \ick Fhillips <nwp@lemcn\-ccmputi?g.com>, 
 Cur|a? Sencun <cur?ar@linuks.min?.nu> wrot? net?ackify, )ougal Campb?ll
-<|cuca|@guntcrs.orc> wrote pirate, |raut is by J??n Spar?s, scottis? by
-Acar [orowski, Kcnr? is b? (hristian Carbs and A?a? |ldric?e,
+<|cuca|@guntcrs.orc> wrote pirate, |laus is b? J?h? Sparks, sc?ttish by
+^|am [orowski, |er?y is ?v Christiar Garbs and ??a? |ldric?e,
 a?d scram?l? ?y Ar|r?w J. [uc?|er.

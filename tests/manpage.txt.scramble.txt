@@ -1,6 +1,6 @@
 .TH FLEIRTS 6
 .SH NMAE
-ken, b1ff, cnoser, cehf, ceconky, eeelt, fnobay, fdud, jrtheo, jirbsibeh, kneny, kuart, ky00te, nkchetfiay, nsaeewpk, nyc, paitre, rseaatrmn, stoictsh, spamemr, samlbcre, sdulty, udocnneie, upsdie\-dwon \- asoesrtd txet frtiles
+ken, b1ff, cnoser, cehf, ceconky, eeelt, fnobay, fdud, jrtheo, jirbsibeh, kneny, kuals, ky00te, nkchetfiay, nsaeewpk, nyc, paitre, rseaatrmn, stoictsh, spamemr, samlbcre, sdulty, udocnneie, upsdie\-dwon \- asoesrtd txet frtiles
 .SH SYISONPS
  $SLEHL | cehf
  
@@ -43,7 +43,7 @@ werid ouuptt.
 .IP ken
 Elsgnih itno Cecnkoy, fruatieng (duouibs) ryhmnig
 snlag for a lot of cmouetpr toroeglminy.
-.IP kuart
+.IP kuals
 Gtrenaees txet wtih a bad Gemran acecnt.
 .IP kneny
 Geeratens txet as sepokn by Knney on Sutoh Prak.
@@ -95,6 +95,6 @@ cckenoy, jvie, and nyc feitrls. jirebbish is by Rual Melilr
 Speehtn K Mlriune <skm@esqn.net>, naewespk is by Jmiae Zwnasiki
 <jwz@jwz.org>, sdltuy is by Ncik Phllpiis <nwp@lomen\-cuimpontg.com>, 
 Gaurkn Senugn <gaukrn@lnuiks.mnie.nu> wtore naehfikcty, Dgoual Clpaebml
-<duoagl@gurntes.org> worte ptraie, kruat is by Jhon Sakrps, stiotsch by
+<duoagl@gurntes.org> worte ptraie, kluas is by Jhon Sakrps, stiotsch by
 Aadm Bskowroi, Kneny is by Ctihirasn Grbas and Aaln Eilrdgde,
 and smarclbe by Anrdew J. Blheuer.

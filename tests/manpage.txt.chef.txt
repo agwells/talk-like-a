@@ -1,6 +1,6 @@
 .TH FILTERS 6
 .SH NEME
-kee, b1fff, cunsur, cheff, cuckney, ileet, funbuy, foodd, jethru, jeebberish, kunny, kroot, ky00te-a, netheckeeffy, nevspeek, nyc, peerete-a, restermun, scutteesh, spemmer, scremble-a, stoodly, uneeuncude-a, upseede-a\-doon \- essurted text feelters
+kee, b1fff, cunsur, cheff, cuckney, ileet, funbuy, foodd, jethru, jeebberish, kunny, kloos, ky00te-a, netheckeeffy, nevspeek, nyc, peerete-a, restermun, scutteesh, spemmer, scremble-a, stoodly, uneeuncude-a, upseede-a\-doon \- essurted text feelters
 .SH SYNOPSIS
  $SHELL | cheff
  
@@ -50,7 +50,7 @@ Bork Bork Bork!
 Ingleesh intu Cuckney, feetooreeng (doobeeuoos) rhymeeng
 slung fur a lut ooff cumpooter termeenulugy.
 Bork Bork Bork!
-.IP kroot
+.IP kloos
 Guneretes text veet a bed Germun eccunt.
 Bork Bork Bork!
 .IP kunny
@@ -117,7 +117,7 @@ cuckney, jeefe-a, und nyc feelters. jeebberish is by Rool Meeller
 Stephee K Moolreene-a <skm@iqsn.net>, nevspeek is by Jemeee-a Zeveenski
 <jvz@jvz.oorg>, stoodly is by Neeck Pheellips <nvp@lemun\-cumpooteeng.cum>, 
 Goorkun Sungoon <goorkun@leenooks.meene-a.noo> vrute-a netheckeeffy, Duoogel Cempbell
-<duoogel@goonters.oorg> vrute-a peerete-a, kroot is by Juhn Sperks, scutteesh by
+<duoogel@goonters.oorg> vrute-a peerete-a, kloos is by Juhn Sperks, scutteesh by
 Edem Burooskee, Kunny is by Chreestiun Gerbs und Elun Ildreedge-a,
 und scremble-a by Undrev J. Booehler.
 Bork Bork Bork!

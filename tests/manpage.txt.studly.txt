@@ -1,6 +1,6 @@
 .Th FIlTERs 6
 .SH nAME
-ken, b1Ff, CensOr, Chef, coCkneY, eLeet, faNboy, fuDd, JethRo, JibbErisH, kEnny, krAut, ky00te, netHackIfy, newSpeaK, nYc, PiraTe, RastErmaN, sCottIsh, spaMmer, scRambLe, StudLy, UnieNcodE, uPsidE\-dOwn \- aSsorTed Text filTers
+ken, b1Ff, CensOr, Chef, coCkneY, eLeet, faNboy, fuDd, JethRo, JibbErisH, kEnny, klAus, ky00te, netHackIfy, newSpeaK, nYc, PiraTe, RastErmaN, sCottIsh, spaMmer, scRambLe, StudLy, UnieNcodE, uPsidE\-dOwn \- aSsorTed Text filTers
 .SH SYNoPSIs
  $sHELl | Chef
  
@@ -43,7 +43,7 @@ weiRd oUtpuT.
 .iP kEn
 ENgliSh iNto cockNey, feaTuriNg (DubiOus) rhyMing
 slaNg fOr a lot of CompUter terMinoLogy.
-.Ip krAut
+.Ip klAus
 geneRateS teXt wIth A baD GeRman accEnt.
 .IP kenNy
 GEnerAtes texT as spoKen By KEnny on soutH PaRk.
@@ -95,6 +95,6 @@ CockNey, jivE, aNd nYc fIlteRs. JibbErisH is by raul MilLer
 StePhen K MUlriNe <Skm@Eqsn.net>, nEwspEak Is bY JaMie zawiNski
 <jwZ@jwZ.orG>, StudLy iS by NicK PhIlliPs <Nwp@LemoN\-cOmpuTing.com>, 
 gurkAn SEnguN <gUrkaN@liNuks.minE.nu> wrOte NethAckiFy, dougAl CAmpbEll
-<douGal@GuntErs.Org> wroTe pIratE, kRaut is By JOhn sparKs, ScotTish by
+<douGal@GuntErs.Org> wroTe pIratE, kLaus is By JOhn sparKs, ScotTish by
 adam BorOwskI, KEnny is By CHrisTian GarBs aNd ALan eldrIdge,
 anD scRambLe bY AnDrew J. buehLer.

@@ -6,7 +6,7 @@ const b1ff = require('./b1ff');
 const chef = require('./chef');
 const jethro = require('./jethro');
 const upside_down = require('./upside_down');
-const kraut = require('./kraut');
+const klaus = require('./klaus');
 const cockney = require('./cockney');
 const pirate = require('./pirate');
 const nyc = require('./nyc');
@@ -32,7 +32,7 @@ function jibberish(originalString) {
     chef,
     jethro,
     upside_down,
-    kraut,
+    klaus,
     cockney,
     pirate,
     nyc,

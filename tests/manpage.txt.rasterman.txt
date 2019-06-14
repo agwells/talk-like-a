@@ -1,6 +1,6 @@
 .th filters 6
 .sh name
-ken.. b1ff.. censor.. chef.. cockney.. eleet.. fanboy.. fudd. jethro.. jibbeisdh.. kenny.. kraut.. kyt00te.. nethackify.. newpeak.. nyc.. pirate.. rasterman.. scottish.. spammer.. scramble.. studly.. uniencode.. upside\-down \- assorted text filtrs
+ken.. b1ff.. censor.. chef.. cockney.. eleet.. fanboy.. fudd. jethro.. jibbeisdh.. kenny.. klaus.. kyt00te.. nethackify.. newpeak.. nyc.. pirate.. rasterman.. scottish.. spammer.. scramble.. studly.. uniencode.. upside\-down \- assorted text filtrs
 .sh synopsis
  $shell | chfe
  
@@ -43,7 +43,7 @@ weird output...
 .ip ken
 eglish into cockney.. featuring (duboius) rhymiong
 slang fro a siltoad fo computer terminology...
-.pi kraut
+.pi klaus
 generates text with a bad german accent...
 .i kenny
 generates txet as spoken by kenny on south park...
@@ -95,6 +95,6 @@ cockney.. jive.. and nyc filters. jibberihs is by rul miler
 stephenk  mulrine <skm@eqs.net>.. newspeak s by jamie zawinski
 <jwz@jwz.org>.. studly is yb nick philisp <nwp@lemon\-computing.com>.. 
 gurkan sengun <gurkan@linuks.mine.nu> wrote nethackify..d ougal campbell
-<dougal@guners.org> wrote piate.. kraut is by john sparks.. scottihs yb
+<dougal@guners.org> wrote piate.. klaus is by john sparks.. scottihs yb
 adam orowski.. kenny is by christian garbs and alna eldridge,
 and scramble by andrew j. buehler...

@@ -25,7 +25,7 @@ const filters = [
   'jibberish',
   'ken',
   'kenny',
-  'kraut',
+  'klaus',
   'ky00te',
   'LOLCAT',
   'nethackify',

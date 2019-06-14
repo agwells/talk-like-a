@@ -17,7 +17,7 @@ const filters = [
   'ken',
   'kenny',
   'ky00te', // currently failing
-  'kraut',
+  'klaus',
   'LOLCAT',
   'nethackify',
   'newspeak',

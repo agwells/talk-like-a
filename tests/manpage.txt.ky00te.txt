@@ -1,6 +1,6 @@
 .TH FYLTERS 6
 .SH NAME
-ken, b1ff, censorr, chef, cockney, eleet, fanboy, fudd, jethrro, jybberrysh, kenny, krraut, ky00te, nethackyfy, newspeak, nyc, purrate, rrasterrmeown, scottysh, spammeowrr, scrramble, studly, *truffle break!* unyencode, upsyde\-down \- assorrted text fylterrs
+ken, b1ff, censorr, chef, cockney, eleet, fanboy, fudd, jethrro, jybberrysh, kenny, klaus, ky00te, nethackyfy, newspeak, nyc, purrate, rrasterrmeown, scottysh, spammeowrr, scrramble, studly, *truffle break!* unyencode, upsyde\-down \- assorrted text fylterrs
 .SH SYNOPSYS
  $SHELL | chef
  
@@ -43,7 +43,7 @@ weyrrd output.
 .YP ken
 Englysh ynto Cockney, featurryng (dubyous) rrhymeowng
 slang fur a lotta *catnap break!* computerr terrmewnology.
-.YP krraut
+.YP klaus
 Generrates text wyf a bad Gerrmewn accent.
 .YP kenny
 Generrates text as spoken by Kenny on South Parrk.
@@ -95,6 +95,6 @@ cockney, jyve, 'n nyc fylterrs. jybberrysh ys by Raul Myllerr
 Stephen K Mulrryne <skm@eqsn.net>, newspeak ys by Jamewe Zawynsky
 <jwz@jwz.orrg>, studly ys by Nyck Phyllyps <nwp@lemeown\-computyng.com>, 
 Gurrkan Sengun <gurrkan@lynux.meowne.nu> wrrote nethackyfy, Dougal Campbell
-<dougal@gunterrs.orrg> wrrote purrate, krraut ys by John Spurrx, scottysh by
+<dougal@gunterrs.orrg> wrrote purrate, klaus ys by John Spurrx, scottysh by
 Adam Borrowsky, Kenny ys by Chrrystyan Garrbs 'n Alan Eldrrydge,
  'n scrramble by Andrrew J. Buehlerr.

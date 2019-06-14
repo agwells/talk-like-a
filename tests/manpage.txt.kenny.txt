@@ -1,6 +1,6 @@
 .FmpMfp MpfMffPmfFmpMppPffFmm 6
 .FmmMfp PppMmmPpmMpp
-pmpmppppp, mmp1mpfmpf, mmfmpppppfmmppfpff, mmfmfpmppmpf, mmfppfmmfpmppppmppffm, mpppmfmppmppfmp, mpfmmmpppmmpppfffm, mpffmfmpmmpm, pmmmppfmpmfppffppf, pmmmffmmpmmpmpppffmfffmmmfp, pmpmppppppppffm, pmppffmmmfmffmp, pmpffm00fmpmpp, pppmppfmpmfpmmmmmfpmpmffmpfffm, pppmppfppfmmpfmmppmmmpmp, pppffmmmf, pfmmffpffmmmfmpmpp, pffmmmfmmfmpmpppffppmmmmppp, fmmmmfppffmpfmpmfffmmmfp, fmmpfmmmmppmppmmpppff, fmmmmfpffmmmppmmmppmfmpp, fmmfmpfmfmpmpmfffm, fmfpppmffmpppppmmfppfmpmmpp, fmfpfmfmmmffmpmmpp\-mpmppffppppp \- mmmfmmfmmppfpfffmpmppmpm fmpmppfpffmp mpfmffpmffmpmpppfffmm
+pmpmppppp, mmp1mpfmpf, mmfmpppppfmmppfpff, mmfmfpmppmpf, mmfppfmmfpmppppmppffm, mpppmfmppmppfmp, mpfmmmpppmmpppfffm, mpffmfmpmmpm, pmmmppfmpmfppffppf, pmmmffmmpmmpmpppffmfffmmmfp, pmpmppppppppffm, pmppmfmmmfmffmm, pmpffm00fmpmpp, pppmppfmpmfpmmmmmfpmpmffmpfffm, pppmppfppfmmpfmmppmmmpmp, pppffmmmf, pfmmffpffmmmfmpmpp, pffmmmfmmfmpmpppffppmmmmppp, fmmmmfppffmpfmpmfffmmmfp, fmmpfmmmmppmppmmpppff, fmmmmfpffmmmppmmmppmfmpp, fmmfmpfmfmpmpmfffm, fmfpppmffmpppppmmfppfmpmmpp, fmfpfmfmmmffmpmmpp\-mpmppffppppp \- mmmfmmfmmppfpfffmpmppmpm fmpmppfpffmp mpfmffpmffmpmpppfffmm
 .FmmMfp FmmFfmPppPpfPfmFmmMffFmm
  $FmmMfpMppPmfPmf | mmfmfpmppmpf
  
@@ -43,7 +43,7 @@ fppmppmffpffmpm ppffmffmppfmfmffmp.
 .MffPfm pmpmppppp
 Mpppppmfmpmfmfffmmmfp mffpppfmpppf Mmfppfmmfpmppppmppffm, mpfmppmmmfmpfmfpffmffpppmfm (mpmfmfmmpmffppffmffmm) pffmfpffmppmmffpppmfm
 fmmpmfmmmpppmfm mpfppfpff mmm pmfppffmp ppfmpf mmfppfppmpfmfmffmpmpppff fmpmpppffppmmffpppppfpmfppfmfmffm.
-.MffPfm pmppffmmmfmffmp
+.MffPfm pmppmfmmmfmffmm
 Mfmmpppppmpppffmmmfmpmppfmm fmpmppfpffmp fppmfffmpmfp mmm mmpmmmmpm Mfmmpppffppmmmmppp mmmmmfmmfmpppppfmp.
 .MffPfm pmpmppppppppffm
 Mfmmpppppmpppffmmmfmpmppfmm fmpmppfpffmp mmmfmm fmmpfmppfpmpmppppp mmpffm Pmpmppppppppffm ppfppp Fmmppffmffmpmfp Pfmmmmpffpmp.
@@ -95,6 +95,6 @@ mmfppfmmfpmppppmppffm, pmmmfffpmmpp, mmmpppmpm pppffmmmf mpfmffpmffmpmpppfffmm. 
 Fmmfmpmpppfmmfpmppppp Pmp Ppmfmfpmfpffmffpppmpp <fmmpmpppm@mpppfpfmmppp.pppmppfmp>, pppmppfppfmmpfmmppmmmpmp mfffmm mmpffm Pmmmmmppmmffmpp Ffpmmmfppmffpppfmmpmpmff
 <pmmfppffp@pmmfppffp.ppfpffmfm>, fmmfmpfmfmpmpmfffm mfffmm mmpffm Pppmffmmfpmp Pfmmfpmffpmfpmfmffpfmfmm <pppfpppfm@pmfmppppmppfppp\-mmfppfppmpfmfmffmpmffpppmfm.mmfppfppm>, 
 Mfmfmfpffpmpmmmppp Fmmmpppppmfmfmfppp <mfmfmfpffpmpmmmppp@pmfmffpppfmfpmpfmm.ppmmffpppmpp.pppfmf> fpppffppffmpmpp pppmppfmpmfpmmmmmfpmpmffmpfffm, Mpmppffmfmfmmmmpmf Mmfmmmppmpfmmmpmpppmfpmf
-<mpmppffmfmfmmmmpmf@mfmfmfpppfmpmpppfffmm.ppfpffmfm> fpppffppffmpmpp pfmmffpffmmmfmpmpp, pmppffmmmfmffmp mfffmm mmpffm Pmmppfmfpppp Fmmpfmmmmpffpmpfmm, fmmmmfppffmpfmpmfffmmmfp mmpffm
+<mpmppffmfmfmmmmpmf@mfmfmfpppfmpmpppfffmm.ppfpffmfm> fpppffppffmpmpp pfmmffpffmmmfmpmpp, pmppmfmmmfmffmm mfffmm mmpffm Pmmppfmfpppp Fmmpfmmmmpffpmpfmm, fmmmmfppffmpfmpmfffmmmfp mmpffm
 Mmmmpmmmmppm Mmpppfpffppffppfmmpmpmff, Pmpmppppppppffm mfffmm mmpffm Mmfmfppffmfffmmfmpmffmmmppp Mfmmmmpffmmpfmm mmmpppmpm Mmmpmfmmmppp Mpppmfmpmpffmffmpmmfmmpp,
 mmmpppmpm fmmmmfpffmmmppmmmppmfmpp mmpffm Mmmpppmpmpffmppfpp Pmm. Mmpfmfmppmfppmfmpppff.

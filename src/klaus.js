@@ -68,8 +68,8 @@ const rules = simuLex.preprocessRules(rawRules);
  *
  * @param {string} originalString
  */
-function kraut(originalString) {
+function klaus(originalString) {
   return simuLex(originalString, rules);
 }
 
-module.exports = kraut;
+module.exports = klaus;

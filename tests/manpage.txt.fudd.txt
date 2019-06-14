@@ -1,6 +1,6 @@
 .F FIWTEWS 6
 .SH NAME
-ken, b1ff, censow, chef, cockney, eweet, fanboy, fudd, jedwo, jibbewish, kenny, kwaut, ky00te, nedackify, newspeak, nyc, piwate, wastewman, scottish, spammew, scwambwe, studwy, uniencode, upside\-down \- assowted text fiwtews
+ken, b1ff, censow, chef, cockney, eweet, fanboy, fudd, jedwo, jibbewish, kenny, kwaus, ky00te, nedackify, newspeak, nyc, piwate, wastewman, scottish, spammew, scwambwe, studwy, uniencode, upside\-down \- assowted text fiwtews
 .SH SYNOPSIS
  $SHEWW | chef
  
@@ -43,7 +43,7 @@ weiwd output.
 .IP ken
 Engwish into Cockney, featuwing (dubious) whyming
 swang fow a wot of computew tewminowogy.
-.IP kwaut
+.IP kwaus
 Genewates text wif a bad Gewman accent.
 .IP kenny
 Genewates text as spoken by Kenny on Souf Pawk.
@@ -95,6 +95,6 @@ cockney, jive, and nyc fiwtews. jibbewish is by Wauw Miwwew
 Stephen K Muwwine <skm@eqsn, uh-hah-hah-hah.net>, newspeak is by Jamie Zawinski
 <jwz@jwz.owg>, studwy is by Nick Phiwwips <nwp@wemon\-computing.com>, 
 Guwkan Sengun <guwkan@winuks.mine.nu> wwote nedackify, Dougaw Campbeww
-<dougaw@guntews.owg> wwote piwate, kwaut is by John Spawks, scottish by
+<dougaw@guntews.owg> wwote piwate, kwaus is by John Spawks, scottish by
 Adam Bowowski, Kenny is by Chwistian Gawbs and Awan Ewdwidge,
 and scwambwe by Andwew J. Buehwew.

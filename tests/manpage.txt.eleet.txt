@@ -1,6 +1,6 @@
 .TH F1LT3R5 6
 .5H N4M3
-k3n, b1ff, c3n50r, ch3f, c0ckn3y, 3l33t, f4nb0y, fudd, j3thr0, j1bb3r15h, k3nny, kr4ut, ky00t3, n3th4ck1fy, n3w5p34k, nyc, p1r4t3, r45t3rm4n, 5c0tt15h, 5p4mm3r, 5cr4mbl3, 5tudly, un13nc0d3, up51d3\-d0wn \- 4550rt3d t3xt f1lt3r5
+k3n, b1ff, c3n50r, ch3f, c0ckn3y, 3l33t, f4nb0y, fudd, j3thr0, j1bb3r15h, k3nny, kl4u5, ky00t3, n3th4ck1fy, n3w5p34k, nyc, p1r4t3, r45t3rm4n, 5c0tt15h, 5p4mm3r, 5cr4mbl3, 5tudly, un13nc0d3, up51d3\-d0wn \- 4550rt3d t3xt f1lt3r5
 .5H 5YN0P515
  $5H3LL | ch3f
  
@@ -43,7 +43,7 @@ w31rd 0utput.
 .1P k3n
 3ngl15h 1nt0 C0ckn3y, f34tur1ng (dub10u5) rhym1ng
 5l4ng f0r 4 l0t 0f c0mput3r t3rm1n0l0gy.
-.1P kr4ut
+.1P kl4u5
 G3n3r4t35 t3xt w1th 4 b4d G3rm4n 4cc3nt.
 .1P k3nny
 G3n3r4t35 t3xt 45 5p0k3n by K3nny 0n 50uth P4rk.
@@ -95,6 +95,6 @@ c0ckn3y, j1v3, 4nd nyc f1lt3r5. j1bb3r15h 15 by R4ul M1ll3r
 5t3ph3n K Mulr1n3 <5km@3q5n.n3t>, n3w5p34k 15 by J4m13 Z4w1n5k1
 <jwz@jwz.0rg>, 5tudly 15 by N1ck Ph1ll1p5 <nwp@l3m0n\-c0mput1ng.c0m>, 
 Gurk4n 53ngun <gurk4n@l1nuk5.m1n3.nu> wr0t3 n3th4ck1fy, D0ug4l C4mpb3ll
-<d0ug4l@gunt3r5.0rg> wr0t3 p1r4t3, kr4ut 15 by J0hn 5p4rk5, 5c0tt15h by
+<d0ug4l@gunt3r5.0rg> wr0t3 p1r4t3, kl4u5 15 by J0hn 5p4rk5, 5c0tt15h by
 4d4m B0r0w5k1, K3nny 15 by Chr15t14n G4rb5 4nd 4l4n 3ldr1dg3,
 4nd 5cr4mbl3 by 4ndr3w J. Bu3hl3r.

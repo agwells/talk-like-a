@@ -1,7 +1,7 @@
 Below is the result of your feedback form:
 .TH FILTERS 6
 .SH NAME
-ken, b1ff, censor, chef, cockney, eleet, fanboy, fudd, jethro, jibberish, kenny, kraut, ky00te, nethackify, newspeak, nyc, pirate, rasterman, scottish, businessman, scramble, studly, uniencode, upside\-down \- assorted text filters
+ken, b1ff, censor, chef, cockney, eleet, fanboy, fudd, jethro, jibberish, kenny, klaus, ky00te, nethackify, newspeak, nyc, pirate, rasterman, scottish, businessman, scramble, studly, uniencode, upside\-down \- assorted text filters
 .SH SYNOPSIS
  $SHELL | chef
  
@@ -44,7 +44,7 @@ weird output.
 .IP ken
 Engrish into Cockney, featuring (dubious) rhyming
 slang for a lot of computer terminology.
-.IP kraut
+.IP klaus
 Generates text with a bad German accent.
 .IP kenny
 Generates text as spoken by Kenny on South Park.
@@ -96,7 +96,7 @@ cockney, jive, and nyc filters. jibberish is by Raul Miller
 Stephen K Mulrine <skm@eqsn.info>, newspeak is by Jamie Zawinski
 <jwz@jwz.biz>, studly is by Nick Phillips <nwp@lemon\-computing.biz>, 
 Gurkan Sengun <gurkan@linuks.mine.nu> wrote nethackify, Dougal Campbell
-<dougal@gunters.biz> wrote pirate, kraut is by John Sparks, scottish by
+<dougal@gunters.biz> wrote pirate, klaus is by John Sparks, scottish by
 Adam Borowski, Kenny is by Christian Garbs and Alan Eldridge,
 and scramble by Andrew J. Buehler.
 

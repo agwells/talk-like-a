@@ -1,6 +1,6 @@
 .TH FILTER-r-rS 6
 .SH NAME
-ken, b1ff, kensor, khef, kockney, eleet, fanboy, fudd, jedro, jibberisch, kenny, kraut, ky00te, nedackify, newspeak, nyc, pirate, r-r-rasterman, scottisch, spammer, scramble, studly, uniencode, upside\-down \- assorted text filters
+ken, b1ff, kensor, khef, kockney, eleet, fanboy, fudd, jedro, jibberisch, kenny, klaus, ky00te, nedackify, newspeak, nyc, pirate, r-r-rasterman, scottisch, spammer, scramble, studly, uniencode, upside\-down \- assorted text filters
 .SH SYNOPSIS
  $SHELL | khef
  
@@ -43,7 +43,7 @@ weird output.
 .IP ken
 Englisch into Kockney, featuringkt (dubious) r-r-rhymingkt
 slang for a lot uff computer terminology.
-.IP kraut
+.IP klaus
 Generates text mitt a bad German accent.
 .IP kenny
 Generates text as spoken by Kenny on Soud Park.
@@ -95,6 +95,6 @@ cockney, jife, undt nyc filters. jibberisch ist by R-r-raul Miller
 Stephen K Mulrine <skm@eqsn.net>, newspeak ist by Jamie Zawinski
 <jwz@jwz.org>, studly ist by Nick Phillips <nwp@lemon\-computingkt.com>, 
 Gurkan Sengun <gurkan@linuks.mine.nu> vrote nedackify, Dougal Kampbell
-<dougal@gunters.org> vrote pirate, kraut ist by Johann Sparks, scottisch by
+<dougal@gunters.org> vrote pirate, klaus ist by Johann Sparks, scottisch by
 Adam Borowski, Kenny ist by Khristian Garbs undt Alan Eldridge,
 and scramble by Andrew J. Buehler.

@@ -189,7 +189,7 @@ filters (2.31) unstable; urgency=low
 
 filters (2.30) unstable; urgency=low
 
-  * Falk Hueffner provided a patch to make kraut work on alpha.
+  * Falk Hueffner provided a patch to make klaus work on alpha.
     Closes: #169256
 
  -- Joey Hess <joeyh@debian.org>  Thu, 21 Nov 2002 00:16:40 -0500
@@ -204,7 +204,7 @@ filters (2.29) unstable; urgency=low
 
 filters (2.28) unstable; urgency=low
 
-  * Fixed a typo in kraut.
+  * Fixed a typo in klaus.
   * Note in man page that it's a _bad_ German accent. Think 1940's 
     American propiganda movies. Closes: #169163
 
@@ -381,7 +381,7 @@ filters (2.4) unstable; urgency=low
 
 filters (2.3) unstable; urgency=low
 
-  * Added kraut filter (free version found).
+  * Added klaus filter (free version found).
 
  -- Joey Hess <joeyh@debian.org>  Wed, 17 Mar 1999 15:52:05 -0800
 
