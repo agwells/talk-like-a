@@ -96,10 +96,16 @@ const repl = [
      */
     const initialUpper = [
       new RegExp(
-        regexText.replace(/(?<!\\)([a-z])/, (match) => match.toUpperCase()),
+        // TODO: replace with a lookbehind assertion once there's broader
+        // browser support.
+        regexText.replace(
+          /^(\\b)?([a-z])/,
+          (match, boundary, firstLetter) =>
+            (boundary || '') + firstLetter.toUpperCase()
+        ),
         'g'
       ),
-      replaceWith.replace(/[a-z]/, (match) => match.toUpperCase()),
+      replaceWith.replace(/^.*?[a-z]/, (match) => match.toUpperCase()),
     ];
     variants.push(initialUpper);
 
@@ -108,7 +114,11 @@ const repl = [
      */
     const allUpper = [
       new RegExp(
-        regexText.replace(/(?<!\\)([a-z])/g, (match) => match.toUpperCase()),
+        // TODO: replace with a lookbehind assertion once there's broader
+        // browser support.
+        regexText
+          .replace(/[a-z]/g, (match) => match.toUpperCase())
+          .replace(/\\B/g, '\\b'),
         'g'
       ),
       replaceWith.replace(/[a-z]/g, (match) => match.toUpperCase()),

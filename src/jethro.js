@@ -367,23 +367,34 @@ function jethro(originalString) {
       // n't			*(yytext)=(char)'u'; SUB("unt");
       .replace(/\Bn't\b/g, 'unt')
       // 're			SUB(" is");
-      .replace(/(?<=\w)'re\b/g, ' is')
+      .replace(/\B're\b/g, ' is')
       // 've			SUB(" done");
-      .replace(/(?<=\w)'ve\b/g, ' done')
+      // TODO: lookbehind
+      //      .replace(/(?<=\w)'ve\b/g, ' done')
+      .replace(/(\w)'ve\b/g, (match, before) => before + ' done')
       // eed{EW}			ECHO;
       // ed{EW}			ESUB("d");
-      // .replace(/(?<!e)ed\b/g, "'d")
+      // Commented out because it kind of detracts
+      // .replace(/(?:(eed)|ed)\b/g, (all, keep) => keep || 'd')
       // {SW}[Oo]wn{EW}		|
       // {SW}[Tt]own{EW}		|
       // {SW}[Dd]own{EW}		|
       // {SW}[Gg]own{EW}		|
       // {SW}[Bb]rown{EW}	ECHO;
       // wn{EW}			ESUB("ed");
-      .replace(/(?<!\b([Oo]|[TtDdGg]o|[Bb]ro))wn\b/g, 'ed')
+      // Rather than list exceptions, it's easier to just list the few irregular
+      // verbs in common usage that we actually want to apply this rule to.
+      .replace(/[Ff]lown/g, sameCapReplacer('Flied'))
+      .replace(
+        /([Bb]lo|[Gg]ro|[Ss]ho|[Tt]hro|[Kk]no|\b[Ss]o|\b[Mm]o|[Ss]a|[Dd]ra|[Ss]e)wn\b/g,
+        (all, match) => match + 'wed'
+      )
       // re{EW}			|
       // er{EW}			ESUB("uh");
       // {SW}[Hh]er{EW}		ECHO;
-      .replace(/(\Bre|(?<!\b[Hh])\Ber)\b/g, 'uh')
+      // TODO: lookbehind
+      //      .replace(/(\Bre|(?<!\b[Hh])\Ber)\b/g, 'uh')
+      .replace(/(?:(\b[Hh]er)|re|er)\b/g, (all, keep) => keep || 'uh')
       // {SW}[Ff]or{EW}		SESUB("Fer");
       .replace(/\b[Ff]or\b/g, sameCapReplacer('Fer'))
       // {SW}[Bb]elow{EW}	|
@@ -395,7 +406,12 @@ function jethro(originalString) {
       // {SW}[Bb]row{EW}		|
       // {SW}[Ss]how{EW}		ECHO;
       // ow{EW}			ESUB("er");
-      .replace(/(?<!\b([Bb]el|[Kk]n|[Tt]hr|[GgBb]r|[HhNn]|[Ss]h))ow\b/g, 'er')
+      // TODO: lookbehind
+      //      .replace(/(?<!\b([Bb]el|[Kk]n|[Tt]hr|[GgBb]r|[HhNn]|[Ss]h))ow\b/g, 'er')
+      .replace(
+        /(?:(\b(?:[Bb]elow|[Kk]now|[Tt]hrow|[Gg]row|[Hh]ow|[Nn]ow|[Bb]row|[Ss]how))|ow)\b/g,
+        (all, keep) => keep || 'er'
+      )
       // {SW}[Oo]ur{EW}		|
       // {SW}[Oo]r{EW}		SESUB("Ore");
       .replace(/\b([Oo]ur|[Oo]r)\b/g, sameCapReplacer('Ore'))

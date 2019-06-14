@@ -55,9 +55,10 @@ function scramble_string(toScramble, rand) {
 function scramble(originalString) {
   const rand = getRandFn();
   // Scramble the middle letters of words.
+  // TODO: Use a lookbehind assertion here, once there's wider browser support
   return originalString.replace(
-    /(?<=[A-Za-z])[A-Za-z]{2,}(?=[A-Za-z])/g,
-    (match) => scramble_string(match, rand)
+    /[A-Za-z][A-Za-z]{2,}(?=[A-Za-z])/g,
+    (match) => match[0] + scramble_string(match.slice(1), rand)
   );
 }
 
