@@ -1,7 +1,8 @@
 /**
  * Censor filter.
  *
- * @copyright 2002 by Joey Hess under the terms of the GNU GPL.
+ * @copyright (c) 2002 Joey Hess
+ * @license GPL-2+
  * @author Aaron Wells
  */
 

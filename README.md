@@ -305,7 +305,8 @@ console.log(upsidedown('Hello! How are you today?'));
 
 # Credits
 
-This is a port to JavaScript of the [debian `filters` package](git://git.joeyh.name/filters),
+This is a JavaScript port of the
+[debian `filters` package](https://packages.debian.org/jessie/games/filters),
 which is a collection of command-line jokey text transformation scripts. For
 example, the "pirate" command transforms text to sound like a pirate, and the
 "eleet" command transforms text so that it looks like it was written
@@ -314,8 +315,10 @@ in classic 90s 1337-speak.
 The text transformation algorithms used here are based on code cloned from
 this Git repo: `git://git.joeyh.name/filters`
 
-The filters were written by several different authors; see the `/originals`
-directory for copyright information on each of them.
+The filters were written by several different authors, and collected by
+[Joey Hess](http://joeyh.name/code/filters/) (who also wrote several of them!).
+See the `/originals` directory for copyright and license information on each of
+them.
 
 # Development
 

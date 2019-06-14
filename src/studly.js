@@ -2,7 +2,8 @@
  * stUdLy cAPs, after emacs studly.el -- the commented line is just
  * to remind diehards how it *should* be done ;)
  *
- * @copyright Nick Phillips <nwp@lemon-computing.com>
+ * @copyright (c) Nick Phillips <nwp@lemon-computing.com>
+ * @license "Just for reference, you may do whatever you like with this file."
  * @author Aaron Wells
  */
 

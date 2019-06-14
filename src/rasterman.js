@@ -1,7 +1,8 @@
 /**
  * Makes text look like it came from the keyboard of Carsten Haitzler.
  *
- * @copyright 1997 Zachary Beane
+ * @copyright (c) 1997 Zachary Beane
+ * @license GPL-2
  * @author Aaron Wells
  */
 const { getRandFn, tr } = require('./lib');

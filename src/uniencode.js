@@ -2,7 +2,8 @@
  * Use glorious unicode to the fullest possible extent. As seen previously in
  * many man pages.
  *
- * @copyright 2004 Joey Hess <joeyh@debian.org>
+ * @copyright (c) 2004 Joey Hess <joeyh@debian.org>
+ * @license GPL-2+
  * @author Aaron Wells
  */
 

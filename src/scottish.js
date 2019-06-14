@@ -2,7 +2,8 @@
  * Fake scottish (dwarven) accent filter, by Adam Borowski, inspired by the
  * character "Durkon" from Order of the Stick by Rich Burlew.  GPL, 2007
  *
- * @copyright 2007 Adam Borowski
+ * @copyright (c) 2007 Adam Borowski
+ * @license GPL-3+
  * @author Aaron Wells
  */
 

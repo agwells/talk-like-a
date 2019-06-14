@@ -1,7 +1,8 @@
 /**
  * Flips text upside down. Stand on your head and squint to read the output.
  *
- * @copyright 2000 Joey Hess <joey@kitenet.net>
+ * @copyright (c) 2000 Joey Hess <joey@kitenet.net>
+ * @license GPL-2+
  * @author Aaron Wells
  */
 const tr = require('./lib').tr;

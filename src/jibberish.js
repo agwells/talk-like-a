@@ -1,6 +1,8 @@
 /**
  * jibberish -- run filters in random order
  *
+ * @copyright (c) 1999 Joey Hess
+ * @license GPL-2+
  * @author Aaron Wells
  */
 const { getRandFn } = require('./lib');

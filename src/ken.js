@@ -6,7 +6,9 @@
  * ken is named after Ken the Chirpy Cockney Character from the Viz Comic (tm),
  * who speaks somewhat like that.
  *
- * @author Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
+ * @copyright (c) Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
+ * @copyright (c) 2019 Aaron Wells (JavaScript port)
+ * @license GPL-2+
  * @author Aaron Wells
  */
 

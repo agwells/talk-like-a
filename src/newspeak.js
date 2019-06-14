@@ -16,7 +16,8 @@
  *	improvements to this code are more than welcome.
  *	Hail Big Brother!
  *
- * @copyright 1991 Jamie Zawinski <jwz@jwz.org>.
+ * @copyright 1991 Jamie Zawinski <jwz@jwz.org>
+ * @license MIT-like
  * @author Aaron Wells
  */
 const { sameCapReplacer: CAP, sameCap, simuLex } = require('./lib');

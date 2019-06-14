@@ -1,7 +1,9 @@
 /**
  * Hillbilly text filter.
  *
- * @author Duane Paulson <ci922@cleveland.freenet.edu> "dap"
+ * @copyright (c) 1993 Duane Paulson <ci922@cleveland.freenet.edu> "dap"
+ * @copyright (c) 2019 Aaron Wells (JavaScript port)
+ * @license GPL-2+
  * @author Aaron Wells
  */
 const sameCapReplacer = require('./lib').sameCapReplacer;

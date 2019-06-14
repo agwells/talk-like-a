@@ -4,7 +4,8 @@
  *
  *	Reproduction permitted so long as this notice is retained.
  *
- * @copyright 1986 by Daniel Klein.
+ * @copyright (c) 1986 Daniel Klein.
+ * @license GPL
  * @author Aaron Wells
  */
 const { simuLex, sameCap, sameCapReplacer } = require('./lib');

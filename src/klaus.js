@@ -1,7 +1,9 @@
 /**
  * Generates text with a bad German accent.
  *
- * @copyright 1989 John Sparks
+ * @copyright (c) 1989 John Sparks
+ * @copyright (c) 2019 Aaron Wells (JavaScript port)
+ * @license GPL-2+
  * @author Aaron Wells
  */
 const simuLex = require('./lib').simuLex;

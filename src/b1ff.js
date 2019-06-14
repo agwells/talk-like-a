@@ -1,7 +1,8 @@
 /**
  * B1FF filter.
  *
- * @copyright 1999 by Joey Hess under the terms of the GNU GPL.
+ * @copyright (c) 1999 Joey Hess
+ * @license GPL-2+
  * @author Aaron Wells
  */
 

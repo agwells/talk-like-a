@@ -1,8 +1,8 @@
 /**
  * Elmer Fudd
  *
- * @copyright 2001 GPL by Joey Hess
- * @author Joey Hess <joey@kitenet.net>
+ * @copyright (c) 2001 Joey Hess
+ * @license GPL-2+
  * @author Aaron Wells
  */
 

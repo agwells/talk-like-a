@@ -4,7 +4,8 @@
  *
  * Wiped out text like can be found in nethack.
  *
- * @copyright 2004 G�kan Seng� <gurkan@linuks.mine.nu>
+ * @copyright (c) 2004 G�kan Seng� <gurkan@linuks.mine.nu>
+ * @license GPL-2
  * @author Aaron Wells
  */
 const getRandFn = require('./lib').getRandFn;

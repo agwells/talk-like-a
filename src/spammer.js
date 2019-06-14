@@ -6,7 +6,8 @@
  *
  * Licensed under the GPL.
  *
- * @copyright 2002 Joey Hess <joeyh@debian.org>
+ * @copyright (c) 2002 Joey Hess <joeyh@debian.org>
+ * @license GPL-2+
  * @author Aaron Wells
  */
 const { getRandFn } = require('./lib');

@@ -3,7 +3,8 @@
  * and output the result. Non-word (that is, non-alphabetical) characters, and
  * the first and last letters of each word, are left alone.
  *
- * @copyright 2009-07-11 Andrew J. Buehler.
+ * @copyright (c) 2009-07-11 Andrew J. Buehler.
+ * @license GPL-3+
  * @author Aaron Wells
  *
  *   This program is free software: you can redistribute it and/or modify

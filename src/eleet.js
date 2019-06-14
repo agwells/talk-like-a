@@ -3,7 +3,8 @@
  *
  * K3wl hacker slang
  *
- * @copyright 1999, 2002 by Joey Hess under the terms of the GNU GPL.
+ * @copyright (c) 1999, 2002 Joey Hess
+ * @license GPL-2+
  * @author Aaron Wells
  */
 const { sameCapReplacer, tr } = require('./lib');

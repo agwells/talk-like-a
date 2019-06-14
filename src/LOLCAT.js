@@ -3,7 +3,8 @@
  *
  * As seen in internet gifs everywhere.
  *
- * @copyright 2013 by Joey Hess under the terms of the GNU GPL.
+ * @copyright (c) 2013 Joey Hess
+ * @licens GPL-2+
  * @author Aaron Wells
  */
 

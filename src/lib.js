@@ -1,7 +1,7 @@
 /**
  * Miscellaneous utility functions
  *
- * @copyright Aaron Wells 2019
+ * @copyright (c) Aaron Wells 2019
  * @author Aaron Wells
  */
 
