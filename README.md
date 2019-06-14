@@ -1,7 +1,7 @@
 # talk-like-a
 
-Transform normal English text in various funny ways. (This is a JavaScript port
-of the debian `filters` package.)
+Transform normal English text in various funny ways.
+([Demo](https://agwells.github.io/talk-like-a/))
 
 ## Table of Contents
 

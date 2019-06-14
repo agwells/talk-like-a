@@ -2,6 +2,7 @@
   "name": "talk-like-a",
   "version": "1.0.1",
   "description": "Transform normal English text in various funny ways",
+  "homepage": "https://agwells.github.io/talk-like-a",
   "files": [
     "/src/",
     "/original/filters.6",
