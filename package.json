@@ -8,6 +8,15 @@
     "/original/filters.6",
     "/original/debian/copyright"
   ],
+  "keywords": [
+    "humor",
+    "pirate",
+    "chef",
+    "b1ff",
+    "scramble",
+    "filters",
+    "talkfilters"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "jest --watch './tests/index.test.js'",
