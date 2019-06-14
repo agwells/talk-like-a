@@ -10,7 +10,7 @@ const tr = require('./lib').tr;
  *
  * @param {string} initialString
  */
-function upside_down(initialString) {
+function upsidedown(initialString) {
   return tr(
     // TODO: Redundantly split and re-join, because tr's going to do
     // that too.
@@ -30,4 +30,4 @@ function upside_down(initialString) {
   ).replace(/k/g, '>|');
 }
 
-module.exports = { upside_down };
+module.exports = { upsidedown };

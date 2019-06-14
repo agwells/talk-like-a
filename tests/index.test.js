@@ -25,7 +25,7 @@ const filters = [
   'spammer',
   'studly',
   'uniencode',
-  'upside_down',
+  'upsidedown',
 ];
 
 describe.each(filters)('%s', (filterName) => {

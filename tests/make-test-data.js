@@ -38,7 +38,7 @@ const filters = [
   'spammer',
   'studly',
   'uniencode',
-  'upside_down',
+  'upsidedown',
 ];
 
 const sampleTextFiles = ['moby-dick-chapter-1.txt', 'manpage.txt'];

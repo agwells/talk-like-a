@@ -21,5 +21,5 @@ module.exports = {
   spammer: require('./src/spammer')['spammer'],
   studly: require('./src/studly')['studly'],
   uniencode: require('./src/uniencode')['uniencode'],
-  upside_down: require('./src/upside_down')['upside_down'],
+  upsidedown: require('./src/upsidedown')['upsidedown'],
 };
