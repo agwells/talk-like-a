@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/talk-like-a/static/css/main.34de6062.chunk.css",
+    "main.js": "/talk-like-a/static/js/main.5d52f27b.chunk.js",
+    "main.js.map": "/talk-like-a/static/js/main.5d52f27b.chunk.js.map",
+    "runtime~main.js": "/talk-like-a/static/js/runtime~main.41073ffa.js",
+    "runtime~main.js.map": "/talk-like-a/static/js/runtime~main.41073ffa.js.map",
+    "static/js/2.99071623.chunk.js": "/talk-like-a/static/js/2.99071623.chunk.js",
+    "static/js/2.99071623.chunk.js.map": "/talk-like-a/static/js/2.99071623.chunk.js.map",
+    "index.html": "/talk-like-a/index.html",
+    "precache-manifest.e1caeab657dca466030e2184dbf72f74.js": "/talk-like-a/precache-manifest.e1caeab657dca466030e2184dbf72f74.js",
+    "service-worker.js": "/talk-like-a/service-worker.js",
+    "static/css/main.34de6062.chunk.css.map": "/talk-like-a/static/css/main.34de6062.chunk.css.map"
+  }
+}
