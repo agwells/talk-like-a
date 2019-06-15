@@ -13,7 +13,7 @@ const tr = require('./lib').tr;
  */
 function upsidedown(initialString) {
   return tr(
-    // TODO: Redundantly split and re-join, because tr's going to do
+    // TODO: This is a redundant split and re-join, because tr's going to do
     // that too.
     initialString
       .toLowerCase()
@@ -26,8 +26,8 @@ function upsidedown(initialString) {
       )
       .join('\n')
       .replace(/"/g, `''`),
-    "[]{}<>()abcdefghijklmnopqrstuvwxy123456789,!.?`'",
-    "[]}{><)(eq)paj6y!fk7wuodbjsfn^mxhl2Eh59L86`i'%,,"
+    '[]{}<>()' + 'abcdefghijklmnopqrstuvwxy' + '123456789' + ",!.?`'",
+    '][}{><)(' + 'eq)paj6y!fk7wuodbjsfn^mxh' + 'l2Eh59L86' + "`i'%,,"
   ).replace(/k/g, '>|');
 }
 
