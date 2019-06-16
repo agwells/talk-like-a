@@ -1,53 +1,91 @@
 /**
- * nethackify
- * tries to write text ala nethack
+ * Nethackify
  *
- * Wiped out text like can be found in nethack.
+ * Makes text look like a partially rubbed out engraving in Nethack.
  *
- * @copyright (c) 2004 G�kan Seng� <gurkan@linuks.mine.nu>
+ * @copyright (c) 2019 Aaron Wells
  * @license GPL-2
  * @author Aaron Wells
  */
 const getRandFn = require('./lib').getRandFn;
 
-const NORMAL__ = 'ABCDEFGHIKLMNOPQRTUVWZbdeghjklmnoqwy:;01678';
-const NETHACK1 = '^P(|||C||||||CFCP|J/V/|cccni||nrccvv.,C|o/3';
-const NETHACK2 = '?b?)F-(-?<_??(?(F???/??|??????r???????(???o';
-const NETHACK3 = ' [ [L       \\                              ';
-const NETHACK4 = '    [              \\                       ';
-const NETHACK5 = '    _               \\                      ';
-
+const rubouts = {
+  A: '^',
+  B: 'Pb[',
+  C: '(',
+  D: '|)[',
+  E: '|FL[_',
+  F: '|-',
+  G: 'C(',
+  H: '|-',
+  I: '|',
+  K: '|<',
+  L: '|_',
+  M: '|',
+  N: '|\\',
+  O: 'C(',
+  P: 'F',
+  Q: 'C(',
+  R: 'PF',
+  T: '|',
+  U: 'J',
+  V: '/\\',
+  W: 'V/\\',
+  Z: '/',
+  b: '|',
+  d: 'c|',
+  e: 'c',
+  g: 'c',
+  h: 'n',
+  j: 'i',
+  k: '|',
+  l: '|',
+  m: 'nr',
+  n: 'r',
+  o: 'c',
+  q: 'c',
+  w: 'v',
+  y: 'v',
+  ':': '.',
+  ';': ',:',
+  ',': '.',
+  '=': '-',
+  '+': '-|',
+  '*': '+',
+  '@': '0',
+  '0': 'C(',
+  '1': '|',
+  '6': 'o',
+  '7': '/',
+  '8': '3o',
+};
 /**
  *
  * @param {string} str
  */
 function nethackify(str) {
-  const modStr = str.split('');
-  const myrandom = getRandFn(1);
-  for (let i = 0; i < modStr.length; i++) {
-    for (let c = 0; c < NORMAL__.length; c++) {
-      if (NORMAL__[c] === modStr[i]) {
-        switch (myrandom() % 5) {
-          case 4:
-            if (NETHACK5[c] != ' ') modStr[i] = NETHACK5[c];
-          case 3:
-            if (NETHACK4[c] != ' ') modStr[i] = NETHACK4[c];
-          case 2:
-            if (NETHACK3[c] != ' ') modStr[i] = NETHACK3[c];
-            break;
-          case 1:
-            if (NETHACK2[c] != ' ') modStr[i] = NETHACK2[c];
-            break;
-          case 0:
-            modStr[i] = NETHACK1[c];
-            break;
-          default:
-            break;
+  const rand = getRandFn(1);
+  return str
+    .split('')
+    .map(function(cOrig) {
+      let c = cOrig;
+      while (c !== ' ' && rand() % 2 > 0) {
+        if (c in rubouts) {
+          const options = rubouts[c];
+          if (options.length === 1) {
+            c = options[0];
+          } else {
+            c = options[rand() % options.length];
+          }
+        } else if ("?.,'`-|_".includes(c)) {
+          c === ' ';
+        } else {
+          c === '?';
         }
       }
-    }
-  }
-  return modStr.join('');
+      return c;
+    })
+    .join('');
 }
 
 module.exports = { nethackify };
