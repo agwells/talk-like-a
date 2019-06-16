@@ -9,7 +9,7 @@
  */
 const getRandFn = require('./lib').getRandFn;
 
-const rubouts = {
+const erasures = {
   A: '^',
   B: 'Pb[',
   C: '(',
@@ -46,6 +46,11 @@ const rubouts = {
   q: 'c',
   w: 'v',
   y: 'v',
+  '0': 'C(',
+  '1': '|',
+  '6': 'o',
+  '7': '/',
+  '8': '3o',
   ':': '.',
   ';': ',:',
   ',': '.',
@@ -53,39 +58,38 @@ const rubouts = {
   '+': '-|',
   '*': '+',
   '@': '0',
-  '0': 'C(',
-  '1': '|',
-  '6': 'o',
-  '7': '/',
-  '8': '3o',
+  '?': ' ',
+  '.': ' ',
+  "'": ' ',
+  '`': ' ',
+  '-': ' ',
+  '|': ' ',
+  _: ' ',
 };
+
 /**
  *
  * @param {string} str
  */
 function nethackify(str) {
   const rand = getRandFn(1);
-  return str
-    .split('')
-    .map(function(cOrig) {
-      let c = cOrig;
-      while (c !== ' ' && rand() % 2 > 0) {
-        if (c in rubouts) {
-          const options = rubouts[c];
-          if (options.length === 1) {
-            c = options[0];
-          } else {
-            c = options[rand() % options.length];
-          }
-        } else if ("?.,'`-|_".includes(c)) {
-          c === ' ';
-        } else {
-          c === '?';
-        }
+  const modStr = str.split('');
+  for (let i = 0; i < Math.floor(str.length / 4); i++) {
+    let n = rand() % str.length;
+    let c = modStr[n];
+    if (c in erasures) {
+      const options = erasures[c];
+      if (options.length === 1) {
+        c = options[0];
+      } else {
+        c = options[rand() % options.length];
       }
-      return c;
-    })
-    .join('');
+    } else if (!/\s/.test(c)) {
+      c = '?';
+    }
+    modStr[n] = c;
+  }
+  return modStr.join('');
 }
 
 module.exports = { nethackify };

@@ -190,7 +190,7 @@ Talk like a wiped out text in nethack.
 ```js
 const { nethackify } = require('talk-like-a');
 console.log(nethackify('Hello! How are you today?'));
-// |c||c! Hcv arc ycu tc|av?'
+// Hello! Hcw  ?e ycu tocay?'
 ```
 
 ### newspeak()
