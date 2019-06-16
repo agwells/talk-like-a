@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c8702084893ab410a435460c925a46f3",
+    "revision": "9f4161553386e6379d0a2e71d4cbe2a6",
     "url": "/talk-like-a/index.html"
   },
   {
-    "revision": "5573c5aecb9131cd3a88",
+    "revision": "a2b45c46d60328ea66cf",
     "url": "/talk-like-a/static/css/main.34de6062.chunk.css"
   },
   {
-    "revision": "36b3a47872e26ac28940",
-    "url": "/talk-like-a/static/js/2.99071623.chunk.js"
+    "revision": "92768385dfbdeac14cb1",
+    "url": "/talk-like-a/static/js/2.cd5e970e.chunk.js"
   },
   {
-    "revision": "5573c5aecb9131cd3a88",
-    "url": "/talk-like-a/static/js/main.5d52f27b.chunk.js"
+    "revision": "a2b45c46d60328ea66cf",
+    "url": "/talk-like-a/static/js/main.ad201a0e.chunk.js"
   },
   {
     "revision": "6076b8f456d86de36f47",
