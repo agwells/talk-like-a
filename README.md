@@ -190,7 +190,7 @@ Talk like a wiped out text in nethack.
 ```js
 const { nethackify } = require('talk-like-a');
 console.log(nethackify('Hello! How are you today?'));
-// -e?l?! H?v ar? ??u today?
+// |c||c! Hcv arc ycu tc|av?'
 ```
 
 ### newspeak()
@@ -228,7 +228,7 @@ console.log(pirate('What are you up to today? I have nothing going on.'));
 
 ### rasterman()
 
-Talk like [Carsten Haitzler](https://en.wikipedia.org/wiki/Carsten_Haitzler).
+Talk like a busy open-source software developer.
 
 ```js
 const { rasterman } = require('talk-like-a');

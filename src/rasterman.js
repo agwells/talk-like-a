@@ -5,10 +5,9 @@
  * @license GPL-2
  * @author Aaron Wells
  */
-const { getRandFn, tr } = require('./lib');
+const { getRandFn } = require('./lib');
 
 const $row = '!qwertyuiop!asdfghjkl!zxcvbnm!';
-const $row_array = $row.split('');
 
 /**
  *
@@ -70,8 +69,8 @@ function rasterman(originalString) {
     }
 
     let $i = $row.indexOf($let);
-    let $before = $row_array[$i - 1];
-    let $after = $row_array[$i + 1];
+    let $before = $row[$i - 1];
+    let $after = $row[$i + 1];
 
     if ($before === '!' || (fakeRand() < fakeRand() && $after !== '!')) {
       return $after;
