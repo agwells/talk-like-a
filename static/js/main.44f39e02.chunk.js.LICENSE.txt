@@ -1,0 +1,244 @@
+/**
+ *	Lex filter to transform plain English into Brooklyn English.
+ *	No racial or societal slurs are intended.  For amusement only.
+ *
+ *	Reproduction permitted so long as this notice is retained.
+ *
+ * @copyright (c) 1986 Daniel Klein.
+ * @license GPL
+ * @author Aaron Wells
+ */
+
+/**
+ *	newspeak.l, version 1.1.
+ *	Lex filter to transform plain English into NewSpeak.
+ *	Copyright (c) 1991 Jamie Zawinski <jwz@jwz.org>.
+ *
+ *      Permission to use, copy, modify, distribute, and sell this
+ *      software and its documentation for any purpose is hereby granted
+ *      without fee, provided that the above copyright notice appear in
+ *      all copies and that both that copyright notice and this
+ *      permission notice appear in supporting documentation.  No
+ *      representations are made about the suitability of this software
+ *      for any purpose.  It is provided "as is" without express or
+ *      implied warranty.
+ *
+ *	There are some design notes near the end.  Suggestions and
+ *	improvements to this code are more than welcome.
+ *	Hail Big Brother!
+ *
+ * @copyright 1991 Jamie Zawinski <jwz@jwz.org>
+ * @license MIT-like
+ * @author Aaron Wells
+ */
+
+/**
+ * B1FF filter.
+ *
+ * @copyright (c) 1999 Joey Hess
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Censor filter.
+ *
+ * @copyright (c) 2002 Joey Hess
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Eleet filter
+ *
+ * K3wl hacker slang
+ *
+ * @copyright (c) 1999, 2002 Joey Hess
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Elmer Fudd
+ *
+ * @copyright (c) 2001 Joey Hess
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Flips text upside down. Stand on your head and squint to read the output.
+ *
+ * @copyright (c) 2000 Joey Hess <joey@kitenet.net>
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Generates text with a bad German accent.
+ *
+ * @copyright (c) 1989 John Sparks
+ * @copyright (c) 2019 Aaron Wells (JavaScript port)
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Hillbilly text filter.
+ *
+ * @copyright (c) 1993 Duane Paulson <ci922@cleveland.freenet.edu> "dap"
+ * @copyright (c) 2019 Aaron Wells (JavaScript port)
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Lex filter to transform plain English into Cockney English.
+ * No racial or societal slurs are intended.  For amusement only.
+ *
+ * Reproduction permitted so long as this notice is retained.
+ *
+ * @copyright (c) 1986 Daniel Klein.
+ * @license GPL
+ * @author Aaron Wells
+ */
+
+/**
+ * Makes text look like it came from the keyboard of Carsten Haitzler.
+ *
+ * @copyright (c) 1997 Zachary Beane
+ * @license GPL-2
+ * @author Aaron Wells
+ */
+
+/**
+ * Nethackify
+ *
+ * Makes text look like a partially rubbed out engraving in Nethack.
+ *
+ * @copyright (c) 2019 Aaron Wells
+ * @license GPL-2
+ * @author Aaron Wells
+ */
+
+/**
+ * Scramble the "inner" letters of each word in the input into a random order,
+ * and output the result. Non-word (that is, non-alphabetical) characters, and
+ * the first and last letters of each word, are left alone.
+ *
+ * @copyright (c) 2009-07-11 Andrew J. Buehler.
+ * @license GPL-3+
+ * @author Aaron Wells
+ *
+ *   This program is free software: you can redistribute it and/or modify
+ *   it under the terms of the GNU General Public License as published by
+ *   the Free Software Foundation, either version 3 of the License, or
+ *   (at your option) any later version.
+ *   This program is distributed in the hope that it will be useful,
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *   GNU General Public License for more details.
+ *   You should have received a copy of the GNU General Public License
+ *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ * Swedish Chef filter. Bork Bork Bork!
+ *
+ * @copyright (c) 1999 Joey Hess
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Talk like a pirate
+ *
+ * @copyright (c) 2003 Dougal Campbell
+ * @license GPL-2
+ * @author Aaron Wells
+ */
+
+/**
+ * Talk like a spammer.
+ *
+ * Doesn't always generate proper engrish, but then neither do
+ * spammers.
+ *
+ * Licensed under the GPL.
+ *
+ * @copyright (c) 2002 Joey Hess <joeyh@debian.org>
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * This program places a very cute (and familiar to FurryMuck fans)
+ * accent to any text file.
+ *
+ * @copyright (c) 1994 Brent E. Edwards
+ * @license GPL-2
+ * @author Aaron Wells
+ */
+
+/**
+ * Use glorious unicode to the fullest possible extent. As seen previously in
+ * many man pages.
+ *
+ * @copyright (c) 2004 Joey Hess <joeyh@debian.org>
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * jibberish -- run filters in random order
+ *
+ * @copyright (c) 1999 Joey Hess
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * ken:
+ * will turn English into Cockney, featuring (dubious) rhyming slang for a lot
+ * of computer terminology.
+ *
+ * ken is named after Ken the Chirpy Cockney Character from the Viz Comic (tm),
+ * who speaks somewhat like that.
+ *
+ * @copyright (c) Stephen K Mulrine <smulrine%cs.strath.ac.uk@nsfnet-relay.ac.uk>
+ * @copyright (c) 2019 Aaron Wells (JavaScript port)
+ * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * lolcatz filtur
+ *
+ * As seen in internet gifs everywhere.
+ *
+ * @copyright (c) 2013 Joey Hess
+ * @licens GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * stUdLy cAPs, after emacs studly.el -- the commented line is just
+ * to remind diehards how it *should* be done ;)
+ *
+ * @copyright (c) Nick Phillips <nwp@lemon-computing.com>
+ * @license "Just for reference, you may do whatever you like with this file."
+ * @author Aaron Wells
+ */
+
+/**
+ * translate from and to KennySpeak
+ * Licensed unter the Artistic License:
+ * http://www.perl.com/language/misc/Artistic.html
+ *
+ * @copyright (c) 2001, 2002 Christian Garbs <mitch@cgarbs.de>, http://www.cgarbs.de
+ *                  Alan Eldridge <alane@geeksrus.net>
+ * @author KennySpeak invented by Kohan Ikin <syneryder@namesuppressed.com>
+ *                        http://www.namesuppressed.com/kenny/
+ * @license Artistic
+ * @author Aaron Wells
+ */
