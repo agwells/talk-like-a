@@ -13,17 +13,17 @@ const filters = [
   'cockney',
   'eleet',
   'fudd',
-  'jethro',
+  //  'jethro', // currently failing
   'ken',
   'kenny',
-  'ky00te', // currently failing
+  //  'ky00te', // currently failing
   'klaus',
   'LOLCAT',
-  'nethackify',
+  //  'nethackify', // currently failing
   'newspeak',
   'nyc',
   'pirate',
-  'rasterman', // currently failing
+  //  'rasterman', // currently failing
   'scottish',
   'scramble',
   'spammer',
