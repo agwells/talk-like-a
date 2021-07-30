@@ -1,6 +1,6 @@
-const fs = require('fs');
-const path = require('path');
-const child_process = require('child_process');
+import fs from 'fs';
+import path from 'path';
+import child_process from 'child_process';
 
 /**
  * This script runs our test corpus through each of the filters from the
@@ -44,10 +44,13 @@ const filters = [
 const sampleTextFiles = ['moby-dick-chapter-1.txt', 'manpage.txt'];
 
 sampleTextFiles.forEach((filename) => {
-  const sampleText = fs.readFileSync(path.join(__dirname, filename), {
-    encoding: 'utf8',
-    flag: 'r',
-  });
+  const sampleText = fs.readFileSync(
+    path.join(__dirname, 'test-fixtures', filename),
+    {
+      encoding: 'utf8',
+      flag: 'r',
+    }
+  );
   console.log(filename);
   Promise.all(
     filters.map(async function (filterName) {
@@ -56,8 +59,6 @@ sampleTextFiles.forEach((filename) => {
       const result1 = child_process.execSync(filterCommand, {
         input: sampleText,
       });
-      // await new Promise(function(resolve) {
-      //   setTimeout(resolve, 2000);
       // });
       const result2 = child_process.execSync(filterCommand, {
         input: sampleText,
@@ -68,7 +69,11 @@ sampleTextFiles.forEach((filename) => {
         );
       } else {
         fs.writeFileSync(
-          path.join(__dirname, `${filename}.${filterName}.txt`),
+          path.join(
+            __dirname,
+            'test-fixtures',
+            `${filename}.${filterName}.txt`
+          ),
           result1,
           { encoding: 'utf8' }
         );

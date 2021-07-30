@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 /**
  * Test if the output of the JS filters is identical to the output of the
@@ -34,13 +34,16 @@ const filters = [
 
 describe.each(filters)('%s', (filterName) => {
   test.each(sampleTexts)('%s', (filename) => {
-    const originalText = fs.readFileSync(path.join(__dirname, filename), {
-      encoding: 'UTF8',
-    });
-    const expectedTransform = fs.readFileSync(
-      path.join(__dirname, `${filename}.${filterName}.txt`),
+    const originalText = fs.readFileSync(
+      path.join(__dirname, 'test-fixtures', filename),
       {
-        encoding: 'UTF8',
+        encoding: 'utf8',
+      }
+    );
+    const expectedTransform = fs.readFileSync(
+      path.join(__dirname, 'test-fixtures', `${filename}.${filterName}.txt`),
+      {
+        encoding: 'utf8',
       }
     );
     const filterFn = require(`../src/${filterName}`);

@@ -1,5 +1,5 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
 const sampleTexts = ['moby-dick-chapter-1.txt', 'manpage.txt'];
 const filters = [
@@ -30,9 +30,12 @@ const filters = [
 
 describe.each(filters)('%s', (filterName) => {
   test.each(sampleTexts)('%s', (filename) => {
-    const originalText = fs.readFileSync(path.join(__dirname, filename), {
-      encoding: 'UTF8',
-    });
+    const originalText = fs.readFileSync(
+      path.join(__dirname, 'test-fixtures', filename),
+      {
+        encoding: 'utf8',
+      }
+    );
     const filterFn = require(`../src/${filterName}`);
     const transformedText = filterFn[filterName](originalText);
 
