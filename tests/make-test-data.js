@@ -50,7 +50,7 @@ sampleTextFiles.forEach((filename) => {
   });
   console.log(filename);
   Promise.all(
-    filters.map(async function(filterName) {
+    filters.map(async function (filterName) {
       let filterCommand = `./original/${filterName}`;
       console.log(`  ${filterName}...`);
       const result1 = child_process.execSync(filterCommand, {

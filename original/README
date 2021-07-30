@@ -14,93 +14,92 @@ missed.
 
 Here are the results of my investigations of how the filters work:
 
-eleet: 
-	This is the simplest filter to figure out. The letters a-z of
-	the alphabet are replaced with the following letters: 
-		4 b c d 3 f g h 1 j |< l /\/\ /\/ 0 p q r 5 + u \/ \/\/ >< y z
-        Note that the equivalent translation is done on upper-case letters.
+eleet:
+This is the simplest filter to figure out. The letters a-z of
+the alphabet are replaced with the following letters:
+4 b c d 3 f g h 1 j |< l /\/\ /\/ 0 p q r 5 + u \/ \/\/ >< y z
+Note that the equivalent translation is done on upper-case letters.
 
 fudd:
 
-	This one is trivial too. A few transpositions happen differently if
-	the letter is at the end of the word or not, and I think I found
-	all the transpositions with only a few paragraphs of sample output.
-	The only weird thing is that 'n.' is changed to "n, uh-hah-hah-hah."
-	(Works well with sentances ending in "gun." ..)
+    This one is trivial too. A few transpositions happen differently if
+    the letter is at the end of the word or not, and I think I found
+    all the transpositions with only a few paragraphs of sample output.
+    The only weird thing is that 'n.' is changed to "n, uh-hah-hah-hah."
+    (Works well with sentances ending in "gun." ..)
 
 chef:
-	Personally my favorite filter. This took a bit of work to figure
-	out, and I doubt I have everything correct. Note that due to a bug
-	or an odd feature of the original program, it doesn't seem to think
-	that the first letter of the first word is really the first letter 
-	of a word and so some of the words below don't trigger for that first
-	word. I did not emulate this behavior because I think it's probably a
-	bug.
+Personally my favorite filter. This took a bit of work to figure
+out, and I doubt I have everything correct. Note that due to a bug
+or an odd feature of the original program, it doesn't seem to think
+that the first letter of the first word is really the first letter
+of a word and so some of the words below don't trigger for that first
+word. I did not emulate this behavior because I think it's probably a
+bug.
 
-	The word "bork" is never changed, no matter what any of these 
-	rules may say. Neither is "Bork".
+    The word "bork" is never changed, no matter what any of these
+    rules may say. Neither is "Bork".
 
-	The following translations only happen to letters that are the first
-	letter of a word of at least 2 letters in size:
-		o -> oo
-		O -> Oo
+    The following translations only happen to letters that are the first
+    letter of a word of at least 2 letters in size:
+    	o -> oo
+    	O -> Oo
 
-	These happen to letters that are not the last letter of a word:
-		a -> e
-		A -> e
+    These happen to letters that are not the last letter of a word:
+    	a -> e
+    	A -> e
 
-	These translations only happen if the letter is not the first letter
-	of a word:
-		f -> ff
-		i -> ee (but only the first `i' per word)
-		o -> u
-		u -> oo
+    These translations only happen if the letter is not the first letter
+    of a word:
+    	f -> ff
+    	i -> ee (but only the first `i' per word)
+    	o -> u
+    	u -> oo
 
-	These translations always happen:
-		v -> f
-		V -> F
-		w -> v
-		W -> V
-		an -> un
-		An -> Un
-		au -> oo
-		Au -> Oo
+    These translations always happen:
+    	v -> f
+    	V -> F
+    	w -> v
+    	W -> V
+    	an -> un
+    	An -> Un
+    	au -> oo
+    	Au -> Oo
 
-	Any occurrence of "e" at the end of a word is changed to "e-a".
-	
-	Any occurrence of "e" and the beginning of a word is changed to "i".
-	Same with capitals.
+    Any occurrence of "e" at the end of a word is changed to "e-a".
 
-	Any occurrence of "the" is changed to "zee", any occurrence of
-	"The", to "Zee".
-	
-	Any occurrence of "tion" in a word, to "shun".
+    Any occurrence of "e" and the beginning of a word is changed to "i".
+    Same with capitals.
 
-	Any "th" at the end of a word is changed to "t".
-	
-	Any "en" at the end of a word is changed to "ee".
+    Any occurrence of "the" is changed to "zee", any occurrence of
+    "The", to "Zee".
 
-	Any "ow" at the end of a word is changed to "oo".
+    Any occurrence of "tion" in a word, to "shun".
 
-	And of course, after any `.', `?', or `!' that is at the end of a
-	line, the Chef prints out a new line, and then the famous
-	"Bork Bork Bork!", and then another newline.
+    Any "th" at the end of a word is changed to "t".
 
-	Known bugs in this implementation:
-		- says "frunch", not "french".
-		- still quite buggy in general.
+    Any "en" at the end of a word is changed to "ee".
+
+    Any "ow" at the end of a word is changed to "oo".
+
+    And of course, after any `.', `?', or `!' that is at the end of a
+    line, the Chef prints out a new line, and then the famous
+    "Bork Bork Bork!", and then another newline.
+
+    Known bugs in this implementation:
+    	- says "frunch", not "french".
+    	- still quite buggy in general.
 
 b1ff:
-	Unlike the other filters, b1ff does not try to be an exact duplicate
-	of its predecessor.
-	
-	After upper-casing everything, b1ff does some word and sub-word
-	substitutions, most of them misspellings.
+Unlike the other filters, b1ff does not try to be an exact duplicate
+of its predecessor.
+After upper-casing everything, b1ff does some word and sub-word
+substitutions, most of them misspellings.
 
-	B1ff also changes punctuation - All commas become periods; all
-	semicolons, commas. Question and exclamation marks are changed to
-	things like "!!!!1!" and "?!?!?!". It looks like the original filter
-	decided how long a sequence to print based on the text input before
-	the end of sentence. I took a simpler route and just randomized it.
+    B1ff also changes punctuation - All commas become periods; all
+    semicolons, commas. Question and exclamation marks are changed to
+    things like "!!!!1!" and "?!?!?!". It looks like the original filter
+    decided how long a sequence to print based on the text input before
+    the end of sentence. I took a simpler route and just randomized it.
 
 Collected and written by Joey Hess <id@joeyh.name>

@@ -18,12 +18,7 @@ function upsidedown(initialString) {
     initialString
       .toLowerCase()
       .split('\n')
-      .map((line) =>
-        line
-          .split('')
-          .reverse()
-          .join('')
-      )
+      .map((line) => line.split('').reverse().join(''))
       .join('\n')
       .replace(/"/g, `''`),
     '[]{}<>()' + 'abcdefghijklmnopqrstuvwxy' + '123456789' + ",!.?`'",

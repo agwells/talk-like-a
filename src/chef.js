@@ -20,7 +20,7 @@ function chef(initialString) {
 
       // // Change 'e' at the end of a word to 'e-a', but don't mess with the word
       // // "the".
-      .replace(/(\w+)e(\b)/g, function(whole, p1, p2) {
+      .replace(/(\w+)e(\b)/g, function (whole, p1, p2) {
         if (p1.toLowerCase() === 'th') {
           return whole;
         } else {

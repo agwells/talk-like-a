@@ -67,7 +67,7 @@ function sameCapReplacer(replacement) {
     replacement[0].toLowerCase() + replacement.slice(1);
   const uppercaseReplacement =
     replacement[0].toUpperCase() + replacement.slice(1);
-  return function(match) {
+  return function (match) {
     if (STARTS_WITH_UPPER.test(match)) {
       return uppercaseReplacement;
     } else {
@@ -100,7 +100,7 @@ function simuLex(originalString, rules, extraUtils = {}) {
     // If multiple rules match, use the one with the longest matching text.
     // If there's a tie for longest matching text, use the rule that appears
     // higher up in the list of rules.
-    rules.forEach(function([regex, replacer]) {
+    rules.forEach(function ([regex, replacer]) {
       const matches = remaining.match(regex);
       if (matches && matches[0].length > bestMatchLength) {
         bestMatch = { match: matches[0], replacer };
@@ -126,8 +126,8 @@ simuLex.preprocessRules =
    * @param {[string, (match: string, util: any) => string][]} rawRules
    * @returns {[RegExp, (match: string, util: any) => string][]}
    */
-  function(rawRules) {
-    return rawRules.map(function([regex, replacer]) {
+  function (rawRules) {
+    return rawRules.map(function ([regex, replacer]) {
       return [new RegExp(`^${regex}`), replacer];
     });
   };

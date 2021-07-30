@@ -31,7 +31,7 @@ const EW = '[ \\t.,;!?$]';
  */
 function simpleSameCapReplacer(replacement) {
   const r = replacement.slice(1);
-  return function(match) {
+  return function (match) {
     return match[0] + r;
   };
 }
@@ -92,7 +92,7 @@ function nyc(originalString) {
   let count = 0;
   let which = 0;
 
-  const expletive = function() {
+  const expletive = function () {
     if (count++ % 4 === 0) {
       return [
         ' Okay?',

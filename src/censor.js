@@ -158,10 +158,19 @@ const censorRE = new RegExp(`\\b(${censorCombined})(ed)?`, 'ig');
 /**
  *
  * @param {string} originalString
+ * @param {string[]} [additionalWords]
  * @returns {string};
  */
-function censor(originalString) {
-  return originalString.replace(censorRE, 'CENSORED');
+function censor(originalString, additionalWords) {
+  const censoredString = originalString.replace(censorRE, 'CENSORED');
+  if (additionalWords) {
+    return censoredString.replace(
+      new RegExp(`\\b(${additionalWords.join('|')})(ed)?)`, 'ig'),
+      'CENSORED'
+    );
+  } else {
+    return censoredString;
+  }
 }
 
 module.exports = { censor };

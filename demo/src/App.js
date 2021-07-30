@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 // import "./App.css";
 // import { b1ff } from "talk-like-a/src/b1ff";
 // import { LOLCAT } from "talk-like-a/src/LOLCAT";
@@ -10,7 +10,7 @@ import React from "react";
 // import "talk-like-a/src/jethro";
 // import "talk-like-a/src/lib";
 // import { newspeak } from "talk-like-a/src/newspeak";
-import * as talkLike from "talk-like-a";
+import * as talkLike from 'talk-like-a';
 
 const filters = Object.keys(talkLike);
 
@@ -29,19 +29,19 @@ With many cheerful facts about the square of the hypotenuse.`
   const filter = talkLike[filterName];
 
   return (
-    <div className="App" style={{ margin: "5vh" }}>
+    <div className="App" style={{ margin: '5vh' }}>
       <header className="App-header">
         <h1>talk-like-a</h1>
-        <p>{filter("Transform plain English text in various comedic ways.")}</p>
+        <p>{filter('Transform plain English text in various comedic ways.')}</p>
         <ul>
           <li>
-            Github:{" "}
+            Github:{' '}
             <a href="https://github.com/agwells/talk-like-a">
               https://github.com/agwells/talk-like-a
             </a>
           </li>
           <li>
-            NPM:{" "}
+            NPM:{' '}
             <a href="https://www.npmjs.com/package/talk-like-a">
               https://www.npmjs.com/package/talk-like-a
             </a>
@@ -53,9 +53,9 @@ With many cheerful facts about the square of the hypotenuse.`
           <select
             autoFocus={true}
             value={filterName}
-            onChange={e => setFilterName(e.target.value)}
+            onChange={(e) => setFilterName(e.target.value)}
           >
-            {filters.map(filterOption => (
+            {filters.map((filterOption) => (
               <option key={filterOption} value={filterOption}>
                 {filterOption}
               </option>
@@ -67,7 +67,7 @@ With many cheerful facts about the square of the hypotenuse.`
             rows={4}
             cols={60}
             value={plainText}
-            onChange={e => setPlainText(e.target.value)}
+            onChange={(e) => setPlainText(e.target.value)}
           />
         </p>
         <pre>{filter(plainText)}</pre>
