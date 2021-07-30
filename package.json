@@ -4,7 +4,7 @@
   "description": "Transform normal English text in various funny ways",
   "homepage": "https://agwells.github.io/talk-like-a",
   "files": [
-    "/src/",
+    "/dist/",
     "/original/filters.6",
     "/original/debian/copyright"
   ],
@@ -17,13 +17,16 @@
     "filters",
     "talkfilters"
   ],
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest --watch './tests/index.test.ts'",
     "test:original": "jest --watch './tests/against-originals.test.ts'",
     "make-test-data": "$NODE ./tests/make-test-data.js",
     "compile-and-make-test-data": "make -C original clean && make -C original all && $NODE ./tests/make-test-data.js",
-    "clean": "make -C original clean"
+    "clean-originals": "make -C original clean",
+    "clean": "rm -Rf dist",
+    "build": "npm run clean && tsc && rm -Rf dist/tests"
   },
   "repository": {
     "type": "github",

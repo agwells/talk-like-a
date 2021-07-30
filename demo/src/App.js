@@ -1,15 +1,4 @@
 import React from 'react';
-// import "./App.css";
-// import { b1ff } from "talk-like-a/src/b1ff";
-// import { LOLCAT } from "talk-like-a/src/LOLCAT";
-// import { censor } from "talk-like-a/src/censor";
-// import "talk-like-a/src/chef";
-// import "talk-like-a/src/cockney";
-// import "talk-like-a/src/eleet";
-// import "talk-like-a/src/fudd";
-// import "talk-like-a/src/jethro";
-// import "talk-like-a/src/lib";
-// import { newspeak } from "talk-like-a/src/newspeak";
 import * as talkLike from 'talk-like-a';
 
 const filters = Object.keys(talkLike);

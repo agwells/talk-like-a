@@ -3,4 +3,6 @@
 /jsconfig.json
 /.envrc
 /build
-/types
+/dist
+/index.js
+/index.d.ts

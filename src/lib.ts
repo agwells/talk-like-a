@@ -124,7 +124,7 @@ export function simuLex<U extends {} = {}>(
         0,
         null as null | {
           match: string;
-          replacer: SimulexReplacerFn<U> | null;
+          replacer: SimulexReplacerFn<U>;
         },
       ]
     );
