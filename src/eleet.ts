@@ -7,14 +7,14 @@
  * @license GPL-2+
  * @author Aaron Wells
  */
-const { sameCapReplacer, tr } = require('./lib');
+import { sameCapReplacer, tr } from './lib';
 
 let from = 'abcdefghijklmnopqrstuvwxyz';
 from = from + from.toUpperCase();
 let to = '4bcd3fgh1jklmn0pqr5tuvwxyz';
 to = to + to.toUpperCase();
 
-function eleet(initialString) {
+export function eleet(initialString: string): string {
   return tr(
     initialString
       .replace(/porn/g, sameCapReplacer('pr0n'))
@@ -32,5 +32,3 @@ function eleet(initialString) {
 // #s:w:\\/\\/:ig;
 // #s:v:\\/:ig;
 // #s:x:><:ig;
-
-module.exports = { eleet };

@@ -19,7 +19,7 @@
  *   along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-const getRandFn = require('./lib').getRandFn;
+import { getRandFn } from './lib';
 
 const all_one_letter = /^(.)\1*$/;
 
@@ -29,7 +29,7 @@ const all_one_letter = /^(.)\1*$/;
  * @param {string} toScramble
  * @param {() => number} rand
  */
-function scramble_string(toScramble, rand) {
+function scramble_string(toScramble: string, rand: () => number): string {
   if (all_one_letter.test(toScramble)) {
     return toScramble; // can't scramble a string which consists entirely of one letter!
   }
@@ -52,7 +52,7 @@ function scramble_string(toScramble, rand) {
  * @param {string} originalString
  * @return '';
  */
-function scramble(originalString) {
+export function scramble(originalString: string): string {
   const rand = getRandFn();
   // Scramble the middle letters of words.
   // TODO: Use a lookbehind assertion here, once there's wider browser support
@@ -61,5 +61,3 @@ function scramble(originalString) {
     (match) => match[0] + scramble_string(match.slice(1), rand)
   );
 }
-
-module.exports = { scramble };

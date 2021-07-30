@@ -8,7 +8,7 @@
  * @license GPL
  * @author Aaron Wells
  */
-const { simuLex, sameCap, sameCapReplacer } = require('./lib');
+import { simuLex, sameCap, sameCapReplacer, SimulexRawRule } from './lib';
 // BW [ \t]
 // SP [ \t]
 // EW [ \t.,;!\?$]
@@ -29,7 +29,7 @@ const EW = '[ \\t.,;!?$]';
  * @param {string} replacement
  * @returns {(match: string) => string}
  */
-function simpleSameCapReplacer(replacement) {
+function simpleSameCapReplacer(replacement: string): (match: string) => string {
   const r = replacement.slice(1);
   return function (match) {
     return match[0] + r;
@@ -39,7 +39,7 @@ function simpleSameCapReplacer(replacement) {
 /**
  * @type {[string, (match: string, utils: any) => string][]}
  */
-const rawRules = [
+const rawRules: SimulexRawRule<{ expletive: () => string }>[] = [
   ['[ao]ther', (match) => (match[0] === 'a' ? 'adder' : 'udder')],
   ['[Nn]othing', simpleSameCapReplacer("nuttin'")],
   ['[Tt]hin', simpleSameCapReplacer('tin')],
@@ -88,7 +88,7 @@ const rules = simuLex.preprocessRules(rawRules);
  *
  * @param {string} originalString
  */
-function nyc(originalString) {
+export function nyc(originalString: string): string {
   let count = 0;
   let which = 0;
 
@@ -108,5 +108,3 @@ function nyc(originalString) {
 
   return simuLex(originalString, rules, { expletive });
 }
-
-module.exports = { nyc };

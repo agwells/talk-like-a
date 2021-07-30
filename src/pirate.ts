@@ -5,14 +5,14 @@
  * @license GPL-2
  * @author Aaron Wells
  */
-const getRandFn = require('./lib').getRandFn;
+import { getRandFn } from './lib';
 
 /**
  *
  * @param {string} originalString
  * @returns {string}
  */
-function pirate(originalString) {
+export function pirate(originalString: string): string {
   const fakeRand = getRandFn();
   // In the original Perl filter, each line is processed on its own.
   return originalString
@@ -110,12 +110,12 @@ function pirate(originalString) {
 }
 /**
  *
- * @param {() => number} fakeRand
+ * @param {() => number} rand
  * @returns {string}
  */
-function roll(fakeRand) {
-  if (fakeRand() % 2 > 0) {
-    return 'r'.repeat((fakeRand() % 5) + 1);
+function roll(rand: () => number): string {
+  if (rand() % 2 > 0) {
+    return 'r'.repeat((rand() % 5) + 1);
   } else {
     return 'r';
   }
@@ -123,12 +123,12 @@ function roll(fakeRand) {
 
 /**
  *
- * @param {() => number} fakeRand
+ * @param {() => number} rand
  * @param {string} stub
  * @param {number} chance
  * @returns {string}
  */
-function avast(fakeRand, stub, chance) {
+function avast(rand: () => number, stub: string, chance: number): string {
   const shouts = [
     `, avast${stub}`,
     `${stub} Ahoy!`,
@@ -153,11 +153,9 @@ function avast(fakeRand, stub, chance) {
     `${stub} Arr, me hearty!`,
   ];
 
-  if (fakeRand() % chance === 1) {
-    return shouts[fakeRand() % shouts.length] + ' ';
+  if (rand() % chance === 1) {
+    return shouts[rand() % shouts.length] + ' ';
   } else {
     return stub;
   }
 }
-
-module.exports = { pirate };

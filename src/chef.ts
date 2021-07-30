@@ -12,7 +12,7 @@
  * @param {string} initialString
  * @returns {string}
  */
-function chef(initialString) {
+export function chef(initialString: string): string {
   // This whole function will be just a chain of
   // string.replace() calls.
   return (
@@ -20,7 +20,7 @@ function chef(initialString) {
 
       // // Change 'e' at the end of a word to 'e-a', but don't mess with the word
       // // "the".
-      .replace(/(\w+)e(\b)/g, function (whole, p1, p2) {
+      .replace(/(\w+)e(\b)/g, function (whole: string, p1: string, p2: string) {
         if (p1.toLowerCase() === 'th') {
           return whole;
         } else {
@@ -56,7 +56,7 @@ function chef(initialString) {
       .replace(/tiun/g, 'shun') // this actually has the effect of changing "tion" to "shun".
       .replace(/the/g, 'zee')
       .replace(/The/g, 'Zee')
-      .replace(/[vVwW]/g, (match) => {
+      .replace(/[vVwW]/g, (match: string) => {
         switch (match) {
           case 'v':
             return 'f';
@@ -65,6 +65,7 @@ function chef(initialString) {
           case 'w':
             return 'v';
           case 'W':
+          default:
             return 'V';
         }
       })
@@ -89,5 +90,3 @@ function chef(initialString) {
       .replace(/([.?!])$/gm, '$1\nBork Bork Bork!')
   );
 }
-
-module.exports = { chef };

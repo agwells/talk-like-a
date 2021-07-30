@@ -9,7 +9,7 @@
  * @author Aaron Wells
  */
 
-const { getRandFn } = require('./lib.js');
+import { getRandFn } from './lib';
 
 /**
  *
@@ -17,7 +17,7 @@ const { getRandFn } = require('./lib.js');
  * @param {string} initialString
  * @return {string}
  */
-function cockney(initialString) {
+export function cockney(initialString: string): string {
   const I_rand = getRandFn();
   function I() {
     if (I_rand() % 5 === 1) {
@@ -29,7 +29,7 @@ function cockney(initialString) {
 
   let b_count = 0;
   let b_which = 0;
-  function bloody() {
+  function bloody(): string {
     if (b_count++ % 2 === 0) {
       switch (b_which++ % 4) {
         case 0:
@@ -55,7 +55,7 @@ function cockney(initialString) {
    * @param {string} fullstring
    * @returns
    */
-  function dintI(offset, fullstring) {
+  function dintI(offset: number, fullstring: string) {
     let sentence = fullstring
       .substr(0, offset + 1)
       .match(/(?:^|(?:\w|')[.?])([^.?]+)$/);
@@ -64,8 +64,7 @@ function cockney(initialString) {
       let sentenceStr = sentence[1].trim();
 
       // Find out if the sentence contains an "I" phrase
-      /** @type {false | string} */
-      let iOrWe = false;
+      let iOrWe: false | string = false;
       const indexOfI = sentenceStr.search(/\b(I|Oy) did\b/);
       if (indexOfI !== -1) {
         iOrWe = 'I';
@@ -205,5 +204,3 @@ function cockney(initialString) {
       )
   );
 }
-
-module.exports = { cockney };

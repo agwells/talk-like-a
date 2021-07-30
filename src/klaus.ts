@@ -1,3 +1,5 @@
+import { SimulexRawRule } from './lib';
+
 /**
  * Generates text with a bad German accent.
  *
@@ -11,7 +13,7 @@ const simuLex = require('./lib').simuLex;
 /**
  * @type {[string, (match: string) => string][]}
  */
-const rawRules = [
+const rawRules: SimulexRawRule[] = [
   ['ing', () => 'ingkt'],
   [' the ', () => ' ze '],
   ['The ', () => 'Ze '],
@@ -76,8 +78,6 @@ const rules = simuLex.preprocessRules(rawRules);
  *
  * @param {string} originalString
  */
-function klaus(originalString) {
+export function klaus(originalString: string): string {
   return simuLex(originalString, rules);
 }
-
-module.exports = { klaus };

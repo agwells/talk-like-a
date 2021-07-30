@@ -20,7 +20,7 @@
  * @param {number} [initialSeed = 1]
  * @returns {() => number}
  */
-function getRandFn(initialSeed = 1) {
+export function getRandFn(initialSeed = 1): () => number {
   let curSeed = initialSeed;
   return function rand() {
     curSeed = (curSeed * 48271) % getRandFn.PSEUDO_RAND_MAX;
@@ -35,7 +35,7 @@ const STARTS_WITH_UPPER = new RegExp('^[A-Z]');
  *
  * @param {string} letter
  */
-function isUpperCase(letter) {
+export function isUpperCase(letter: string): boolean {
   return STARTS_WITH_UPPER.test(letter);
 }
 
@@ -46,7 +46,7 @@ function isUpperCase(letter) {
  * @param {string} match
  * @param {string} replacement
  */
-function sameCap(match, replacement) {
+export function sameCap(match: string, replacement: string): string {
   if (STARTS_WITH_UPPER.test(match)) {
     return replacement[0].toUpperCase() + replacement.slice(1);
   } else {
@@ -62,7 +62,9 @@ function sameCap(match, replacement) {
  * @param {string} replacement
  * @return {(match: string) => string}
  */
-function sameCapReplacer(replacement) {
+export function sameCapReplacer(
+  replacement: string
+): (match: string) => string {
   const lowercaseReplacement =
     replacement[0].toLowerCase() + replacement.slice(1);
   const uppercaseReplacement =
@@ -76,37 +78,56 @@ function sameCapReplacer(replacement) {
   };
 }
 
+type SimulexUtils = { rand: () => number };
+export type SimulexReplacerFn<U extends {} = {}> = (
+  match: string,
+  util: U & SimulexUtils
+) => string;
+export type SimulexRule<U extends {} = {}> = [RegExp, SimulexReplacerFn<U>];
+export type SimulexRawRule<U extends {} = {}> = [string, SimulexReplacerFn<U>];
+
 /**
- *
- * @param {string} originalString
- * @param {[RegExp, (match: string, util: any) => string][]} rules
- * @param {any} extraUtils
- * @return {string}
+ * Simulates the operation of the Lex parser.
+ * @param originalString
+ * @param rules An array of `[RegExp, replacerFn] tuples. For any
+ * string that matches the RegExp, it will transform it using the replacerFn.
+ * The replaceFn will be passed a "util" object that contains a seeded prng,
+ * and anything from `extraUtils`
+ * @param extraUtils
+ * @returns
  */
-function simuLex(originalString, rules, extraUtils = {}) {
+export function simuLex<U extends {} = {}>(
+  originalString: string,
+  rules: SimulexRule<U>[],
+  extraUtils: U = {} as U
+): string {
   let remaining = originalString;
   let out = '';
   const rand = getRandFn();
 
   // Simulate the way a Lex scanner would do things
   while (remaining.length > 0) {
-    /**
-     * @type {null | {match: string, replacer: (match: string, util: any) => string}}
-     */
-    let bestMatch = null;
-    let bestMatchLength = 0;
-
     // Test every rule the remaining text, every time.
     // If multiple rules match, use the one with the longest matching text.
     // If there's a tie for longest matching text, use the rule that appears
     // higher up in the list of rules.
-    rules.forEach(function ([regex, replacer]) {
-      const matches = remaining.match(regex);
-      if (matches && matches[0].length > bestMatchLength) {
-        bestMatch = { match: matches[0], replacer };
-        bestMatchLength = matches[0].length;
-      }
-    });
+    const [, bestMatch] = rules.reduce(
+      ([bestMatchLength, bestMatch], [regex, replacer]) => {
+        const matches = remaining.match(regex);
+        if (matches && matches[0].length > bestMatchLength) {
+          bestMatch = { match: matches[0], replacer };
+          bestMatchLength = matches[0].length;
+        }
+        return [bestMatchLength, bestMatch];
+      },
+      [
+        0,
+        null as null | {
+          match: string;
+          replacer: SimulexReplacerFn<U> | null;
+        },
+      ]
+    );
     if (bestMatch === null) {
       // If there is no match for the current string, pass the first letter
       // through unchanged.
@@ -122,11 +143,12 @@ function simuLex(originalString, rules, extraUtils = {}) {
 
 simuLex.preprocessRules =
   /**
-   *
+   * Processes an array of partial regexp strings and replacer functions, into
+   * instantiated RegExp objects and replacer functions.
    * @param {[string, (match: string, util: any) => string][]} rawRules
    * @returns {[RegExp, (match: string, util: any) => string][]}
    */
-  function (rawRules) {
+  function <U>(rawRules: SimulexRawRule<U>[]): SimulexRule<U>[] {
     return rawRules.map(function ([regex, replacer]) {
       return [new RegExp(`^${regex}`), replacer];
     });
@@ -139,7 +161,11 @@ simuLex.preprocessRules =
  * @param {string} searchList
  * @param {string} replacementList
  */
-function tr(initialString, searchList, replacementList) {
+export function tr(
+  initialString: string,
+  searchList: string,
+  replacementList: string
+): string {
   return initialString
     .split('')
     .map((c) => {
@@ -152,12 +178,3 @@ function tr(initialString, searchList, replacementList) {
     })
     .join('');
 }
-
-module.exports = {
-  getRandFn,
-  isUpperCase,
-  sameCap,
-  sameCapReplacer,
-  simuLex,
-  tr,
-};

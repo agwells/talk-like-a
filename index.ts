@@ -1,26 +1,24 @@
-module.exports = {
-  b1ff: require('./src/b1ff')['b1ff'],
-  censor: require('./src/censor')['censor'],
-  chef: require('./src/chef')['chef'],
-  cockney: require('./src/cockney')['cockney'],
-  eleet: require('./src/eleet')['eleet'],
-  fudd: require('./src/fudd')['fudd'],
-  jethro: require('./src/jethro')['jethro'],
-  jibberish: require('./src/jibberish')['jibberish'],
-  ken: require('./src/ken')['ken'],
-  kenny: require('./src/kenny')['kenny'],
-  klaus: require('./src/klaus')['klaus'],
-  ky00te: require('./src/ky00te')['ky00te'],
-  LOLCAT: require('./src/LOLCAT')['LOLCAT'],
-  nethackify: require('./src/nethackify')['nethackify'],
-  newspeak: require('./src/newspeak')['newspeak'],
-  nyc: require('./src/nyc')['nyc'],
-  pirate: require('./src/pirate')['pirate'],
-  rasterman: require('./src/rasterman')['rasterman'],
-  scottish: require('./src/scottish')['scottish'],
-  scramble: require('./src/scramble')['scramble'],
-  spammer: require('./src/spammer')['spammer'],
-  studly: require('./src/studly')['studly'],
-  uniencode: require('./src/uniencode')['uniencode'],
-  upsidedown: require('./src/upsidedown')['upsidedown'],
-};
+export { b1ff } from './src/b1ff';
+export { censor } from './src/censor';
+export { chef } from './src/chef';
+export { cockney } from './src/cockney';
+export { eleet } from './src/eleet';
+export { fudd } from './src/fudd';
+export { jethro } from './src/jethro';
+export { jibberish } from './src/jibberish';
+export { ken } from './src/ken';
+export { kenny } from './src/kenny';
+export { klaus } from './src/klaus';
+export { ky00te } from './src/ky00te';
+export { LOLCAT } from './src/LOLCAT';
+export { nethackify } from './src/nethackify';
+export { newspeak } from './src/newspeak';
+export { nyc } from './src/nyc';
+export { pirate } from './src/pirate';
+export { rasterman } from './src/rasterman';
+export { scottish } from './src/scottish';
+export { scramble } from './src/scramble';
+export { spammer } from './src/spammer';
+export { studly } from './src/studly';
+export { uniencode } from './src/uniencode';
+export { upsidedown } from './src/upsidedown';

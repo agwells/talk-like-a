@@ -5,11 +5,10 @@
  * @license GPL-2+
  * @author Aaron Wells
  */
-
-const { getRandFn } = require('./lib.js');
+import { getRandFn } from './lib';
 
 // # I use an array, not a hash. because order is important.
-function b1ff(initialString) {
+export function b1ff(initialString: string): string {
   const rand = getRandFn();
   return initialString
     .split('\n')
@@ -72,7 +71,7 @@ function b1ff(initialString) {
           // I guess b1ff doesn't use two spaces after his periods. How 90s-rude!
           .replace(/\.  /g, '. ')
           .replace(/\./g, () => {
-            switch (rand() % 3) {
+            switch ((rand() % 3) as 0 | 1 | 2) {
               case 0:
                 return '.';
               case 1:

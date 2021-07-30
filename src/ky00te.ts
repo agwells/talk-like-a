@@ -6,7 +6,7 @@
  * @license GPL-2
  * @author Aaron Wells
  */
-const { simuLex } = require('./lib');
+import { simuLex, SimulexRawRule } from './lib';
 
 const CUTE = 'ky00te!';
 const FLUFF = '*fluff!*';
@@ -33,7 +33,7 @@ const NA = " na'";
  * @param {() => number} rand
  * @returns {string}
  */
-function MEOW(rand) {
+function MEOW(rand: () => number): string {
   const inRand = rand() % 5;
 
   switch (inRand) {
@@ -41,20 +41,14 @@ function MEOW(rand) {
     case 1:
     case 2:
       return 'meow';
-    case 3:
-    case 4:
+    default:
       return 'mew';
   }
 }
 
-/**
- *
- * @param {() => number} fakeRand
- * @returns {string}
- */
-function SPACE(fakeRand) {
-  if (fakeRand() % 30 < 1) {
-    const inRand = fakeRand() % 5;
+function SPACE(rand: () => number): string {
+  if (rand() % 30 < 1) {
+    const inRand = rand() % 5;
 
     switch (inRand) {
       case 0:
@@ -69,7 +63,7 @@ function SPACE(fakeRand) {
       case 3:
         return ' *meow!* ';
 
-      case 4:
+      default:
         return ' *fluff!* ';
     }
   } else {
@@ -77,10 +71,7 @@ function SPACE(fakeRand) {
   }
 }
 
-/**
- * @type {[string, () => any][]}
- */
-const rawRules = [
+const rawRules: SimulexRawRule[] = [
   ['i', () => 'y'],
   ['I', () => 'Y'],
   ['cks', () => 'x'],
@@ -94,7 +85,7 @@ const rawRules = [
   ['pr', () => PURR],
   ['p[aeiou]*r', () => PURR],
   ['f[aeiou]+r', () => FUR],
-  ['m[aeiou]+(?=$|[^.,s?! ])', (match, { rand }) => MEOW(rand)] /*UN*/,
+  ['m[aeiou]+(?=$|[^.,s?! ])', (_match, { rand }) => MEOW(rand)] /*UN*/,
   ['at a', () => ATTA],
   ['at the', () => ATTA],
   ['in a', () => YNNA],
@@ -117,7 +108,7 @@ const rawRules = [
   ['(\n| )when($|\b| )', () => WEN],
   ["n't", () => NA] /*UN*/,
   [' not', () => NA] /*UN*/,
-  [`[ \t]`, (match, { rand }) => SPACE(rand)],
+  [`[ \t]`, (_match, { rand }) => SPACE(rand)],
   ['r', () => 'rr'],
 ];
 
@@ -128,7 +119,6 @@ const rules = simuLex.preprocessRules(rawRules);
  * @param {string} originalString
  * @returns {string}
  */
-function ky00te(originalString) {
+export function ky00te(originalString: string): string {
   return simuLex(originalString, rules);
 }
-module.exports = { ky00te };

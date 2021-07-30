@@ -7,13 +7,13 @@
  * @author Aaron Wells
  */
 
-const isUpperCase = require('./lib').isUpperCase;
+import { isUpperCase } from './lib';
 
 /**
  *
  * @param {string} initialString
  */
-function studly(initialString) {
+export function studly(initialString: string): string {
   return initialString
     .split('')
     .map((c, offset) => {
@@ -25,5 +25,3 @@ function studly(initialString) {
     })
     .join('');
 }
-
-module.exports = { studly };

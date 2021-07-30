@@ -7,9 +7,9 @@
  * @author Aaron Wells
  */
 
-const getRandFn = require('./lib').getRandFn;
+import { getRandFn } from './lib';
 
-const Δ = {
+const Δ: Record<string, number[]> = {
   // "~": [],
   // "!": [],
   // "@": [],
@@ -111,7 +111,7 @@ const Δ = {
  *
  * @param {string} initialString
  */
-function uniencode(initialString) {
+export function uniencode(initialString: string): string {
   const rand = getRandFn();
 
   return initialString
@@ -125,5 +125,3 @@ function uniencode(initialString) {
     })
     .join('');
 }
-
-module.exports = { uniencode };

@@ -20,55 +20,37 @@
  * @license MIT-like
  * @author Aaron Wells
  */
-const { sameCapReplacer: CAP, sameCap, simuLex } = require('./lib');
+import {
+  sameCapReplacer as CAP,
+  sameCap,
+  simuLex,
+  SimulexRawRule,
+  SimulexRule,
+  SimulexReplacerFn,
+} from './lib';
 
 /**
  *
  * @param {string} replacement
  */
-function WCAP(replacement) {
-  /**
-   * @param {string} match
-   */
-  function wcap(match) {
+function WCAP(replacement: string): (match: string) => string {
+  return function wcap(match) {
     return match[0] + sameCap(match.slice(1), replacement);
-  }
-
-  return wcap;
+  };
 }
 
-/**
- *
- * @param {string} str1
- * @param {string} str2
- */
-function COMP(str1, str2) {
-  /**
-   * @param {string} match
-   */
-  function comp(match) {
+function COMP(str1: string, str2: string): (match: string) => string {
+  return function comp(match) {
     return sameCap(match, str1) + sameCap(match, str2);
-  }
-
-  return comp;
+  };
 }
 
-/**
- *
- * @param {string} str1
- * @param {string} str2
- */
-function WCOMP(str1, str2) {
-  /**
-   * @param {string} match
-   */
-  function wcomp(match) {
+function WCOMP(str1: string, str2: string): (match: string) => string {
+  return function wcomp(match: string): string {
     return (
       match[0] + sameCap(match.slice(1), str1) + sameCap(match.slice(1), str2)
     );
-  }
-
-  return wcomp;
+  };
 }
 
 /**
@@ -99,7 +81,7 @@ const expansions = [
 /**
  * @type {[string, (null | ((...matches: string[]) => any))][]}
  */
-const rawRules = [
+const rawRules: [string, SimulexReplacerFn | null][] = [
   [/[Qq]uite{EW}(?=[A-Za-z][A-Za-z])/.source, CAP('plus')],
   [/[Rr]ather{EW}(?=[A-Za-z][A-Za-z][A-Za-z])/.source, CAP('plus')],
   [/[Kk]ind{EW}of{EW}(?=[A-Za-z][A-Za-z][A-Za-z])/.source, CAP('plus')],
@@ -253,16 +235,17 @@ const rawRules = [
   [/{THE}?[Uu]niv\.?{EW}of{EW}./.source, null],
   [/{THE}?[Dd]ept\.?{EW}of{EW}./.source, null],
   [/{THE}?([Ss]ub-?)?[Cc]omm?itt?ee{EW}(of|on){EW}./.source, null],
-  [
-    /{THE}?[Ss]chool{EW}of{EW}(.)/.source,
-    (fullMatch, firstParen) => {
-      if (/[a-zA-Z]/.test(firstParen)) {
-        return 'Mini' + firstParen.toUpperCase();
-      } else {
-        return 'Ministry of ' + firstParen;
-      }
-    },
-  ],
+  // TODO: TypeScriptification made clear that this is broken!
+  // [
+  //   /{THE}?[Ss]chool{EW}of{EW}(.)/.source,
+  //   (fullMatch, firstParen) => {
+  //     if (/[a-zA-Z]/.test(firstParen)) {
+  //       return 'Mini' + firstParen.toUpperCase();
+  //     } else {
+  //       return 'Ministry of ' + firstParen;
+  //     }
+  //   },
+  // ],
   [/[Dd]epartment/.source, null],
   [/[Uu]niversity/.source, CAP('ministry')],
   [/[Uu]niv\.?(?={W})/.source, CAP('ministry')],
@@ -659,27 +642,34 @@ const rawRules = [
   [/\n/.source, () => '\n'],
 ];
 
-const rules = rawRules.map(([regex, replacer]) => {
-  let expandedRE = regex;
-  expansions.forEach(
-    ([find, replace]) =>
-      (expandedRE = expandedRE.replace(
-        new RegExp('{' + find + '}', 'g'),
-        replace
-      ))
-  );
-  return [new RegExp(`^(?:${expandedRE})`), replacer];
-});
-// Fill in those null rules...
-let [, lastFn] = rules[rules.length - 1];
-for (let i = rules.length - 1; i >= 0; i--) {
-  const replacer = rules[i][1];
-  if (replacer === null) {
-    rules[i][1] = lastFn;
-  } else {
-    lastFn = replacer;
-  }
-}
+let lastFn = rawRules[rawRules.length - 1][1] as SimulexReplacerFn;
+
+const rules = rawRules
+  .map(([regex, replacer]): [RegExp, SimulexReplacerFn | null] => {
+    let expandedRE = regex;
+    expansions.forEach(
+      ([find, replace]) =>
+        (expandedRE = expandedRE.replace(
+          new RegExp('{' + find + '}', 'g'),
+          replace
+        ))
+    );
+    return [new RegExp(`^(?:${expandedRE})`), replacer];
+  })
+  // Fill in those null rules...
+  // Because of the way I ported this over from Lex, the replacer function
+  // is the first non-null replacer after the null replacer.
+  .reverse()
+  .map((rule): SimulexRule => {
+    const [regex, replacer] = rule;
+    if (replacer === null) {
+      return [regex, lastFn];
+    } else {
+      lastFn = replacer;
+      return rule as SimulexRule;
+    }
+  })
+  .reverse();
 
 // %{
 // /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
@@ -740,9 +730,6 @@ for (let i = rules.length - 1; i >= 0; i--) {
  * @param {string} originalText
  * @returns {string}
  */
-function newspeak(originalText) {
-  // @ts-ignore
+export function newspeak(originalText: string): string {
   return simuLex(originalText, rules) + '\nHail Big Brother!\n';
 }
-
-module.exports = { newspeak };

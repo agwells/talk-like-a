@@ -12,12 +12,12 @@
  * @author Aaron Wells
  */
 
-const { simuLex } = require('./lib');
+import { simuLex, SimulexRawRule } from './lib';
 
 /**
  * @type {[string, () => any][]}
  */
-const rawRules = [
+const rawRules: SimulexRawRule[] = [
   ['stairs', () => 'apples and pears'],
   ['Downstairs', () => 'Down the apples and pears'],
   ['downstairs', () => 'down the apples and pears'],
@@ -28,8 +28,8 @@ const rawRules = [
   ['[Tt]rouble', () => 'Barney Rubble'],
   [
     'wife',
-    (match, { rand }) => {
-      switch (rand() % 2) {
+    (_match, { rand }) => {
+      switch ((rand() % 2) as 0 | 1) {
         case 0:
           return 'trouble and strife';
         case 1:
@@ -188,8 +188,8 @@ const rawRules = [
   ['directories', () => 'lockups'],
   [
     '[Pp]rocess',
-    (match, { rand }) => {
-      switch (rand() % 2) {
+    (_match, { rand }) => {
+      switch ((rand() % 2) as 0 | 1) {
         case 0:
           return 'Queen Bess';
         case 1:
@@ -219,8 +219,8 @@ const rawRules = [
   ['[Bb]rain', () => 'Michael Caine'],
   [
     '[Pp][Aa][Ss][Cc][Aa][Ll]',
-    (match, { rand }) => {
-      switch (rand() % 2) {
+    (_match, { rand }) => {
+      switch ((rand() % 2) as 0 | 1) {
         case 0:
           return 'Pall Mall';
         case 1:
@@ -244,8 +244,8 @@ const rawRules = [
   ['[Ll]ondoner', () => 'Cockney'],
   [
     'friend',
-    (match, { rand }) => {
-      switch (rand() % 3) {
+    (_match, { rand }) => {
+      switch ((rand() % 3) as 0 | 1 | 2) {
         case 0:
           return 'mucker';
         case 1:
@@ -262,7 +262,7 @@ const rawRules = [
   [' C-', () => ' Bruce Lee-'],
   [
     ' C ',
-    (match, { rand }) => {
+    (_match, { rand }) => {
       switch (rand() % 4) {
         case 0:
           return ' Bruce Lee ';
@@ -270,7 +270,7 @@ const rawRules = [
           return ' Circus Flea ';
         case 2:
           return ' Bumble Bee ';
-        case 3:
+        default:
           return ' Door Key ';
       }
     },
@@ -308,13 +308,13 @@ const rawRules = [
   ],
   [
     '\\? ',
-    (match, { rand }) => {
+    (_match, { rand }) => {
       switch (rand() % 3) {
         case 0:
           return ', mate? ';
         case 1:
           return ', guv? ';
-        case 2:
+        default:
           return ', squire? ';
       }
     },
@@ -333,7 +333,7 @@ const rawRules = [
           return '! Honest guv! ';
         case 4:
           return ', mate! ';
-        case 5:
+        default:
           return match;
       }
     },
@@ -342,8 +342,6 @@ const rawRules = [
 
 const rules = simuLex.preprocessRules(rawRules);
 
-function ken(originalString) {
+export function ken(originalString: string): string {
   return simuLex(originalString, rules);
 }
-
-module.exports = { ken };

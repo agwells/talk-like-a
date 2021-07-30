@@ -5,7 +5,7 @@
  * @license GPL-2
  * @author Aaron Wells
  */
-const { getRandFn } = require('./lib');
+import { getRandFn } from './lib';
 
 const $row = '!qwertyuiop!asdfghjkl!zxcvbnm!';
 
@@ -14,18 +14,11 @@ const $row = '!qwertyuiop!asdfghjkl!zxcvbnm!';
  * @param {string} originalString
  * @returns {string}
  */
-function rasterman(originalString) {
+export function rasterman(originalString: string): string {
   const rng = getRandFn();
   const fakeRand = () => (rng() % 100) / 100;
 
-  /**
-   *
-   * @param {string[]} $aref
-   * @param {number} $n
-   * @param {number} $m
-   * @return {void}
-   */
-  function swap($aref, $n, $m) {
+  function swap($aref: string[], $n: number, $m: number) {
     if (
       $n >= 0 &&
       $n < $aref.length &&
@@ -40,14 +33,11 @@ function rasterman(originalString) {
     }
   }
 
-  /**
-   *
-   * @param {string[]} $aref
-   * @param {number} $pos
-   * @param {string} $let
-   * @return {number}
-   */
-  function insert_adjacent($aref, $pos, $let) {
+  function insert_adjacent(
+    $aref: string[],
+    $pos: number,
+    $let: string
+  ): number {
     let $newlet = get_adjacent($let);
 
     if (!$newlet) {
@@ -58,12 +48,7 @@ function rasterman(originalString) {
     return 1;
   }
 
-  /**
-   *
-   * @param {string} $let
-   * @return {string|false}
-   */
-  function get_adjacent($let) {
+  function get_adjacent($let: string): string | false {
     if ($let.match(/[a-z]/) === null) {
       return false;
     }
@@ -123,5 +108,3 @@ function rasterman(originalString) {
     })
     .join('\n');
 }
-
-module.exports = { rasterman };

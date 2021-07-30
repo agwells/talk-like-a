@@ -12,7 +12,7 @@ const sameCapReplacer = require('./lib').sameCapReplacer;
  * @param {string} originalString
  * @returns {string}
  */
-function jethro(originalString) {
+export function jethro(originalString: string): string {
   return (
     originalString
       // {SW}[Gg]reetings{EW}	|
@@ -423,5 +423,3 @@ function jethro(originalString) {
       .replace(/!(?=(\s|$))/gm, '. Ye DAWGies!!!')
   );
 }
-
-module.exports = { jethro };

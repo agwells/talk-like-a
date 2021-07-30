@@ -6,7 +6,7 @@
  * @author Aaron Wells
  */
 
-function fudd(initialString) {
+export function fudd(initialString: string): string {
   return initialString
     .replace(/[rl]/g, 'w')
     .replace(/qu/g, 'qw')
@@ -21,5 +21,3 @@ function fudd(initialString) {
     .replace(/Th/g, 'D')
     .replace(/N\./g, 'N, uh-hah-hah-hah.');
 }
-
-module.exports = { fudd };

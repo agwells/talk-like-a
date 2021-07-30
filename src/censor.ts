@@ -6,7 +6,7 @@
  * @author Aaron Wells
  */
 
-const tr = require('./lib').tr;
+import { tr } from './lib';
 
 /**
  * List of regexes to censor, encoded in ROT-13 so this program itself won't
@@ -161,7 +161,10 @@ const censorRE = new RegExp(`\\b(${censorCombined})(ed)?`, 'ig');
  * @param {string[]} [additionalWords]
  * @returns {string};
  */
-function censor(originalString, additionalWords) {
+export function censor(
+  originalString: string,
+  additionalWords?: string[]
+): string {
   const censoredString = originalString.replace(censorRE, 'CENSORED');
   if (additionalWords) {
     return censoredString.replace(
@@ -172,5 +175,3 @@ function censor(originalString, additionalWords) {
     return censoredString;
   }
 }
-
-module.exports = { censor };

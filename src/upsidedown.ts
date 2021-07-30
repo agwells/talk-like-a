@@ -5,13 +5,13 @@
  * @license GPL-2+
  * @author Aaron Wells
  */
-const tr = require('./lib').tr;
+import { tr } from './lib';
 
 /**
  *
  * @param {string} initialString
  */
-function upsidedown(initialString) {
+export function upsidedown(initialString: string): string {
   return tr(
     // TODO: This is a redundant split and re-join, because tr's going to do
     // that too.
@@ -25,5 +25,3 @@ function upsidedown(initialString) {
     '][}{><)(' + 'eq)paj6y!fk7wuodbjsfn^mxh' + 'l2Eh59L86' + "`i'%,,"
   ).replace(/k/g, '>|');
 }
-
-module.exports = { upsidedown };

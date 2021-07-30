@@ -10,15 +10,15 @@
  * @license GPL-2+
  * @author Aaron Wells
  */
-const { getRandFn } = require('./lib');
+import { getRandFn } from './lib';
 
 /**
  *
  * @param {string} originalString
  */
-function spammer(originalString) {
+export function spammer(originalString: string): string {
   const prng = getRandFn();
-  const rand = (max) => {
+  const rand = (max: number) => {
     const seed = prng();
     return max === 0 ? 0 : seed % max;
   };
@@ -27,19 +27,11 @@ function spammer(originalString) {
     return (prng() % 100) / 100;
   }
 
-  /**
-   *
-   * @param {...string} strings
-   */
-  function oneOf(...strings) {
+  function oneOf(...strings: string[]) {
     return strings[rand(strings.length)];
   }
 
-  /**
-   *
-   * @param {string} str
-   */
-  function line_of_yelling(str) {
+  function line_of_yelling(str: string) {
     const $lines = str.split('\n');
     const $n = rand($lines.length);
     $lines[$n] = $lines[$n].toUpperCase();
@@ -75,7 +67,7 @@ function spammer(originalString) {
   /**
    * @type {[RegExp, string|((...match: string[]) => string)][]}
    */
-  const replacers = [
+  const replacers: [RegExp, string | ((...match: string[]) => string)][] = [
     [
       /^(Subject:\s+.*)/g,
       (...match) => match[1] + ' '.repeat(rand(20) + 40) + rand(1000000),
@@ -301,5 +293,3 @@ function spammer(originalString) {
   $spam = $spam.replace(/\n/g, '\r\n');
   return `${$spam}\n`;
 }
-
-module.exports = { spammer };

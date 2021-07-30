@@ -5,31 +5,31 @@
  * @license GPL-2+
  * @author Aaron Wells
  */
-const { getRandFn } = require('./lib');
+import { getRandFn } from './lib';
 
-const { eleet } = require('./eleet');
-const { b1ff } = require('./b1ff');
-const { chef } = require('./chef');
-const { jethro } = require('./jethro');
-const { upsidedown } = require('./upsidedown');
-const { klaus } = require('./klaus');
-const { cockney } = require('./cockney');
-const { pirate } = require('./pirate');
-const { nyc } = require('./nyc');
-const { ken } = require('./ken');
-const { ky00te } = require('./ky00te');
-const { rasterman } = require('./rasterman');
-const { newspeak } = require('./newspeak');
-const { studly } = require('./studly');
-const { censor } = require('./censor');
-const { spammer } = require('./spammer');
+import { eleet } from './eleet';
+import { b1ff } from './b1ff';
+import { chef } from './chef';
+import { jethro } from './jethro';
+import { upsidedown } from './upsidedown';
+import { klaus } from './klaus';
+import { cockney } from './cockney';
+import { pirate } from './pirate';
+import { nyc } from './nyc';
+import { ken } from './ken';
+import { ky00te } from './ky00te';
+import { rasterman } from './rasterman';
+import { newspeak } from './newspeak';
+import { studly } from './studly';
+import { censor } from './censor';
+import { spammer } from './spammer';
 
 /**
  *
  * @param {string} originalString
  * @returns {string}
  */
-function jibberish(originalString) {
+export function jibberish(originalString: string): string {
   const rand = getRandFn();
 
   const all = [
@@ -74,4 +74,3 @@ function jibberish(originalString) {
   // # But you have to ask yourself: how important is it to optimize
   // # the generation of jibberish?
 }
-module.exports = { jibberish };

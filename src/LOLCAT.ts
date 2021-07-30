@@ -8,7 +8,7 @@
  * @author Aaron Wells
  */
 
-function LOLCAT(initialString) {
+export function LOLCAT(initialString: string): string {
   return (
     initialString
       .toLowerCase()
@@ -84,5 +84,3 @@ function LOLCAT(initialString) {
       .toUpperCase()
   );
 }
-
-module.exports = { LOLCAT };

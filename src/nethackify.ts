@@ -7,9 +7,9 @@
  * @license GPL-2
  * @author Aaron Wells
  */
-const getRandFn = require('./lib').getRandFn;
+import { getRandFn } from './lib';
 
-const erasures = {
+const erasures: Record<string, string> = {
   A: '/\\^-',
   B: 'Pb[3',
   C: '(',
@@ -97,7 +97,7 @@ const erasures = {
  *
  * @param {string} str
  */
-function nethackify(str) {
+export function nethackify(str: string): string {
   const rand = getRandFn(1);
   const modStr = str.split('');
   for (let i = 0; i < Math.floor(str.length / 4); i++) {
@@ -117,5 +117,3 @@ function nethackify(str) {
   }
   return modStr.join('');
 }
-
-module.exports = { nethackify };

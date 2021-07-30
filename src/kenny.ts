@@ -10,14 +10,13 @@
  * @license Artistic
  * @author Aaron Wells
  */
-const { tr } = require('./lib');
+import { tr } from './lib';
 
 // ##### Generate KennySpeak encoding table
 function generateKenny() {
-  /** @type {Record<string, string>} */
-  let $kenny = {};
+  let $kenny: Record<string, string> = {};
 
-  let $a, $b, $c;
+  let $a: number, $b: number, $c: number;
   $a = $b = $c = 0;
   'abcdefghijklmnopqrstuvwxyz'.split('').forEach(($char) => {
     let $foo = tr(`${$a}${$b}${$c}`, '012', 'mpf');
@@ -46,11 +45,9 @@ const kennyTranslationTable = generateKenny();
  * @param {string} originalString
  * @returns {string}
  */
-function kenny(originalString) {
+export function kenny(originalString: string): string {
   return originalString.replace(
     /[a-zA-Z]/g,
     (match) => kennyTranslationTable[match]
   );
 }
-
-module.exports = { kenny };
