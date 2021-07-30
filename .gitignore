@@ -2,3 +2,5 @@
 /.vscode/
 /jsconfig.json
 /.envrc
+/build
+/types
