@@ -19,8 +19,8 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch './tests/index.test.js'",
-    "test:original": "jest --watch './tests/against-originals.test.js'",
+    "test": "jest --watch './tests/index.test.ts'",
+    "test:original": "jest --watch './tests/against-originals.test.ts'",
     "make-test-data": "$NODE ./tests/make-test-data.js",
     "compile-and-make-test-data": "make -C original clean && make -C original all && $NODE ./tests/make-test-data.js",
     "clean": "make -C original clean"
@@ -32,7 +32,11 @@
   "author": "Aaron Wells",
   "license": "SEE LICENSE IN original/debian/copyright",
   "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@babel/preset-typescript": "^7.14.5",
     "@types/jest": "^26.0.24",
+    "babel-jest": "^27.0.6",
     "jest": "^27.0.6",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
@@ -41,5 +45,11 @@
     "singleQuote": true,
     "trailingComma": "es5",
     "arrowParens": "always"
+  },
+  "jest": {
+    "roots": [
+      "src",
+      "tests"
+    ]
   }
 }
