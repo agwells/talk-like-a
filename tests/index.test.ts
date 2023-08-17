@@ -7,6 +7,7 @@ const filters = [
   'censor',
   'chef',
   'cockney',
+  'duck',
   'eleet',
   'fudd',
   'jethro',

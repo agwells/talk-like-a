@@ -31,6 +31,8 @@ getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
 
 const STARTS_WITH_UPPER = new RegExp('^[A-Z]');
 
+const ALL_UPPER = new RegExp('^[^a-z]$')
+
 /**
  *
  * @param {string} letter
@@ -49,6 +51,8 @@ export function isUpperCase(letter: string): boolean {
 export function sameCap(match: string, replacement: string): string {
   if (STARTS_WITH_UPPER.test(match)) {
     return replacement[0].toUpperCase() + replacement.slice(1);
+  } else if (ALL_UPPER.test(match)) {
+    return replacement.toUpperCase();
   } else {
     return replacement[0].toLowerCase() + replacement.slice(1);
   }
