@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LOLCAT manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -30,8 +30,8 @@ Array [
   "SCRAMBLE,",
   "STUDLY,",
   "UNIENCODE,",
-  "UPSIDE\\\\-DOWN",
-  "\\\\-",
+  "UPSIDE\\-DOWN",
+  "\\-",
   "ASORTD",
   "TEXT",
   "FILTERS",
@@ -67,7 +67,7 @@ Array [
   "|",
   "CENZOR",
   ".SH",
-  "\\"DEZCRIPSHUN\\"",
+  ""DEZCRIPSHUN"",
   "ALL",
   "OF",
   "THEEZ",
@@ -339,7 +339,7 @@ Array [
   "BY",
   "THE",
   "CHARACTR",
-  "\\"DURKON\\"",
+  ""DURKON"",
   "FROM",
   "ORDR",
   "OF",
@@ -364,7 +364,7 @@ Array [
   "SCRAMBLE",
   "SCRAMBLE",
   "THE",
-  "\\"INNR\\"",
+  ""INNR"",
   "LETTERS",
   "OF",
   "EACH",
@@ -404,7 +404,7 @@ Array [
   "MAN",
   "PAGEZ.",
   ".IP",
-  "UPSIDE\\\\-DOWN",
+  "UPSIDE\\-DOWN",
   "FLIPS",
   "TEXT",
   "UPSIDE",
@@ -420,8 +420,8 @@ Array [
   "THE",
   "OUTPUT.",
   ".SH",
-  "\\"ZEE",
-  "ALSO\\"",
+  ""ZEE",
+  "ALSO"",
   "OTHR",
   "FILTERS:",
   ".TP",
@@ -459,7 +459,7 @@ Array [
   "AUTHORS",
   "THE",
   "ELEET,",
-  "UPSIDE\\\\-DOWN,",
+  "UPSIDE\\-DOWN,",
   "CHEF,",
   "B1FF,",
   "AND",
@@ -517,7 +517,7 @@ Array [
   "BY",
   "NIK",
   "FILLIPS",
-  "<NWP@LEMON\\\\-COMPUTIN.COM>,",
+  "<NWP@LEMON\\-COMPUTIN.COM>,",
   "",
   "GURKAN",
   "ZENGUN",
@@ -557,7 +557,7 @@ Array [
 `;
 
 exports[`LOLCAT moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTR",
   "1.",
   "LOOMINGS.",
@@ -2773,7 +2773,7 @@ Array [
   "YET?",
   "",
   "THE",
-  "\\"ELEET\\"",
+  ""ELEET"",
   "FILTR",
   "SPECIALLY",
   "HANDLEZ",
@@ -2798,7 +2798,7 @@ Array [
 `;
 
 exports[`b1ff manpage.txt 1`] = `
-Array [
+[
   "!!!!!1TH",
   "FILTURZ",
   "6",
@@ -2827,8 +2827,8 @@ Array [
   "SCRAMBLE,",
   "STUDLY,",
   "UNEINCODE,",
-  "UPSIDE\\\\-DOWN",
-  "\\\\-",
+  "UPSIDE\\-DOWN",
+  "\\-",
   "ASSORTED",
   "TEXT",
   "FILTURZ",
@@ -2864,7 +2864,7 @@ Array [
   "|",
   "CENSOR",
   "!!SH",
-  "\\"DESCRIPSHUN\\"",
+  ""DESCRIPSHUN"",
   "AL",
   "UV",
   "THESE",
@@ -3147,7 +3147,7 @@ Array [
   "BY",
   "THE",
   "CHARACTUR",
-  "\\"DURKON\\"",
+  ""DURKON"",
   "FROM",
   "ORDUR",
   "UV",
@@ -3172,7 +3172,7 @@ Array [
   "SCRAMBLE",
   "SCRAMBLE",
   "THE",
-  "\\"INNUR\\"",
+  ""INNUR"",
   "LETTURZ",
   "UV",
   "EACH",
@@ -3213,7 +3213,7 @@ Array [
   "MAN",
   "PAGEZ.",
   ",IP",
-  "UPSIDE\\\\-DOWN",
+  "UPSIDE\\-DOWN",
   "FLIPZ",
   "TEXT",
   "UPSIDE",
@@ -3229,8 +3229,8 @@ Array [
   "THE",
   "OUTPUT.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "OTHUR",
   "FILTURZ:",
   "!!!!!TP",
@@ -3269,7 +3269,7 @@ Array [
   "AUTHORZ",
   "THE",
   "ELEET,",
-  "UPSIDE\\\\-DOWN,",
+  "UPSIDE\\-DOWN,",
   "CHEF,",
   "B1FF,",
   "+",
@@ -3327,7 +3327,7 @@ Array [
   "BY",
   "NICK",
   "PHILIPZ",
-  "<NWP@LEMON\\\\-COMPUTING!!!!!COM>,",
+  "<NWP@LEMON\\-COMPUTING!!!!!COM>,",
   "",
   "GURKAN",
   "SENGUN",
@@ -3367,7 +3367,7 @@ Array [
 `;
 
 exports[`b1ff moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTUR",
   "1!!!",
   "L00MINGZ.",
@@ -3611,7 +3611,7 @@ Array [
   "TAKE",
   "U",
   "W8RWARD,",
-  "IT\\"Z",
+  "IT"Z",
   "EXTREME",
   "DOWNTOWN",
   "IZ",
@@ -4099,7 +4099,7 @@ Array [
   "PINE-TREE",
   "SHAKEZ",
   "DOWN",
-  "IT\\"Z",
+  "IT"Z",
   "SIGHZ",
   "LIKE",
   "LEAVEZ",
@@ -5652,7 +5652,7 @@ Array [
   "YET??1?",
   "",
   "THE",
-  "\\"ELEET\\"",
+  ""ELEET"",
   "FILTUR",
   "SPECIALY",
   "HANDLEZ",
@@ -5677,7 +5677,7 @@ Array [
 `;
 
 exports[`censor manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -5706,8 +5706,8 @@ Array [
   "scramble,",
   "CENSOREDly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "CENSOREDorted",
   "text",
   "filters",
@@ -5743,7 +5743,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "of",
   "these",
@@ -6024,7 +6024,7 @@ Array [
   "by",
   "the",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Order",
   "of",
@@ -6049,7 +6049,7 @@ Array [
   "scramble",
   "Scramble",
   "the",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "of",
   "each",
@@ -6090,7 +6090,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -6106,8 +6106,8 @@ Array [
   "the",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Other",
   "filters:",
   ".TP",
@@ -6146,7 +6146,7 @@ Array [
   "AUTHORS",
   "The",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -6204,7 +6204,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computing.com>,",
+  "<nwp@lemon\\-computing.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -6244,7 +6244,7 @@ Array [
 `;
 
 exports[`censor moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomings.",
@@ -8528,7 +8528,7 @@ Array [
   "yet?",
   "",
   "The",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "specially",
   "handles",
@@ -8553,7 +8553,7 @@ Array [
 `;
 
 exports[`chef manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -8582,8 +8582,8 @@ Array [
   "scremble-a,",
   "stoodly,",
   "uneeuncude-a,",
-  "upseede-a\\\\-doon",
-  "\\\\-",
+  "upseede-a\\-doon",
+  "\\-",
   "essurted",
   "text",
   "feelters",
@@ -8619,7 +8619,7 @@ Array [
   "|",
   "cunsur",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "Ell",
   "ooff",
   "zeese-a",
@@ -8939,7 +8939,7 @@ Array [
   "by",
   "zee",
   "cherecter",
-  "\\"Doorkun\\"",
+  ""Doorkun"",
   "frum",
   "Oorder",
   "ooff",
@@ -8970,7 +8970,7 @@ Array [
   "scremble-a",
   "Scremble-a",
   "zee",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "ooff",
   "iech",
@@ -9023,7 +9023,7 @@ Array [
   "Bork",
   "Bork!",
   ".IP",
-  "upseede-a\\\\-doon",
+  "upseede-a\\-doon",
   "Fleeps",
   "text",
   "upseede-a",
@@ -9042,8 +9042,8 @@ Array [
   "Bork",
   "Bork!",
   ".SH",
-  "\\"SEE",
-  "ELSO\\"",
+  ""SEE",
+  "ELSO"",
   "Oozeer",
   "feelters:",
   ".TP",
@@ -9088,7 +9088,7 @@ Array [
   "EUTHORS",
   "Zee",
   "ileet,",
-  "upseede-a\\\\-doon,",
+  "upseede-a\\-doon,",
   "cheff,",
   "b1fff,",
   "und",
@@ -9146,7 +9146,7 @@ Array [
   "by",
   "Neeck",
   "Pheellips",
-  "<nvp@lemun\\\\-cumpooteeng.cum>,",
+  "<nvp@lemun\\-cumpooteeng.cum>,",
   "",
   "Goorkun",
   "Sungoon",
@@ -9189,7 +9189,7 @@ Array [
 `;
 
 exports[`chef moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHEPTER",
   "1.",
   "Luumeengs.",
@@ -11530,7 +11530,7 @@ Array [
   "Bork!",
   "",
   "Zee",
-  "\\"ileet\\"",
+  ""ileet"",
   "feelter",
   "speceeelly",
   "hundles",
@@ -11558,7 +11558,7 @@ Array [
 `;
 
 exports[`cockney manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -11587,8 +11587,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -11624,7 +11624,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "of",
   "vese",
@@ -11911,7 +11911,7 @@ Array [
   "the",
   "flinkin'",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Order",
   "of",
@@ -11937,7 +11937,7 @@ Array [
   "Scramble",
   "the",
   "bleedin'",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "of",
   "each",
@@ -11979,7 +11979,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -11996,8 +11996,8 @@ Array [
   "bloody",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Over",
   "filters:",
   ".TP",
@@ -12037,7 +12037,7 @@ Array [
   "AUTHORS",
   "The",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "'n'",
@@ -12096,7 +12096,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computin'.com>,",
+  "<nwp@lemon\\-computin'.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -12136,7 +12136,7 @@ Array [
 `;
 
 exports[`cockney moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomings.",
@@ -14486,7 +14486,7 @@ Array [
   "",
   "The",
   "bleedin'",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "specially",
   "'andles",
@@ -14511,7 +14511,7 @@ Array [
 `;
 
 exports[`eleet manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "F1LT3R5",
   "6",
@@ -14540,8 +14540,8 @@ Array [
   "5cr4mbl3,",
   "5tudly,",
   "un13nc0d3,",
-  "up51d3\\\\-d0wn",
-  "\\\\-",
+  "up51d3\\-d0wn",
+  "\\-",
   "4550rt3d",
   "t3xt",
   "f1lt3r5",
@@ -14577,7 +14577,7 @@ Array [
   "|",
   "c3n50r",
   ".5H",
-  "\\"D35CR1PT10N\\"",
+  ""D35CR1PT10N"",
   "4ll",
   "0f",
   "th353",
@@ -14858,7 +14858,7 @@ Array [
   "by",
   "th3",
   "ch4r4ct3r",
-  "\\"Durk0n\\"",
+  ""Durk0n"",
   "fr0m",
   "0rd3r",
   "0f",
@@ -14883,7 +14883,7 @@ Array [
   "5cr4mbl3",
   "5cr4mbl3",
   "th3",
-  "\\"1nn3r\\"",
+  ""1nn3r"",
   "l3tt3r5",
   "0f",
   "34ch",
@@ -14924,7 +14924,7 @@ Array [
   "m4n",
   "p4g35.",
   ".1P",
-  "up51d3\\\\-d0wn",
+  "up51d3\\-d0wn",
   "Fl1p5",
   "t3xt",
   "up51d3",
@@ -14940,8 +14940,8 @@ Array [
   "th3",
   "0utput.",
   ".5H",
-  "\\"533",
-  "4L50\\"",
+  ""533",
+  "4L50"",
   "0th3r",
   "f1lt3r5:",
   ".TP",
@@ -14980,7 +14980,7 @@ Array [
   "4UTH0R5",
   "Th3",
   "3l33t,",
-  "up51d3\\\\-d0wn,",
+  "up51d3\\-d0wn,",
   "ch3f,",
   "b1ff,",
   "4nd",
@@ -15038,7 +15038,7 @@ Array [
   "by",
   "N1ck",
   "Ph1ll1p5",
-  "<nwp@l3m0n\\\\-c0mput1ng.c0m>,",
+  "<nwp@l3m0n\\-c0mput1ng.c0m>,",
   "",
   "Gurk4n",
   "53ngun",
@@ -15078,7 +15078,7 @@ Array [
 `;
 
 exports[`eleet moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CH4PT3R",
   "1.",
   "L00m1ng5.",
@@ -17362,7 +17362,7 @@ Array [
   "y3t?",
   "",
   "Th3",
-  "\\"3l33t\\"",
+  ""3l33t"",
   "f1lt3r",
   "5p3c14lly",
   "h4ndl35",
@@ -17387,7 +17387,7 @@ Array [
 `;
 
 exports[`fudd manpage.txt 1`] = `
-Array [
+[
   ".F",
   "FIWTEWS",
   "6",
@@ -17416,8 +17416,8 @@ Array [
   "scwambwe,",
   "studwy,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assowted",
   "text",
   "fiwtews",
@@ -17453,7 +17453,7 @@ Array [
   "|",
   "censow",
   ".SH",
-  "\\"DESCWIPTION\\"",
+  ""DESCWIPTION"",
   "Aww",
   "of",
   "dese",
@@ -17734,7 +17734,7 @@ Array [
   "by",
   "de",
   "chawactew",
-  "\\"Duwkon\\"",
+  ""Duwkon"",
   "fwom",
   "Owdew",
   "of",
@@ -17759,7 +17759,7 @@ Array [
   "scwambwe",
   "Scwambwe",
   "de",
-  "\\"innew\\"",
+  ""innew"",
   "wettews",
   "of",
   "each",
@@ -17800,7 +17800,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Fwips",
   "text",
   "upside",
@@ -17817,8 +17817,8 @@ Array [
   "de",
   "output.",
   ".SH",
-  "\\"SEE",
-  "AWSO\\"",
+  ""SEE",
+  "AWSO"",
   "Odew",
   "fiwtews:",
   ".TP",
@@ -17858,7 +17858,7 @@ Array [
   "AUDOWS",
   "De",
   "eweet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -17917,7 +17917,7 @@ Array [
   "by",
   "Nick",
   "Phiwwips",
-  "<nwp@wemon\\\\-computing.com>,",
+  "<nwp@wemon\\-computing.com>,",
   "",
   "Guwkan",
   "Sengun",
@@ -17957,7 +17957,7 @@ Array [
 `;
 
 exports[`fudd moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTEW",
   "1.",
   "Woomings.",
@@ -20249,7 +20249,7 @@ Array [
   "yet?",
   "",
   "De",
-  "\\"eweet\\"",
+  ""eweet"",
   "fiwtew",
   "speciawwy",
   "handwes",
@@ -20274,7 +20274,7 @@ Array [
 `;
 
 exports[`jethro manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -20303,8 +20303,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -20340,7 +20340,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "uv",
   "these",
@@ -20621,7 +20621,7 @@ Array [
   "by",
   "duh",
   "charactuh",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Orduh",
   "uv",
@@ -20646,7 +20646,7 @@ Array [
   "scramble",
   "Scramble",
   "duh",
-  "\\"innuh\\"",
+  ""innuh"",
   "letters",
   "uv",
   "each",
@@ -20687,7 +20687,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -20703,8 +20703,8 @@ Array [
   "duh",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Othuh",
   "filters:",
   ".TP",
@@ -20743,7 +20743,7 @@ Array [
   "AUTHORS",
   "Duh",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -20801,7 +20801,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computin'.com>,",
+  "<nwp@lemon\\-computin'.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -20842,7 +20842,7 @@ Array [
 `;
 
 exports[`jethro moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomings.",
@@ -23142,7 +23142,7 @@ Array [
   "yet?",
   "",
   "Duh",
-  "\\"eleet\\"",
+  ""eleet"",
   "filtuh",
   "specially",
   "handles",
@@ -23167,7 +23167,7 @@ Array [
 `;
 
 exports[`ken manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -23196,8 +23196,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -23233,7 +23233,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "of",
   "these",
@@ -23536,7 +23536,7 @@ Array [
   "by",
   "the",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Order",
   "of",
@@ -23561,7 +23561,7 @@ Array [
   "scramble",
   "Scramble",
   "the",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "of",
   "each",
@@ -23605,7 +23605,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -23621,8 +23621,8 @@ Array [
   "the",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Uvver",
   "filters:",
   ".TP",
@@ -23663,7 +23663,7 @@ Array [
   "The",
   "bleedin'",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -23721,7 +23721,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computing.com>,",
+  "<nwp@lemon\\-computing.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -23761,7 +23761,7 @@ Array [
 `;
 
 exports[`ken moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomings.",
@@ -26174,7 +26174,7 @@ Array [
   "",
   "The",
   "bleedin'",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "specially",
   "'andles",
@@ -26199,7 +26199,7 @@ Array [
 `;
 
 exports[`kenny manpage.txt 1`] = `
-Array [
+[
   ".FmpMfp",
   "MpfMffPmfFmpMppPffFmm",
   "6",
@@ -26228,8 +26228,8 @@ Array [
   "fmmmmfpffmmmppmmmppmfmpp,",
   "fmmfmpfmfmpmpmfffm,",
   "fmfpppmffmpppppmmfppfmpmmpp,",
-  "fmfpfmfmmmffmpmmpp\\\\-mpmppffppppp",
-  "\\\\-",
+  "fmfpfmfmmmffmpmmpp\\-mpmppffppppp",
+  "\\-",
   "mmmfmmfmmppfpfffmpmppmpm",
   "fmpmppfpffmp",
   "mpfmffpmffmpmpppfffmm",
@@ -26265,7 +26265,7 @@ Array [
   "|",
   "mmfmpppppfmmppfpff",
   ".FmmMfp",
-  "\\"MpmMppFmmMmfPffMffPfmFmpMffPpfPpp\\"",
+  ""MpmMppFmmMmfPffMffPfmFmpMffPpfPpp"",
   "Mmmpmfpmf",
   "ppfmpf",
   "fmpmfpmppfmmmpp",
@@ -26546,7 +26546,7 @@ Array [
   "mmpffm",
   "fmpmfpmpp",
   "mmfmfpmmmpffmmmmmffmpmpppff",
-  "\\"Mpmfmfpffpmpppfppp\\"",
+  ""Mpmfmfpffpmpppfppp"",
   "mpfpffppfppm",
   "Ppfpffmpmmpppff",
   "ppfmpf",
@@ -26571,7 +26571,7 @@ Array [
   "fmmmmfpffmmmppmmmppmfmpp",
   "Fmmmmfpffmmmppmmmppmfmpp",
   "fmpmfpmpp",
-  "\\"mffppppppmpppff\\"",
+  ""mffppppppmpppff"",
   "pmfmppfmpfmpmpppfffmm",
   "ppfmpf",
   "mppmmmmmfmfp",
@@ -26612,7 +26612,7 @@ Array [
   "ppmmmmppp",
   "pfmmmmmfmmppfmm.",
   ".MffPfm",
-  "fmfpfmfmmmffmpmmpp\\\\-mpmppffppppp",
+  "fmfpfmfmmmffmpmmpp\\-mpmppffppppp",
   "Mpfpmfmffpfmfmm",
   "fmpmppfpffmp",
   "fmfpfmfmmmffmpmmpp",
@@ -26628,8 +26628,8 @@ Array [
   "fmpmfpmpp",
   "ppffmffmppfmfmffmp.",
   ".FmmMfp",
-  "\\"FmmMppMpp",
-  "MmmPmfFmmPpf\\"",
+  ""FmmMppMpp",
+  "MmmPmfFmmPpf"",
   "Ppffmpmfpmpppff",
   "mpfmffpmffmpmpppfffmm:",
   ".FmpPfm",
@@ -26668,7 +26668,7 @@ Array [
   "MmmFmfFmpMfpPpfPffFmm",
   "Fmpmfpmpp",
   "mpppmfmppmppfmp,",
-  "fmfpfmfmmmffmpmmpp\\\\-mpmppffppppp,",
+  "fmfpfmfmmmffmpmmpp\\-mpmppffppppp,",
   "mmfmfpmppmpf,",
   "mmp1mpfmpf,",
   "mmmpppmpm",
@@ -26726,7 +26726,7 @@ Array [
   "mmpffm",
   "Pppmffmmfpmp",
   "Pfmmfpmffpmfpmfmffpfmfmm",
-  "<pppfpppfm@pmfmppppmppfppp\\\\-mmfppfppmpfmfmffmpmffpppmfm.mmfppfppm>,",
+  "<pppfpppfm@pmfmppppmppfppp\\-mmfppfppmpfmfmffmpmffpppmfm.mmfppfppm>,",
   "",
   "Mfmfmfpffpmpmmmppp",
   "Fmmmpppppmfmfmfppp",
@@ -26766,7 +26766,7 @@ Array [
 `;
 
 exports[`kenny moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "MmfMfpMmmPfmFmpMppPff",
   "1.",
   "Pmfppfppfppmmffpppmfmfmm.",
@@ -29050,7 +29050,7 @@ Array [
   "ffmmppfmp?",
   "",
   "Fmpmfpmpp",
-  "\\"mpppmfmppmppfmp\\"",
+  ""mpppmfmppmppfmp"",
   "mpfmffpmffmpmpppff",
   "fmmpfmmppmmfmffmmmpmfpmfffm",
   "mfpmmmpppmpmpmfmppfmm",
@@ -29075,7 +29075,7 @@ Array [
 `;
 
 exports[`klaus manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTER-r-rS",
   "6",
@@ -29104,8 +29104,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -29141,7 +29141,7 @@ Array [
   "|",
   "kensor",
   ".SH",
-  "\\"DESCR-r-rIPTION\\"",
+  ""DESCR-r-rIPTION"",
   "All",
   "uff",
   "dese",
@@ -29422,7 +29422,7 @@ Array [
   "by",
   "ze",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Order",
   "uff",
@@ -29447,7 +29447,7 @@ Array [
   "scramble",
   "Scramble",
   "ze",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "uff",
   "each",
@@ -29488,7 +29488,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -29504,8 +29504,8 @@ Array [
   "ze",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Oder",
   "filters:",
   ".TP",
@@ -29544,7 +29544,7 @@ Array [
   "AUTHOR-r-rS",
   "Ze",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "khef,",
   "b1ff,",
   "undt",
@@ -29602,7 +29602,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computingkt.com>,",
+  "<nwp@lemon\\-computingkt.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -29642,7 +29642,7 @@ Array [
 `;
 
 exports[`klaus moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER-r-r",
   "1.",
   "Loomingkts.",
@@ -31928,7 +31928,7 @@ Array [
   "yet?",
   "",
   "Ze",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "specially",
   "handles",
@@ -31953,7 +31953,7 @@ Array [
 `;
 
 exports[`ky00te manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FYLTERS",
   "6",
@@ -31984,8 +31984,8 @@ Array [
   "*truffle",
   "break!*",
   "unyencode,",
-  "upsyde\\\\-down",
-  "\\\\-",
+  "upsyde\\-down",
+  "\\-",
   "assorrted",
   "text",
   "fylterrs",
@@ -32021,7 +32021,7 @@ Array [
   "|",
   "censorr",
   ".SH",
-  "\\"DESCRYPTYON\\"",
+  ""DESCRYPTYON"",
   "All",
   "of",
   "these",
@@ -32310,7 +32310,7 @@ Array [
   "by",
   "da",
   "charracterr",
-  "\\"Durrkon\\"",
+  ""Durrkon"",
   "frrom",
   "Orrderr",
   "of",
@@ -32335,7 +32335,7 @@ Array [
   "scrramble",
   "Scrramble",
   "da",
-  "\\"ynnerr\\"",
+  ""ynnerr"",
   "letterrs",
   "of",
   "each",
@@ -32375,7 +32375,7 @@ Array [
   "meown",
   "pages.",
   ".YP",
-  "upsyde\\\\-down",
+  "upsyde\\-down",
   "Flyps",
   "text",
   "upsyde",
@@ -32391,8 +32391,8 @@ Array [
   "da",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Otherr",
   "*fluff!*",
   "fylterrs:",
@@ -32431,7 +32431,7 @@ Array [
   "AUTHORS",
   "The",
   "eleet,",
-  "upsyde\\\\-down,",
+  "upsyde\\-down,",
   "chef,",
   "b1ff,",
   "'n",
@@ -32493,7 +32493,7 @@ Array [
   "Nyck",
   "*purrpurr*",
   "Phyllyps",
-  "<nwp@lemeown\\\\-computyng.com>,",
+  "<nwp@lemeown\\-computyng.com>,",
   "",
   "Gurrkan",
   "Sengun",
@@ -32533,7 +32533,7 @@ Array [
 `;
 
 exports[`ky00te moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomeowngs.",
@@ -34844,7 +34844,7 @@ Array [
   "yet?",
   "",
   "The",
-  "\\"eleet\\"",
+  ""eleet"",
   "fylterr",
   "specyally",
   "handles",
@@ -34870,7 +34870,7 @@ Array [
 `;
 
 exports[`nethackify manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FI_TERS",
   "6",
@@ -34903,7 +34903,7 @@ Array [
   "scramble,",
   "stud|y,",
   "uniercode,",
-  "?oside\\\\-dovn",
+  "?oside\\-dovn",
   "",
   "-",
   "assorted",
@@ -34943,7 +34943,7 @@ Array [
   "|",
   "?e?sor",
   ".SH",
-  "'DESCRI|T|(N\\"",
+  "'DESCRI|T|(N"",
   "/||",
   "of",
   "the?e",
@@ -35255,7 +35255,7 @@ Array [
   "Ly",
   "tre",
   "?|a?acter",
-  "'Dur|or\\"",
+  "'Dur|or"",
   "f?cm",
   "Ordcr",
   "cf",
@@ -35328,7 +35328,7 @@ Array [
   "mar",
   "oa?es.",
   ".:P",
-  "upsi|e\\\\-|cw?",
+  "upsi|e\\-|cw?",
   "Fl.ps",
   "?ex",
   "",
@@ -35347,8 +35347,8 @@ Array [
   "",
   "",
   "S|",
-  "\\"?E_",
-  "-LSO\\"",
+  ""?E_",
+  "-LSO"",
   "Otner",
   "-:ltcrs:",
   ".TP",
@@ -35391,7 +35391,7 @@ Array [
   "The",
   "elee?,",
   "?ps:d",
-  "\\\\-dow?,",
+  "\\-dow?,",
   "",
   "h-f.",
   "b|ff,",
@@ -35451,7 +35451,7 @@ Array [
   "by",
   "Ni?:",
   "Ph:llips",
-  "<nwo@lcron\\\\",
+  "<nwo@lcron\\",
   "ccnputirg",
   "com>.",
   "",
@@ -35497,7 +35497,7 @@ Array [
 `;
 
 exports[`nethackify moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "(!AFTER",
   "|.",
   "Loomings.",
@@ -37559,11 +37559,11 @@ Array [
   "VOY^GE",
   "B?",
   "ONE",
-  "I?HM\\\\EL.",
+  "I?HM\\EL.",
   "“B|?ODY",
   "BATTLE",
   "IN",
-  "-FFGH\\\\||ST^\\\\",
+  "-FFGH\\||ST^\\",
   "?",
   "",
   "||ough",
@@ -37926,7 +37926,7 @@ Array [
   ",et?",
   "",
   ":he",
-  "\\"elee?\\"",
+  ""elee?"",
   "-il?e?",
   "spcc:ally",
   "h?rdl?s",
@@ -37955,7 +37955,7 @@ Array [
 `;
 
 exports[`newspeak manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -37985,8 +37985,8 @@ Array [
   "scramble,",
   "studwise,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -38022,7 +38022,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "of",
   "these",
@@ -38304,7 +38304,7 @@ Array [
   "by",
   "the",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Order",
   "of",
@@ -38329,7 +38329,7 @@ Array [
   "scramble",
   "Scramble",
   "the",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "of",
   "each",
@@ -38370,7 +38370,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -38386,8 +38386,8 @@ Array [
   "the",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Other",
   "filters:",
   ".TP",
@@ -38426,7 +38426,7 @@ Array [
   "AUTHORS",
   "The",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -38484,7 +38484,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computing.com>,",
+  "<nwp@lemon\\-computing.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -38528,7 +38528,7 @@ Array [
 `;
 
 exports[`newspeak moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomings.",
@@ -40819,7 +40819,7 @@ Array [
   "yet?",
   "",
   "The",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "speciwise",
   "handles",
@@ -40848,7 +40848,7 @@ Array [
 `;
 
 exports[`nyc manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -40877,8 +40877,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assawhted",
   "text",
   "filters",
@@ -40915,7 +40915,7 @@ Array [
   "|",
   "censawh",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "uhv",
   "dese",
@@ -41207,7 +41207,7 @@ Array [
   "by",
   "de",
   "charactuh",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Awhduh",
   "uhv",
@@ -41233,7 +41233,7 @@ Array [
   "scramble",
   "Scramble",
   "de",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "uhv",
   "each",
@@ -41275,7 +41275,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -41291,8 +41291,8 @@ Array [
   "de",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Oder",
   "filters,",
   "like,",
@@ -41338,7 +41338,7 @@ Array [
   "AUTHORS",
   "De",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -41401,7 +41401,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computin'.com>,",
+  "<nwp@lemon\\-computin'.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -41442,7 +41442,7 @@ Array [
 `;
 
 exports[`nyc moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomings.",
@@ -43809,7 +43809,7 @@ Array [
   "what?",
   "",
   "De",
-  "\\"eleet\\"",
+  ""eleet"",
   "filtuh",
   "specially",
   "handles",
@@ -43834,7 +43834,7 @@ Array [
 `;
 
 exports[`pirate manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -43863,8 +43863,8 @@ Array [
   "scrramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorrted",
   "text",
   "filterrrs",
@@ -43900,7 +43900,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "o'",
   "these",
@@ -44194,7 +44194,7 @@ Array [
   "by",
   "th'",
   "character",
-  "\\"Durrrrkon\\"",
+  ""Durrrrkon"",
   "from",
   "Order",
   "o'",
@@ -44219,7 +44219,7 @@ Array [
   "scramble",
   "Scramble",
   "th'",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "o'",
   "each",
@@ -44269,7 +44269,7 @@ Array [
   "lubber",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -44285,8 +44285,8 @@ Array [
   "th'",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Other",
   "filterrrrrs:",
   ".TP",
@@ -44329,7 +44329,7 @@ Array [
   "AUTHORS",
   "The",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -44391,7 +44391,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computin'.com>,",
+  "<nwp@lemon\\-computin'.com>,",
   "",
   "Gurkan",
   "Sengun",
@@ -44435,7 +44435,7 @@ Array [
 `;
 
 exports[`pirate moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1,",
   "avast.",
@@ -46854,7 +46854,7 @@ Array [
   "yet?",
   "",
   "The",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "specially",
   "handles",
@@ -46879,7 +46879,7 @@ Array [
 `;
 
 exports[`rasterman manpage.txt 1`] = `
-Array [
+[
   ".th",
   "filters",
   "6",
@@ -46908,8 +46908,8 @@ Array [
   "scramble..",
   "studly..",
   "uniencode..",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filtrs",
@@ -46945,7 +46945,7 @@ Array [
   "|",
   "censor",
   ".sh",
-  "\\"description\\"",
+  ""description"",
   "all",
   "of",
   "these",
@@ -47224,7 +47224,7 @@ Array [
   "by",
   "the",
   "character",
-  "\\"duyrkon\\"",
+  ""duyrkon"",
   "from",
   "order",
   "ofd",
@@ -47249,7 +47249,7 @@ Array [
   "scramble",
   "scramble",
   "the",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "of",
   "each",
@@ -47290,7 +47290,7 @@ Array [
   "man",
   "pages...",
   ".ip",
-  "upside\\\\-down",
+  "upside\\-down",
   "flips",
   "text",
   "upsied",
@@ -47306,8 +47306,8 @@ Array [
   "the",
   "outpt...",
   ".hs",
-  "\\"see",
-  "also\\"",
+  ""see",
+  "also"",
   "other",
   "filters:",
   ".tp",
@@ -47346,7 +47346,7 @@ Array [
   "autors",
   "the",
   "eleet..",
-  "upside\\\\-don..",
+  "upside\\-don..",
   "che..b1ff..",
   "and",
   "censor",
@@ -47403,7 +47403,7 @@ Array [
   "yb",
   "nick",
   "philisp",
-  "<nwp@lemon\\\\-computing.com>..",
+  "<nwp@lemon\\-computing.com>..",
   "",
   "gurkan",
   "sengun",
@@ -47443,7 +47443,7 @@ Array [
 `;
 
 exports[`rasterman moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "chapter",
   "1.",
   "loomings...",
@@ -49711,7 +49711,7 @@ Array [
   "yet?",
   "",
   "the",
-  "\\"elete\\"",
+  ""elete"",
   "filter",
   "specially",
   "handles",
@@ -49736,7 +49736,7 @@ Array [
 `;
 
 exports[`scottish manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FILTERS",
   "6",
@@ -49765,8 +49765,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -49802,7 +49802,7 @@ Array [
   "|",
   "censor",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "All",
   "o'",
   "thase",
@@ -50083,7 +50083,7 @@ Array [
   "by",
   "tha",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "from",
   "Order",
   "o'",
@@ -50108,7 +50108,7 @@ Array [
   "scramble",
   "Scramble",
   "tha",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "o'",
   "each",
@@ -50149,7 +50149,7 @@ Array [
   "man",
   "pages.",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "Flips",
   "text",
   "upside",
@@ -50165,8 +50165,8 @@ Array [
   "tha",
   "output.",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "Othar",
   "filters:",
   ".TP",
@@ -50205,7 +50205,7 @@ Array [
   "AUTHORS",
   "Tha",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "an'",
@@ -50263,7 +50263,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computin'.com>,",
+  "<nwp@lemon\\-computin'.com>,",
   "",
   "Gurkan",
   "S'ngun",
@@ -50303,7 +50303,7 @@ Array [
 `;
 
 exports[`scottish moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHAPTER",
   "1.",
   "Loomin's.",
@@ -52582,7 +52582,7 @@ Array [
   "yet?",
   "",
   "Tha",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "speci'lly",
   "handles",
@@ -52607,7 +52607,7 @@ Array [
 `;
 
 exports[`scramble manpage.txt 1`] = `
-Array [
+[
   ".TH",
   "FLEIRTS",
   "6",
@@ -52636,8 +52636,8 @@ Array [
   "samlbcre,",
   "sdulty,",
   "udocnneie,",
-  "upsdie\\\\-dwon",
-  "\\\\-",
+  "upsdie\\-dwon",
+  "\\-",
   "asoesrtd",
   "txet",
   "frtiles",
@@ -52673,7 +52673,7 @@ Array [
   "|",
   "coesnr",
   ".SH",
-  "\\"DIICOEPTSRN\\"",
+  ""DIICOEPTSRN"",
   "All",
   "of",
   "tsehe",
@@ -52954,7 +52954,7 @@ Array [
   "by",
   "the",
   "crhaeatcr",
-  "\\"Dorkun\\"",
+  ""Dorkun"",
   "form",
   "Oderr",
   "of",
@@ -52979,7 +52979,7 @@ Array [
   "sbrcmlae",
   "Slrmbace",
   "the",
-  "\\"iennr\\"",
+  ""iennr"",
   "lretets",
   "of",
   "ecah",
@@ -53020,7 +53020,7 @@ Array [
   "man",
   "paegs.",
   ".IP",
-  "updsie\\\\-dwon",
+  "updsie\\-dwon",
   "Fpils",
   "txet",
   "uisdpe",
@@ -53036,8 +53036,8 @@ Array [
   "the",
   "otuupt.",
   ".SH",
-  "\\"SEE",
-  "ASLO\\"",
+  ""SEE",
+  "ASLO"",
   "Ohetr",
   "fleitrs:",
   ".TP",
@@ -53076,7 +53076,7 @@ Array [
   "ATROUHS",
   "The",
   "eelet,",
-  "upisde\\\\-dwon,",
+  "upisde\\-dwon,",
   "cehf,",
   "b1ff,",
   "and",
@@ -53134,7 +53134,7 @@ Array [
   "by",
   "Ncik",
   "Phllpiis",
-  "<nwp@lomen\\\\-cuimpontg.com>,",
+  "<nwp@lomen\\-cuimpontg.com>,",
   "",
   "Gaurkn",
   "Senugn",
@@ -53174,7 +53174,7 @@ Array [
 `;
 
 exports[`scramble moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CATHEPR",
   "1.",
   "Lgomnios.",
@@ -55458,7 +55458,7 @@ Array [
   "yet?",
   "",
   "The",
-  "\\"eeelt\\"",
+  ""eeelt"",
   "feiltr",
   "sacpleily",
   "hlenads",
@@ -55483,7 +55483,7 @@ Array [
 `;
 
 exports[`spammer manpage.txt 1`] = `
-Array [
+[
   "Below",
   "is",
   "the",
@@ -55523,8 +55523,8 @@ Array [
   "scramble,",
   "studly,",
   "uniencode,",
-  "upside\\\\-down",
-  "\\\\-",
+  "upside\\-down",
+  "\\-",
   "assorted",
   "text",
   "filters",
@@ -55569,7 +55569,7 @@ Array [
   "censor",
   "",
   ".SH",
-  "\\"DESCRIPTION\\"",
+  ""DESCRIPTION"",
   "",
   "All",
   "of",
@@ -55904,7 +55904,7 @@ Array [
   "by",
   "the",
   "character",
-  "\\"Durkon\\"",
+  ""Durkon"",
   "",
   "from",
   "Order",
@@ -55936,7 +55936,7 @@ Array [
   "",
   "Scramble",
   "the",
-  "\\"inner\\"",
+  ""inner"",
   "letters",
   "of",
   "each",
@@ -55985,7 +55985,7 @@ Array [
   "pages.",
   "",
   ".IP",
-  "upside\\\\-down",
+  "upside\\-down",
   "",
   "Flips",
   "text",
@@ -56003,8 +56003,8 @@ Array [
   "output.",
   "",
   ".SH",
-  "\\"SEE",
-  "ALSO\\"",
+  ""SEE",
+  "ALSO"",
   "",
   "Other",
   "filters:",
@@ -56053,7 +56053,7 @@ Array [
   "",
   "The",
   "eleet,",
-  "upside\\\\-down,",
+  "upside\\-down,",
   "chef,",
   "b1ff,",
   "and",
@@ -56117,7 +56117,7 @@ Array [
   "by",
   "Nick",
   "Phillips",
-  "<nwp@lemon\\\\-computing.biz>,",
+  "<nwp@lemon\\-computing.biz>,",
   "",
   "",
   "Gurkan",
@@ -56183,7 +56183,7 @@ Array [
   "a",
   "subject",
   "of",
-  "\\"remove\\".",
+  ""remove".",
   "",
   "",
   "",
@@ -56191,7 +56191,7 @@ Array [
 `;
 
 exports[`spammer moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "Below",
   "is",
   "the",
@@ -58746,7 +58746,7 @@ Array [
   "",
   "",
   "The",
-  "\\"eleet\\"",
+  ""eleet"",
   "filter",
   "specially",
   "handles",
@@ -58776,7 +58776,7 @@ Array [
 `;
 
 exports[`studly manpage.txt 1`] = `
-Array [
+[
   ".Th",
   "FIlTERs",
   "6",
@@ -58805,8 +58805,8 @@ Array [
   "scRambLe,",
   "StudLy,",
   "UnieNcodE,",
-  "uPsidE\\\\-dOwn",
-  "\\\\-",
+  "uPsidE\\-dOwn",
+  "\\-",
   "aSsorTed",
   "Text",
   "filTers",
@@ -58842,7 +58842,7 @@ Array [
   "|",
   "CensOr",
   ".sH",
-  "\\"dESCrIPTiON\\"",
+  ""dESCrIPTiON"",
   "All",
   "of",
   "ThesE",
@@ -59123,7 +59123,7 @@ Array [
   "bY",
   "thE",
   "chAracTer",
-  "\\"DurKon\\"",
+  ""DurKon"",
   "froM",
   "OrDer",
   "Of",
@@ -59148,7 +59148,7 @@ Array [
   "scrAmblE",
   "ScRambLe",
   "tHe",
-  "\\"InneR\\"",
+  ""InneR"",
   "lEtteRs",
   "oF",
   "eaCh",
@@ -59189,7 +59189,7 @@ Array [
   "Man",
   "PageS.",
   ".iP",
-  "uPsidE\\\\-dOwn",
+  "uPsidE\\-dOwn",
   "flipS",
   "teXt",
   "uPsidE",
@@ -59205,8 +59205,8 @@ Array [
   "thE",
   "ouTput.",
   ".Sh",
-  "\\"SeE",
-  "AlSO\\"",
+  ""SeE",
+  "AlSO"",
   "OthEr",
   "fIlteRs:",
   ".TP",
@@ -59245,7 +59245,7 @@ Array [
   "AUtHORs",
   "ThE",
   "elEet,",
-  "upsIde\\\\-dowN,",
+  "upsIde\\-dowN,",
   "cHef,",
   "b1fF,",
   "aNd",
@@ -59303,7 +59303,7 @@ Array [
   "by",
   "NicK",
   "PhIlliPs",
-  "<Nwp@LemoN\\\\-cOmpuTing.com>,",
+  "<Nwp@LemoN\\-cOmpuTing.com>,",
   "",
   "gurkAn",
   "SEnguN",
@@ -59343,7 +59343,7 @@ Array [
 `;
 
 exports[`studly moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "CHaPTEr",
   "1.",
   "LooMingS.",
@@ -61627,7 +61627,7 @@ Array [
   "yEt?",
   "",
   "The",
-  "\\"elEet\\"",
+  ""elEet"",
   "filTer",
   "SpecIallY",
   "haNdleS",
@@ -61652,7 +61652,7 @@ Array [
 `;
 
 exports[`uniencode manpage.txt 1`] = `
-Array [
+[
   ".ТΗ",
   "ϜІⅬТЕRՏ",
   "6",
@@ -61681,8 +61681,8 @@ Array [
   "ѕсrаⅿЬⅼе,",
   "ѕtυⅾⅼу,",
   "υηⅰеηсօԁе,",
-  "υρѕіԁе\\\\‐ԁоwη",
-  "\\\\‐",
+  "υρѕіԁе\\‐ԁоwη",
+  "\\‐",
   "аѕѕօrtеⅾ",
   "tеⅹt",
   "fіⅼtеrѕ",
@@ -62065,7 +62065,7 @@ Array [
   "ⅿаη",
   "ρаgеѕ.",
   ".ΙР",
-  "υрѕⅰⅾе\\\\‐ⅾօwɳ",
+  "υрѕⅰⅾе\\‐ⅾօwɳ",
   "Ϝⅼⅰρѕ",
   "tеⅹt",
   "υрѕіԁе",
@@ -62121,7 +62121,7 @@ Array [
   "АUΤНОRՏ",
   "ТҺе",
   "еⅼееt,",
-  "υрѕіⅾе\\\\‐ԁоwη,",
+  "υрѕіⅾе\\‐ԁоwη,",
   "ϲҺеf,",
   "Ь1ff,",
   "аηԁ",
@@ -62179,7 +62179,7 @@ Array [
   "ЬУ",
   "Νіϲk",
   "РҺіⅼⅼіρѕ",
-  "‹ɳwр@ⅼеⅿоɳ\\\\‐ⅽօⅿρυtіɳg.сօⅿ›,",
+  "‹ɳwр@ⅼеⅿоɳ\\‐ⅽօⅿρυtіɳg.сօⅿ›,",
   "",
   "Ԍυrkаɳ",
   "Տеηgυɳ",
@@ -62219,7 +62219,7 @@ Array [
 `;
 
 exports[`uniencode moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "СΗАРТЕR",
   "1.",
   "Ⅼօօⅿⅰɳgѕ.",
@@ -64528,7 +64528,7 @@ Array [
 `;
 
 exports[`upsidedown manpage.txt 1`] = `
-Array [
+[
   "9",
   "sjaf7!j",
   "yf'",
@@ -64537,8 +64537,8 @@ Array [
   "sjaf7!j",
   "fxaf",
   "pafjosse",
-  "-\\\\",
-  "umop-\\\\ap!sdn",
+  "-\\",
+  "umop-\\ap!sdn",
   "\`apo)ua!un",
   "\`h7pnfs",
   "\`a7qwej)s",
@@ -64940,7 +64940,7 @@ Array [
   "'sa6ed",
   "uew",
   "huew",
-  "umop-\\\\ap!sdn",
+  "umop-\\ap!sdn",
   "d!'",
   "'fndfno",
   "ayf",
@@ -65003,7 +65003,7 @@ Array [
   "pue",
   "\`jjlq",
   "\`jay)",
-  "\`umop-\\\\ap!sdn",
+  "\`umop-\\ap!sdn",
   "\`faa7a",
   "ayf",
   "ayf",
@@ -65050,7 +65050,7 @@ Array [
   ">|",
   "uaydafs",
   "",
-  "\`<wo)'6u!fndwo)-\\\\uowa7@dmu>",
+  "\`<wo)'6u!fndwo)-\\uowa7@dmu>",
   "sd!77!yd",
   ">|)!u",
   "hq",
@@ -65095,7 +65095,7 @@ Array [
 `;
 
 exports[`upsidedown moby-dick-chapter-1.txt 1`] = `
-Array [
+[
   "'s6u!woo7",
   "'l",
   "jafdey)",

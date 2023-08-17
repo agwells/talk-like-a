@@ -148,7 +148,7 @@ simuLex.preprocessRules =
    * @param {[string, (match: string, util: any) => string][]} rawRules
    * @returns {[RegExp, (match: string, util: any) => string][]}
    */
-  function <U>(rawRules: SimulexRawRule<U>[]): SimulexRule<U>[] {
+  function <U extends {} = {}>(rawRules: SimulexRawRule<U>[]): SimulexRule<U>[] {
     return rawRules.map(function ([regex, replacer]) {
       return [new RegExp(`^${regex}`), replacer];
     });
