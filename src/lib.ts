@@ -31,7 +31,7 @@ getRandFn.PSEUDO_RAND_MAX = 0x7fffffff;
 
 const STARTS_WITH_UPPER = new RegExp('^[A-Z]');
 
-const ALL_UPPER = new RegExp('^[^a-z]$')
+const ALL_UPPER = new RegExp('^[^a-z]$');
 
 /**
  *
@@ -152,7 +152,9 @@ simuLex.preprocessRules =
    * @param {[string, (match: string, util: any) => string][]} rawRules
    * @returns {[RegExp, (match: string, util: any) => string][]}
    */
-  function <U extends {} = {}>(rawRules: SimulexRawRule<U>[]): SimulexRule<U>[] {
+  function <U extends {} = {}>(
+    rawRules: SimulexRawRule<U>[]
+  ): SimulexRule<U>[] {
     return rawRules.map(function ([regex, replacer]) {
       return [new RegExp(`^${regex}`), replacer];
     });

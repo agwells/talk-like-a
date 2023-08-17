@@ -22,4 +22,4 @@ export { scramble } from './src/scramble';
 export { spammer } from './src/spammer';
 export { studly } from './src/studly';
 export { uniencode } from './src/uniencode';
-export { upsidedown } from "./src/upsidedown";
+export { upsidedown } from './src/upsidedown';

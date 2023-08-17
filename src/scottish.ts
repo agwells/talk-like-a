@@ -80,47 +80,50 @@ const repl: [RegExp, string][] = (
     [/ned\b/g, `n'd`],
     [/\bbecause/g, `'cause`],
   ] as [RegExp, string][]
-).reduce(function makeUpperCaseVariations(acc, origRegex): [RegExp, string][] {
-  const [regex, replaceWith] = origRegex;
-  const variants = [origRegex];
-  const regexText = regex.source;
+).reduce(
+  function makeUpperCaseVariations(acc, origRegex): [RegExp, string][] {
+    const [regex, replaceWith] = origRegex;
+    const variants = [origRegex];
+    const regexText = regex.source;
 
-  /**
-   * @type {[RegExp, string]}
-   */
-  const initialUpper = [
-    new RegExp(
-      // TODO: replace with a lookbehind assertion once there's broader
-      // browser support.
-      regexText.replace(
-        /^(\\b)?([a-z])/,
-        (match, boundary, firstLetter) =>
-          (boundary || '') + firstLetter.toUpperCase()
+    /**
+     * @type {[RegExp, string]}
+     */
+    const initialUpper = [
+      new RegExp(
+        // TODO: replace with a lookbehind assertion once there's broader
+        // browser support.
+        regexText.replace(
+          /^(\\b)?([a-z])/,
+          (match, boundary, firstLetter) =>
+            (boundary || '') + firstLetter.toUpperCase()
+        ),
+        'g'
       ),
-      'g'
-    ),
-    replaceWith.replace(/^.*?[a-z]/, (match) => match.toUpperCase()),
-  ] as [RegExp, string];
-  variants.push(initialUpper);
+      replaceWith.replace(/^.*?[a-z]/, (match) => match.toUpperCase()),
+    ] as [RegExp, string];
+    variants.push(initialUpper);
 
-  /**
-   * @type {[RegExp, string]}
-   */
-  const allUpper = [
-    new RegExp(
-      // TODO: replace with a lookbehind assertion once there's broader
-      // browser support.
-      regexText
-        .replace(/[a-z]/g, (match) => match.toUpperCase())
-        .replace(/\\B/g, '\\b'),
-      'g'
-    ),
-    replaceWith.replace(/[a-z]/g, (match) => match.toUpperCase()),
-  ] as [RegExp, string];
-  variants.push(allUpper);
+    /**
+     * @type {[RegExp, string]}
+     */
+    const allUpper = [
+      new RegExp(
+        // TODO: replace with a lookbehind assertion once there's broader
+        // browser support.
+        regexText
+          .replace(/[a-z]/g, (match) => match.toUpperCase())
+          .replace(/\\B/g, '\\b'),
+        'g'
+      ),
+      replaceWith.replace(/[a-z]/g, (match) => match.toUpperCase()),
+    ] as [RegExp, string];
+    variants.push(allUpper);
 
-  return [...acc, ...variants];
-}, [] as [RegExp, string][]);
+    return [...acc, ...variants];
+  },
+  [] as [RegExp, string][]
+);
 
 /**
  *
