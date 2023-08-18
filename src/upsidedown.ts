@@ -13,15 +13,18 @@ import { tr } from './lib';
  */
 export function upsidedown(initialString: string): string {
   return tr(
-    // TODO: This is a redundant split and re-join, because tr's going to do
-    // that too.
-    initialString
-      .toLowerCase()
-      .split('\n')
-      .map((line) => line.split('').reverse().join(''))
-      .join('\n')
-      .replace(/"/g, `''`),
-    '[]{}<>()' + 'abcdefghijklmnopqrstuvwxy' + '123456789' + ",!.?`'",
-    '][}{><)(' + 'eq)paj6y!fk7wuodbjsfn^mxh' + 'l2Eh59L86' + "`i'%,,"
-  ).replace(/k/g, '>|');
+    initialString.split('').reverse().join('').replace(/"/g, `''`),
+    '[]{}<>()' +
+      'ABCDEFGHIJKLMNOPQRSTUVWXYZ' +
+      'abcdefghijklmnopqrstuvwxyz' +
+      '123456789' +
+      ",!.?`'",
+    '][}{><)(' +
+      'V8)d3j9HIfk7WNOdbjSLnAMXhZ' +
+      'eq)paj6y!fk7wuodbjsfn^mxhz' +
+      'l2Eh59L86' +
+      "`i'%,,"
+  )
+    .replace(/k/g, '>|')
+    .replace(/L/g, '_|_');
 }
