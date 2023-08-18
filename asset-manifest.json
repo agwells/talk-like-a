@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/talk-like-a/static/css/main.e6c13ad2.css",
-    "main.js": "/talk-like-a/static/js/main.99a37a77.js",
+    "main.css": "/talk-like-a/static/css/main.54a1afe9.css",
+    "main.js": "/talk-like-a/static/js/main.23edcfce.js",
     "index.html": "/talk-like-a/index.html",
-    "main.e6c13ad2.css.map": "/talk-like-a/static/css/main.e6c13ad2.css.map",
-    "main.99a37a77.js.map": "/talk-like-a/static/js/main.99a37a77.js.map"
+    "main.54a1afe9.css.map": "/talk-like-a/static/css/main.54a1afe9.css.map",
+    "main.23edcfce.js.map": "/talk-like-a/static/js/main.23edcfce.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.99a37a77.js"
+    "static/css/main.54a1afe9.css",
+    "static/js/main.23edcfce.js"
   ]
 }
