@@ -21,7 +21,7 @@ With many cheerful facts about the square of the hypotenuse.`
     <div className="App" style={{ margin: '5vh' }}>
       <header className="App-header">
         <h1>talk-like-a</h1>
-        <p>{filter('Transform plain English text in various comedic ways.')}</p>
+        <p className={filterName}>{filter('Transform plain English text in various comedic ways.')}</p>
         <ul>
           <li>
             Github:{' '}
@@ -59,7 +59,7 @@ With many cheerful facts about the square of the hypotenuse.`
             onChange={(e) => setPlainText(e.target.value)}
           />
         </p>
-        <pre>{filter(plainText)}</pre>
+        <pre className={filterName}>{filter(plainText)}</pre>
       </main>
     </div>
   );

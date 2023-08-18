@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.upsidedown {
+  transform: rotate(180deg);
+  text-align: right;
+  transition: transform 1s;
+  transform: text-align 1s;
+}
