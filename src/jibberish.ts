@@ -10,6 +10,7 @@ import { getRandFn } from './lib';
 import { eleet } from './eleet';
 import { b1ff } from './b1ff';
 import { chef } from './chef';
+import { duck } from './duck';
 import { jethro } from './jethro';
 import { upsidedown } from './upsidedown';
 import { klaus } from './klaus';
@@ -30,12 +31,13 @@ import { spammer } from './spammer';
  * @returns {string}
  */
 export function jibberish(originalString: string): string {
-  const rand = getRandFn();
+  const rand = getRandFn(originalString.length);
 
   const all = [
     eleet,
     b1ff,
     chef,
+    duck,
     jethro,
     upsidedown,
     klaus,
