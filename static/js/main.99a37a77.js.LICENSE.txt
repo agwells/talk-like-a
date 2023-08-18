@@ -33,6 +33,46 @@
  */
 
 /**
+ * @license React
+ * react-dom.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react-jsx-runtime.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * react.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
+ * @license React
+ * scheduler.production.min.js
+ *
+ * Copyright (c) Facebook, Inc. and its affiliates.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
+/**
  * B1FF filter.
  *
  * @copyright (c) 1999 Joey Hess
@@ -45,6 +85,14 @@
  *
  * @copyright (c) 2002 Joey Hess
  * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Duck filter.
+ *
+ * @copyright 2023 Aaron Wells
+ * @license Public domain
  * @author Aaron Wells
  */
 
@@ -63,6 +111,15 @@
  *
  * @copyright (c) 2001 Joey Hess
  * @license GPL-2+
+ * @author Aaron Wells
+ */
+
+/**
+ * Fake scottish (dwarven) accent filter, by Adam Borowski, inspired by the
+ * character "Durkon" from Order of the Stick by Rich Burlew.  GPL, 2007
+ *
+ * @copyright (c) 2007 Adam Borowski
+ * @license GPL-3+
  * @author Aaron Wells
  */
 
