@@ -20,11 +20,9 @@ export function upsidedown(initialString: string): string {
       '123456789' +
       ",!.?`'",
     '][}{><)(' +
-      'V8)d3j9HIfk7WNOdbjSLnAMXhZ' +
+      'V8)d3j9HIfK7WNOdbjS+nAMXhZ' +
       'eq)paj6y!fk7wuodbjsfn^mxhz' +
       'l2Eh59L86' +
       "`i'%,,"
   )
-    .replace(/k/g, '>|')
-    .replace(/L/g, '_|_');
 }
